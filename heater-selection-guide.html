@@ -1,0 +1,1622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PPW Sauna Heater Selection Guide — The 50,000-Foot View</title>
+<style>
+  /* ===== RESET & BASE ===== */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f5f5f5;
+    color: #333;
+    line-height: 1.7;
+    font-size: 16px;
+  }
+
+  /* ===== SIDEBAR ===== */
+  .sidebar {
+    position: fixed; top: 0; left: 0; bottom: 0;
+    width: 280px;
+    background: #0F2439;
+    color: #ccc;
+    overflow-y: auto;
+    padding: 24px 0;
+    z-index: 1000;
+    transition: transform 0.3s;
+  }
+  .sidebar-logo {
+    text-align: center;
+    padding: 0 20px 20px;
+    border-bottom: 1px solid #1A3C5E;
+    margin-bottom: 16px;
+  }
+  .sidebar-logo h2 {
+    color: #C8862A;
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  .sidebar-logo p {
+    color: #8aa8c7;
+    font-size: 12px;
+    margin-top: 4px;
+  }
+  .sidebar-search {
+    padding: 0 16px 16px;
+  }
+  .sidebar-search input {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #1A3C5E;
+    border-radius: 4px;
+    background: #162d47;
+    color: #eee;
+    font-size: 13px;
+    outline: none;
+  }
+  .sidebar-search input::placeholder { color: #6a8aaa; }
+  .sidebar-search input:focus { border-color: #C8862A; }
+
+  .nav-section-title {
+    color: #C8862A;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    padding: 14px 20px 6px;
+    font-weight: 700;
+  }
+  .sidebar a {
+    display: block;
+    color: #a0b8cf;
+    text-decoration: none;
+    padding: 7px 20px 7px 28px;
+    font-size: 13.5px;
+    border-left: 3px solid transparent;
+    transition: all 0.2s;
+  }
+  .sidebar a:hover { color: #fff; background: rgba(255,255,255,0.05); }
+  .sidebar a.active {
+    color: #C8862A;
+    border-left-color: #C8862A;
+    background: rgba(200,134,42,0.08);
+    font-weight: 600;
+  }
+  .sidebar a.hidden { display: none; }
+
+  /* ===== MAIN CONTENT ===== */
+  .main {
+    margin-left: 280px;
+    padding: 40px 56px 80px;
+    max-width: 1060px;
+  }
+  .verified-badge {
+    display: inline-block;
+    background: #EAF2F8;
+    border: 1px solid #b8d4e8;
+    color: #1A3C5E;
+    font-size: 13px;
+    padding: 6px 14px;
+    border-radius: 4px;
+    margin-bottom: 28px;
+  }
+  h1 {
+    font-size: 34px;
+    color: #0F2439;
+    margin-bottom: 8px;
+    line-height: 1.2;
+  }
+  .subtitle {
+    font-size: 17px;
+    color: #666;
+    margin-bottom: 32px;
+    max-width: 700px;
+  }
+  h2 {
+    font-size: 26px;
+    color: #0F2439;
+    margin: 48px 0 12px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #C8862A;
+  }
+  h3 {
+    font-size: 20px;
+    color: #1A3C5E;
+    margin: 32px 0 10px;
+  }
+  h4 {
+    font-size: 17px;
+    color: #0F2439;
+    margin: 24px 0 8px;
+  }
+  p { margin-bottom: 14px; max-width: 780px; }
+  ul, ol { margin: 10px 0 18px 24px; max-width: 780px; }
+  li { margin-bottom: 6px; }
+  strong { color: #0F2439; }
+
+  /* ===== CALLOUT BOXES ===== */
+  .callout-frame {
+    background: #EAF2F8; border-top: 3px solid #0F2439;
+    padding: 20px; margin: 20px 0; border-radius: 4px;
+  }
+  .callout-tip {
+    background: #FDF3E7; border-left: 4px solid #C8862A;
+    padding: 20px; margin: 20px 0; border-radius: 4px;
+  }
+  .callout-warn {
+    background: #fde8e8; border-left: 4px solid #d9534f;
+    padding: 20px; margin: 20px 0; border-radius: 4px;
+  }
+  .callout-def {
+    background: #f0f0f0; border-left: 4px solid #0F2439;
+    padding: 20px; margin: 20px 0; border-radius: 4px;
+  }
+  .callout-frame p, .callout-tip p, .callout-warn p, .callout-def p { margin-bottom: 8px; }
+  .callout-frame p:last-child, .callout-tip p:last-child, .callout-warn p:last-child, .callout-def p:last-child { margin-bottom: 0; }
+
+  /* ===== TABLES ===== */
+  table {
+    width: 100%; border-collapse: collapse; margin: 20px 0;
+    font-size: 14.5px;
+  }
+  thead tr { background: #0F2439; color: #fff; }
+  th { padding: 12px 14px; text-align: left; font-weight: 600; white-space: nowrap; }
+  td { padding: 10px 14px; border-bottom: 1px solid #ddd; }
+  tbody tr:nth-child(odd) { background: #fff; }
+  tbody tr:nth-child(even) { background: #EAF2F8; }
+  .highlight-row { background: #FDF3E7 !important; font-weight: 600; }
+
+  /* ===== TIER CARDS ===== */
+  .tier-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+    margin: 24px 0;
+  }
+  .tier-card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 24px;
+    border-top: 4px solid #C8862A;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  }
+  .tier-card h4 {
+    margin: 0 0 4px;
+    font-size: 19px;
+    color: #0F2439;
+  }
+  .tier-card .tier-label {
+    font-size: 13px;
+    color: #C8862A;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 12px;
+  }
+  .tier-card p { font-size: 14.5px; margin-bottom: 10px; }
+  .tier-card ul { font-size: 14px; margin-left: 18px; }
+
+  /* ===== DECISION TREE ===== */
+  .decision-box {
+    background: #fff;
+    border: 2px solid #1A3C5E;
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin: 16px 0;
+    position: relative;
+  }
+  .decision-box::before {
+    content: '';
+    position: absolute; left: -16px; top: 50%;
+    width: 12px; height: 2px;
+    background: #C8862A;
+  }
+  .decision-box .q { font-weight: 700; color: #0F2439; margin-bottom: 8px; }
+  .decision-box .a { margin-left: 16px; }
+  .decision-box .a span { color: #C8862A; font-weight: 600; }
+
+  /* ===== BACK TO TOP ===== */
+  #backToTop {
+    position: fixed; bottom: 32px; right: 32px;
+    width: 48px; height: 48px;
+    background: #C8862A; color: #fff;
+    border: none; border-radius: 50%;
+    font-size: 22px; cursor: pointer;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    opacity: 0; transition: opacity 0.3s;
+    z-index: 999;
+  }
+  #backToTop.show { opacity: 1; }
+  #backToTop:hover { background: #b07524; }
+
+  /* ===== MOBILE MENU ===== */
+  .mobile-toggle {
+    display: none;
+    position: fixed; top: 12px; left: 12px;
+    background: #0F2439; color: #C8862A;
+    border: none; border-radius: 4px;
+    padding: 8px 14px; font-size: 18px;
+    cursor: pointer; z-index: 1100;
+  }
+  @media (max-width: 860px) {
+    .sidebar { transform: translateX(-100%); }
+    .sidebar.open { transform: translateX(0); }
+    .main { margin-left: 0; padding: 24px 20px 80px; }
+    .mobile-toggle { display: block; }
+    .tier-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Mobile toggle -->
+<button class="mobile-toggle" onclick="document.querySelector('.sidebar').classList.toggle('open')">&#9776;</button>
+
+<!-- ===== SIDEBAR ===== -->
+<nav class="sidebar" id="sidebar">
+  <div class="sidebar-logo">
+    <h2>Peak Primal Wellness</h2>
+    <p>Heater Selection Guide</p>
+  </div>
+  <div class="sidebar-search">
+    <input type="text" id="navSearch" placeholder="Search chapters..." oninput="filterNav()">
+  </div>
+
+  <div class="nav-section-title">Foundations</div>
+  <a href="#ch1" data-chapter="ch1">1. What Is a Sauna Heater?</a>
+  <a href="#ch2" data-chapter="ch2">2. Electric vs. Wood-Burning</a>
+  <a href="#ch3" data-chapter="ch3">3. Key Terms You Need to Know</a>
+
+  <div class="nav-section-title">Our Brands</div>
+  <a href="#ch4" data-chapter="ch4">4. The Brand Tier System</a>
+  <a href="#ch5" data-chapter="ch5">5. Harvia — The Toyota</a>
+  <a href="#ch6" data-chapter="ch6">6. HUUM — The BMW</a>
+  <a href="#ch7" data-chapter="ch7">7. Saunum — The Bentley</a>
+  <a href="#ch8" data-chapter="ch8">8. Narvi — Finnish Tradition</a>
+  <a href="#ch9" data-chapter="ch9">9. Cozy Heat — Wood-Fire King</a>
+
+  <div class="nav-section-title">Sizing & Selection</div>
+  <a href="#ch10" data-chapter="ch10">10. How to Size a Heater</a>
+  <a href="#ch11" data-chapter="ch11">11. Matching Customer to Brand</a>
+  <a href="#ch12" data-chapter="ch12">12. The Qualifying Checklist</a>
+
+  <div class="nav-section-title">Selling Heaters</div>
+  <a href="#ch13" data-chapter="ch13">13. The Heater Investment Reframe</a>
+  <a href="#ch14" data-chapter="ch14">14. Common Objections</a>
+  <a href="#ch15" data-chapter="ch15">15. Electrical Basics for Sales</a>
+
+  <div class="nav-section-title">Reference</div>
+  <a href="#ch16" data-chapter="ch16">16. Brand Comparison Table</a>
+  <a href="#ch17" data-chapter="ch17">17. Quick Reference Cheat Sheet</a>
+  <a href="#gaps" data-chapter="gaps">Information Gaps</a>
+</nav>
+
+<!-- ===== MAIN CONTENT ===== -->
+<div class="main">
+
+<span class="verified-badge">Product information verified as of April 13, 2026</span>
+
+<h1>Sauna Heater Selection Guide</h1>
+<p class="subtitle">The 50,000-Foot View. Everything a new PPW sales rep needs to understand how sauna heaters work, what brands we carry, and how to match the right heater to the right customer — before diving into individual brand guides.</p>
+
+<!-- ========================================== -->
+<!-- CHAPTER 1 -->
+<!-- ========================================== -->
+<h2 id="ch1">Chapter 1: What Is a Sauna Heater?</h2>
+
+<p>Before you can sell a sauna heater, you need to understand what it actually does. This chapter starts from absolute zero.</p>
+
+<p>A <strong>sauna heater</strong> is the heart of any sauna. It's the appliance that creates the heat. Without it, you just have a nicely insulated wooden box. Think of it like a furnace in a house — the room is the shell, the heater is the engine that makes it work.</p>
+
+<p>Sauna heaters do two things:</p>
+<ol>
+  <li><strong>Heat the air</strong> inside the sauna room to between 150&deg;F and 200&deg;F (65&deg;C–95&deg;C)</li>
+  <li><strong>Heat sauna stones</strong> so you can pour water on them to create <strong>l&ouml;yly</strong> (steam) — more on this in a minute</li>
+</ol>
+
+<div class="callout-def">
+  <p><strong>Key Definition — L&ouml;yly (LOY-loo):</strong> The Finnish word for the burst of steam that rises when you pour water over hot sauna stones. This isn't just moisture — it's the soul of the sauna experience. The quality of l&ouml;yly is what separates a "meh" sauna from a transformative one. Better heaters with more stone mass produce softer, longer-lasting l&ouml;yly.</p>
+</div>
+
+<h3>Why Does the Heater Matter So Much?</h3>
+
+<p>Here's the reality most customers don't understand when they start shopping: <strong>the heater determines the quality of the sauna experience more than any other single component.</strong> The wood, the benches, the lighting — those are important. But the heater controls:</p>
+
+<ul>
+  <li><strong>How the room heats up</strong> — fast and even, or slow with cold spots?</li>
+  <li><strong>How the steam feels</strong> — harsh and biting, or soft and enveloping?</li>
+  <li><strong>How stable the temperature stays</strong> — does it swing wildly or hold steady?</li>
+  <li><strong>How long the heat lasts</strong> — does it disappear the moment you throw water, or does it absorb and radiate?</li>
+</ul>
+
+<div class="callout-frame">
+  <p><strong>How to Frame This:</strong></p>
+  <p><strong>The core concept:</strong> The heater is to a sauna what an engine is to a car. You can have beautiful leather seats and a gorgeous paint job, but if the engine is weak, the driving experience suffers.</p>
+  <p><strong>What the customer needs to understand:</strong> Investing in the heater is investing in the experience itself — every single sauna session for the next 10-20 years.</p>
+  <p><strong>PPW framework to apply:</strong> Gap Selling — the customer's desired state is a transformative sauna experience, and the heater is the single biggest factor in getting them there.</p>
+</div>
+
+<h3>Who Buys Sauna Heaters?</h3>
+
+<p>Your customers generally fall into three buckets:</p>
+
+<ol>
+  <li><strong>Building a new sauna from scratch</strong> — they need everything. They're often working with a contractor or doing a DIY kit. This is your biggest opportunity to guide the full setup.</li>
+  <li><strong>Upgrading an existing heater</strong> — they already have a sauna but want a better experience. These buyers already know what they want to improve. 70-80% of Harvia buyers eventually come back and upgrade to a premium brand.</li>
+  <li><strong>Replacing a broken heater</strong> — urgency purchase. They need something that fits their existing setup (same voltage, similar footprint). Speed matters here.</li>
+</ol>
+
+
+<!-- ========================================== -->
+<!-- CHAPTER 2 -->
+<!-- ========================================== -->
+<h2 id="ch2">Chapter 2: Electric vs. Wood-Burning Heaters</h2>
+
+<p>Every sauna heater falls into one of two categories: <strong>electric</strong> or <strong>wood-burning</strong>. Understanding the difference is fundamental — it's the first fork in the road for every customer conversation.</p>
+
+<h3>Electric Heaters</h3>
+
+<p>Electric heaters use <strong>heating elements</strong> (metal coils, like a heavy-duty version of a toaster) to heat sauna stones and the room. You plug them into an electrical circuit, set a temperature, and they do the rest.</p>
+
+<div class="callout-def">
+  <p><strong>Key Definition — Heating Element:</strong> A resistive metal coil inside the heater that converts electricity into heat. When current flows through it, it gets extremely hot. Electric sauna heaters contain multiple elements stacked or arranged around the stones.</p>
+</div>
+
+<p><strong>Why customers choose electric:</strong></p>
+<ul>
+  <li><strong>Convenience</strong> — turn it on, set a temperature, walk away. Some models have WiFi control so you can preheat from your phone.</li>
+  <li><strong>Indoor-friendly</strong> — no chimney, no smoke, no ash. Works in basements, bathrooms, and commercial spaces.</li>
+  <li><strong>Precise temperature control</strong> — digital controllers hold the room within a few degrees.</li>
+  <li><strong>Lower maintenance</strong> — no wood to chop, no ash to clean, no chimney to inspect.</li>
+</ul>
+
+<p><strong>The tradeoff:</strong> Electric heaters require dedicated electrical circuits. Most sauna heaters need <strong>240V power</strong> (the same voltage as your clothes dryer or oven). Small heaters under 5kW can sometimes run on 120V, but most require a licensed electrician to wire a dedicated circuit.</p>
+
+<h3>Wood-Burning Heaters</h3>
+
+<p>Wood-burning heaters use a <strong>firebox</strong> (combustion chamber) to burn wood logs. The heat from the fire passes through the stones and into the room. They require a <strong>chimney</strong> (flue pipe) to vent smoke.</p>
+
+<div class="callout-def">
+  <p><strong>Key Definition — Firebox:</strong> The enclosed chamber where wood burns inside a wood-fired heater. Think of it like the inside of a wood stove. The design of the firebox determines how efficiently the wood burns and how much heat reaches the stones.</p>
+</div>
+
+<p><strong>Why customers choose wood-burning:</strong></p>
+<ul>
+  <li><strong>The ritual</strong> — building the fire, tending it, smelling the wood smoke. For many Finnish purists, this IS the sauna experience.</li>
+  <li><strong>Off-grid capability</strong> — no electricity needed. Perfect for cabins, lakeside properties, rural locations.</li>
+  <li><strong>Intense heat</strong> — wood fires can push higher temperatures and often produce a "softer" feeling heat.</li>
+  <li><strong>Ambiance</strong> — the crackle and glow of a real fire adds something electric can't replicate.</li>
+</ul>
+
+<p><strong>The tradeoff:</strong> Requires a chimney installation, fire safety clearances, a supply of dry firewood, and regular ash cleanup. Not suitable for most indoor residential installs unless there's chimney access.</p>
+
+<h3>Side-by-Side Comparison</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Factor</th>
+      <th>Electric</th>
+      <th>Wood-Burning</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Installation</strong></td>
+      <td>Dedicated electrical circuit (usually 240V)</td>
+      <td>Chimney/flue pipe + fire clearances</td>
+    </tr>
+    <tr>
+      <td><strong>Best For</strong></td>
+      <td>Indoor, residential, commercial, convenience</td>
+      <td>Outdoor, cabins, off-grid, traditionalists</td>
+    </tr>
+    <tr>
+      <td><strong>Heat-Up Time</strong></td>
+      <td>30–60 minutes typically</td>
+      <td>45–90 minutes (depends on fire management)</td>
+    </tr>
+    <tr>
+      <td><strong>Temperature Control</strong></td>
+      <td>Precise — digital controller</td>
+      <td>Manual — manage the fire</td>
+    </tr>
+    <tr>
+      <td><strong>Maintenance</strong></td>
+      <td>Low — replace stones occasionally</td>
+      <td>Moderate — ash removal, chimney cleaning, stone replacement</td>
+    </tr>
+    <tr>
+      <td><strong>Running Cost</strong></td>
+      <td>Electricity (varies by region)</td>
+      <td>Firewood (free if you have land, otherwise varies by region)</td>
+    </tr>
+    <tr>
+      <td><strong>Our Brands</strong></td>
+      <td>Harvia, HUUM, Saunum</td>
+      <td>Harvia, HUUM, Narvi, Cozy Heat</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="callout-tip">
+  <p><strong>Pro Tip:</strong> The majority of your customer conversations will be about electric heaters. That's the primary market for residential indoor saunas. But don't overlook wood-burning — it's a passionate niche with customers who are willing to invest heavily in the right setup. When someone mentions a cabin, lakehouse, or "authentic Finnish experience," your ears should perk up.</p>
+</div>
+
+
+<!-- ========================================== -->
+<!-- CHAPTER 3 -->
+<!-- ========================================== -->
+<h2 id="ch3">Chapter 3: Key Terms You Need to Know</h2>
+
+<p>Before we get into brands and sizing, you need a vocabulary foundation. Here are the terms that will come up in every heater conversation. Learn these and you'll sound like you know what you're talking about — because you will.</p>
+
+<div class="callout-def">
+  <p><strong>Key Definition — Kilowatt (kW):</strong> The unit used to measure a heater's power output. Think of it like horsepower for a car. A 6kW heater has less "oomph" than a 9kW heater — it heats a smaller space. Most residential sauna heaters range from 3kW to 18kW. Commercial heaters can go higher.</p>
+</div>
+
+<div class="callout-def">
+  <p><strong>Key Definition — Cubic Feet (cu ft):</strong> How we measure sauna room size. Length &times; Width &times; Height in feet. A 6' &times; 6' &times; 7' sauna = 252 cubic feet. This number is what determines how many kW you need.</p>
+</div>
+
+<div class="callout-def">
+  <p><strong>Key Definition — Stone Mass (kg):</strong> The weight of sauna stones the heater holds. More stone mass = more thermal energy stored = softer, longer-lasting steam. Think of stone mass like a thermal battery — a bigger battery stores more energy and releases it more gradually. A heater with 20kg of stones will give you a quick burst of steam. A heater with 80kg (180 lbs) will give you deep, rolling waves of l&ouml;yly.</p>
+</div>
+
+<div class="callout-def">
+  <p><strong>Key Definition — Heat Stratification:</strong> Hot air rises, cold air sinks. In a sauna, this means the ceiling can be 200&deg;F while the floor is 120&deg;F. This is normal, but extreme stratification makes the sauna uncomfortable (your head is roasting while your feet are cold). Good heater placement and certain technologies (like Saunum's air blending) reduce this problem.</p>
+</div>
+
+<div class="callout-def">
+  <p><strong>Key Definition — Combi Heater:</strong> A heater that is both a traditional sauna heater AND a steam generator in one unit. It has a separate water tank that produces steam independently of throwing water on stones. This lets you run the sauna in traditional dry mode, wet (l&ouml;yly) mode, or pure steam mode. Harvia's Virta Combi line is our main combi offering.</p>
+</div>
+
+<div class="callout-def">
+  <p><strong>Key Definition — Controller:</strong> The device that controls the heater's temperature, timer, and (on some models) lighting and steam. Can be a simple dial built into the heater, a wall-mounted panel, or a WiFi-connected app. Some heaters include a controller; others require you to purchase one separately — always check.</p>
+</div>
+
+<div class="callout-def">
+  <p><strong>Key Definition — UL Listed:</strong> The heater has been tested and certified by Underwriters Laboratories for electrical safety. This matters because many U.S. building codes and insurance companies require UL listing. Not all imported heaters have this certification. When a customer asks "is it safe?" — UL listing is your answer.</p>
+</div>
+
+<div class="callout-def">
+  <p><strong>Key Definition — Ventilation:</strong> Proper airflow in and out of the sauna room. Saunas need a fresh air intake (usually low, near the heater), an exhaust vent (usually high, on the opposite wall), and a drying vent near the ceiling — keep CLOSED during use, open after the session to let moisture escape and prevent mold. Without ventilation, the sauna becomes stuffy, the air quality drops, and the heater works harder. It's not a heater spec per se — but it affects heater performance, so you'll discuss it often.</p>
+</div>
+
+
+<!-- ========================================== -->
+<!-- CHAPTER 4 -->
+<!-- ========================================== -->
+<h2 id="ch4">Chapter 4: The Brand Tier System</h2>
+
+<p>PPW carries five sauna heater brands. They're not all interchangeable — each is positioned at a different tier, serving different customers. Understanding the tier system is the single fastest shortcut to recommending the right brand.</p>
+
+<p>We use a <strong>car analogy</strong> to make the tiers intuitive. If you can explain cars, you can explain sauna heaters.</p>
+
+<div class="tier-grid">
+  <div class="tier-card">
+    <h4>Harvia</h4>
+    <div class="tier-label">The Toyota &mdash; Reliable, Affordable</div>
+    <p>Finland's leading sauna heater manufacturer. Harvia is where most customers start — wide range, competitive pricing, solid quality.</p>
+    <ul>
+      <li>57 products across 15 families</li>
+      <li>Electric + wood-burning</li>
+      <li>Entry-level to mid-range pricing</li>
+      <li>70–80% of buyers eventually upgrade</li>
+    </ul>
+  </div>
+
+  <div class="tier-card">
+    <h4>HUUM</h4>
+    <div class="tier-label">The BMW / Mercedes &mdash; Design-Forward</div>
+    <p>Estonian brand known for stunning, minimalist design. Their DROP heater won the Red Dot Design Award. When aesthetics matter as much as performance, HUUM is the answer.</p>
+    <ul>
+      <li>29 products across 7 families</li>
+      <li>Electric + wood-burning</li>
+      <li>Mid-range to premium pricing</li>
+      <li>Design-conscious buyers love it</li>
+    </ul>
+  </div>
+
+  <div class="tier-card">
+    <h4>Saunum</h4>
+    <div class="tier-label">The Bentley / Rolls Royce &mdash; The Best</div>
+    <p>The absolute top of the market. Patented air-blending technology, optional salt therapy, massive 80kg (180 lbs) stone capacity, UL listed, and four independent safety systems. When a customer wants the best and budget isn't the constraint — this is it.</p>
+    <ul>
+      <li>5 products across 2 families</li>
+      <li>Electric only</li>
+      <li>Premium pricing</li>
+      <li>Strongest "wow factor" story</li>
+    </ul>
+  </div>
+
+  <div class="tier-card">
+    <h4>Narvi</h4>
+    <div class="tier-label">Traditional Finnish Craftsmanship</div>
+    <p>Finnish company specializing in wood-burning heaters. For the customer who wants an authentic Finnish wood-burning experience with traditional craftsmanship.</p>
+    <ul>
+      <li>7 products across 5 families</li>
+      <li>Wood-burning only</li>
+      <li>Mid-range pricing</li>
+      <li>Traditional sauna purists</li>
+    </ul>
+  </div>
+
+  <div class="tier-card">
+    <h4>Cozy Heat</h4>
+    <div class="tier-label">The Wood-Fire King &mdash; Best in Class</div>
+    <p>Premium wood-burning heaters with patented dual combustion technology — burns 25-40% more fuel efficiently and produces significantly fewer emissions (German BImSchV certified). When a customer wants wood-burning but wants the BEST, Cozy Heat is the answer.</p>
+    <ul>
+      <li>10 products across 5 families</li>
+      <li>Wood-burning only</li>
+      <li>Premium pricing</li>
+      <li>Eco-conscious wood-burner buyers</li>
+    </ul>
+  </div>
+</div>
+
+<div class="callout-frame">
+  <p><strong>How to Frame This:</strong></p>
+  <p><strong>The core concept:</strong> The car analogy makes brand positioning instantly understandable. Everyone knows a Toyota is reliable and affordable, and a Bentley is top-of-the-line. You don't need to explain every feature — the analogy does the heavy lifting.</p>
+  <p><strong>What the customer needs to understand:</strong> There's no "bad" choice. Every brand is great at its tier. The question is: what level of experience do they want, and what's their budget?</p>
+  <p><strong>PPW framework to apply:</strong> Three Tens — build certainty in the product by positioning it confidently within the tier system. If you hesitate or seem unsure, they lose confidence.</p>
+</div>
+
+
+<!-- ========================================== -->
+<!-- CHAPTER 5 -->
+<!-- ========================================== -->
+<h2 id="ch5">Chapter 5: Harvia — The Toyota</h2>
+
+<p>Harvia is Finland's leading sauna heater manufacturer. If a customer has heard of one sauna brand, it's probably Harvia.</p>
+
+<h3>Why We Carry Harvia</h3>
+<ul>
+  <li><strong>Breadth of lineup</strong> — 15 product families, 57 products. Whatever the customer's space, budget, or style, there's a Harvia for it.</li>
+  <li><strong>Price accessibility</strong> — Harvia gets more people into the sauna world. Not everyone starts with a $3,000 heater.</li>
+  <li><strong>The upgrade pipeline</strong> — This is key. 70-80% of Harvia buyers come back later and upgrade to HUUM or Saunum. Harvia is the gateway drug.</li>
+</ul>
+
+<div class="callout-tip">
+  <p><strong>Pro Tip:</strong> Think of it like cars: your first car, you're just happy it drives. Your second car, you want features. 70-80% of Harvia buyers come back for their second heater and upgrade.</p>
+</div>
+
+<h3>Key Harvia Families to Know</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Family</th>
+      <th>Type</th>
+      <th>Best For</th>
+      <th>Notable Feature</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>KIP</strong></td>
+      <td>Electric, wall-mount</td>
+      <td>Small saunas, budget-conscious</td>
+      <td>Compact, affordable entry point</td>
+    </tr>
+    <tr>
+      <td><strong>Cilindro</strong></td>
+      <td>Electric, floor-standing</td>
+      <td>Mid-size rooms, more stones</td>
+      <td>Pillar design, open stone cage, great l&ouml;yly</td>
+    </tr>
+    <tr>
+      <td><strong>Virta</strong></td>
+      <td>Electric, wall-mount</td>
+      <td>Premium residential</td>
+      <td>Stainless steel, modern look</td>
+    </tr>
+    <tr>
+      <td><strong>Virta Combi</strong></td>
+      <td>Electric + steam, wall-mount</td>
+      <td>Customers who want both dry and steam</td>
+      <td>Built-in steam generator (combi unit)</td>
+    </tr>
+    <tr>
+      <td><strong>Legend</strong></td>
+      <td>Electric, floor-standing</td>
+      <td>Customers wanting more stone mass</td>
+      <td>Large stone cage, impressive look</td>
+    </tr>
+    <tr>
+      <td><strong>The Wall</strong></td>
+      <td>Electric, wall-mount</td>
+      <td>Space-saving installs</td>
+      <td>Slim profile, minimal floor footprint</td>
+    </tr>
+    <tr>
+      <td><strong>M Series</strong></td>
+      <td>Wood-burning</td>
+      <td>Traditional, outdoor, off-grid</td>
+      <td>Time-tested Finnish wood stove design</td>
+    </tr>
+    <tr>
+      <td><strong>Pro</strong></td>
+      <td>Electric, floor-standing</td>
+      <td>Commercial / large rooms</td>
+      <td>Heavy-duty, high kW options</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="callout-tip">
+  <p><strong>Pro Tip:</strong> Don't try to memorize all 15 Harvia families on day one. Focus on <strong>KIP</strong> (entry-level wall mount), <strong>Cilindro</strong> (mid-range floor pillar), <strong>Virta/Virta Combi</strong> (premium wall mount), and <strong>Legend</strong> (big stone capacity). Those four cover 80% of Harvia conversations. Refer to the full Harvia Brand Guide for detailed specs.</p>
+</div>
+
+
+<!-- ========================================== -->
+<!-- CHAPTER 6 -->
+<!-- ========================================== -->
+<h2 id="ch6">Chapter 6: HUUM — The BMW</h2>
+
+<p>HUUM is an Estonian brand that entered the sauna market with a design-first philosophy. If Harvia is function over form, HUUM is form AND function. Their heaters look like modern art pieces — and they perform beautifully.</p>
+
+<h3>Why We Carry HUUM</h3>
+<ul>
+  <li><strong>Design wins sales</strong> — When a customer is building a luxury home sauna, aesthetics matter. HUUM heaters are conversation starters.</li>
+  <li><strong>The "wow" factor on a call</strong> — When you describe or show HUUM products, customers react. The DROP looks like a water droplet. The HIVE is a modernist stone tower. These designs sell themselves.</li>
+  <li><strong>Strong mid-to-premium positioning</strong> — Fills the gap between Harvia's accessibility and Saunum's ultra-premium tier.</li>
+</ul>
+
+<h3>Key HUUM Families to Know</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Family</th>
+      <th>Type</th>
+      <th>Best For</th>
+      <th>Notable Feature</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>DROP</strong></td>
+      <td>Electric, wall-mount</td>
+      <td>Design-focused small-to-mid saunas</td>
+      <td>Water-drop shape, Red Dot Design Award winner</td>
+    </tr>
+    <tr>
+      <td><strong>HIVE</strong></td>
+      <td>Electric, floor-standing</td>
+      <td>Mid-to-large rooms, stone lovers</td>
+      <td>Beehive-shaped stone tower, huge stone capacity</td>
+    </tr>
+    <tr>
+      <td><strong>HIVE Wood</strong></td>
+      <td>Wood-burning, floor-standing</td>
+      <td>Design-forward wood-burning</td>
+      <td>Same iconic shape, wood-fired</td>
+    </tr>
+    <tr>
+      <td><strong>CLIFF</strong></td>
+      <td>Electric, wall-mount</td>
+      <td>Space-saving, compact saunas</td>
+      <td>Sleek wall-mount with clean lines</td>
+    </tr>
+    <tr>
+      <td><strong>STEEL</strong></td>
+      <td>Electric, floor-standing</td>
+      <td>Commercial / large rooms</td>
+      <td>Heavy-duty, industrial-chic design</td>
+    </tr>
+    <tr>
+      <td><strong>CORE</strong></td>
+      <td>Electric, floor-standing</td>
+      <td>Versatile all-rounder</td>
+      <td>Clean cylindrical design</td>
+    </tr>
+    <tr>
+      <td><strong>HIVE Flow</strong></td>
+      <td>Wood-burning, floor-standing</td>
+      <td>Design-forward wood-burning</td>
+      <td>4 models (Flow, Flow LS, Flow Mini, Flow Mini LS)</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="callout-frame">
+  <p><strong>How to Frame This:</strong></p>
+  <p><strong>The core concept:</strong> HUUM is for the customer who sees the sauna as part of their home's design, not just a utility room. It's the difference between a basic kitchen and a chef's kitchen — both cook food, but one is a showpiece.</p>
+  <p><strong>What the customer needs to understand:</strong> They're not paying more just for looks. HUUM heaters are designed to hold substantial stone mass and produce excellent l&ouml;yly. The design is a bonus on top of real performance.</p>
+  <p><strong>PPW framework to apply:</strong> Gap Selling — the customer's desired state includes a beautiful sauna they're proud to show friends. HUUM bridges that gap.</p>
+</div>
+
+
+<!-- ========================================== -->
+<!-- CHAPTER 7 -->
+<!-- ========================================== -->
+<h2 id="ch7">Chapter 7: Saunum — The Bentley</h2>
+
+<p>Saunum is the top of our lineup. It's not just a heater — it's a completely different approach to how a sauna works. If a customer wants the absolute best sauna experience money can buy, this is where you point them.</p>
+
+<div class="callout-frame">
+  <p><strong>How to Frame This:</strong></p>
+  <p><strong>The core concept:</strong> Any heater can make a hot box. Only Saunum blends the air to create a real sauna experience.</p>
+</div>
+
+<h3>Why We Carry Saunum</h3>
+<ul>
+  <li><strong>Patented air-blending technology</strong> — Saunum's patented Climate Equalizer system actively circulates air to eliminate heat stratification. Instead of a 60&deg;F difference between ceiling and floor, Saunum creates even heat throughout. This is their biggest differentiator.</li>
+  <li><strong>Massive stone capacity</strong> — Up to 80kg (180 lbs) of stones. That's a "thermal battery" that stores enormous heat energy and produces unbelievably soft l&ouml;yly.</li>
+  <li><strong>Salt therapy option</strong> — Saunum heaters can integrate salt panels for halotherapy. This is a unique selling point no other brand offers.</li>
+  <li><strong>UL Listed</strong> — Fully certified for the U.S. market. Insurance-friendly.</li>
+  <li><strong>Four independent safety systems</strong> — Two physical high limiters plus two software-based safety monitors, including smart door detection that monitors heating rate. The safest heater we carry.</li>
+</ul>
+
+<h3>Saunum Families</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Family</th>
+      <th>Type</th>
+      <th>Best For</th>
+      <th>Notable Feature</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Air</strong></td>
+      <td>Electric, floor-standing</td>
+      <td>Standard-to-large residential saunas</td>
+      <td>Climate Equalizer air blending, salt therapy compatible</td>
+    </tr>
+    <tr>
+      <td><strong>Air L</strong></td>
+      <td>Electric, floor-standing</td>
+      <td>Larger rooms / commercial</td>
+      <td>Larger capacity version of the Air</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="callout-frame">
+  <p><strong>How to Frame This:</strong></p>
+  <p><strong>The core concept:</strong> Every other heater heats from the top down (hot ceiling, cool floor). Saunum heats the entire room evenly. It's like the difference between a space heater in one corner versus central heating that reaches every room. Once you experience even heat distribution, going back feels wrong.</p>
+  <p><strong>What the customer needs to understand:</strong> Saunum doesn't just make a hot room — it creates a fundamentally better environment. The air blending eliminates the harsh "head is on fire, feet are cold" problem.</p>
+  <p><strong>PPW framework to apply:</strong> The Heater Investment Reframe — if they're already spending $10,000+ on a sauna build, the difference between a good heater and the best heater is a fraction of the total cost. Don't put a 2-liter engine in a Bentley.</p>
+</div>
+
+<div class="callout-tip">
+  <p><strong>Pro Tip:</strong> Saunum is your highest-margin, highest-value sale. With only 5 SKUs across 2 families, it's also the easiest to learn. Master this brand first — when you can confidently explain air blending and salt therapy, you can handle any heater conversation.</p>
+</div>
+
+<div class="callout-tip">
+  <p><strong>Pro Tip:</strong> When HUUM and Saunum heaters fall in the same price range, recommend Saunum — the customer gets air blending, salt therapy, and UL listing for the same money.</p>
+</div>
+
+<div class="callout-tip">
+  <p><strong>Pro Tip:</strong> For barrel saunas, Saunum offers a dedicated barrel sauna mode that pushes hot air from the ceiling down to warm the floor — solving the universal cold-floor problem in barrel saunas.</p>
+</div>
+
+
+<!-- ========================================== -->
+<!-- CHAPTER 8 -->
+<!-- ========================================== -->
+<h2 id="ch8">Chapter 8: Narvi — Finnish Tradition</h2>
+
+<p>Narvi is a Finnish company specializing in <strong>wood-burning heaters</strong>. They don't try to be everything to everyone — they do one thing and do it with decades of Finnish tradition behind them.</p>
+
+<h3>Why We Carry Narvi</h3>
+<ul>
+  <li><strong>Authentic Finnish wood-burning</strong> — For customers who want the real deal, made in Finland with decades of tradition behind every stove.</li>
+  <li><strong>Solid mid-range pricing</strong> — More accessible than Cozy Heat while still offering genuine Finnish craftsmanship.</li>
+  <li><strong>Fills the traditional niche</strong> — Some customers specifically want a wood stove that looks and feels traditional, not modern.</li>
+</ul>
+
+<h3>Narvi Families</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Family</th>
+      <th>Best For</th>
+      <th>Notable Feature</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>NC</strong></td>
+      <td>Standard cabins and outdoor saunas</td>
+      <td>Classic Finnish wood stove design</td>
+    </tr>
+    <tr>
+      <td><strong>30/50</strong></td>
+      <td>Smaller to mid-size rooms</td>
+      <td>Compact traditional heaters</td>
+    </tr>
+    <tr>
+      <td><strong>Inari</strong></td>
+      <td>Larger rooms, more stones</td>
+      <td>Higher stone capacity for better l&ouml;yly</td>
+    </tr>
+    <tr>
+      <td><strong>Kuru</strong></td>
+      <td>Premium wood-burning</td>
+      <td>Upgraded materials and finish</td>
+    </tr>
+    <tr>
+      <td><strong>Luosto</strong></td>
+      <td>Large saunas</td>
+      <td>High heat output</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="callout-frame">
+  <p><strong>How to Frame This:</strong></p>
+  <p><strong>The core concept:</strong> Narvi is the Finnish workshop with decades of tradition. Think of it like buying a handcrafted guitar from a luthier versus a factory. The product has soul and heritage.</p>
+  <p><strong>What the customer needs to understand:</strong> If they want a wood-burning heater with authentic Finnish pedigree at a reasonable price, Narvi is the answer. If they want the absolute peak of wood-burning technology, that's Cozy Heat (next chapter).</p>
+</div>
+
+
+<!-- ========================================== -->
+<!-- CHAPTER 9 -->
+<!-- ========================================== -->
+<h2 id="ch9">Chapter 9: Cozy Heat — The Wood-Fire King</h2>
+
+<p>Cozy Heat makes the best wood-burning sauna heaters on the market. Period. Their secret weapon is <strong>dual combustion technology</strong>, and once you understand it, you'll understand why these heaters are in a class of their own.</p>
+
+<div class="callout-def">
+  <p><strong>Key Definition — Dual Combustion (Secondary Burn):</strong> In a standard wood stove, some of the gases from burning wood escape up the chimney unburned — wasted energy and extra emissions. Dual combustion captures those gases and burns them a second time, extracting up to <strong>25-40% more energy</strong> from the same amount of wood. Think of it like a turbocharger for a car engine — it squeezes more power out of the same fuel.</p>
+</div>
+
+<h3>Why We Carry Cozy Heat</h3>
+<ul>
+  <li><strong>25-40% more fuel efficient</strong> — Burns less wood for the same heat. Customers save money on firewood over the life of the heater.</li>
+  <li><strong>German BImSchV emissions certified</strong> — Meets the strictest emissions standards in the world. For eco-conscious customers, this matters enormously.</li>
+  <li><strong>Premium build quality</strong> — Heavy-gauge steel, precision engineering.</li>
+  <li><strong>Fills the "best wood-burning" slot</strong> — Narvi is the traditional option. Cozy Heat is the premium option. Together they cover the full wood-burning market.</li>
+</ul>
+
+<h3>Cozy Heat Families</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Family</th>
+      <th>Best For</th>
+      <th>Notable Feature</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Cozy</strong></td>
+      <td>Standard residential</td>
+      <td>Core dual combustion heater</td>
+    </tr>
+    <tr>
+      <td><strong>OG</strong></td>
+      <td>Outdoor / larger rooms</td>
+      <td>Higher output</td>
+    </tr>
+    <tr>
+      <td><strong>O</strong></td>
+      <td>Versatile mid-size</td>
+      <td>Balanced performance</td>
+    </tr>
+    <tr>
+      <td><strong>Quattro</strong></td>
+      <td>Large saunas</td>
+      <td>Maximum heating capacity</td>
+    </tr>
+    <tr>
+      <td><strong>SW</strong></td>
+      <td>Specialized applications</td>
+      <td>Unique form factor</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="callout-frame">
+  <p><strong>How to Frame This:</strong></p>
+  <p><strong>The core concept:</strong> Cozy Heat is to wood-burning heaters what a Tesla is to electric cars — it takes an established technology and makes it dramatically more efficient and cleaner. The dual combustion system means less wood, less smoke, more heat.</p>
+  <p><strong>What the customer needs to understand:</strong> They're not just buying a stove — they're buying a more enjoyable, less wasteful sauna experience. Less time feeding the fire, less smoke for the neighbors, less ash to clean.</p>
+  <p><strong>PPW framework to apply:</strong> Gap Selling — the customer's current state with a regular wood stove involves more wood consumption, more emissions, and more maintenance. Cozy Heat closes that gap.</p>
+</div>
+
+
+<!-- ========================================== -->
+<!-- CHAPTER 10 -->
+<!-- ========================================== -->
+<h2 id="ch10">Chapter 10: How to Size a Heater</h2>
+
+<p>This is one of the most important skills you'll develop. An undersized heater can't heat the room. An oversized heater wastes money and can overheat the space. Getting it right builds trust with the customer — they see you as a knowledgeable consultant, not just a salesperson.</p>
+
+<h3>The Basic Formula</h3>
+
+<p>The core calculation is simple:</p>
+
+<div style="background: #fff; border: 2px solid #0F2439; border-radius: 8px; padding: 24px; margin: 20px 0; text-align: center;">
+  <p style="font-size: 22px; color: #0F2439; margin-bottom: 8px;"><strong>Room Volume (cu ft) &divide; 50 = Minimum kW needed</strong></p>
+  <p style="font-size: 14px; color: #666;">This is the baseline. Adjustment factors below may increase the requirement.</p>
+</div>
+
+<p><strong>Example:</strong> A sauna room that is 6 ft &times; 6 ft &times; 7 ft = 252 cubic feet. 252 &divide; 50 = <strong>5.04 kW</strong>. So you'd recommend at least a <strong>6 kW heater</strong> (always round up to the next available size).</p>
+
+<h3>Adjustment Factors</h3>
+
+<p>The basic formula assumes a perfectly insulated, indoor sauna with no windows. Real life is rarely that clean. Here are the factors that increase your kW requirement:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Factor</th>
+      <th>Adjustment</th>
+      <th>Why</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Uninsulated or poorly insulated walls</strong></td>
+      <td>Add 25–50% more kW</td>
+      <td>Heat escapes through the walls. The heater has to work harder to maintain temperature.</td>
+    </tr>
+    <tr>
+      <td><strong>Glass door or glass wall</strong></td>
+      <td>Add ~1.5 cu ft per sq ft of glass to the room volume</td>
+      <td>Glass is a poor insulator and radiates heat outward. Treat each square foot of glass as if it adds 1.5 cubic feet to your room.</td>
+    </tr>
+    <tr>
+      <td><strong>Concrete, brick, or stone surfaces</strong></td>
+      <td>Add ~1.8 cu ft per sq ft of exposed masonry</td>
+      <td>Masonry absorbs enormous amounts of heat before the room warms up. It's like trying to fill a bigger bucket.</td>
+    </tr>
+    <tr>
+      <td><strong>Outdoor placement</strong></td>
+      <td>Add 10–20% more kW</td>
+      <td>Ambient cold (especially in winter) increases heat loss through the walls.</td>
+    </tr>
+    <tr>
+      <td><strong>Log cabin walls (not insulated)</strong></td>
+      <td>Multiply total room volume by 1.5</td>
+      <td>Exposed log walls are thick and absorb a lot of heat energy before the room reaches sauna temperatures.</td>
+    </tr>
+    <tr>
+      <td><strong>Ceiling above 7 feet</strong></td>
+      <td>Already factored into volume, but consider the extra stratification</td>
+      <td>Higher ceilings mean more hot air pooling above head height. The effective "sauna zone" takes longer to heat.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Worked Example with Adjustments</h3>
+
+<div style="background: #fff; border-radius: 8px; padding: 24px; margin: 20px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.07);">
+  <h4 style="margin-top: 0; color: #0F2439;">Customer Scenario:</h4>
+  <p>"I'm building a 7' &times; 8' &times; 7' sauna in my backyard. It has a full glass door (about 15 sq ft of glass) and it's going in a shed that isn't insulated."</p>
+  <h4 style="color: #C8862A;">Calculation:</h4>
+  <ul>
+    <li>Base volume: 7 &times; 8 &times; 7 = <strong>392 cu ft</strong></li>
+    <li>Glass adjustment: 15 sq ft &times; 1.5 = +22.5 cu ft &rarr; <strong>414.5 cu ft</strong></li>
+    <li>Outdoor/uninsulated adjustment: 414.5 &times; 1.4 (splitting the difference) = <strong>~580 cu ft effective</strong></li>
+    <li>kW needed: 580 &divide; 50 = <strong>11.6 kW &rarr; recommend a 12 kW heater</strong></li>
+  </ul>
+</div>
+
+<div class="callout-tip">
+  <p><strong>Pro Tip:</strong> When in doubt, size UP, not down. An 8kW heater in a room that needs 9kW will struggle, cycle constantly, and never feel quite right. A 10.5kW heater in that same room will heat up faster, hold temperature more comfortably, and create a better experience. The customer will never complain about a heater that's slightly oversized — but they'll definitely notice one that's too small.</p>
+</div>
+
+<div class="callout-warn">
+  <p><strong>Watch Out:</strong> Never guess on sizing. Always ask for the room dimensions. "What's the rough size of your sauna space?" is one of the first questions in the qualifying checklist for a reason. If a customer doesn't know their dimensions, encourage them to measure before you make a recommendation. A wrong recommendation erodes trust fast.</p>
+</div>
+
+
+<!-- ========================================== -->
+<!-- CHAPTER 11 -->
+<!-- ========================================== -->
+<h2 id="ch11">Chapter 11: Matching Customer to Brand</h2>
+
+<p>Now that you understand all five brands and how sizing works, let's put it together. Here's how to quickly match a customer to the right brand based on their needs.</p>
+
+<h3>The Decision Tree</h3>
+
+<div class="decision-box">
+  <p class="q">Step 1: Electric or Wood-Burning?</p>
+  <div class="a">
+    <p><span>&rarr; Wood-Burning:</span> Go to Step 2W</p>
+    <p><span>&rarr; Electric:</span> Go to Step 2E</p>
+    <p><span>&rarr; Not sure:</span> Ask: "Will your sauna have access to a chimney, or is this going indoors?" If indoor with no chimney access, it's electric.</p>
+  </div>
+</div>
+
+<div class="decision-box">
+  <p class="q">Step 2W (Wood-Burning): What's the priority?</p>
+  <div class="a">
+    <p><span>&rarr; "I want the best wood-burning heater" / efficiency / eco-friendly:</span> <strong>Cozy Heat</strong></p>
+    <p><span>&rarr; "I want traditional / authentic Finnish" / budget-conscious:</span> <strong>Narvi</strong></p>
+    <p><span>&rarr; "I want something that looks amazing":</span> <strong>HUUM HIVE Wood</strong></p>
+    <p><span>&rarr; "I need something affordable and reliable":</span> <strong>Harvia M Series</strong></p>
+  </div>
+</div>
+
+<div class="decision-box">
+  <p class="q">Step 2E (Electric): What's the budget range?</p>
+  <div class="a">
+    <p><span>&rarr; Entry-level / budget-conscious / "what's a good starter?":</span> Go to Step 3H (Harvia)</p>
+    <p><span>&rarr; Mid-range / "I want something nice" / design matters:</span> Go to Step 3M (HUUM)</p>
+    <p><span>&rarr; Premium / "I want the best" / "money isn't the issue":</span> Go to Step 3P (Saunum)</p>
+    <p><span>&rarr; Not sure on budget:</span> Start with Harvia, introduce HUUM, then Saunum. Let the customer self-select.</p>
+  </div>
+</div>
+
+<div class="decision-box">
+  <p class="q">Step 3H (Harvia Electric): What's the room situation?</p>
+  <div class="a">
+    <p><span>&rarr; Small room, wall space limited:</span> <strong>KIP</strong> (compact wall-mount)</p>
+    <p><span>&rarr; Mid-size room, wants good steam:</span> <strong>Cilindro</strong> (floor pillar, more stones)</p>
+    <p><span>&rarr; Wants dry + steam modes:</span> <strong>Virta Combi</strong></p>
+    <p><span>&rarr; Large/commercial:</span> <strong>Pro</strong> or <strong>Club</strong></p>
+  </div>
+</div>
+
+<div class="decision-box">
+  <p class="q">Step 3M (HUUM Electric): What matters most?</p>
+  <div class="a">
+    <p><span>&rarr; Design / aesthetics / "it has to look great":</span> <strong>DROP</strong> (wall) or <strong>HIVE</strong> (floor)</p>
+    <p><span>&rarr; Maximum stone capacity / best steam:</span> <strong>HIVE</strong> (floor-standing, large stone cage)</p>
+    <p><span>&rarr; Compact space but still want HUUM quality:</span> <strong>CLIFF</strong> (wall-mount)</p>
+    <p><span>&rarr; Large room / commercial:</span> <strong>STEEL</strong></p>
+  </div>
+</div>
+
+<div class="decision-box">
+  <p class="q">Step 3P (Saunum Electric): Which model?</p>
+  <div class="a">
+    <p><span>&rarr; Standard residential room:</span> <strong>Saunum Air</strong></p>
+    <p><span>&rarr; Larger room or commercial space:</span> <strong>Saunum Air L</strong></p>
+    <p>With Saunum, the question is simply room size. Both models offer the same air-blending technology, salt therapy compatibility, and safety systems.</p>
+  </div>
+</div>
+
+<div class="callout-frame">
+  <p><strong>How to Frame This:</strong></p>
+  <p><strong>The core concept:</strong> You're not pushing a brand — you're diagnosing needs and prescribing the right solution. Like a doctor asking about symptoms before writing a prescription.</p>
+  <p><strong>What the customer needs to understand:</strong> They should feel that your recommendation is based on THEIR specific situation, not on what you want to sell. When your recommendation clearly connects to what they told you, trust skyrockets.</p>
+  <p><strong>PPW framework to apply:</strong> Bridge Technique — answer their initial question first, then bridge into discovery. "Great question about the HUUM HIVE. Before I tell you if it's the right fit, can I ask a few quick questions about your space?"</p>
+</div>
+
+
+<!-- ========================================== -->
+<!-- CHAPTER 12 -->
+<!-- ========================================== -->
+<h2 id="ch12">Chapter 12: The Qualifying Checklist</h2>
+
+<p>These 12 questions should become second nature. They're the foundation of every heater sale. Each question maps directly to a product recommendation.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Question</th>
+      <th>Why You're Asking</th>
+      <th>How It Maps to Product</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td><strong>"What's your first name?"</strong></td>
+      <td>Build rapport. Personalize the conversation.</td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td><strong>"What got you interested in a sauna?"</strong></td>
+      <td>Understand motivation (health, relaxation, social, tradition).</td>
+      <td>Motivation reveals tier. Health/wellness buyers lean premium.</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td><strong>"Have you looked at any specific models?"</strong></td>
+      <td>Gauge research level and anchor point.</td>
+      <td>If they mention a brand, you know their baseline.</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td><strong>"Where is it going?"</strong></td>
+      <td>Indoor vs. outdoor, room type, existing structure.</td>
+      <td>Indoor = electric likely. Cabin/outdoor = wood-burning option.</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td><strong>"Rough dimensions of the space?"</strong></td>
+      <td>Sizing the heater (kW calculation).</td>
+      <td>Direct input to the sizing formula. Critical question.</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td><strong>"Indoor or outdoor?"</strong></td>
+      <td>Affects kW adjustment factors and heater type.</td>
+      <td>Outdoor adds 10–20% to kW requirement.</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td><strong>"How many people typically using it?"</strong></td>
+      <td>Affects room size recommendation and bench layout.</td>
+      <td>More people = possibly larger room = more kW.</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td><strong>"What electrical do you have available?"</strong></td>
+      <td>Determines voltage (120V vs. 240V) and amperage.</td>
+      <td>Limits which models are feasible. Most need 240V.</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td><strong>"Infrared, traditional, or both?"</strong></td>
+      <td>PPW sells traditional (Finnish) sauna heaters, not infrared.</td>
+      <td>If they want IR, educate on the difference. If traditional, proceed.</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td><strong>"What's your budget range for the heater?"</strong></td>
+      <td>Tier selection — Harvia, HUUM, or Saunum?</td>
+      <td>Maps directly to brand tier.</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td><strong>"What's your timeline?"</strong></td>
+      <td>Stock availability, shipping lead times.</td>
+      <td>Some models ship faster than others.</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td><strong>"Best email for follow-up?"</strong></td>
+      <td>Capture the lead. Send quotes, links, specs.</td>
+      <td>—</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="callout-tip">
+  <p><strong>Pro Tip:</strong> You don't have to ask these in order, and you shouldn't fire them off like a survey. Weave them naturally into the conversation. The best salespeople get all 12 answers without the customer feeling like they're being interrogated. Think of it as a conversation, not a checklist — but make sure you get the data.</p>
+</div>
+
+
+<!-- ========================================== -->
+<!-- CHAPTER 13 -->
+<!-- ========================================== -->
+<h2 id="ch13">Chapter 13: The Heater Investment Reframe</h2>
+
+<p>This is one of the most powerful concepts in your toolkit. Memorize the principle and adapt it to your own words.</p>
+
+<h3>The Problem</h3>
+<p>Customers often under-invest in the heater. They'll spend $7,000–$15,000 on a sauna room (kit, installation, tile work, lighting) and then try to save $300 on the heater — the one component that determines 80% of the experience.</p>
+
+<h3>The Reframe</h3>
+
+<div style="background: #fff; border: 3px solid #C8862A; border-radius: 8px; padding: 28px; margin: 24px 0; text-align: center;">
+  <p style="font-size: 20px; color: #0F2439; font-weight: 700; margin-bottom: 8px;">"A $500 heater in a $7,000 sauna is like putting a 2-liter engine in a Bentley."</p>
+  <p style="font-size: 15px; color: #666;">The room looks beautiful. The heater struggles. Every session is a reminder that they cut corners on the one thing that matters most.</p>
+</div>
+
+<div class="callout-frame">
+  <p><strong>How to Frame This:</strong></p>
+  <p><strong>The core concept:</strong> The heater is an investment in every future sauna session. Over 10 years, even a $500 price difference between a basic and a premium heater works out to pennies per session. But the experience difference is night and day.</p>
+  <p><strong>What the customer needs to understand:</strong> They're not comparing a $600 heater to a $1,200 heater. They're comparing 10 years of "good enough" sessions to 10 years of incredible sessions. The cost-per-session math makes the premium option look like a no-brainer.</p>
+  <p><strong>PPW framework to apply:</strong> Gap Selling — the customer's desired state is a premium sauna experience. The heater is the bridge. Also: the Three Tens — they need certainty that spending more on the heater is genuinely worth it. Your confidence and the math should get them there.</p>
+</div>
+
+<h3>The Math That Closes</h3>
+
+<p>Here's a simple calculation you can walk through with a customer:</p>
+
+<div style="background: #fff; border-radius: 8px; padding: 24px; margin: 20px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.07);">
+  <ul>
+    <li>Customer uses sauna <strong>3 times per week</strong> = ~156 sessions/year</li>
+    <li>Over <strong>10 years</strong> = ~1,560 sessions</li>
+    <li>Difference between a $700 Harvia and a $1,800 Saunum = <strong>$1,100</strong></li>
+    <li><strong>$1,100 &divide; 1,560 sessions = $0.71 per session</strong></li>
+    <li>For less than a dollar per session, they get air blending, salt therapy, 80kg (180 lbs) of stones, and four safety systems</li>
+  </ul>
+</div>
+
+<div class="callout-tip">
+  <p><strong>Pro Tip:</strong> Don't force the upsell. Present the math, show the value, and let the customer decide. If they genuinely can't afford the premium tier, Harvia is an excellent product and they'll be happy with it. Remember — 70-80% come back and upgrade later. Plant the seed, don't push the tree.</p>
+</div>
+
+<div class="callout-tip">
+  <p><strong>Pro Tip:</strong> Divide the heater price by years of daily use — the per-day or per-session cost is almost always less than a cup of coffee. Do this math out loud with the customer.</p>
+</div>
+
+
+<!-- ========================================== -->
+<!-- CHAPTER 14 -->
+<!-- ========================================== -->
+<h2 id="ch14">Chapter 14: Common Objections</h2>
+
+<p>You'll hear these objections regularly. Here's how to handle each one using the <strong>LAER framework</strong>.</p>
+
+<div class="callout-def">
+  <p><strong>Key Definition — LAER Framework:</strong> <strong>L</strong>isten &rarr; <strong>A</strong>cknowledge &rarr; <strong>E</strong>xplore &rarr; <strong>R</strong>espond. The key insight: most objections have a deeper concern underneath. A customer who says "it's too expensive" might really mean "I'm not convinced it's worth the difference." LAER helps you find the real concern before responding.</p>
+</div>
+
+<h3>Objection 1: "It's too expensive"</h3>
+
+<p><strong>Listen:</strong> Let them finish. Don't interrupt or jump to defense.</p>
+<p><strong>Acknowledge:</strong> The feeling is valid. Sauna heaters aren't cheap, and the price range can be surprising.</p>
+<p><strong>Explore:</strong> What specifically feels too expensive? Is it the heater alone, or the total project cost? Are they comparing to a specific alternative? What's their budget range? Often the real issue is they don't yet see the value difference between tiers.</p>
+<p><strong>Respond:</strong> This is where the Heater Investment Reframe lives. Walk through the cost-per-session math. Compare the heater cost to their total project investment. If their budget is genuinely tight, confidently recommend the right Harvia — there's no shame in the Toyota tier.</p>
+
+<h3>Objection 2: "I found it cheaper on Amazon / another site"</h3>
+
+<p><strong>Listen:</strong> Take note of where they found it and what model.</p>
+<p><strong>Acknowledge:</strong> It makes sense to price-shop. Everyone does.</p>
+<p><strong>Explore:</strong> Does that price include the controller? (Often sold separately.) Is it the same voltage/configuration? Is the seller an authorized dealer? What's their return policy?</p>
+<p><strong>Respond:</strong> Position the <strong>Peak Protection Concierge</strong> — PPW's personal order management. When they buy from PPW, they get a dedicated person who manages the order, coordinates with an electrician for free, and advocates with the manufacturer if anything goes wrong. Amazon gives you a tracking number. PPW gives you a concierge. The price difference IS the service.</p>
+
+<h3>Objection 3: "I'll just go with the cheapest option"</h3>
+
+<p><strong>Listen:</strong> Understand that this might be budget-driven or knowledge-driven.</p>
+<p><strong>Acknowledge:</strong> Budget matters, and there's nothing wrong with being cost-conscious.</p>
+<p><strong>Explore:</strong> Ask what they're building. If they're spending $10,000 on a sauna room and going with the cheapest heater, gently surface the mismatch. If the whole project is budget-focused, respect that.</p>
+<p><strong>Respond:</strong> Use the car-engine analogy. If they're truly budget-constrained, recommend the best Harvia for their size and move on confidently. Your job is to make sure they get the right product for their situation, not to upsell everyone.</p>
+
+<h3>Objection 4: "Why not infrared? It's cheaper and easier"</h3>
+
+<p><strong>Listen:</strong> This is usually someone comparing traditional sauna to infrared sauna, which are fundamentally different experiences.</p>
+<p><strong>Acknowledge:</strong> Infrared saunas have their place and are popular for a reason.</p>
+<p><strong>Explore:</strong> What experience are they looking for? Do they want to throw water on stones (l&ouml;yly)? Do they want the social aspect of a hot room? Have they tried both?</p>
+<p><strong>Respond:</strong> Traditional saunas heat the AIR and the STONES. You can throw water for steam, you can control the humidity, you can share the experience with 2-6 people. Infrared heats your body directly — it's more like a personal therapy device. Neither is "better" — they're different. If they want the full Finnish sauna experience, traditional is the only path.</p>
+
+<div class="callout-warn">
+  <p><strong>Watch Out:</strong> Never trash infrared saunas. Some customers own one and are considering adding a traditional sauna. If you bash infrared, you've insulted their previous purchase and lost their trust. Respect the difference, educate on the distinction, and let them decide.</p>
+</div>
+
+<h3>Objection 5: "I need to think about it"</h3>
+
+<p><strong>Listen:</strong> This is the most common stall. It almost never means they literally need to think — it means they have an unresolved concern.</p>
+<p><strong>Acknowledge:</strong> "Absolutely, it's a big decision."</p>
+<p><strong>Explore:</strong> "So I can send you the most helpful information — is it the sizing, the brand choice, the price, or something else you want to sit with?" This question surfaces the real blocker 80% of the time.</p>
+<p><strong>Respond:</strong> Address whatever they reveal. Then offer to send a follow-up email with a personalized recommendation and the math. Always get the email (Question 12).</p>
+
+
+<!-- ========================================== -->
+<!-- CHAPTER 15 -->
+<!-- ========================================== -->
+<h2 id="ch15">Chapter 15: Electrical Basics for Sales</h2>
+
+<p>You don't need to be an electrician. But you need to understand enough to have a basic conversation and avoid recommending something the customer can't install.</p>
+
+<div class="callout-def">
+  <p><strong>Key Definition — Voltage (V):</strong> Think of voltage as the "pressure" of electricity. In North America, homes have two standard voltages: <strong>120V</strong> (standard wall outlets — what you plug a lamp into) and <strong>240V</strong> (heavy-duty circuits — what your clothes dryer or oven runs on). Most sauna heaters need 240V.</p>
+</div>
+
+<div class="callout-def">
+  <p><strong>Key Definition — Amperage (Amps):</strong> If voltage is pressure, amperage is the "volume" of electricity flowing. Higher kW heaters draw more amps. A 6kW heater draws about 25 amps. A 10.5kW heater draws about 44 amps. The customer's electrical panel needs a breaker big enough to handle the load.</p>
+</div>
+
+<div class="callout-def">
+  <p><strong>Key Definition — Dedicated Circuit:</strong> An electrical circuit that serves only the sauna heater — nothing else is on it. This is required for safety and performance. An electrician runs a new wire from the electrical panel directly to the heater. This is where <strong>Peak Protection Concierge</strong> shines — PPW coordinates the electrician for free.</p>
+</div>
+
+<h3>Electrical Rules of Thumb</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Heater Size</th>
+      <th>Voltage</th>
+      <th>Typical Amperage</th>
+      <th>Wire Gauge (typical)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>2–4.5 kW</td>
+      <td>120V or 240V</td>
+      <td>15–20A</td>
+      <td>12 or 10 AWG</td>
+    </tr>
+    <tr>
+      <td>5–6 kW</td>
+      <td>240V</td>
+      <td>25–30A</td>
+      <td>10 AWG</td>
+    </tr>
+    <tr>
+      <td>7–9 kW</td>
+      <td>240V</td>
+      <td>30–40A</td>
+      <td>8 AWG</td>
+    </tr>
+    <tr>
+      <td>10–12 kW</td>
+      <td>240V</td>
+      <td>40–50A</td>
+      <td>6 AWG</td>
+    </tr>
+    <tr>
+      <td>13–18 kW</td>
+      <td>240V</td>
+      <td>50–80A</td>
+      <td>4–6 AWG</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="callout-warn">
+  <p><strong>Watch Out:</strong> Never tell a customer they can install the heater themselves unless it's a plug-in 120V model. Hardwired 240V heaters MUST be installed by a licensed electrician. Incorrect wiring is a fire hazard and voids the warranty. If a customer asks "can I do it myself?" — the answer for 240V is always "the wiring needs a licensed electrician, but we'll coordinate one for you at no extra charge through our Peak Protection Concierge."</p>
+</div>
+
+<div class="callout-tip">
+  <p><strong>Pro Tip:</strong> The electrical question (#8 in the qualifying checklist) is a great opportunity to introduce Peak Protection Concierge early. "What electrical do you have available? … Don't worry if you're not sure — when you order through us, we'll connect you with an electrician who can assess your panel and do the install. That's part of our concierge service, no extra charge." This builds value before you ever talk price.</p>
+</div>
+
+<h3>The Key Electrical Question</h3>
+<p>The single most important thing to find out: <strong>Does the customer have (or can they add) a 240V circuit with enough amperage?</strong> If yes, the world is open. If they're limited to 120V, you're looking at small heaters only (under 5kW), which limits room size to about 200 cubic feet.</p>
+
+
+<!-- ========================================== -->
+<!-- CHAPTER 16 -->
+<!-- ========================================== -->
+<h2 id="ch16">Chapter 16: Brand Comparison at a Glance</h2>
+
+<p>Here's every brand side by side. Use this table during calls when you need a quick comparison.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Feature</th>
+      <th>Harvia</th>
+      <th>HUUM</th>
+      <th>Saunum</th>
+      <th>Narvi</th>
+      <th>Cozy Heat</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Tier</strong></td>
+      <td>Toyota</td>
+      <td>BMW/Mercedes</td>
+      <td>Bentley/Rolls Royce</td>
+      <td>Traditional Finnish</td>
+      <td>Best Wood-Fired</td>
+    </tr>
+    <tr>
+      <td><strong>Fuel Type</strong></td>
+      <td>Electric + Wood</td>
+      <td>Electric + Wood</td>
+      <td>Electric only</td>
+      <td>Wood only</td>
+      <td>Wood only</td>
+    </tr>
+    <tr>
+      <td><strong>Product Count</strong></td>
+      <td>57</td>
+      <td>29</td>
+      <td>5</td>
+      <td>7</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <td><strong>Families</strong></td>
+      <td>15</td>
+      <td>7</td>
+      <td>2</td>
+      <td>5</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td><strong>Key Differentiator</strong></td>
+      <td>Widest selection, best entry price</td>
+      <td>Award-winning design</td>
+      <td>Air blending, salt therapy, 4 safety systems</td>
+      <td>Authentic Finnish wood craft</td>
+      <td>Dual combustion, 25-40% more fuel efficient</td>
+    </tr>
+    <tr>
+      <td><strong>Best For</strong></td>
+      <td>Budget shoppers, first-time buyers, versatility</td>
+      <td>Design-focused, luxury home builds</td>
+      <td>"I want the absolute best," high-end builds</td>
+      <td>Cabin owners, traditional purists</td>
+      <td>Eco-conscious, premium wood-burning</td>
+    </tr>
+    <tr>
+      <td><strong>Combi Option?</strong></td>
+      <td>Yes (Virta Combi)</td>
+      <td>No</td>
+      <td>No</td>
+      <td>No</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td><strong>UL Listed</strong></td>
+      <td>Varies by model</td>
+      <td>Varies by model</td>
+      <td>Yes</td>
+      <td>No (wood-burning)</td>
+      <td>No (wood-burning)</td>
+    </tr>
+    <tr class="highlight-row">
+      <td><strong>Upgrade Path</strong></td>
+      <td>Start here &rarr;</td>
+      <td>&rarr; Upgrade to &rarr;</td>
+      <td>&rarr; Ultimate destination</td>
+      <td>Standalone niche</td>
+      <td>Standalone niche</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="callout-frame">
+  <p><strong>How to Frame This:</strong></p>
+  <p><strong>The core concept:</strong> For electric heaters, there's a natural upgrade path: Harvia &rarr; HUUM &rarr; Saunum. For wood-burning, it's Harvia M &rarr; Narvi &rarr; Cozy Heat. When a customer is on the fence between tiers, remind them that 70-80% of entry-level buyers eventually upgrade. If they can stretch the budget now, they'll avoid paying twice.</p>
+</div>
+
+
+<!-- ========================================== -->
+<!-- CHAPTER 17 -->
+<!-- ========================================== -->
+<h2 id="ch17">Chapter 17: Quick Reference Cheat Sheet</h2>
+
+<p>Pull this up during calls. Everything you need at a glance.</p>
+
+<h3>Sizing Formula</h3>
+<div style="background: #fff; border: 2px solid #C8862A; border-radius: 8px; padding: 16px 24px; margin: 12px 0; font-size: 18px; text-align: center;">
+  <strong>Room cu ft &divide; 50 = Base kW</strong> &nbsp; | &nbsp; Then adjust for glass, masonry, outdoor, insulation &nbsp; | &nbsp; <strong>Always round UP</strong>
+</div>
+
+<h3>Brand Quick-Pick</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Customer Says...</th>
+      <th>You Recommend...</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>"I'm on a budget"</td><td><strong>Harvia</strong> (electric) or <strong>Harvia M</strong> (wood)</td></tr>
+    <tr><td>"I want it to look amazing"</td><td><strong>HUUM DROP</strong> or <strong>HIVE</strong></td></tr>
+    <tr><td>"I want the best electric heater"</td><td><strong>Saunum Air</strong></td></tr>
+    <tr><td>"I want traditional wood-burning"</td><td><strong>Narvi</strong></td></tr>
+    <tr><td>"I want the most efficient wood stove"</td><td><strong>Cozy Heat</strong></td></tr>
+    <tr><td>"I want dry AND steam sauna"</td><td><strong>Harvia Virta Combi</strong></td></tr>
+    <tr><td>"It's for a cabin off-grid"</td><td><strong>Narvi</strong> or <strong>Cozy Heat</strong> (wood-burning)</td></tr>
+    <tr><td>"I need something for a commercial space"</td><td><strong>Harvia Pro</strong>, <strong>HUUM STEEL</strong>, or <strong>Saunum Air L</strong></td></tr>
+  </tbody>
+</table>
+
+<h3>Key Framing Concepts</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Concept</th>
+      <th>Analogy / Mental Model</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Heater quality</td><td>Engine in a car — it determines the experience</td></tr>
+    <tr><td>Stone mass</td><td>Thermal battery — more mass = longer, softer heat</td></tr>
+    <tr><td>Brand tiers</td><td>Toyota &rarr; BMW &rarr; Bentley</td></tr>
+    <tr><td>Dual combustion</td><td>Turbocharger — more power from the same fuel</td></tr>
+    <tr><td>Air blending (Saunum)</td><td>Central heating vs. space heater — even heat everywhere</td></tr>
+    <tr><td>240V circuit</td><td>"Same as your dryer" — familiar, not scary</td></tr>
+    <tr><td>Cost per session</td><td>$0.71/session for the upgrade — less than a cup of coffee</td></tr>
+    <tr><td>Peak Protection Concierge</td><td>"Amazon gives a tracking number. We give you a person."</td></tr>
+  </tbody>
+</table>
+
+<h3>The 5 Must-Ask Questions</h3>
+<p>If you're short on time and can only ask five questions, make it these:</p>
+<ol>
+  <li><strong>Where is it going?</strong> (Indoor/outdoor &rarr; electric/wood)</li>
+  <li><strong>What are the dimensions?</strong> (Sizing formula)</li>
+  <li><strong>What electrical do you have?</strong> (120V vs 240V)</li>
+  <li><strong>What's your budget range?</strong> (Brand tier)</li>
+  <li><strong>What's your timeline?</strong> (Stock/shipping)</li>
+</ol>
+
+<h3>PPW Differentiator — Peak Protection Concierge</h3>
+<ul>
+  <li>Personal order management (one dedicated person)</li>
+  <li>Free electrician coordination</li>
+  <li>Manufacturer advocacy if issues arise</li>
+  <li>This is WHY customers buy from PPW instead of Amazon</li>
+</ul>
+
+
+<!-- ========================================== -->
+<!-- GAPS -->
+<!-- ========================================== -->
+<h2 id="gaps">Information Gaps — Requires Review</h2>
+
+<p>This guide is a high-level overview using the brand summary data provided. The following items could not be independently verified from the provided source data and should be reviewed:</p>
+
+<ul>
+  <li><strong>[FAMILY SPEC — confirm for all Harvia families]:</strong> Specific family-level descriptions (e.g., KIP as "compact wall-mount," Cilindro as "floor pillar") are based on general knowledge of these product lines. Confirm against individual Harvia brand guide for accuracy.</li>
+  <li><strong>[CORRECTED — Saunum stone capacity]:</strong> Updated to 80kg (180 lbs) based on Air L spec sheet. Verify against Saunum brand guide for per-model breakdown.</li>
+  <li><strong>[NOT FOUND IN SOURCE — exact pricing for cost-per-session math]:</strong> The $700 and $1,800 price points used in the Heater Investment Reframe example are illustrative. Confirm actual retail pricing for accurate customer-facing math.</li>
+  <li><strong>[NOT FOUND IN SOURCE — HUUM Red Dot Design Award]:</strong> The DROP's Red Dot Design Award is commonly cited but was not in the provided source data. Confirm with HUUM brand guide or distributor.</li>
+  <li><strong>[NOT FOUND IN SOURCE — "70-80% upgrade" statistic]:</strong> Referenced in the brand tier description for Harvia. Verify the source of this statistic (Prit Call, internal PPW data, etc.).</li>
+  <li><strong>[GENERAL NOTE]:</strong> Electrical rules of thumb (amperage, wire gauge by kW range) are industry-standard approximations. Always defer to manufacturer specs and local electrical codes for exact requirements per model.</li>
+</ul>
+
+<p>All other content is derived from the provided brand summary JSON and PPW sales framework documentation.</p>
+
+<!-- ===== Footer ===== -->
+<div style="margin-top: 60px; padding-top: 24px; border-top: 1px solid #ddd; color: #999; font-size: 13px;">
+  <p>Peak Primal Wellness &mdash; Sauna Heater Selection Guide (50,000-Foot View)</p>
+  <p>Product information verified as of April 13, 2026. For detailed model specs, refer to individual brand guides.</p>
+</div>
+
+</div><!-- end .main -->
+
+<!-- ===== BACK TO TOP ===== -->
+<button id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">&uarr;</button>
+
+<!-- ===== JAVASCRIPT ===== -->
+<script>
+(function(){
+  // --- Scroll Spy ---
+  const links = document.querySelectorAll('.sidebar a[data-chapter]');
+  const sections = [];
+  links.forEach(function(link){
+    const id = link.getAttribute('data-chapter');
+    const el = document.getElementById(id);
+    if(el) sections.push({id:id, el:el, link:link});
+  });
+
+  function updateScrollSpy(){
+    let current = sections[0];
+    const scrollY = window.scrollY + 120;
+    for(let i = 0; i < sections.length; i++){
+      if(sections[i].el.offsetTop <= scrollY){
+        current = sections[i];
+      }
+    }
+    links.forEach(function(l){ l.classList.remove('active'); });
+    if(current) current.link.classList.add('active');
+  }
+
+  // --- Back to Top ---
+  const btn = document.getElementById('backToTop');
+  function updateBtn(){
+    if(window.scrollY > 400) btn.classList.add('show');
+    else btn.classList.remove('show');
+  }
+
+  window.addEventListener('scroll', function(){
+    updateScrollSpy();
+    updateBtn();
+  });
+  updateScrollSpy();
+
+  // --- Search Filter ---
+  window.filterNav = function(){
+    const q = document.getElementById('navSearch').value.toLowerCase();
+    links.forEach(function(link){
+      const text = link.textContent.toLowerCase();
+      if(!q || text.indexOf(q) !== -1){
+        link.classList.remove('hidden');
+      } else {
+        link.classList.add('hidden');
+      }
+    });
+  };
+
+  // --- Mobile: close sidebar on link click ---
+  links.forEach(function(link){
+    link.addEventListener('click', function(){
+      if(window.innerWidth <= 860){
+        document.querySelector('.sidebar').classList.remove('open');
+      }
+    });
+  });
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,1248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cozy Heat Brand Guide — Peak Primal Wellness</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f5f5f5; color: #333; line-height: 1.7; }
+
+  /* Sidebar */
+  .sidebar { position: fixed; top: 0; left: 0; width: 280px; height: 100vh; background: #0F2439; color: #fff; overflow-y: auto; padding: 20px 0; z-index: 1000; }
+  .sidebar-header { padding: 15px 20px 20px; border-bottom: 1px solid #1A3C5E; }
+  .sidebar-header h2 { color: #C8862A; font-size: 1.1rem; letter-spacing: 1px; text-transform: uppercase; }
+  .sidebar-header p { color: #8faabe; font-size: 0.75rem; margin-top: 4px; }
+  .sidebar-search { padding: 12px 20px; }
+  .sidebar-search input { width: 100%; padding: 8px 12px; border: 1px solid #1A3C5E; border-radius: 4px; background: #1A3C5E; color: #fff; font-size: 0.85rem; outline: none; }
+  .sidebar-search input::placeholder { color: #6a8fa8; }
+  .sidebar-search input:focus { border-color: #C8862A; }
+  .nav-section { padding: 10px 20px 4px; }
+  .nav-section-title { color: #C8862A; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 700; margin-bottom: 6px; }
+  .nav-link { display: block; color: #8faabe; text-decoration: none; padding: 5px 20px; font-size: 0.85rem; transition: all 0.2s; border-left: 3px solid transparent; }
+  .nav-link:hover { color: #fff; background: rgba(255,255,255,0.05); }
+  .nav-link.active { color: #C8862A; border-left-color: #C8862A; background: rgba(200,134,42,0.08); }
+
+  /* Main */
+  .main { margin-left: 280px; padding: 40px 60px 80px; max-width: 1100px; }
+  .verified-banner { background: #1A3C5E; color: #8faabe; padding: 10px 20px; border-radius: 4px; font-size: 0.8rem; margin-bottom: 30px; text-align: center; }
+  .verified-banner strong { color: #C8862A; }
+
+  h1 { color: #0F2439; font-size: 2.2rem; margin-bottom: 10px; border-bottom: 3px solid #C8862A; padding-bottom: 12px; }
+  .chapter { margin-bottom: 50px; padding-top: 20px; }
+  .chapter h2 { color: #0F2439; font-size: 1.6rem; margin-bottom: 8px; padding-bottom: 8px; border-bottom: 2px solid #C8862A; }
+  .chapter h3 { color: #1A3C5E; font-size: 1.25rem; margin: 25px 0 10px; }
+  .chapter h4 { color: #0F2439; font-size: 1.05rem; margin: 20px 0 8px; }
+  p { margin-bottom: 14px; }
+  ul, ol { margin: 10px 0 16px 24px; }
+  li { margin-bottom: 6px; }
+  strong { color: #0F2439; }
+
+  /* Callout Boxes */
+  .framing-box { background: #EAF2F8; border-top: 3px solid #0F2439; padding: 20px; margin: 20px 0; border-radius: 4px; }
+  .framing-box p:last-child { margin-bottom: 0; }
+  .pro-tip { background: #FDF3E7; border-left: 4px solid #C8862A; padding: 20px; margin: 20px 0; border-radius: 4px; }
+  .pro-tip p:last-child { margin-bottom: 0; }
+  .watch-out { background: #fde8e8; border-left: 4px solid #d9534f; padding: 20px; margin: 20px 0; border-radius: 4px; }
+  .watch-out p:last-child { margin-bottom: 0; }
+  .script-box { background: #f0f7f0; border-left: 4px solid #2e7d32; padding: 20px; margin: 20px 0; border-radius: 4px; }
+  .script-box p:last-child { margin-bottom: 0; }
+  .script-box .script-label { font-weight: 700; color: #2e7d32; margin-bottom: 8px; display: block; }
+  .script-box .line-customer { color: #555; margin-left: 10px; }
+  .script-box .line-rep { color: #0F2439; margin-left: 10px; font-weight: 600; }
+  .key-def { background: #f0f0f0; border-left: 4px solid #0F2439; padding: 20px; margin: 20px 0; border-radius: 4px; }
+  .key-def p:last-child { margin-bottom: 0; }
+
+  /* Tables */
+  table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.9rem; }
+  thead tr { background: #0F2439; color: #fff; }
+  th { padding: 12px 14px; text-align: left; font-weight: 600; }
+  td { padding: 10px 14px; border-bottom: 1px solid #ddd; }
+  tbody tr:nth-child(even) { background: #EAF2F8; }
+  tbody tr:hover { background: #dce9f2; }
+  .highlight-row { background: #FDF3E7 !important; }
+
+  /* Back to top */
+  .back-to-top { position: fixed; bottom: 30px; right: 30px; width: 48px; height: 48px; background: #C8862A; color: #fff; border: none; border-radius: 50%; font-size: 1.4rem; cursor: pointer; display: none; z-index: 999; box-shadow: 0 2px 8px rgba(0,0,0,0.3); transition: opacity 0.3s; }
+  .back-to-top:hover { background: #a06d1f; }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .sidebar { transform: translateX(-100%); transition: transform 0.3s; }
+    .sidebar.open { transform: translateX(0); }
+    .main { margin-left: 0; padding: 20px 20px 60px; }
+    .menu-toggle { display: block; position: fixed; top: 10px; left: 10px; z-index: 1001; background: #0F2439; color: #C8862A; border: none; padding: 10px 14px; border-radius: 4px; font-size: 1.2rem; cursor: pointer; }
+  }
+  @media (min-width: 901px) {
+    .menu-toggle { display: none; }
+  }
+  .gap-flag { background: #fff3cd; border: 1px solid #ffc107; padding: 4px 8px; border-radius: 3px; font-size: 0.85rem; color: #856404; }
+</style>
+</head>
+<body>
+
+<button class="menu-toggle" onclick="document.querySelector('.sidebar').classList.toggle('open')">&#9776;</button>
+
+<!-- SIDEBAR -->
+<nav class="sidebar">
+  <div class="sidebar-header">
+    <h2>Cozy Heat</h2>
+    <p>PPW Knowledge Base &bull; Wood-Burning Stoves</p>
+  </div>
+  <div class="sidebar-search">
+    <input type="text" id="searchInput" placeholder="Search chapters..." onkeyup="filterNav()">
+  </div>
+
+  <div class="nav-section"><div class="nav-section-title">The Journey: Foundations</div></div>
+  <a href="#ch1" class="nav-link" data-chapter="ch1">1. Introduction to Cozy Heat</a>
+  <a href="#ch2" class="nav-link" data-chapter="ch2">2. Wood-Burning Sauna Foundations</a>
+
+  <div class="nav-section"><div class="nav-section-title">Product Knowledge</div></div>
+  <a href="#ch3" class="nav-link" data-chapter="ch3">3. The Cozy Heat Product Lineup</a>
+
+  <div class="nav-section"><div class="nav-section-title">Customer Application</div></div>
+  <a href="#ch4" class="nav-link" data-chapter="ch4">4. Matching Customers to Products</a>
+
+  <div class="nav-section"><div class="nav-section-title">Sales Execution</div></div>
+  <a href="#ch5" class="nav-link" data-chapter="ch5">5. Questions &amp; Objections</a>
+
+  <div class="nav-section"><div class="nav-section-title">Technical Reference</div></div>
+  <a href="#ch6" class="nav-link" data-chapter="ch6">6. Technical Reference</a>
+
+  <div class="nav-section"><div class="nav-section-title">Quick Reference</div></div>
+  <a href="#ch7" class="nav-link" data-chapter="ch7">7. Quick Reference Cheat Sheet</a>
+  <a href="#gaps" class="nav-link" data-chapter="gaps">Information Gaps</a>
+</nav>
+
+<!-- MAIN CONTENT -->
+<div class="main">
+  <div class="verified-banner">
+    <strong>Product information verified as of April 13, 2026.</strong> All specifications sourced from official Bathing Brands product data.
+  </div>
+
+  <h1>Cozy Heat Brand Guide</h1>
+  <p style="font-size:1.1rem; color:#555; margin-bottom:40px;">The definitive PPW training guide to the best wood-fired sauna stoves on the market. Hand-made in Estonia. Dual combustion. German emissions certified. Built for the sauna purist.</p>
+
+  <!-- ============================================================ -->
+  <!-- CHAPTER 1 -->
+  <!-- ============================================================ -->
+  <div class="chapter" id="ch1">
+    <h2 id="ch1">Chapter 1: Introduction to Cozy Heat</h2>
+
+    <h3>What Is Cozy Heat?</h3>
+    <p>Cozy Heat is a premium wood-burning sauna stove manufacturer based in <strong>Estonia</strong> — one of the few countries where sauna bathing is literally part of the national identity. Every single Cozy Heat stove is <strong>hand-made</strong>, not mass-produced on an assembly line.</p>
+    <p>They make <strong>one thing and one thing only:</strong> wood-burning sauna stoves. No electric heaters, no infrared panels, no accessories. Just wood-fired stoves, built to the highest standard in the world.</p>
+
+    <h3>Why Do We Carry Cozy Heat?</h3>
+    <p>PPW positions Cozy Heat as the <strong>best wood-fired sauna stove on the market</strong>. Here's why:</p>
+    <ul>
+      <li><strong>Dual combustion technology</strong> — burns the smoke gases a second time, making them 6x cleaner than conventional wood stoves</li>
+      <li><strong>25-40% more fuel efficient</strong> than comparable stoves — your customer uses less wood for the same heat</li>
+      <li><strong>German BImSchV certification</strong> — the strictest emissions standard in Europe. This isn't a marketing claim; it's third-party verified</li>
+      <li><strong>5mm stainless steel flame cutter</strong> — the part of the stove that takes the most abuse is built thicker and stronger than competitors</li>
+      <li><strong>Five distinct design families</strong> — every aesthetic taste is covered, from classic to ultra-modern</li>
+    </ul>
+
+    <h3>Where Does Cozy Heat Fit in the PPW Brand Lineup?</h3>
+    <p>Think of our brand tiers like cars:</p>
+    <table>
+      <thead><tr><th>Brand</th><th>Car Equivalent</th><th>Position</th></tr></thead>
+      <tbody>
+        <tr><td>Harvia</td><td>Toyota</td><td>Reliable, affordable, gets the job done</td></tr>
+        <tr><td>HUUM</td><td>BMW / Mercedes</td><td>Design-forward, higher price point (may be less reliable than Harvia)</td></tr>
+        <tr><td>Saunum</td><td>Bentley / Rolls Royce</td><td>The absolute best electric. Air blending, salt therapy</td></tr>
+        <tr><td>Narvi</td><td>Traditional Finnish craft</td><td>Wood-burning specialists</td></tr>
+        <tr class="highlight-row"><td><strong>Cozy Heat</strong></td><td><strong>Range Rover — premium, built for the terrain</strong></td><td><strong>Premium wood-burning. Dual combustion, 25-40% more fuel efficient, German certified</strong></td></tr>
+      </tbody>
+    </table>
+
+    <div class="framing-box">
+      <p><strong>How to Frame This:</strong></p>
+      <p><strong>The core concept:</strong> Cozy Heat is to wood-burning stoves what Saunum is to electric heaters — the top of the food chain. When a customer wants the authentic wood-fired experience done right, this is the brand.</p>
+      <p><strong>What the customer needs to understand:</strong> They're not just getting a stove; they're getting hand-made Estonian craftsmanship with German engineering certification. It's the intersection of tradition and technology.</p>
+      <p><strong>PPW framework to apply:</strong> The Gap — help the customer see the difference between a basic wood stove (smoky, inefficient, high wood consumption) and the Cozy Heat experience (clean burn, less wood, longer-lasting heat).</p>
+    </div>
+
+    <div class="pro-tip">
+      <p><strong>Pro Tip:</strong> If a customer is comparing Cozy Heat to budget wood-burning options, the most common alternative is the <strong>Harvia M3</strong> — a basic wood-fired heater at a much lower price point. Cozy Heat is the premium option; the Harvia M3 is the budget option. Don't trash it — acknowledge it as a solid entry-level stove, then highlight what separates Cozy Heat: dual combustion, 25–40% better fuel efficiency, 6x cleaner emissions, and 175–350 lbs of stone capacity vs. the M3's smaller stone bed. The M3 heats the room; Cozy Heat transforms the experience.</p>
+    </div>
+
+    <div class="pro-tip">
+      <p><strong>Pro Tip:</strong> Lead with the German certification early. In Europe — and especially Germany, where wood-burning sauna regulations are the strictest on earth — Cozy Heat is what serious sauna builders choose. Germany is their biggest market. When you tell a customer "this stove passes the toughest emissions test in the world," you've earned the right to pitch everything else.</p>
+    </div>
+
+    <h3>The Cozy Heat Customer</h3>
+    <p>The customer who buys a Cozy Heat stove typically falls into one or more of these categories:</p>
+    <ul>
+      <li><strong>The Sauna Purist</strong> — They want the traditional wood-fired experience. The crackle of the fire, the ritual of loading logs, the soft radiant heat. Electric won't do.</li>
+      <li><strong>The Outdoor Builder</strong> — Building a barrel sauna, a backyard sauna shed, or a cabin sauna. Often in locations without convenient electrical service.</li>
+      <li><strong>The Eco-Conscious Buyer</strong> — Cares about emissions, fuel efficiency, and sustainability. The German certification is a real selling point for this customer.</li>
+      <li><strong>The Design Enthusiast</strong> — Wants a stove that looks as good as it performs. The five design families mean there's a style for every taste.</li>
+      <li><strong>The Upgrader</strong> — Already owns a basic wood stove (or a cheap electric) and is ready for something better. Ask: "Is this your first stove, or are you replacing something?" Harvia's own earnings data shows 70-80% of their heater sales come from second-time buyers upgrading.</li>
+    </ul>
+
+    <div class="watch-out">
+      <p><strong>Watch Out:</strong> When a customer says "authentic," "traditional," "off-grid," or "wood-fired" — those are your Cozy Heat trigger words. Listen for them early in the call. If you hear any of those, bring up Cozy Heat before they even ask.</p>
+    </div>
+
+    <div class="framing-box">
+      <p><strong>Why This Matters for Sales:</strong></p>
+      <p>Cozy Heat is your premium play in the wood-burning category. Every other brand in our lineup competes on the electric side. When the conversation turns to wood, you have exactly one brand to recommend — and it's the best one on the market. Know this chapter cold and you'll own every wood-burning conversation that comes your way.</p>
+    </div>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- CHAPTER 2 -->
+  <!-- ============================================================ -->
+  <div class="chapter" id="ch2">
+    <h2 id="ch2">Chapter 2: Understanding Wood-Burning Saunas (Foundations)</h2>
+
+    <p>Before we dive into the specific Cozy Heat models, you need to understand how wood-burning sauna stoves work. If you've only ever sold electric heaters, this chapter gets you up to speed.</p>
+
+    <h3>Key Terms You Need to Know</h3>
+
+    <div class="key-def">
+      <p><strong>Key Definition — Kilowatt (kW):</strong> A measurement of heat output. Think of it like horsepower for a car engine — the higher the kW, the more heat the stove can produce. Cozy Heat stoves come in <strong>12kW and 18kW</strong> options. A 12kW stove is for smaller rooms; 18kW handles larger spaces.</p>
+    </div>
+
+    <div class="key-def">
+      <p><strong>Key Definition — Firebox:</strong> The chamber inside the stove where you burn the wood. It's like the engine compartment. The size of the firebox determines how much wood you can load at once, which affects how long you can run between loadings.</p>
+    </div>
+
+    <div class="key-def">
+      <p><strong>Key Definition — Flame Cutter:</strong> A component inside the firebox that directs and distributes the flame. It takes the most heat abuse of any part. In Cozy Heat stoves, this is made of <strong>5mm-thick stainless steel</strong> — significantly thicker than most competitors. Think of it as the brake pads of the stove: it's the wear component, and Cozy builds it tougher.</p>
+    </div>
+
+    <div class="key-def">
+      <p><strong>Key Definition — Dual Combustion (Secondary Burn):</strong> Regular wood stoves burn wood once and the smoke goes up the chimney. Dual combustion stoves burn the <strong>smoke gases a second time</strong> — extracting more heat from the same amount of wood and producing dramatically cleaner exhaust. This is why Cozy Heat stoves are <strong>6x cleaner</strong> and use <strong>25-40% less fuel</strong>.</p>
+    </div>
+
+    <div class="key-def">
+      <p><strong>Key Definition — Flue / Chimney Connection:</strong> The pipe that carries smoke and exhaust gases out of the sauna. All Cozy Heat stoves have a <strong>top-mounted flue connection</strong>, meaning the chimney pipe attaches to the top of the stove and goes straight up through the roof.</p>
+    </div>
+
+    <div class="key-def">
+      <p><strong>Key Definition — Thru-Wall (TW):</strong> A stove design where the firebox extends through the sauna wall so you can load firewood from <strong>outside</strong> the sauna room. The heat and stones stay inside; the door where you add wood is on the other side of the wall. This keeps the sauna cleaner (no bark, no ash inside) and means you don't lose heat every time you open the door to add wood.</p>
+    </div>
+
+    <div class="key-def">
+      <p><strong>Key Definition — BImSchV Certification:</strong> Germany's federal emissions standard for wood-burning appliances. It's the strictest in Europe — like getting a 5-star crash rating for emissions. Cozy Heat stoves meet <strong>EN 15821:2010, BImSchV DIN EN 13240, Level 2</strong>, the highest certification level. This is a big deal for customers in areas with emissions regulations or for anyone who cares about clean burning.</p>
+    </div>
+
+    <div class="key-def">
+      <p><strong>Key Definition — Sauna Stones:</strong> Natural rocks placed on top of the stove that absorb and store heat. You pour water (called <strong>löyly</strong> — pronounced "LOW-loo") over the hot stones to create steam. The stones act like a <strong>thermal battery</strong> — they absorb heat while the fire is burning and release it slowly, providing that mild, long-lasting heat wood saunas are famous for. More stone mass = more stored heat = longer, more stable sauna sessions.</p>
+    </div>
+
+    <h3>How a Wood-Burning Sauna Stove Works</h3>
+    <p>Here's the simple version:</p>
+    <ol>
+      <li><strong>You load firewood</strong> into the firebox and light it. Cozy Heat 18kW stoves accept logs up to 15.74" (400mm) long; 12kW models accept up to 12.99" (329mm). <em>[verify against source — not confirmed in parsed specs]</em> Firewood diameter: 3-5".</li>
+      <li><strong>The fire heats the stove body,</strong> which radiates heat into the room. The dual combustion system burns the smoke gases a second time for maximum efficiency.</li>
+      <li><strong>The stones on top absorb heat</strong> from the stove body. With 175-350 lbs of stones (depending on the model), you have a massive thermal battery.</li>
+      <li><strong>You pour water over the hot stones</strong> to create steam (löyly). This is what gives a traditional sauna its characteristic soft, enveloping heat.</li>
+      <li><strong>Exhaust gases exit through the top-mounted flue</strong> and up the chimney. Thanks to dual combustion, these gases are 6x cleaner than conventional stoves.</li>
+    </ol>
+
+    <div class="framing-box">
+      <p><strong>How to Frame This:</strong></p>
+      <p><strong>The core concept:</strong> Wood-fired saunas are the original, the OG. Electric heaters are the modern convenience version. Think of it like grilling — a gas grill is convenient, but a charcoal grill gives you that authentic flavor and experience. Wood-fired saunas produce a softer, more radiant heat that sauna purists swear by.</p>
+      <p><strong>What the customer needs to understand:</strong> A wood-fired sauna isn't harder — it's more <em>intentional</em>. The ritual of building the fire IS part of the experience. And with Cozy Heat's dual combustion, you get the traditional experience without the downsides (excess smoke, high wood consumption).</p>
+    </div>
+
+    <h3>Wood-Burning vs. Electric: Why Customers Choose Wood</h3>
+    <table>
+      <thead><tr><th>Factor</th><th>Wood-Burning</th><th>Electric</th></tr></thead>
+      <tbody>
+        <tr><td>Heat quality</td><td>Soft, radiant, long-lasting</td><td>Drier, more intense</td></tr>
+        <tr><td>Ritual / experience</td><td>Fire-building is part of the experience</td><td>Push a button</td></tr>
+        <tr><td>Electrical requirements</td><td>None — just a chimney</td><td>Requires 240V circuit, electrician</td></tr>
+        <tr><td>Location flexibility</td><td>Great for off-grid, outdoor, cabins</td><td>Needs electrical service</td></tr>
+        <tr><td>Ongoing cost</td><td>Firewood (often free / cheap)</td><td>Electricity bill</td></tr>
+        <tr><td>Maintenance</td><td>Chimney cleaning, ash removal</td><td>Minimal</td></tr>
+        <tr><td>Ambiance</td><td>Crackling fire, visible flames</td><td>No flame</td></tr>
+      </tbody>
+    </table>
+
+    <div class="pro-tip">
+      <p><strong>Pro Tip:</strong> Many customers come in asking about electric heaters and haven't even considered wood-burning. If they mention an outdoor build, a cabin, or the "traditional experience," ask if they've considered a wood-fired stove. You might open up a whole new conversation — and Cozy Heat is our premium answer in that space.</p>
+    </div>
+
+    <h3>Understanding Stone Mass</h3>
+    <p>Stone mass is one of the most important factors in a wood-burning sauna, and it's something your customer probably hasn't thought about.</p>
+    <p>Think of sauna stones as a <strong>thermal battery</strong>. The more stones you have, the more heat energy is stored. More stored energy means:</p>
+    <ul>
+      <li><strong>Longer sessions</strong> without needing to add more wood</li>
+      <li><strong>More stable temperatures</strong> — less fluctuation</li>
+      <li><strong>Better steam (löyly)</strong> — more hot stone surface area for water to hit</li>
+    </ul>
+    <p>Cozy Heat stoves require between <strong>175 and 350 lbs of stones</strong> depending on the model and kW rating. That's a LOT of thermal mass — which translates to an exceptional sauna experience.</p>
+
+    <p><strong>Why stone mass is a feature, not a burden:</strong> Heat stratification is the enemy of a great sauna. Hot air rises, so cheap stoves with minimal stones create an uncomfortable split — your head cooks while your feet freeze. That's why people lie down on sauna benches: not because they're tired, but because they want their whole body at the same temperature. A heavy stone mass (like Cozy Heat's 175-350 lbs) radiates heat from a lower point, creating a more even temperature profile throughout the room. The result? You can stay in the sauna for the <strong>15-20 minutes</strong> that research shows you need for real health benefits — cardiovascular, muscle recovery, stress reduction — instead of being chased out after 8 minutes because your head is overheating.</p>
+
+    <div class="framing-box">
+      <p><strong>Why This Matters for Sales:</strong></p>
+      <p>When a customer says "that seems like a lot of stones," flip it: "That's the whole point. More stones means softer, more even heat that lets you actually stay in the sauna long enough to get the health benefits. Cheap stoves with small stone beds blast your head with heat and your feet stay cold. That's not a sauna — that's a hot box." The stone mass is the selling point, not the objection.</p>
+    </div>
+
+    <div class="watch-out">
+      <p><strong>Watch Out:</strong> Stones are a <strong>required component</strong> sold separately from the stove. Always confirm the customer is aware they need to purchase stones. Cozy Heat offers two stone options: <strong>Traditional Sauna Stones</strong> (10-15 cm, natural shape) and <strong>Premium Rounded Olivine Diabase Stones</strong> (smooth, river-stone look). Recommend buying an extra box to allow for selection of the best-fitting stones.</p>
+    </div>
+
+    <h3>Chimney & Ventilation Basics</h3>
+    <p>Every wood-burning stove needs a chimney. All Cozy Heat models have a <strong>top-mounted flue connection</strong>, meaning the chimney pipe goes straight up from the top of the stove. Here's what you need to tell customers:</p>
+    <ul>
+      <li>A proper chimney is required — this is typically not included and must be sourced locally based on local building codes</li>
+      <li>The sauna room needs adequate ventilation for combustion air (the fire needs oxygen)</li>
+      <li>Professional installation is strongly recommended</li>
+      <li>Local building codes and fire regulations must be followed</li>
+    </ul>
+
+    <div class="watch-out">
+      <p><strong>Watch Out:</strong> Never tell a customer they can install a wood-burning stove without checking local building codes. Many municipalities have specific requirements for wood-burning appliances, chimney heights, clearances, and permits. Always recommend they consult with a local professional.</p>
+    </div>
+
+    <h3>Ventilation Quick Reference</h3>
+    <p>Proper ventilation is critical for both combustion and sauna comfort. A well-ventilated wood sauna uses a <strong>three-vent system</strong>:</p>
+    <table>
+      <thead><tr><th>Vent</th><th>Location</th><th>Purpose</th><th>During Use</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Intake</strong></td><td>Low on the wall, near the heater</td><td>Supplies fresh air for combustion</td><td>Open</td></tr>
+        <tr><td><strong>Exhaust</strong></td><td>Opposite wall, under the bench</td><td>Draws used air out, creates circulation</td><td>Open</td></tr>
+        <tr><td><strong>Drying</strong></td><td>High on the wall, near the ceiling</td><td>Releases moisture after sessions to prevent mold</td><td>Closed (open after use)</td></tr>
+      </tbody>
+    </table>
+
+    <div class="pro-tip">
+      <p><strong>Pro Tip:</strong> Customers building custom saunas with a Cozy Heat stove often don't think about ventilation until it's too late. Bring it up early in the conversation — it shows you know what you're talking about and builds your credibility as their sauna advisor, not just a stove salesperson.</p>
+    </div>
+
+    <div class="framing-box">
+      <p><strong>Why This Matters for Sales:</strong></p>
+      <p>Understanding wood-burning fundamentals — how the fire works, why stones matter, how ventilation flows — makes you the expert in the room. Most customers have never owned a wood-burning stove. The rep who can explain these basics clearly and confidently wins the sale, because the customer trusts they're buying from someone who actually understands the product.</p>
+    </div>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- CHAPTER 3 -->
+  <!-- ============================================================ -->
+  <div class="chapter" id="ch3">
+    <h2 id="ch3">Chapter 3: The Cozy Heat Product Lineup</h2>
+
+    <p>Cozy Heat offers <strong>five design families</strong>, and each family comes in a <strong>standard</strong> and <strong>Thru-Wall (TW)</strong> variant. That gives us <strong>10 models</strong> total. Every model is available in <strong>12kW and 18kW</strong> options.</p>
+
+    <p>Here's the thing that makes Cozy Heat easy to learn: <strong>the technology is the same across all families</strong>. Same dual combustion. Same 5mm stainless steel flame cutter. Same German certification. Same fuel efficiency. The only differences are <strong>design/aesthetics, dimensions, weight, and stone capacity</strong>.</p>
+
+    <div class="framing-box">
+      <p><strong>How to Frame This:</strong></p>
+      <p><strong>The core concept:</strong> Think of the five families as five body styles of the same car. The engine (dual combustion), the drivetrain (5mm flame cutter), and the safety ratings (German BImSchV) are identical. The customer is choosing their preferred look and the size that fits their space.</p>
+      <p><strong>What the customer needs to understand:</strong> They can't go wrong with any Cozy Heat model from a performance standpoint. The decision comes down to: (1) What style do they like? (2) Standard or Thru-Wall? (3) 12kW or 18kW?</p>
+    </div>
+
+    <h3>Family Overview: At a Glance</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Family</th>
+          <th>Design Style</th>
+          <th>Variants</th>
+          <th>Stone Capacity (18kW)</th>
+          <th>Stove Weight (18kW Std)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Cozy (Base)</strong></td>
+          <td>Classic / Traditional</td>
+          <td>Standard, TW</td>
+          <td>Min 310 lbs</td>
+          <td>159 lbs</td>
+        </tr>
+        <tr>
+          <td><strong>O</strong></td>
+          <td>Circular rim design</td>
+          <td>Standard, TW</td>
+          <td>Min 350 lbs</td>
+          <td>154 lbs</td>
+        </tr>
+        <tr>
+          <td><strong>OG</strong></td>
+          <td>Trilateral / Contemporary</td>
+          <td>Standard, TW</td>
+          <td>Min 240 lbs</td>
+          <td>176 lbs</td>
+        </tr>
+        <tr>
+          <td><strong>Quattro</strong></td>
+          <td>Square / Minimalist</td>
+          <td>Standard, TW</td>
+          <td>Min 265 lbs</td>
+          <td>198 lbs</td>
+        </tr>
+        <tr>
+          <td><strong>SW</strong></td>
+          <td>Cylindrical / Sleek</td>
+          <td>Standard, TW</td>
+          <td>Min 220 lbs</td>
+          <td>209 lbs</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="pro-tip">
+      <p><strong>Pro Tip:</strong> All 12kW models cover <strong>210–423 cu. ft.</strong> and all 18kW models cover <strong>317–635 cu. ft.</strong> The minimum ceiling height is <strong>72" (1828mm) for 12kW models</strong> and <strong>82" (2096mm) for 18kW models</strong>. The sizing is identical across families at each kW level — so you're really helping the customer pick a design style and decide between standard vs. Thru-Wall, not a room-size calculation that differs by model.</p>
+    </div>
+
+    <!-- COZY (BASE) FAMILY -->
+    <h3>The Cozy (Base) Family</h3>
+    <p><strong>Models:</strong> COZY (standard) &amp; COZY TW (Thru-Wall)</p>
+    <p>This is the original Cozy Heat stove — the one that started it all. It has a <strong>classic, traditional aesthetic</strong> that feels right at home in any sauna. No frills, no fuss, just pure wood-fired performance.</p>
+    <p><strong>Variant explanation:</strong> The base COZY model loads firewood from inside the sauna. The <strong>COZY TW</strong> has an extended firebox that passes through the wall, so you load wood from an adjacent room.</p>
+
+    <h4>What Makes It Different</h4>
+    <ul>
+      <li>Light at only <strong>159 lbs</strong> (18kW) — easy to position during installation</li>
+      <li><strong>Narrowest width</strong> in the lineup at 19.68" (500mm) — great for tight spaces</li>
+      <li>Strong stone capacity at <strong>310 lbs</strong> (18kW) — substantial thermal battery</li>
+      <li>Classic design works in any aesthetic, from rustic cabin to modern build</li>
+      <li>The <strong>original Cozy Heat design</strong> — the foundation the other families were built from</li>
+    </ul>
+
+    <div class="framing-box">
+      <p><strong>How to Frame This:</strong></p>
+      <p><strong>The core concept:</strong> The Cozy base model is the "no-compromise essential." It's the original design with proven performance and a generous 310 lbs of stone capacity. For customers who care about pure function over aesthetics, this is the one.</p>
+      <p><strong>Analogy:</strong> It's like a cast-iron skillet — timeless design, does the job better than anything fancier, and gets better with age.</p>
+    </div>
+
+    <table>
+      <thead><tr><th>Spec</th><th>COZY (Standard)</th><th>COZY TW (Thru-Wall)</th></tr></thead>
+      <tbody>
+        <tr><td>kW Options</td><td>12kW, 18kW</td><td>12kW, 18kW</td></tr>
+        <tr><td>Room Range (cu. ft.)</td><td>317–635</td><td>317–635</td></tr>
+        <tr><td>Min Ceiling Height</td><td>82" <span class="gap-flag">(1828mm — source data discrepancy; likely 2096mm, see Gap #8)</span></td><td>82" (2096mm)</td></tr>
+        <tr><td>Stove Dimensions (D×W×H)</td><td>24.58" × 19.68" × 29.76"</td><td>30.51" × 19.68" × 29.76"</td></tr>
+        <tr><td>Stove Weight</td><td>159 lbs</td><td>185 lbs</td></tr>
+        <tr><td>Stones Min (12kW / 18kW)</td><td>200 / 310 lbs</td><td>200 / 310 lbs</td></tr>
+        <tr><td>Stone Boxes (12kW / 18kW)</td><td>5 / 7 boxes</td><td>5 / 7 boxes</td></tr>
+        <tr><td>Flue Connection</td><td>Top</td><td>Top</td></tr>
+        <tr><td>Max Firewood Length</td><td>15.74" (400mm)</td><td>15.74" (400mm)</td></tr>
+        <tr><td>SKU</td><td>4745010348013</td><td>4745010348020</td></tr>
+      </tbody>
+    </table>
+
+    <!-- O FAMILY -->
+    <h3>The O Family</h3>
+    <p><strong>Models:</strong> COZY O (standard) &amp; COZY O-TW (Thru-Wall)</p>
+    <p>The O stands out with its <strong>innovative circular rim design</strong>. The round stone cage isn't just for looks — it ensures efficient heat distribution as heat radiates evenly in all directions from the circular shape.</p>
+    <p><strong>Variant explanation:</strong> The COZY O-TW adds the through-the-wall extended firebox for loading from an adjacent room.</p>
+
+    <h4>What Makes It Different</h4>
+    <ul>
+      <li><strong>Circular rim design</strong> — unique aesthetic with functional benefit of even heat distribution</li>
+      <li><strong>Highest stone capacity</strong> in the 18kW class at 350 lbs minimum — massive thermal battery</li>
+      <li>The <strong>lightest 18kW standard model by stove weight</strong> at 154 lbs</li>
+      <li>Narrow profile at only 19.88" (505mm) wide — fits most sauna layouts easily</li>
+    </ul>
+
+    <div class="framing-box">
+      <p><strong>How to Frame This:</strong></p>
+      <p><strong>The core concept:</strong> The O is for the customer who wants their stove to be a visual centerpiece. That circular rim catches the eye and holds the most stones. It's where form meets function — the round design isn't just pretty, it distributes heat more evenly.</p>
+      <p><strong>Analogy:</strong> Think of the O as the sports car of the lineup — it looks distinctive and the design actually helps performance.</p>
+    </div>
+
+    <table>
+      <thead><tr><th>Spec</th><th>COZY O (Standard)</th><th>COZY O-TW (Thru-Wall)</th></tr></thead>
+      <tbody>
+        <tr><td>kW Options</td><td>12kW, 18kW</td><td>12kW, 18kW</td></tr>
+        <tr><td>Room Range (cu. ft.)</td><td>317–635</td><td>317–635</td></tr>
+        <tr><td>Min Ceiling Height</td><td>82" (2096mm)</td><td>82" (2096mm)</td></tr>
+        <tr><td>Stove Dimensions (D×W×H)</td><td>24.08" × 19.88" × 29.76"</td><td>30.70" × 19.88" × 29.76"</td></tr>
+        <tr><td>Stove Weight</td><td>154 lbs</td><td>181 lbs</td></tr>
+        <tr><td>Stones Min (12kW / 18kW)</td><td>200 / 350 lbs</td><td>200 / 350 lbs</td></tr>
+        <tr><td>Stone Boxes (12kW / 18kW)</td><td>5 / 8 boxes</td><td>5 / 8 boxes</td></tr>
+        <tr><td>Flue Connection</td><td>Top</td><td>Top</td></tr>
+        <tr><td>Max Firewood Length</td><td>15.74" (400mm)</td><td>15.74" (400mm)</td></tr>
+        <tr><td>SKU</td><td>4745010348037</td><td>4745010348044</td></tr>
+      </tbody>
+    </table>
+
+    <!-- OG FAMILY -->
+    <h3>The OG Family</h3>
+    <p><strong>Models:</strong> COZY OG (standard) &amp; COZY OG-TW (Thru-Wall)</p>
+    <p>The OG features an <strong>"artistically inventive" trilateral design</strong> — clean lines and graceful curves that create a contemporary, sophisticated look. If the base Cozy is the classic cast-iron skillet, the OG is the designer cookware.</p>
+    <p><strong>Variant explanation:</strong> The COZY OG-TW adds the through-the-wall extended firebox for loading from an adjacent room.</p>
+
+    <h4>What Makes It Different</h4>
+    <ul>
+      <li><strong>Trilateral (three-sided) design</strong> — elegant, contemporary aesthetic</li>
+      <li><strong>Wider body</strong> at 22.04" (560mm) — gives it a more commanding presence</li>
+      <li>Moderate stone capacity: 175 / 240 lbs (12kW / 18kW)</li>
+      <li>Described by Cozy Heat as the "pinnacle of comfort and sophistication"</li>
+    </ul>
+
+    <div class="framing-box">
+      <p><strong>How to Frame This:</strong></p>
+      <p><strong>The core concept:</strong> The OG is for the customer building a high-end sauna where the stove needs to look like a piece of modern art. The trilateral design makes it a conversation starter.</p>
+      <p><strong>PPW framework to apply:</strong> Three Tens — when a customer is investing in a premium sauna build, the stove should match the caliber of the rest of the project. The OG's design says "this was chosen with intention, not grabbed off a shelf."</p>
+    </div>
+
+    <table>
+      <thead><tr><th>Spec</th><th>COZY OG (Standard)</th><th>COZY OG-TW (Thru-Wall)</th></tr></thead>
+      <tbody>
+        <tr><td>kW Options</td><td>12kW, 18kW</td><td>12kW, 18kW</td></tr>
+        <tr><td>Room Range (cu. ft.)</td><td>317–635</td><td>317–635</td></tr>
+        <tr><td>Min Ceiling Height</td><td>82" (2096mm)</td><td>82" (2096mm)</td></tr>
+        <tr><td>Stove Dimensions (D×W×H)</td><td>25.78" × 22.04" × 29.72"</td><td>31.69" × 22.04" × 29.72"</td></tr>
+        <tr><td>Stove Weight</td><td>176 lbs</td><td>199 lbs</td></tr>
+        <tr><td>Stones Min (12kW / 18kW)</td><td>175 / 240 lbs</td><td>175 / 240 lbs</td></tr>
+        <tr><td>Stone Boxes (12kW / 18kW)</td><td>4 / 6 boxes</td><td>4 / 6 boxes</td></tr>
+        <tr><td>Flue Connection</td><td>Top</td><td>Top</td></tr>
+        <tr><td>Max Firewood Length</td><td>15.74" (400mm)</td><td>15.74" (400mm)</td></tr>
+        <tr><td>SKU</td><td>4745010348075</td><td>4745010348082</td></tr>
+      </tbody>
+    </table>
+
+    <!-- QUATTRO FAMILY -->
+    <h3>The Quattro Family</h3>
+    <p><strong>Models:</strong> COZY QUATTRO (standard) &amp; COZY QUATTRO TW (Thru-Wall)</p>
+    <p>The Quattro features a <strong>square, minimalist design</strong> with clean lines and a <strong>large viewing window</strong> that lets you see the dancing flames inside. It's the stove for someone who wants understated elegance.</p>
+    <p><strong>Variant explanation:</strong> The COZY QUATTRO TW adds the through-the-wall extended firebox for loading from an adjacent room.</p>
+
+    <h4>What Makes It Different</h4>
+    <ul>
+      <li><strong>Square design</strong> — clean, minimalist, modern</li>
+      <li><strong>Large viewing window</strong> — watch the fire. This is a real experience enhancer.</li>
+      <li><strong>Heaviest standard model</strong> at 198 lbs (18kW) — substantial, solid feel</li>
+      <li>Moderate stone capacity: 175 / 265 lbs (12kW / 18kW)</li>
+      <li><strong>Shortest height</strong> in the lineup at 28.74" (730mm) — sits lower, different visual profile</li>
+    </ul>
+
+    <div class="framing-box">
+      <p><strong>How to Frame This:</strong></p>
+      <p><strong>The core concept:</strong> The Quattro is for the customer who appreciates minimalism and wants to see the fire. That large viewing window transforms the stove from a heating appliance into the focal point of the room. It's like having a fireplace in your sauna.</p>
+      <p><strong>Analogy:</strong> If the OG is a piece of modern art, the Quattro is a designer fireplace — clean, square, with a big window that makes the fire the star.</p>
+    </div>
+
+    <table>
+      <thead><tr><th>Spec</th><th>COZY QUATTRO (Standard)</th><th>COZY QUATTRO TW (Thru-Wall)</th></tr></thead>
+      <tbody>
+        <tr><td>kW Options</td><td>12kW, 18kW</td><td>12kW, 18kW</td></tr>
+        <tr><td>Room Range (cu. ft.)</td><td>317–635</td><td>317–635</td></tr>
+        <tr><td>Min Ceiling Height</td><td>82" (2096mm)</td><td>82" (2096mm)</td></tr>
+        <tr><td>Stove Dimensions (D×W×H)</td><td>24.08" × 20.27" × 28.74"</td><td>30.70" × 20.27" × 28.74"</td></tr>
+        <tr><td>Stove Weight</td><td>198 lbs</td><td>220 lbs</td></tr>
+        <tr><td>Stones Min (12kW / 18kW)</td><td>175 / 265 lbs</td><td>175 / 265 lbs</td></tr>
+        <tr><td>Stone Boxes (12kW / 18kW)</td><td><span class="gap-flag">[NOT FOUND IN SOURCE]</span></td><td><span class="gap-flag">[NOT FOUND IN SOURCE]</span></td></tr>
+        <tr><td>Flue Connection</td><td>Top</td><td>Top</td></tr>
+        <tr><td>Max Firewood Length</td><td>15.74" (400mm)</td><td>15.74" (400mm)</td></tr>
+        <tr><td>SKU</td><td>4745010348259</td><td>4745010348266</td></tr>
+      </tbody>
+    </table>
+
+    <div class="pro-tip">
+      <p><strong>Pro Tip:</strong> The Quattro's "large viewing window" is mentioned prominently in the product description. If a customer mentions wanting to see the fire or wanting ambiance, the Quattro should be your first recommendation. That fire-viewing experience is a powerful emotional selling point — it's not just heating, it's atmosphere.</p>
+    </div>
+
+    <!-- SW FAMILY -->
+    <h3>The SW Family</h3>
+    <p><strong>Models:</strong> COZY SW (standard) &amp; COZY SW-TW (Thru-Wall)</p>
+    <p>The SW features a <strong>sleek, contemporary cylindrical shape</strong>. Smooth curves create elegance and style while contributing to efficient heat distribution. It's the tallest stove in the Cozy Heat lineup.</p>
+    <p><strong>Variant explanation:</strong> The COZY SW-TW adds the through-the-wall extended firebox for loading from an adjacent room.</p>
+
+    <h4>What Makes It Different</h4>
+    <ul>
+      <li><strong>Cylindrical design</strong> — smooth curves, modern aesthetic</li>
+      <li><strong>Tallest stove</strong> in the lineup at 34.25" (870mm) — a full 5+ inches taller than other families</li>
+      <li><strong>Lowest stone requirement</strong> at 18kW: only 220 lbs minimum — fewer boxes to buy</li>
+      <li><strong>Heaviest TW model</strong> at 236 lbs — the most substantial stove in the lineup</li>
+      <li>The SW is the <strong>only model with specific safety distances listed in the product specs</strong>: Front-to-Back: 54.32" (1380mm), Left-to-Right: 34.64" (880mm)</li>
+    </ul>
+
+    <div class="framing-box">
+      <p><strong>How to Frame This:</strong></p>
+      <p><strong>The core concept:</strong> The SW is the tallest, sleekest stove in the lineup. Its cylindrical shape gives it a tower-like presence that commands attention. For customers who want their stove to make a vertical visual statement, this is the one.</p>
+      <p><strong>Analogy:</strong> The SW is like a modern sculpture — smooth, curved, and tall. It's the stove that says "I designed this sauna, I didn't just build it."</p>
+    </div>
+
+    <table>
+      <thead><tr><th>Spec</th><th>COZY SW (Standard)</th><th>COZY SW-TW (Thru-Wall)</th></tr></thead>
+      <tbody>
+        <tr><td>kW Options</td><td>12kW, 18kW</td><td>12kW, 18kW</td></tr>
+        <tr><td>Room Range (cu. ft.)</td><td>317–635</td><td>317–635</td></tr>
+        <tr><td>Min Ceiling Height</td><td>82" (2096mm)</td><td>82" (2096mm)</td></tr>
+        <tr><td>Stove Dimensions (D×W×H)</td><td>25.59" × 21.65" × 34.25"</td><td>31.49" × 21.65" × 34.25"</td></tr>
+        <tr><td>Stove Weight</td><td>209 lbs</td><td>236 lbs</td></tr>
+        <tr><td>Stones Min (12kW / 18kW)</td><td>175 / 220 lbs</td><td>175 / 220 lbs</td></tr>
+        <tr><td>Stone Boxes (12kW / 18kW)</td><td>4 / 5 boxes</td><td>[NOT FOUND IN SOURCE — SKU: COZY SW-TW]</td></tr>
+        <tr><td>Safety Distance (Front-Back)</td><td>54.32" (1380mm)</td><td>See Manual</td></tr>
+        <tr><td>Safety Distance (Left-Right)</td><td>34.64" (880mm)</td><td>See Manual</td></tr>
+        <tr><td>Flue Connection</td><td>Top</td><td>Top</td></tr>
+        <tr><td>Max Firewood Length</td><td>15.74" (400mm)</td><td>15.74" (400mm)</td></tr>
+        <tr><td>SKU</td><td>4745010348051</td><td>4745010348068</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Standard vs. Thru-Wall: The Universal Decision</h3>
+    <p>Across ALL five families, the choice between Standard and Thru-Wall comes down to one question: <strong>Where do you want to load the firewood?</strong></p>
+
+    <table>
+      <thead><tr><th>Factor</th><th>Standard</th><th>Thru-Wall (TW)</th></tr></thead>
+      <tbody>
+        <tr><td>Firewood loading</td><td>From inside the sauna</td><td>From outside / adjacent room</td></tr>
+        <tr><td>Sauna cleanliness</td><td>Bark & ash can enter sauna</td><td>Sauna stays clean</td></tr>
+        <tr><td>Heat loss when loading</td><td>Open door = some heat loss</td><td>No heat loss (door is outside)</td></tr>
+        <tr><td>Installation complexity</td><td>Simpler — no wall penetration</td><td>Requires wall framing & fireproofing</td></tr>
+        <tr><td>Stove depth</td><td>~24-26"</td><td>~30-32" (extended firebox)</td></tr>
+        <tr><td>Stove weight</td><td>Lighter</td><td>~22-27 lbs heavier</td></tr>
+        <tr><td>Best for</td><td>Simple builds, standalone saunas</td><td>Attached saunas, clean-room priority</td></tr>
+      </tbody>
+    </table>
+
+    <div class="pro-tip">
+      <p><strong>Pro Tip:</strong> Thru-Wall models are typically about 6" deeper than their standard counterparts (that's the extended firebox passing through the wall). Make sure the customer accounts for this in their wall framing. The wall thickness + the firebox extension needs to be planned in advance.</p>
+    </div>
+
+    <h3>12kW vs. 18kW: The Power Decision</h3>
+    <p>Every Cozy Heat model comes in <strong>12kW and 18kW</strong>. Here's how to guide the customer:</p>
+
+    <table>
+      <thead><tr><th>Factor</th><th>12kW</th><th>18kW</th></tr></thead>
+      <tbody>
+        <tr><td>Room Size</td><td>210–423 cu. ft.</td><td>317–635 cu. ft.</td></tr>
+        <tr><td>Stone Requirement</td><td>175–200 lbs (varies by family)</td><td>220–350 lbs (varies by family)</td></tr>
+        <tr><td>Heat-Up Time</td><td>Faster for small rooms</td><td>Handles large rooms effectively</td></tr>
+        <tr><td>Best For</td><td>Compact saunas, personal use</td><td>Family saunas, larger builds, commercial</td></tr>
+      </tbody>
+    </table>
+
+    <div class="watch-out">
+      <p><strong>Watch Out:</strong> The 12kW and 18kW models cover <strong>different room sizes</strong>. The 12kW models are rated for <strong>210–423 cu. ft.</strong>, while the 18kW models cover <strong>317–635 cu. ft.</strong> Make sure you're recommending the right kW for the customer's room size. When in doubt, recommend the 18kW — it's better to have more power than not enough. You can always burn less wood, but you can't make a stove bigger.</p>
+    </div>
+
+    <h3>What's Included with Every Cozy Heat Stove</h3>
+    <p>Every Cozy Heat stove ships with the following (stones sold separately):</p>
+    <ul>
+      <li>Outer frame of the heater</li>
+      <li>Chimney pipe</li>
+      <li>Heater body</li>
+      <li>Cleaning hatch</li>
+      <li>Heater door with glass</li>
+      <li>Ash box</li>
+      <li>Installation and operation manual</li>
+      <li>2-Year Warranty</li>
+    </ul>
+
+    <div class="pro-tip">
+      <p><strong>Pro Tip:</strong> A chimney pipe is included, but the customer will likely need additional chimney components (roof penetration kit, chimney cap, etc.) based on their specific installation. Always mention this so there are no surprises.</p>
+    </div>
+
+    <div class="watch-out">
+      <p><strong>Watch Out:</strong> Don't confuse standard and Thru-Wall depths when advising on fit. Thru-Wall variants are roughly <strong>6 inches deeper</strong> than their standard counterparts (e.g., Cozy base: 24.58" standard vs. 30.51" TW). Customers planning wall framing for a TW installation need the TW dimension, not the standard one. Getting this wrong means the stove doesn't fit during installation — an expensive mistake.</p>
+    </div>
+
+    <div class="framing-box">
+      <p><strong>Why This Matters for Sales:</strong></p>
+      <p>You now know all 10 models across 5 families. The performance is identical — your job is matching the customer's taste and space to the right design and configuration. Remember: the customer can't make a bad choice with Cozy Heat. Your role is helping them make the <em>best</em> choice for their specific build.</p>
+    </div>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- CHAPTER 4 -->
+  <!-- ============================================================ -->
+  <div class="chapter" id="ch4">
+    <h2 id="ch4">Chapter 4: Matching Customers to Products</h2>
+
+    <p>This chapter is where product knowledge becomes sales skill. You know the five families. Now let's talk about how to figure out which one your customer needs.</p>
+
+    <h3>The Qualifying Checklist (Wood-Burning Edition)</h3>
+    <p>The PPW qualifying checklist works for every product category, but here's how each question maps to Cozy Heat recommendations:</p>
+
+    <table>
+      <thead><tr><th>Question</th><th>What You're Learning</th><th>How It Maps to Cozy Heat</th></tr></thead>
+      <tbody>
+        <tr><td><strong>1. First name?</strong></td><td>Rapport building</td><td>—</td></tr>
+        <tr><td><strong>2. What got you interested in a sauna?</strong></td><td>Their "why" — the Gap</td><td>If they mention "authentic," "traditional," "wood-fired," or "off-grid" → Cozy Heat is the play</td></tr>
+        <tr><td><strong>3. Looked at specific models?</strong></td><td>Research level / competitors</td><td>If they name a cheap wood stove, use the Investment Reframe</td></tr>
+        <tr><td><strong>3b. First stove or replacing?</strong></td><td>Upgrade buyer vs. first-timer</td><td>Upgraders already know what they want better — lean into quality. First-timers need more education on wood-burning basics</td></tr>
+        <tr><td><strong>4. Where is it going?</strong></td><td>Indoor vs. outdoor, attached vs. standalone</td><td>Attached building → consider TW. Standalone → standard may be fine</td></tr>
+        <tr><td><strong>5. Rough dimensions?</strong></td><td>Room size for kW selection</td><td>Calculate cubic feet. 210-423 cu. ft. = 12kW. 317-635 cu. ft. = 18kW</td></tr>
+        <tr><td><strong>6. Indoor or outdoor?</strong></td><td>Build type, code considerations</td><td>Outdoor = less code complexity. Indoor = chimney routing matters</td></tr>
+        <tr><td><strong>7. How many people?</strong></td><td>Room size validation</td><td>1-2 people = smaller build, 12kW. 4+ people = larger, 18kW</td></tr>
+        <tr><td><strong>8. Electrical available?</strong></td><td>Electric vs. wood decision</td><td>No electric service? Wood is the obvious choice. Cozy Heat shines here</td></tr>
+        <tr><td><strong>9. Infrared, traditional, or both?</strong></td><td>Sauna type preference</td><td>"Traditional" = wood-fired is perfect. Explain the löyly experience</td></tr>
+        <tr><td><strong>10. Budget range?</strong></td><td>Price positioning</td><td>Cozy Heat is premium wood-burning. Know your price points</td></tr>
+        <tr><td><strong>11. Timeline?</strong></td><td>Urgency, freight planning</td><td>Freight shipping = plan ahead. These ship on pallets</td></tr>
+        <tr><td><strong>12. Best email?</strong></td><td>Follow-up</td><td>Send comparison sheet and freight quote</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Decision Tree: Which Cozy Heat Model?</h3>
+    <p>Once you know the customer wants a wood-burning stove and Cozy Heat is in play, walk through this decision tree:</p>
+
+    <h4>Step 1: Standard or Thru-Wall?</h4>
+    <ul>
+      <li><strong>Customer is building an attached sauna</strong> (connected to the house, garage, or changing room) → Recommend <strong>Thru-Wall</strong>. Loading from the adjacent room keeps the sauna clean and prevents heat loss.</li>
+      <li><strong>Customer is building a standalone sauna</strong> (barrel sauna, cabin, backyard shed) → Recommend <strong>Standard</strong>. Simpler installation, no wall penetration needed.</li>
+      <li><strong>Customer wants the cleanest possible sauna experience</strong> → Recommend <strong>Thru-Wall</strong> regardless of build type.</li>
+    </ul>
+
+    <h4>Step 2: 12kW or 18kW?</h4>
+    <ul>
+      <li><strong>Room 210–423 cu. ft.</strong> → 12kW confirmed range from specs</li>
+      <li><strong>Room 317–635 cu. ft.</strong> → 18kW confirmed range from specs</li>
+      <li><strong>When in doubt</strong> → Go with 18kW. Oversizing slightly is better than undersizing. You can always burn less wood, but you can't make a stove bigger.</li>
+    </ul>
+
+    <h4>Step 3: Which Design Family?</h4>
+    <p>This is where you let the customer's taste drive:</p>
+
+    <table>
+      <thead><tr><th>Customer Says...</th><th>Recommend</th><th>Why</th></tr></thead>
+      <tbody>
+        <tr><td>"I want classic / traditional / rustic"</td><td><strong>Cozy (Base)</strong></td><td>Timeless design, the original, narrowest width</td></tr>
+        <tr><td>"I want something unique / eye-catching"</td><td><strong>O</strong></td><td>Circular rim is distinctive, highest stone capacity</td></tr>
+        <tr><td>"I want modern / contemporary / elegant"</td><td><strong>OG</strong></td><td>Trilateral design, artistic, sophisticated</td></tr>
+        <tr><td>"I want clean lines / minimalist / to see the fire"</td><td><strong>Quattro</strong></td><td>Square design, large viewing window, understated elegance</td></tr>
+        <tr><td>"I want sleek / cylindrical / tall / tower-like"</td><td><strong>SW</strong></td><td>Cylindrical shape, tallest stove, smooth curves</td></tr>
+        <tr><td>"I'm not sure / just want the best performance"</td><td><strong>Cozy (Base)</strong> or <strong>O</strong></td><td>Highest stone capacities = best thermal performance</td></tr>
+      </tbody>
+    </table>
+
+    <div class="framing-box">
+      <p><strong>How to Frame This:</strong></p>
+      <p><strong>The core concept:</strong> Every Cozy Heat model has the same engine under the hood — dual combustion, 5mm stainless flame cutter, German certification. So the customer can't make a bad performance choice. They're really choosing body style and stone capacity.</p>
+      <p><strong>PPW framework to apply:</strong> Bridge Technique — answer their design question first ("Great taste — the Quattro has that minimalist look you described"), then bridge to discovery ("Let me ask about your room dimensions so I can confirm the right kW size for you").</p>
+    </div>
+
+    <h3>Sizing Guide: Room Size to Stove Size</h3>
+    <p>All Cozy Heat 12kW models cover <strong>210–423 cubic feet</strong>. All 18kW models cover <strong>317–635 cubic feet</strong>. Here's how to calculate your customer's room:</p>
+
+    <div class="key-def">
+      <p><strong>Key Definition — Cubic Feet:</strong> Length × Width × Height of the room, all in feet. A room that's 8' long × 6' wide × 7' tall = 8 × 6 × 7 = <strong>336 cubic feet</strong>.</p>
+    </div>
+
+    <p><strong>Quick reference room examples (assuming 7' ceiling):</strong></p>
+    <table>
+      <thead><tr><th>Room (L × W)</th><th>Cubic Feet (7' ceiling)</th><th>kW Recommendation</th></tr></thead>
+      <tbody>
+        <tr><td>5' × 5'</td><td>175</td><td>12kW</td></tr>
+        <tr><td>6' × 6'</td><td>252</td><td>12kW</td></tr>
+        <tr><td>6' × 8'</td><td>336</td><td>18kW ✓</td></tr>
+        <tr><td>7' × 8'</td><td>392</td><td>18kW ✓</td></tr>
+        <tr><td>8' × 8'</td><td>448</td><td>18kW ✓</td></tr>
+        <tr><td>8' × 10'</td><td>560</td><td>18kW ✓</td></tr>
+        <tr><td>8' × 11'</td><td>616</td><td>18kW ✓ (near max)</td></tr>
+      </tbody>
+    </table>
+
+    <div class="pro-tip">
+      <p><strong>Pro Tip:</strong> Cozy Heat 12kW stoves require a minimum room height of <strong>72 inches</strong> (6 feet), while 18kW stoves require <strong>82 inches</strong> (6 feet 10 inches). Standard 7-foot ceilings (84") meet both requirements. If a customer mentions a low-ceiling space, verify which clearance applies based on the kW model they need.</p>
+    </div>
+
+    <div class="watch-out">
+      <p><strong>Watch Out:</strong> These room-size calculations assume standard insulated sauna construction. Factors that increase the effective room size (requiring more power): uninsulated walls, large glass windows/doors, stone or concrete surfaces, high ceilings. If the customer's sauna has any of these, lean toward the larger kW option. <span class="gap-flag">[Specific adjustment factors NOT FOUND IN SOURCE — use general sauna industry guidance]</span></p>
+    </div>
+
+    <h3>Common Customer Scenarios</h3>
+
+    <h4>Scenario 1: The Backyard Barrel Sauna</h4>
+    <p><strong>Customer profile:</strong> Building or bought a barrel sauna, needs a wood stove, wants the authentic experience.</p>
+    <p><strong>Recommendation:</strong> <strong>Cozy (Base) 12kW or 18kW Standard</strong>. The narrow width (19.68") works well in barrel saunas. Generous stone capacity for excellent thermal performance. Classic look suits the rustic barrel aesthetic. Standard model because barrel saunas are standalone.</p>
+    <p><strong>Cold-climate note:</strong> In colder climates, barrel saunas can have cold floors because heat rises and the curved shape concentrates warmth at the top. Set expectations with the customer — the heavy stone mass helps by radiating heat from a lower point, but if they want active air circulation, mention the <strong>Saunum Air Solo</strong> as an add-on option.</p>
+
+    <h4>Scenario 2: The Custom Home Sauna Build</h4>
+    <p><strong>Customer profile:</strong> Building a custom sauna room in their home or attached to their house. Has a changing room or adjacent space.</p>
+    <p><strong>Recommendation:</strong> <strong>Any TW (Thru-Wall) model, 18kW</strong>. The Thru-Wall design is perfect here — load wood from the changing room, keep the sauna pristine. Let them choose the design family based on their aesthetic preference. The Quattro TW or OG-TW are popular for high-end builds.</p>
+    <p><strong>Cross-sell opportunity:</strong> Custom builders need more than just a stove. Ask about <strong>sauna building materials</strong> — doors, LED lighting, aluminum foil vapor barrier, wall paneling, benching wood, and accessories. These customers are a gold mine for PPW because they need the complete package. Also mention the <strong>Saunum Air Solo</strong> — a standalone air-blending device that mounts on the wall and works with any heater, including wood-fired. It actively circulates heat for a more even temperature from floor to ceiling. It's the premium add-on for customers who want the ultimate sauna experience.</p>
+
+    <h4>Scenario 3: The Off-Grid Cabin</h4>
+    <p><strong>Customer profile:</strong> Cabin or property with no electrical service. Wants a sauna.</p>
+    <p><strong>Recommendation:</strong> <strong>Cozy Heat is the obvious choice</strong> — no electricity needed. Standard model for simplicity. 18kW for larger cabin saunas, 12kW for compact builds. Emphasize the fuel efficiency: 25-40% less wood means fewer trips to the woodpile.</p>
+
+    <h4>Scenario 4: The Design-Conscious Builder</h4>
+    <p><strong>Customer profile:</strong> Building a premium sauna as part of a high-end renovation. Aesthetics are as important as performance.</p>
+    <p><strong>Recommendation:</strong> <strong>OG or Quattro</strong>. The OG's trilateral design and the Quattro's clean square lines with viewing window are both showpieces. Guide them based on whether they prefer curves (OG) or clean lines (Quattro).</p>
+
+    <h3>Shipping & Delivery Expectations</h3>
+    <p>Set proper expectations with every Cozy Heat customer:</p>
+    <ul>
+      <li>Ships on a <strong>wooden pallet</strong>, encased in three-ply cardboard</li>
+      <li>Requires a <strong>scheduled delivery appointment</strong></li>
+      <li>Driver provides <strong>"delivery only"</strong> with limited assistance</li>
+      <li>Shipping weights (18kW models) range from <strong>429–533 lbs</strong> (stove + stones); 12kW models ship lighter at <strong>297–346 lbs</strong> — either way, the customer needs to plan for handling a heavy pallet</li>
+      <li>Freight quotes: email <strong>Customerservice@bathingbrands.com</strong> with model number and full shipping address</li>
+      <li>Accessories can be bundled with stove shipments to save on freight costs</li>
+    </ul>
+
+    <div class="pro-tip">
+      <p><strong>Pro Tip:</strong> Mentioning that accessories can ship with the stove to save on freight is a great way to upsell sauna accessories. The customer is already paying for freight — adding stones, buckets, ladles, or thermometers to the same pallet costs almost nothing extra. This is a margin booster for PPW.</p>
+    </div>
+
+    <div class="framing-box">
+      <p><strong>Peak Protection Concierge — Surface It Here:</strong></p>
+      <p>Freight is the natural anxiety point for Cozy Heat customers. This is where Peak Protection earns its name: "We manage the freight coordination, track your pallet, and stay with you from order to first fire. You're not just buying a stove — you're getting a personal project manager who makes the whole process smooth." Surface this at the moment of shipping anxiety, not after they've already worried about it.</p>
+    </div>
+
+    <div class="framing-box">
+      <p><strong>Why This Matters for Sales:</strong></p>
+      <p>Matching the right model to the right customer is where you add value that a website can't. Anyone can read a spec sheet. But asking the right qualifying questions, understanding the build scenario, and guiding the customer to the perfect stove-and-accessories package — that's what makes the sale and earns the referral. Use the qualifying checklist on every call.</p>
+    </div>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- CHAPTER 5 -->
+  <!-- ============================================================ -->
+  <div class="chapter" id="ch5">
+    <h2 id="ch5">Chapter 5: Handling Questions &amp; Objections</h2>
+
+    <p>This chapter covers the questions you'll hear most often from customers considering Cozy Heat, and how to handle the objections that come up.</p>
+
+    <div class="key-def">
+      <p><strong>Key Definition — LAER Framework:</strong> Our four-step framework for handling objections:</p>
+      <p><strong>Listen</strong> — Let the customer finish. Don't interrupt. Understand what they're really asking.</p>
+      <p><strong>Acknowledge</strong> — Validate their concern. "That's a fair point" goes a long way.</p>
+      <p><strong>Explore</strong> — Ask a follow-up question that uncovers the real issue behind the objection.</p>
+      <p><strong>Respond</strong> — Now give your answer, targeted to what you just learned.</p>
+      <p>The sequence matters: if you Respond before you Explore, you're guessing at the answer. If you skip Acknowledge, the customer feels dismissed.</p>
+    </div>
+
+    <div class="key-def">
+      <p><strong>Key Definition — Three Tens:</strong> Every customer needs to be a <strong>10 out of 10 certain</strong> about three things before they buy:</p>
+      <p><strong>Ten #1 — The Product:</strong> "Is this the right stove for me?" (Build certainty with specs, certifications, design match.)</p>
+      <p><strong>Ten #2 — The Salesperson (You):</strong> "Does this rep actually know what they're talking about?" (Build certainty by speaking confidently about dual combustion, citing BImSchV without stumbling, knowing stone requirements cold.)</p>
+      <p><strong>Ten #3 — The Company (PPW):</strong> "Will this company take care of me after the sale?" (Build certainty with Peak Protection Concierge, freight support, manufacturer advocacy.)</p>
+      <p>Most buying decisions are driven by #2 and #3 — the customer's trust in you and in PPW — not just the product specs. Know your stuff and show you care.</p>
+    </div>
+
+    <h3>Top Customer Questions</h3>
+
+    <h4>"What makes Cozy Heat better than other wood stoves?"</h4>
+    <div class="framing-box">
+      <p><strong>How to Frame This:</strong></p>
+      <p><strong>The key insight for the customer:</strong> Three things separate Cozy Heat from every other wood stove: (1) Dual combustion that burns smoke 6x cleaner, (2) 25-40% less fuel consumption, and (3) German BImSchV certification — the strictest emissions standard in Europe.</p>
+      <p><strong>Analogy to use:</strong> "Most wood stoves burn wood once and send the smoke up the chimney. Cozy Heat burns that smoke <em>again</em>, extracting more heat and producing cleaner exhaust. It's like the difference between a standard engine and a turbo — same fuel, more output, fewer emissions."</p>
+      <p><strong>PPW framework:</strong> Three Tens — build certainty in the product. The German certification isn't a marketing claim; it's a third-party verification that this stove is in a different class.</p>
+    </div>
+
+    <h4>"Do I need a Thru-Wall model?"</h4>
+    <div class="framing-box">
+      <p><strong>How to Frame This:</strong></p>
+      <p><strong>The key insight:</strong> Thru-Wall isn't about performance — it's about convenience and cleanliness. Ask the customer: "Is your sauna attached to another room? Would you prefer to keep firewood and ash completely outside the sauna space?"</p>
+      <p><strong>PPW framework:</strong> Bridge Technique — answer the question ("Thru-Wall lets you load wood from outside the sauna"), then bridge to discovery ("Tell me about your sauna layout — is it attached to your house or a standalone building?").</p>
+    </div>
+
+    <h4>"How much wood does it use?"</h4>
+    <div class="framing-box">
+      <p><strong>How to Frame This:</strong></p>
+      <p><strong>The key insight:</strong> Cozy Heat stoves use 25-40% less firewood than comparable stoves. That's verified by the German certification, not a marketing estimate. Over a season of regular sauna use, that's a meaningful difference in both wood cost and effort.</p>
+      <p><strong>Analogy:</strong> "It's like getting 25-40% better gas mileage on the same tank. You're getting the same heat with significantly less fuel."</p>
+    </div>
+
+    <h4>"What about chimney requirements?"</h4>
+    <div class="framing-box">
+      <p><strong>How to Frame This:</strong></p>
+      <p><strong>The honest answer:</strong> Every wood-burning stove needs a proper chimney, and requirements vary by local building code. A chimney pipe is included with the stove, but the customer will need additional chimney components based on their specific installation.</p>
+      <p><strong>PPW framework:</strong> Peak Protection Concierge — this is where PPW's concierge service shines. "We can help connect you with resources to figure out exactly what chimney components you need. We're not just selling you a stove and sending you on your way."</p>
+    </div>
+
+    <h4>"What size stones do I need, and how many?"</h4>
+    <div class="framing-box">
+      <p><strong>How to Frame This:</strong></p>
+      <p><strong>The facts:</strong> Stone requirements vary by model and kW. Always reference the specific model's stone requirement from the spec sheet. Two stone options are available: Traditional Sauna Stones (10-15 cm, natural shape) and Premium Rounded Olivine Diabase Stones (smooth, river-stone look).</p>
+      <p><strong>Upsell opportunity:</strong> Always recommend buying one extra box. Natural stones vary in shape and size — having extras lets the customer select the best-fitting stones for their stove. This is genuinely helpful advice, not just an upsell.</p>
+    </div>
+
+    <h3>Common Objections &amp; LAER Responses</h3>
+
+    <h4>Objection: "That's more expensive than the wood stove I found on Amazon."</h4>
+    <div class="framing-box">
+      <p><strong>LAER Framework Applied:</strong></p>
+      <p><strong>Listen:</strong> Let them tell you about the stove they found. Don't interrupt. Understand what they're comparing to.</p>
+      <p><strong>Acknowledge:</strong> "That's a valid comparison — there are definitely cheaper wood stoves out there."</p>
+      <p><strong>Explore:</strong> Ask what matters to them: "When you're looking at wood stoves, what's most important to you — just heating the room, or the quality of the sauna experience? How often do you plan to use it?" This surfaces whether they're a casual user or a serious sauna enthusiast.</p>
+      <p><strong>Respond:</strong> Use a three-part response:</p>
+      <p><strong>Part 1 — The Experience Difference:</strong> A cheap wood stove with a small stone bed just blasts hot air upward. Your head cooks, your feet freeze, and after 8 minutes you're done — not because you want to be, but because you have to be. That's a hot box, not a real sauna. Cozy Heat's massive stone mass (175-350 lbs) creates soft, even, radiant heat that lets you stay in for 15-20 minutes — which is where the real health benefits happen.</p>
+      <p><strong>Part 2 — The Investment Reframe:</strong> The stove is the heart of the sauna. A $500 stove in a $7,000 sauna build is like putting a 2-liter engine in a Bentley. Harvia's own quarterly earnings data shows that <strong>70 to 80 percent</strong> of their heater sales come from second-time buyers — every single one of them upgrading to a better, more expensive heater. You can skip that step and get the right stove the first time.</p>
+      <p><strong>Part 3 — The Daily Cost Breakdown:</strong> Break it down over the stove's lifespan. A Cozy Heat stove used two or three times a week for 15 years costs less than a couple dollars per session. The $500 Amazon alternative burns 25-40% more wood every single session and may need replacing in 3-5 years. The math runs the other way once you factor in lifespan and fuel savings.</p>
+    </div>
+
+    <div class="framing-box">
+      <p><strong>How to Frame — Amazon Price Objection</strong></p>
+      <p><strong>The core concept:</strong> Cheap wood stoves create a "hot box" — blasting dry heat upward so your head cooks while your feet stay cold, forcing you out in 8 minutes. Cozy Heat's massive stone mass (175–350 lbs) acts as a thermal battery that delivers soft, even, radiant heat you can sit in for 15–20 minutes, which is where the real health benefits occur.</p>
+      <p><strong>Mental model:</strong> Think of the stove as the heart of the sauna build. A $500 stove in a $7,000 build is like putting a 2-liter engine in a Bentley. The investment reframe works because Harvia's own earnings data shows 70–80% of heater sales come from second-time buyers upgrading — you can help the customer skip that expensive mistake.</p>
+      <p><strong>Approach:</strong> First, establish the experience and quality gap before discussing price. Then break the cost down over the stove's lifespan — at 2–3 sessions per week over 15 years, a Cozy Heat stove costs a couple dollars per session, while the cheap alternative burns 25–40% more wood and may need replacing in 3–5 years. Let the math make the case.</p>
+    </div>
+
+    <div class="watch-out">
+      <p><strong>Watch Out:</strong> Do not concede on price before you've done discovery. If you drop the price conversation before establishing the quality difference, the customer anchors to the Amazon stove's price and everything you say after sounds like an upsell. Always establish the experience and quality gap first, then address the price.</p>
+    </div>
+
+    <h4>Objection: "I've never heard of Cozy Heat."</h4>
+    <div class="framing-box">
+      <p><strong>LAER Framework Applied:</strong></p>
+      <p><strong>Listen:</strong> Understand their concern — is it brand trust? Quality worry? Country of origin skepticism?</p>
+      <p><strong>Acknowledge:</strong> "That's totally fair — they're not a household name in the US yet."</p>
+      <p><strong>Explore:</strong> "What brands have you looked at? What made you trust those?" This tells you what credibility signals matter to them.</p>
+      <p><strong>Respond:</strong> Build on their credibility signals. If they trust certifications → lead with German BImSchV. If they trust heritage → lead with "hand-made in Estonia, a country where sauna is a national tradition." If they trust durability → lead with the 5mm stainless steel flame cutter. Then drop this line: "In Europe — and especially Germany, where wood-burning regulations are the strictest on earth — Cozy Heat is what serious sauna builders choose. Germany is their biggest market. They're not a household name in the US yet, but they're the gold standard where saunas actually come from." Apply <strong>Three Tens</strong> — you're building certainty in the product specifically.</p>
+    </div>
+
+    <h4>Objection: "Wood-burning seems like too much work. Maybe I should go electric."</h4>
+    <div class="framing-box">
+      <p><strong>LAER Framework Applied:</strong></p>
+      <p><strong>Listen:</strong> What specifically feels like too much work? Loading wood? Cleaning ash? Chimney maintenance?</p>
+      <p><strong>Acknowledge:</strong> "I hear you — wood-burning is definitely more hands-on than flipping a switch."</p>
+      <p><strong>Explore:</strong> "What was it that originally drew you to a sauna? Was it the convenience or the experience?" This is a Gap question — if they want the <em>experience</em>, wood is the answer. If they purely want convenience, electric might genuinely be better for them, and that's OK.</p>
+      <p><strong>Respond:</strong> If the experience matters to them, frame the "work" as the ritual: "The people who love wood saunas will tell you that building the fire IS the experience. It's like saying 'cooking is too much work — I should just microwave.' Technically true, but you're giving up the best part." Then address their specific concern (ash box makes cleanup easy, Cozy Heat burns so efficiently there's less ash, etc.).</p>
+    </div>
+
+    <h4>Objection: "I'm worried about emissions / smoke / neighbors complaining."</h4>
+    <div class="framing-box">
+      <p><strong>LAER Framework Applied:</strong></p>
+      <p><strong>Listen:</strong> Valid concern, especially in suburban areas or places with HOAs.</p>
+      <p><strong>Acknowledge:</strong> "That's actually one of the smartest questions a customer can ask."</p>
+      <p><strong>Explore:</strong> "Do you have specific local regulations, or is this more about being a good neighbor?" This tells you whether it's a code issue or a social issue.</p>
+      <p><strong>Respond:</strong> This is where Cozy Heat's dual combustion and German BImSchV certification become the hero. The smoke gases are <strong>6x cleaner</strong> than conventional stoves. Think of the German BImSchV certification like a <strong>5-star crash rating for emissions</strong> — it's the strictest test in Europe, and Cozy Heat meets the <strong>highest level (Level 2)</strong>. This isn't a marketing claim; it's third-party verified by the most demanding regulatory body in the world for wood-burning appliances. If there's a wood stove that can pass a neighbor's scrutiny test, it's this one.</p>
+    </div>
+
+    <h3>The Bridge Technique in Action</h3>
+    <p>The Bridge Technique is essential when selling Cozy Heat because customers often lead with narrow questions. Here's the pattern:</p>
+    <ol>
+      <li><strong>Answer the question first.</strong> Don't dodge it. Give them a direct, honest answer.</li>
+      <li><strong>Bridge to discovery.</strong> Then ask a question that helps you understand their full situation.</li>
+    </ol>
+    <p><strong>Example:</strong> Customer asks, "What's the price on the Quattro?" → Answer: "The Quattro is [price]. Great choice — that one's got a really clean, modern look with a big viewing window." → Bridge: "Quick question — is this for a new build or are you replacing an existing stove? I want to make sure we get the right configuration for your space."</p>
+
+    <div class="framing-box">
+      <p><strong>How to Frame — Bridge into a Cozy Heat Conversation</strong></p>
+      <p><strong>The core concept:</strong> Customers often open with a narrow question — "Do you have X in stock?" or "What's the price on Y?" The Bridge Technique turns a transactional question into a consultative conversation without dodging the original question.</p>
+      <p><strong>Mental model:</strong> Think of it as Answer → Affirm → Ask. Give the direct answer first (yes, it's available; here's the price), affirm their choice briefly, then ask one discovery question that opens up the full picture — new build vs. replacement, room layout, adjacent rooms. Each answer unlocks the next natural question.</p>
+      <p><strong>Approach:</strong> Never dodge the initial question — customers sense evasion immediately. Answer it honestly, then bridge into discovery by asking about the build context (new vs. replacement, room location, adjacent spaces). This naturally leads to recommending the right configuration (standard vs. Thru-Wall) and positions you as a knowledgeable guide, not a clerk reading specs.</p>
+    </div>
+
+    <div class="pro-tip">
+      <p><strong>Pro Tip:</strong> Wood-burning stove customers tend to be more knowledgeable and more passionate about sauna than the average buyer. They've usually done research. Respect that. Don't over-explain basics they already know — instead, give them the insider details (dual combustion, BImSchV certification, 5mm flame cutter) that they probably haven't found yet. That builds credibility fast.</p>
+    </div>
+
+    <h3>Peak Protection Concierge Positioning</h3>
+    <p>For wood-burning stoves, the Peak Protection Concierge service is especially valuable because the installation is more complex than electric:</p>
+    <ul>
+      <li><strong>Chimney planning</strong> — PPW can help the customer figure out what chimney components they need</li>
+      <li><strong>Freight coordination</strong> — these are heavy, pallet-shipped products that require scheduled delivery</li>
+      <li><strong>Stone selection guidance</strong> — helping choose between traditional and premium stones, calculating the right quantity</li>
+      <li><strong>Installation referrals</strong> — connecting customers with professionals who have experience with wood-burning sauna stoves</li>
+      <li><strong>Manufacturer advocacy</strong> — if anything goes wrong, PPW goes to bat for the customer with Cozy Heat / Bathing Brands</li>
+    </ul>
+
+    <div class="framing-box">
+      <p><strong>How to Frame This:</strong></p>
+      <p><strong>The core concept:</strong> "You're not just buying a stove from a website. You're getting a personal project manager who makes sure everything from freight to chimney to stones comes together right. That's what Peak Protection means."</p>
+      <p><strong>PPW framework:</strong> Three Tens — this builds certainty in the company (PPW) and the salesperson (you). The customer should feel like they have someone in their corner throughout the entire process.</p>
+    </div>
+
+    <div class="framing-box">
+      <p><strong>How to Frame — Closing Value Stack with Peak Protection</strong></p>
+      <p><strong>The core concept:</strong> The close should feel like a summary, not a pitch. Stack the value the customer is getting into three layers: (1) the product itself — hand-made Estonian craftsmanship, dual combustion, German BImSchV certification; (2) the Peak Protection Concierge service — personal freight management, chimney planning, stone order verification, and manufacturer advocacy; (3) the logistics convenience — bundled pallet shipping, scheduled delivery aligned to the build timeline.</p>
+      <p><strong>Mental model:</strong> You're not selling a stove; you're selling a managed project. The customer should walk away feeling they have a personal project manager, not just a receipt. This is Three Tens in action — building certainty in the product, the company (PPW), and you as their point person.</p>
+      <p><strong>Approach:</strong> Recap what you've discussed in a natural stack — product quality, then concierge support, then next steps. End with a clear, low-friction action item (sending a freight quote, scheduling delivery). The goal is to make saying "yes" the easiest thing in the conversation.</p>
+    </div>
+
+    <div class="watch-out">
+      <p><strong>Watch Out:</strong> Never let a customer leave the conversation without hearing about Peak Protection. If they buy from Amazon or a random website, they get a box on their doorstep and zero support. If they buy from PPW, they get a project manager. That's the difference that justifies the relationship — make sure they know it.</p>
+    </div>
+
+    <div class="framing-box">
+      <p><strong>Why This Matters for Sales:</strong></p>
+      <p>This chapter is the one you'll use most on live calls. The LAER framework gives you a repeatable structure for any objection. The framing guides give you the mental models and approaches to use when you're in the moment. And Peak Protection Concierge is your closing tool — it's the reason a customer should buy from PPW instead of anywhere else. Practice these frameworks until they feel natural.</p>
+    </div>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- CHAPTER 6 -->
+  <!-- ============================================================ -->
+  <div class="chapter" id="ch6">
+    <h2 id="ch6">Chapter 6: Technical Reference</h2>
+    <p>Everything below is what you need when a customer asks for the specific number — depths, weights, stone counts, SKUs, certifications. This is your reference section. Don't read it start to finish — use it to look up specific specs during customer conversations. Being able to pull the exact number mid-call is what separates the expert from the order-taker.</p>
+
+    <h3>Complete Specifications: All Models (18kW)</h3>
+    <p>All specs below are for the <strong>18kW variants</strong> as listed in the official product data.</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Specification</th>
+          <th>Cozy</th>
+          <th>Cozy TW</th>
+          <th>O</th>
+          <th>O-TW</th>
+          <th>OG</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Model Name</strong></td><td>Cozy 18</td><td>Cozy 18 Thru-Wall</td><td>Cozy O 18</td><td>Cozy O Thru-Wall 18</td><td>Cozy OG 18</td></tr>
+        <tr><td><strong>kW Rating</strong></td><td>18kW</td><td>18kW</td><td>18kW</td><td>18kW</td><td>18kW</td></tr>
+        <tr><td><strong>Primary Fuel</strong></td><td>Wood</td><td>Wood</td><td>Wood</td><td>Wood</td><td>Wood</td></tr>
+        <tr><td><strong>Min Cu. Ft.</strong></td><td>317</td><td>317</td><td>317</td><td>317</td><td>317</td></tr>
+        <tr><td><strong>Max Cu. Ft.</strong></td><td>635</td><td>635</td><td>635</td><td>635</td><td>635</td></tr>
+        <tr><td><strong>Min Room Height</strong></td><td>82" <span class="gap-flag">(1828mm*)</span></td><td>82" (2096mm)</td><td>82" (2096mm)</td><td>82" (2096mm)</td><td>82" (2096mm)</td></tr>
+        <tr><td><strong>Stove Depth</strong></td><td>24.58" (625mm)</td><td>30.51" (775mm)</td><td>24.08" (630mm)</td><td>30.70" (780mm)</td><td>25.78" (655mm)</td></tr>
+        <tr><td><strong>Stove Width</strong></td><td>19.68" (500mm)</td><td>19.68" (500mm)</td><td>19.88" (505mm)</td><td>19.88" (505mm)</td><td>22.04" (560mm)</td></tr>
+        <tr><td><strong>Stove Height</strong></td><td>29.76" (756mm)</td><td>29.76" (756mm)</td><td>29.76" (756mm)</td><td>29.76" (756mm)</td><td>29.72" (755mm)</td></tr>
+        <tr><td><strong>Stove Weight</strong></td><td>159 lbs</td><td>185 lbs</td><td>154 lbs</td><td>181 lbs</td><td>176 lbs</td></tr>
+        <tr><td><strong>Shipping Wt w/ Stones</strong></td><td>467 lbs</td><td>493 lbs</td><td>506 lbs</td><td>533 lbs</td><td>440 lbs</td></tr>
+        <tr><td><strong>Max Firewood Length</strong></td><td>15.74" (400mm)</td><td>15.74" (400mm)</td><td>15.74" (400mm)</td><td>15.74" (400mm)</td><td>15.74" (400mm)</td></tr>
+        <tr><td><strong>Firewood Diameter</strong></td><td>3.15-4.72"</td><td>3.15-4.72"</td><td>3.15-4.72"</td><td>3.14-4.72"</td><td>3.15-4.72"</td></tr>
+        <tr><td><strong>Flue Connection</strong></td><td>Top</td><td>Top</td><td>Top</td><td>Top</td><td>Top</td></tr>
+        <tr><td><strong>Stones 12kW</strong></td><td>200 lbs</td><td>200 lbs</td><td>200 lbs</td><td>200 lbs</td><td>175 lbs</td></tr>
+        <tr><td><strong>Stones 18kW</strong></td><td>310 lbs</td><td>310 lbs</td><td>350 lbs</td><td>350 lbs</td><td>240 lbs</td></tr>
+        <tr><td><strong>Safety Distance</strong></td><td>See Manual</td><td>See Manual</td><td>See Manual</td><td>See Manual</td><td>See Manual</td></tr>
+        <tr><td><strong>SKU</strong></td><td>4745010348013</td><td>4745010348020</td><td>4745010348037</td><td>4745010348044</td><td>4745010348075</td></tr>
+        <tr><td><strong>Internal SKU</strong></td><td>174-127693</td><td>174-127694</td><td>174-127695</td><td>174-127696</td><td>174-127697</td></tr>
+      </tbody>
+    </table>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Specification</th>
+          <th>OG-TW</th>
+          <th>Quattro</th>
+          <th>Quattro TW</th>
+          <th>SW</th>
+          <th>SW-TW</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Model Name</strong></td><td>Cozy OG Thru-Wall 18</td><td>Cozy Quattro 18</td><td>Cozy Quattro Thru-Wall 18</td><td>Cozy SW 18</td><td>Cozy SW-Thru-Wall 18</td></tr>
+        <tr><td><strong>kW Rating</strong></td><td>18kW</td><td>18kW</td><td>18kW</td><td>18kW</td><td>18kW</td></tr>
+        <tr><td><strong>Primary Fuel</strong></td><td>Wood</td><td>Wood</td><td>Wood</td><td>Wood</td><td>Wood</td></tr>
+        <tr><td><strong>Min Cu. Ft.</strong></td><td>317</td><td>317</td><td>317</td><td>317</td><td>317</td></tr>
+        <tr><td><strong>Max Cu. Ft.</strong></td><td>635</td><td>635</td><td>635</td><td>635</td><td>635</td></tr>
+        <tr><td><strong>Min Room Height</strong></td><td>82" (2096mm)</td><td>82" (2096mm)</td><td>82" (2096mm)</td><td>82" (2096mm)</td><td>82" (2096mm)</td></tr>
+        <tr><td><strong>Stove Depth</strong></td><td>31.69" (805mm)</td><td>24.08" (630mm)</td><td>30.70" (780mm)</td><td>25.59" (650mm)</td><td>31.49" (800mm)</td></tr>
+        <tr><td><strong>Stove Width</strong></td><td>22.04" (560mm)</td><td>20.27" (515mm)</td><td>20.27" (515mm)</td><td>21.65" (550mm)</td><td>21.65" (550mm)</td></tr>
+        <tr><td><strong>Stove Height</strong></td><td>29.72" (755mm)</td><td>28.74" (730mm)</td><td>28.74" (730mm)</td><td>34.25" (870mm)</td><td>34.25" (870mm)</td></tr>
+        <tr><td><strong>Stove Weight</strong></td><td>199 lbs</td><td>198 lbs</td><td>220 lbs</td><td>209 lbs</td><td>236 lbs</td></tr>
+        <tr><td><strong>Shipping Wt w/ Stones</strong></td><td>463 lbs</td><td>462 lbs</td><td>484 lbs</td><td>429 lbs</td><td>456 lbs</td></tr>
+        <tr><td><strong>Max Firewood Length</strong></td><td>15.74" (400mm)</td><td>15.74" (400mm)</td><td>15.74" (400mm)</td><td>15.74" (400mm)</td><td>15.74" (400mm)</td></tr>
+        <tr><td><strong>Firewood Diameter</strong></td><td>3.14-4.72"</td><td>3.15-4.72"</td><td>3.14-4.72"</td><td>3.15-4.72"</td><td>3.14-4.72"</td></tr>
+        <tr><td><strong>Flue Connection</strong></td><td>Top</td><td>Top</td><td>Top</td><td>Top</td><td>Top</td></tr>
+        <tr><td><strong>Stones 12kW</strong></td><td>175 lbs</td><td>175 lbs</td><td>175 lbs</td><td>175 lbs</td><td>175 lbs</td></tr>
+        <tr><td><strong>Stones 18kW</strong></td><td>240 lbs</td><td>265 lbs</td><td>265 lbs</td><td>220 lbs</td><td>220 lbs</td></tr>
+        <tr><td><strong>Safety Dist. (F-B)</strong></td><td>See Manual</td><td>See Manual</td><td>See Manual</td><td>54.32" (1380mm)</td><td>See Manual</td></tr>
+        <tr><td><strong>Safety Dist. (L-R)</strong></td><td>See Manual</td><td>See Manual</td><td>See Manual</td><td>34.64" (880mm)</td><td>See Manual</td></tr>
+        <tr><td><strong>SKU</strong></td><td>4745010348082</td><td>4745010348259</td><td>4745010348266</td><td>4745010348051</td><td>4745010348068</td></tr>
+        <tr><td><strong>Internal SKU</strong></td><td>174-127698</td><td>174-127701</td><td>174-127702</td><td>174-127699</td><td>174-127700</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Stone Requirements by Model</h3>
+    <table>
+      <thead><tr><th>Family</th><th>12kW Min Stones</th><th>12kW Boxes</th><th>18kW Min Stones</th><th>18kW Boxes</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Cozy (Base)</strong></td><td>200 lbs</td><td>5 boxes</td><td>310 lbs</td><td>7 boxes</td></tr>
+        <tr><td><strong>O</strong></td><td>200 lbs</td><td>5 boxes</td><td>350 lbs</td><td>8 boxes</td></tr>
+        <tr><td><strong>OG</strong></td><td>175 lbs</td><td>4 boxes</td><td>240 lbs</td><td>6 boxes</td></tr>
+        <tr><td><strong>Quattro</strong></td><td>175 lbs</td><td>Confirm with Bathing Brands</td><td>265 lbs</td><td>Confirm with Bathing Brands</td></tr>
+        <tr><td><strong>SW</strong></td><td>175 lbs</td><td>4 boxes</td><td>220 lbs</td><td>5 boxes</td></tr>
+      </tbody>
+    </table>
+
+    <div class="pro-tip">
+      <p><strong>Pro Tip:</strong> Two stone types are available: <strong>Traditional Sauna Stones</strong> (10-15 cm, natural shape) and <strong>Premium Rounded Olivine Diabase Stones</strong> (smooth, rounded). Both work in all models. The premium rounded stones have a more polished, spa-like aesthetic. Always recommend one extra box for selection purposes.</p>
+    </div>
+
+    <h3>Warranty Details</h3>
+    <p>All Cozy Heat stoves come with a <strong>2-year warranty</strong>. Warranty documentation is available at:</p>
+    <p><a href="https://prod.cms.bathingbrands.com/sites/default/files/2025-04/Cozy%20Heat%20Warranty.pdf" target="_blank" style="color: #C8862A;">Cozy Heat Warranty PDF</a></p>
+
+    <div class="watch-out">
+      <p><strong>Watch Out:</strong> The warranty PDF is the authoritative source for warranty terms, exclusions, and claim procedures. <span class="gap-flag">[Specific warranty terms/exclusions NOT FOUND IN SOURCE — refer to warranty PDF for details]</span>. Always direct customers to the warranty document for specific coverage questions.</p>
+    </div>
+
+    <h3>Installation Essentials</h3>
+    <p>All Cozy Heat stoves are <strong>floor-mounted</strong>. Here are the key installation considerations:</p>
+    <ul>
+      <li><strong>Flue connection:</strong> Top-mounted on all models</li>
+      <li><strong>Chimney:</strong> Required for all models. Must comply with local building codes</li>
+      <li><strong>Floor protection:</strong> Required under and around the stove — fireproof material</li>
+      <li><strong>Safety distances:</strong> Specific to each model — refer to the Installation and Operation Manual</li>
+      <li><strong>Ventilation:</strong> Adequate combustion air supply required</li>
+      <li><strong>Thru-Wall models:</strong> Require proper wall framing and fireproofing where the firebox passes through</li>
+      <li><strong>Minimum room height:</strong> 72" (1828mm) for 12kW models; 82" (2096mm) for 18kW models</li>
+    </ul>
+
+    <div class="watch-out">
+      <p><strong>Watch Out:</strong> Safety distances for most models are listed as "See Installation and Operation Manual" in the product specs. The only model with specific distances in the product data is the <strong>COZY SW</strong> (Front-to-Back: 54.32" / 1380mm, Left-to-Right: 34.64" / 880mm). For all other models, the customer MUST consult the installation manual. <span class="gap-flag">[Safety distances for non-SW models NOT FOUND IN SOURCE — refer to IOM]</span></p>
+    </div>
+
+    <h3>Installation Manual &amp; Documentation</h3>
+    <p>The Cozy Heat Manual (2024) covers installation and operation for all models:</p>
+    <p><a href="https://prod.cms.bathingbrands.com/sites/default/files/2024-04/Cozy%20Heat%20Manual%202024.pdf" target="_blank" style="color: #C8862A;">Cozy Heat Manual 2024 (PDF)</a></p>
+
+    <h3>Certification Details</h3>
+    <ul>
+      <li><strong>Standard:</strong> EN 15821:2010, BImSchV DIN EN 13240, Level 2</li>
+      <li><strong>What it means:</strong> Germany's highest certification standard for wood-burning appliances</li>
+      <li><strong>Applies to:</strong> All Cozy Heat models</li>
+    </ul>
+
+    <div class="watch-out">
+      <p><strong>Watch Out — Quattro Stone Box Quantities:</strong> The Quattro and Quattro TW product data does not include stone box counts. Stone weights are confirmed (175 lbs / 265 lbs for 12kW / 18kW), but the number of boxes needed must be confirmed with Bathing Brands before quoting to the customer. Do not estimate.</p>
+    </div>
+
+    <div class="framing-box">
+      <p><strong>Why This Matters for Sales:</strong></p>
+      <p>This chapter exists so you can answer any specific question a customer throws at you without losing confidence. The specs make you the expert in the room. When you can say "the Quattro is 24.08 inches deep, 20.27 wide, weighs 198 pounds, and needs a minimum of 265 pounds of stones at 18kW" without hesitating, the customer knows they're talking to someone who knows the product inside and out. That's Ten #2 — certainty in the salesperson.</p>
+    </div>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- CHAPTER 7 -->
+  <!-- ============================================================ -->
+  <div class="chapter" id="ch7">
+    <h2 id="ch7">Chapter 7: Quick Reference Cheat Sheet</h2>
+    <p>Pull this up during calls. Everything you need at a glance.</p>
+
+    <h3>Brand Snapshot</h3>
+    <table>
+      <tbody>
+        <tr><td><strong>Brand</strong></td><td>Cozy Heat</td></tr>
+        <tr><td><strong>Made In</strong></td><td>Estonia (hand-made)</td></tr>
+        <tr><td><strong>PPW Tier</strong></td><td>Best Wood-Fired on the Market</td></tr>
+        <tr><td><strong>Product Type</strong></td><td>Wood-burning sauna stoves only</td></tr>
+        <tr><td><strong>Families</strong></td><td>5 (Cozy, O, OG, Quattro, SW)</td></tr>
+        <tr><td><strong>Variants</strong></td><td>Standard + Thru-Wall for each family (10 models total)</td></tr>
+        <tr><td><strong>kW Options</strong></td><td>12kW, 18kW for each model</td></tr>
+        <tr><td><strong>Room Range (12kW)</strong></td><td>210–423 cu. ft.</td></tr>
+        <tr><td><strong>Room Range (18kW)</strong></td><td>317–635 cu. ft.</td></tr>
+        <tr><td><strong>Key Differentiators</strong></td><td>Dual combustion, 6x cleaner smoke, 25-40% less fuel, German BImSchV certified, 5mm SS flame cutter</td></tr>
+        <tr><td><strong>Warranty</strong></td><td>2 years</td></tr>
+        <tr><td><strong>Stones</strong></td><td>Sold separately (Traditional or Premium Rounded)</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Family Quick Compare</h3>
+    <table>
+      <thead><tr><th>Family</th><th>Design</th><th>Weight (18kW Std)</th><th>Height</th><th>Stones 18kW</th><th>Best For</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Cozy</strong></td><td>Classic</td><td>159 lbs</td><td>29.76"</td><td>310 lbs</td><td>Classic design, narrowest, the original</td></tr>
+        <tr><td><strong>O</strong></td><td>Circular rim</td><td>154 lbs</td><td>29.76"</td><td>350 lbs</td><td>Eye-catching, most stones, even heat</td></tr>
+        <tr><td><strong>OG</strong></td><td>Trilateral</td><td>176 lbs</td><td>29.72"</td><td>240 lbs</td><td>Modern/artistic, premium builds</td></tr>
+        <tr><td><strong>Quattro</strong></td><td>Square</td><td>198 lbs</td><td>28.74"</td><td>265 lbs</td><td>Minimalist, fire viewing, shortest</td></tr>
+        <tr><td><strong>SW</strong></td><td>Cylindrical</td><td>209 lbs</td><td>34.25"</td><td>220 lbs</td><td>Tallest, sleek, fewest stones needed</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Key Framing Concepts — Quick Recall</h3>
+    <table>
+      <thead><tr><th>Concept</th><th>How to Frame It</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Dual Combustion</strong></td><td>"Burns the smoke twice — like a turbo engine. More heat, less fuel, cleaner exhaust."</td></tr>
+        <tr><td><strong>6x Cleaner</strong></td><td>"Not a marketing claim — verified by Germany's strictest emissions test."</td></tr>
+        <tr><td><strong>25-40% Less Fuel</strong></td><td>"Like getting 25-40% better gas mileage. Same heat, less wood."</td></tr>
+        <tr><td><strong>5mm Flame Cutter</strong></td><td>"The part that takes the most heat abuse is built thicker than anyone else's."</td></tr>
+        <tr><td><strong>Hand-Made in Estonia</strong></td><td>"Sauna is Estonia's national tradition. These are built by people who grew up in saunas."</td></tr>
+        <tr><td><strong>Thru-Wall</strong></td><td>"Load wood from outside. Sauna stays clean, no heat loss when feeding the fire."</td></tr>
+        <tr><td><strong>Stone Mass = Thermal Battery</strong></td><td>"More stones = more stored heat = longer, more stable sessions."</td></tr>
+        <tr><td><strong>Investment Reframe</strong></td><td>"The stove is the heart. A $500 stove in a $7K sauna is a 2-liter engine in a Bentley."</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Decision Tree Summary</h3>
+    <ol>
+      <li><strong>Standard or Thru-Wall?</strong> → Attached building = TW. Standalone = Standard. Wants cleanest sauna = TW.</li>
+      <li><strong>12kW or 18kW?</strong> → 210-423 cu. ft. = 12kW. 317-635 cu. ft. = 18kW. When in doubt = 18kW.</li>
+      <li><strong>Which family?</strong> → Classic = Cozy. Unique = O. Modern = OG. Minimalist/fire = Quattro. Sleek/tall = SW. Performance only = Cozy or O (most stones).</li>
+    </ol>
+
+    <div class="pro-tip">
+      <p><strong>Pro Tip:</strong> Bookmark or print this page and have it open on every Cozy Heat call. The family comparison table and key framing concepts are designed to be glanceable mid-conversation. You shouldn't need to memorize every spec — just know where to find them in under 5 seconds.</p>
+    </div>
+
+    <h3>Don't Forget</h3>
+    <ul>
+      <li>Stones sold separately — always confirm with customer</li>
+      <li>Recommend 1 extra box of stones for selection</li>
+      <li>Chimney components may be needed beyond what's included</li>
+      <li>Ships on pallets — scheduled freight delivery</li>
+      <li>Freight quotes: Customerservice@bathingbrands.com</li>
+      <li>Bundle accessories with stove freight to save shipping costs (and boost margins)</li>
+      <li>Safety distances: check the IOM for each model</li>
+      <li>Minimum ceiling height: 72" (12kW) / 82" (18kW)</li>
+    </ul>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- INFORMATION GAPS -->
+  <!-- ============================================================ -->
+  <div class="chapter" id="gaps">
+    <h2>INFORMATION GAPS — REQUIRES REVIEW</h2>
+    <p>The following items could not be verified from the provided source data and are flagged for review:</p>
+
+    <table>
+      <thead><tr><th>#</th><th>Gap</th><th>Details</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td><strong style="text-decoration: line-through;">12kW-specific room range</strong> <strong style="color: #2e7d32;">RESOLVED</strong></td><td>12kW models cover 210–423 cu. ft. (confirmed in all source product pages). This has been corrected throughout the guide.</td></tr>
+        <tr><td>2</td><td><strong>Safety distances for most models</strong></td><td>Only the COZY SW lists specific safety distances (F-B: 54.32", L-R: 34.64"). All other models say "See Installation and Operation Manual." The IOM PDF extraction was empty — distances could not be verified.</td></tr>
+        <tr><td>3</td><td><strong>Quattro stone box quantities</strong></td><td>The Quattro and Quattro TW product pages do not list required_components with stone box quantities. Other families specify box counts (e.g., "12kW - 4 Boxes, 18kW - 6 Boxes") but this data is missing for the Quattro family.</td></tr>
+        <tr><td>4</td><td><strong>SW-TW stone box quantities</strong></td><td>The SW-TW product page does not list required_components with stone box quantities. The standard SW lists 4/5 boxes (12kW/18kW).</td></tr>
+        <tr><td>5</td><td><strong>Specific warranty terms and exclusions</strong></td><td>Source data confirms "2-year warranty" and provides a PDF link, but the specific terms, exclusions, and claim procedures were not extracted from the warranty PDF.</td></tr>
+        <tr><td>6</td><td><strong>IOM installation details</strong></td><td>The Cozy Heat Manual 2024 PDF extraction returned empty ({}). Safety distances, ventilation requirements, chimney specifications, floor protection requirements, and detailed installation instructions could not be sourced from the manual.</td></tr>
+        <tr><td>7</td><td><strong>Room size adjustment factors</strong></td><td>No brand-specific guidance found for adjusting room-size calculations for uninsulated walls, glass, stone surfaces, etc.</td></tr>
+        <tr><td>8</td><td><strong>Cozy base model min room height discrepancy</strong></td><td>The COZY (base) lists minimum room height as 82" (1828mm), while all other models list 82" (2096mm). 1828mm = 72" and 2096mm = 82.5". This appears to be a data inconsistency — the COZY base may have a different mm conversion or a typo in the source data.</td></tr>
+        <tr><td>9</td><td><strong>Pricing</strong></td><td>No pricing data was included in the source material. Reps will need current pricing from the PPW system.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+</div><!-- end .main -->
+
+<!-- Back to Top Button -->
+<button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#8679;</button>
+
+<script>
+// Back to top button
+const btn = document.getElementById('backToTop');
+window.addEventListener('scroll', () => {
+  btn.style.display = window.scrollY > 400 ? 'block' : 'none';
+});
+
+// Scroll spy
+const chapters = document.querySelectorAll('.chapter');
+const navLinks = document.querySelectorAll('.nav-link');
+window.addEventListener('scroll', () => {
+  let current = '';
+  chapters.forEach(ch => {
+    const top = ch.offsetTop - 100;
+    if (window.scrollY >= top) current = ch.id;
+  });
+  navLinks.forEach(link => {
+    link.classList.remove('active');
+    if (link.getAttribute('data-chapter') === current) link.classList.add('active');
+  });
+});
+
+// Smooth scroll
+navLinks.forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+    const target = document.querySelector(link.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      // Close mobile sidebar
+      document.querySelector('.sidebar').classList.remove('open');
+    }
+  });
+});
+
+// Search filter
+function filterNav() {
+  const q = document.getElementById('searchInput').value.toLowerCase();
+  navLinks.forEach(link => {
+    const text = link.textContent.toLowerCase();
+    link.style.display = text.includes(q) || q === '' ? 'block' : 'none';
+  });
+}
+</script>
+
+</body>
+</html>

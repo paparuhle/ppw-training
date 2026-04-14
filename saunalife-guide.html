@@ -1,0 +1,1223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PPW Knowledge Base: SaunaLife Sauna Guide</title>
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f5f5f5; color: #333; line-height: 1.7; }
+
+    /* Sidebar */
+    .sidebar {
+        position: fixed; top: 0; left: 0; width: 280px; height: 100vh;
+        background: #0F2439; color: #ccc; overflow-y: auto; z-index: 1000;
+        padding: 20px 0; scrollbar-width: thin; scrollbar-color: #C8862A #0F2439;
+    }
+    .sidebar::-webkit-scrollbar { width: 6px; }
+    .sidebar::-webkit-scrollbar-track { background: #0F2439; }
+    .sidebar::-webkit-scrollbar-thumb { background: #C8862A; border-radius: 3px; }
+    .sidebar-header { padding: 0 20px 15px; border-bottom: 1px solid #1A3C5E; margin-bottom: 15px; }
+    .sidebar-header h2 { color: #C8862A; font-size: 1.1em; margin-bottom: 4px; }
+    .sidebar-header p { font-size: 0.75em; color: #8aa; }
+    .sidebar-search { padding: 0 15px 15px; }
+    .sidebar-search input {
+        width: 100%; padding: 8px 12px; background: #1A3C5E; border: 1px solid #2a5a8e;
+        color: #eee; border-radius: 4px; font-size: 0.85em; outline: none;
+    }
+    .sidebar-search input::placeholder { color: #7a9aba; }
+    .sidebar-search input:focus { border-color: #C8862A; }
+    .nav-section { padding: 8px 20px 4px; color: #C8862A; font-size: 0.7em; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 700; }
+    .sidebar a {
+        display: block; padding: 6px 20px 6px 28px; color: #b0c4d8; text-decoration: none;
+        font-size: 0.82em; border-left: 3px solid transparent; transition: all 0.2s;
+    }
+    .sidebar a:hover { color: #fff; background: #1A3C5E; border-left-color: #C8862A; }
+    .sidebar a.active { color: #C8862A; background: #1A3C5E; border-left-color: #C8862A; font-weight: 600; }
+
+    /* Main Content */
+    .main { margin-left: 280px; padding: 40px 60px 80px; max-width: 1100px; }
+    .verified-date { background: #C8862A; color: #fff; padding: 8px 16px; border-radius: 4px; font-size: 0.85em; display: inline-block; margin-bottom: 30px; }
+
+    h1 { color: #0F2439; font-size: 2em; margin: 50px 0 20px; padding-bottom: 10px; border-bottom: 3px solid #C8862A; }
+    h1:first-of-type { margin-top: 10px; }
+    h2 { color: #1A3C5E; font-size: 1.4em; margin: 35px 0 15px; }
+    h3 { color: #0F2439; font-size: 1.15em; margin: 25px 0 10px; }
+    h4 { color: #1A3C5E; margin: 15px 0 8px; }
+    p { margin-bottom: 14px; }
+    ul, ol { margin: 10px 0 18px 25px; }
+    li { margin-bottom: 6px; }
+
+    /* Callout Boxes */
+    .framing { background: #EAF2F8; border-top: 3px solid #0F2439; padding: 20px; margin: 20px 0; border-radius: 4px; }
+    .pro-tip { background: #FDF3E7; border-left: 4px solid #C8862A; padding: 20px; margin: 20px 0; border-radius: 4px; }
+    .watch-out { background: #fde8e8; border-left: 4px solid #d9534f; padding: 20px; margin: 20px 0; border-radius: 4px; }
+    .script-box { background: #E8EDF2; border-left: 4px solid #1A3C5E; padding: 20px; margin: 20px 0; border-radius: 4px; }
+    .script-box p { margin: 8px 0; }
+    .key-def { background: #f0f0f0; border-left: 4px solid #0F2439; padding: 20px; margin: 20px 0; border-radius: 4px; }
+
+    /* Tables */
+    table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.9em; }
+    thead tr, table tr:first-child:has(th) { background: #0F2439; color: #fff; }
+    th { padding: 12px 14px; text-align: left; font-weight: 600; }
+    td { padding: 10px 14px; border-bottom: 1px solid #ddd; }
+    tbody tr:nth-child(even), table tr:nth-child(even):not(:first-child) { background: #EAF2F8; }
+    tbody tr:hover, table tr:hover:not(:first-child) { background: #d6e8f5; }
+    .highlight-row { background: #FDF3E7 !important; font-weight: 600; }
+
+    /* Back to top */
+    #back-to-top {
+        position: fixed; bottom: 30px; right: 30px; width: 48px; height: 48px;
+        background: #C8862A; color: #fff; border: none; border-radius: 50%;
+        font-size: 1.3em; cursor: pointer; display: none; z-index: 999;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.3); transition: opacity 0.3s;
+    }
+    #back-to-top:hover { background: #b07522; }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+        .sidebar { transform: translateX(-100%); transition: transform 0.3s; }
+        .sidebar.open { transform: translateX(0); }
+        .main { margin-left: 0; padding: 20px 25px 60px; }
+        .menu-toggle { display: block; position: fixed; top: 10px; left: 10px; z-index: 1001;
+            background: #0F2439; color: #C8862A; border: none; padding: 10px 14px;
+            border-radius: 4px; font-size: 1.2em; cursor: pointer; }
+    }
+    @media (min-width: 901px) { .menu-toggle { display: none; } }
+
+    .series-badge { display: inline-block; padding: 3px 10px; border-radius: 12px; font-size: 0.75em; font-weight: 700; color: #fff; margin-left: 8px; vertical-align: middle; }
+    .badge-barrel { background: #2e7d32; }
+    .badge-cube { background: #1565c0; }
+    .badge-garden { background: #6d4c41; }
+    .badge-luxury { background: #C8862A; }
+    .badge-indoor { background: #7b1fa2; }
+    .badge-soak { background: #00838f; }
+    .badge-premium { background: #c62828; }
+
+    .model-card { background: #fff; border: 1px solid #ddd; border-radius: 8px; padding: 24px; margin: 20px 0; box-shadow: 0 2px 6px rgba(0,0,0,0.06); }
+    .model-card h3 { margin-top: 0; border-bottom: 2px solid #EAF2F8; padding-bottom: 8px; }
+    .model-card.featured { border-left: 4px solid #C8862A; }
+
+    .gap-flag { background: #fff3cd; border: 1px solid #ffc107; padding: 4px 10px; border-radius: 4px; font-size: 0.85em; color: #856404; }
+</style>
+</head>
+<body>
+
+<button class="menu-toggle" onclick="document.querySelector('.sidebar').classList.toggle('open')">&#9776;</button>
+
+<nav class="sidebar">
+    <div class="sidebar-header">
+        <h2>SaunaLife Guide</h2>
+        <p>PPW Knowledge Base</p>
+    </div>
+    <div class="sidebar-search">
+        <input type="text" id="nav-search" placeholder="Search chapters..." oninput="filterNav(this.value)">
+    </div>
+
+    <div class="nav-section">The Journey</div>
+    <a href="#ch1" data-nav>1. Introduction to SaunaLife</a>
+    <a href="#ch2" data-nav>2. Understanding Saunas</a>
+
+    <div class="nav-section">Product Lineup</div>
+    <a href="#ch3" data-nav>3. Product Lineup Overview</a>
+    <a href="#ch3-e" data-nav>&nbsp;&nbsp;E-Series (Barrel)</a>
+    <a href="#ch3-ee" data-nav>&nbsp;&nbsp;EE-Series (Premium Barrel)</a>
+    <a href="#ch3-cl" data-nav>&nbsp;&nbsp;CL-Series (Cube)</a>
+    <a href="#ch3-g" data-nav>&nbsp;&nbsp;G-Series (Garden Cabin)</a>
+    <a href="#ch3-gl" data-nav>&nbsp;&nbsp;GL-Series (Luxury Cabin)</a>
+    <a href="#ch3-x" data-nav>&nbsp;&nbsp;X-Series (Indoor)</a>
+    <a href="#ch3-s" data-nav>&nbsp;&nbsp;S-Series (Soak/Tubs)</a>
+    <a href="#ch3-acc" data-nav>&nbsp;&nbsp;Accessories &amp; Add-Ons</a>
+
+    <div class="nav-section">Sales Mastery</div>
+    <a href="#ch4" data-nav>4. Matching Customers to Saunas</a>
+    <a href="#ch5" data-nav>5. Heater Pairings</a>
+    <a href="#ch5-objections" data-nav>&nbsp;&nbsp;Questions &amp; Objections</a>
+
+    <div class="nav-section">Reference</div>
+    <a href="#ch6" data-nav>6. Technical Reference</a>
+    <a href="#ch7" data-nav>7. Quick Reference Cheat Sheet</a>
+    <a href="#gaps" data-nav>Information Gaps</a>
+</nav>
+
+<div class="main">
+
+<span class="verified-date">Product information verified as of April 14, 2026</span>
+
+<!-- ============================================ -->
+<!-- CHAPTER 1: INTRODUCTION -->
+<!-- ============================================ -->
+<h1 id="ch1">Chapter 1: Introduction to SaunaLife</h1>
+
+<h2>What Is SaunaLife?</h2>
+<p>SaunaLife is a <strong>Scandinavian-designed sauna brand</strong> distributed by Bathing Brands out of Wheeling, Illinois. They design and manufacture complete sauna rooms &mdash; barrel saunas, cube saunas, garden cabins, indoor saunas, and even hot/cold immersion tubs. Think of them as the company that builds the <em>room</em> you sweat in, not the heater that makes it hot.</p>
+
+<p>This is an important distinction you'll use every single day: <strong>SaunaLife makes the sauna body. The heater is sold separately.</strong> Every SaunaLife sauna ships without a heater. Your job is to pair the right sauna with the right heater from Harvia, HUUM, or Saunum.</p>
+
+<div class="key-def">
+    <p><strong>Key Concept &mdash; Sauna Body vs. Heater:</strong> A sauna purchase has two parts: the <strong>room</strong> (the SaunaLife structure &mdash; walls, benches, door, roof) and the <strong>heater</strong> (sold separately from Harvia, HUUM, or Saunum). The customer's total investment = sauna body price + heater price ($2,000&ndash;$4,000) + electrician installation (varies by area &mdash; recommend they get a local quote).</p>
+</div>
+
+<h2>Why Does PPW Carry SaunaLife?</h2>
+<p>SaunaLife gives us a complete sauna ecosystem under one brand &mdash; <strong>30 models across 7 product series</strong>, covering every budget from $2,490 to $32,900. Here's why that matters for you as a sales advisor:</p>
+<ul>
+    <li><strong>One brand, every customer:</strong> Whether someone wants a $3,990 cube for two people or a $24,900 pre-assembled flagship, SaunaLife has it. You don't need to juggle multiple sauna manufacturers.</li>
+    <li><strong>Thermo-modified wood construction:</strong> SaunaLife uses thermally treated European spruce and aspen &mdash; wood that's been baked at extreme temperatures to become rot-resistant and weather-proof. This gives their saunas a 20+ year lifespan, far outlasting standard cedar competitors.</li>
+    <li><strong>ERGO barrel diameters:</strong> While most competitors sell barrels at 67&ndash;72 inches in diameter, SaunaLife's E-Series starts at 81 inches and the EE-Series goes to 91 inches. That extra space is the difference between hunching over and sitting comfortably upright.</li>
+    <li><strong>Heater flexibility:</strong> Because heaters are sold separately, customers can choose the right brand/tier for their budget &mdash; from reliable Harvia (Toyota) to design-forward HUUM (BMW) to premium Saunum (Bentley).</li>
+</ul>
+
+<h2>Brand Tier Positioning</h2>
+<p>SaunaLife doesn't compete with budget Amazon saunas or ultra-premium custom builds. Think of them like this:</p>
+
+<div class="framing">
+    <p><strong>How to Frame This:</strong></p>
+    <p><strong>The core analogy:</strong> SaunaLife is like <strong>a well-built home from a reputable builder</strong>. You get Scandinavian design, premium materials (thermo-treated wood, tempered glass), and a range of floor plans from starter homes to estates. Then you choose your own appliances (the heater) separately.</p>
+    <p><strong>What the customer needs to understand:</strong> This isn't a cheap box. It's a 20-year outdoor structure built with wood that's engineered to resist rot, insects, and weather. The sauna body is the foundation &mdash; the heater is what brings it to life.</p>
+    <p><strong>PPW framework to apply:</strong> Use <strong>Gap Selling</strong> &mdash; the customer's current state is "no sauna" or "looking at cheap options." Their desired state is "a genuine sauna experience that lasts decades." SaunaLife is the bridge.</p>
+</div>
+
+<h2>The SaunaLife Portfolio at a Glance</h2>
+<table>
+    <tr><th>Series</th><th>Type</th><th>Capacity</th><th>Price Range</th><th>Best For</th></tr>
+    <tr><td><strong>E-Series</strong> <span class="series-badge badge-barrel">Barrel</span></td><td>Barrel, 81" ERGO diameter</td><td>3&ndash;6</td><td>$4,390&ndash;$6,990</td><td>Most customers &mdash; classic barrel shape</td></tr>
+    <tr><td><strong>EE-Series</strong> <span class="series-badge badge-premium">Premium</span></td><td>Barrel, 91" diameter</td><td>4&ndash;6</td><td>$5,990&ndash;$7,190</td><td>Premium buyers wanting the widest barrels</td></tr>
+    <tr><td><strong>CL-Series</strong> <span class="series-badge badge-cube">Cube</span></td><td>Cube, modern design</td><td>2&ndash;8</td><td>$3,990&ndash;$10,990</td><td>Modern homes, contemporary aesthetics</td></tr>
+    <tr><td><strong>G-Series</strong> <span class="series-badge badge-garden">Garden</span></td><td>Cabin, rectangular (6 models)</td><td>4&ndash;8</td><td>$4,990&ndash;$32,900</td><td>Larger groups, traditional cabins</td></tr>
+    <tr><td><strong>GL-Series</strong> <span class="series-badge badge-luxury">Luxury</span></td><td>Cabin, 1.57" thick walls</td><td>4&ndash;6</td><td>$9,490&ndash;$12,790</td><td>Maximum durability seekers</td></tr>
+    <tr><td><strong>X-Series</strong> <span class="series-badge badge-indoor">Indoor</span></td><td>Indoor cabin (3 models: X2, X6, X7)</td><td>2&ndash;6</td><td>$4,990&ndash;$5,790</td><td>No outdoor space, year-round use</td></tr>
+    <tr><td><strong>S-Series</strong> <span class="series-badge badge-soak">Soak</span></td><td>Hot tubs &amp; immersion tubs</td><td>1&ndash;7</td><td>$2,490&ndash;$6,990</td><td>Contrast therapy, cold/hot plunge</td></tr>
+</table>
+
+
+<!-- ============================================ -->
+<!-- CHAPTER 2: UNDERSTANDING SAUNAS -->
+<!-- ============================================ -->
+<h1 id="ch2">Chapter 2: Understanding Saunas (Foundations)</h1>
+
+<p>Before you can sell a sauna, you need to understand what one actually is and how the different types work. If you've never been in a sauna, think of it as a small, insulated wooden room designed to get very hot &mdash; typically 150&ndash;200&deg;F. People sit inside for 15&ndash;30 minutes for relaxation, stress relief, muscle recovery, and overall wellness.</p>
+
+<h2>Key Terms You'll Use Every Day</h2>
+
+<div class="key-def">
+    <p><strong>Traditional Sauna (Finnish Sauna):</strong> A sauna heated by an electric or wood-burning heater with stones on top. You pour water on the hot stones to create steam (called <strong>l&ouml;yly</strong>, pronounced "LOW-loo"). This is what SaunaLife saunas are designed for. It's different from an infrared sauna, which uses light panels instead of heated air.</p>
+</div>
+
+<div class="key-def">
+    <p><strong>Thermo-Modified Wood:</strong> Wood that's been heated to extreme temperatures in a special kiln with no oxygen. This permanently changes the wood's cell structure, making it resistant to rot, moisture, insects, and warping. Think of it like <em>tempering steel</em> &mdash; the heat treatment makes it fundamentally tougher. SaunaLife uses three types: <strong>Thermo-Spruce</strong> (exterior walls), <strong>Thermo-Aspen</strong> (benches &mdash; stays cool to touch), and <strong>Thermo-Pine</strong> (tubs).</p>
+</div>
+
+<div class="key-def">
+    <p><strong>ERGO Diameter:</strong> SaunaLife's proprietary barrel diameter. The E-Series uses an <strong>81-inch diameter</strong> barrel (vs. competitors' 67&ndash;72 inches). The EE-Series goes up to <strong>91 inches</strong>. A bigger diameter means more headroom &mdash; you can sit fully upright on the upper bench without ducking. Think of it like the difference between economy and business class legroom.</p>
+</div>
+
+<div class="key-def">
+    <p><strong>Stave:</strong> One of the long wooden planks that forms the barrel wall. Barrel saunas are built by fitting staves together side by side, then cinching them tight with stainless steel bands &mdash; like the planks of a wooden boat. <strong>Stave thickness</strong> determines insulation: standard E-Series staves are thinner, while GL-Series staves are 1.57 inches thick for maximum insulation.</p>
+</div>
+
+<div class="key-def">
+    <p><strong>kW (Kilowatt):</strong> The power rating of a sauna heater. Higher kW = more heating power. A small 2-person sauna might need 4.5kW; a large 8-person sauna needs 9&ndash;12kW. Think of it like engine horsepower &mdash; bigger room needs a bigger engine.</p>
+</div>
+
+<div class="key-def">
+    <p><strong>240V Circuit:</strong> The electrical service required for sauna heaters. This is the same type of circuit your clothes dryer or oven runs on. It requires a dedicated circuit and a licensed electrician to install. Every SaunaLife sauna heater runs on 240V.</p>
+</div>
+
+<h2>Barrel vs. Cube vs. Garden Cabin &mdash; The Three Shapes</h2>
+
+<p>SaunaLife saunas come in three basic shapes. Each has distinct advantages, and your customer's preference often comes down to aesthetics and yard layout.</p>
+
+<table>
+    <tr><th>Feature</th><th>Barrel (E/EE-Series)</th><th>Cube (CL-Series)</th><th>Garden Cabin (G/GL-Series)</th></tr>
+    <tr><td><strong>Shape</strong></td><td>Round cylinder on cradles</td><td>Rectangular box with shingle roof</td><td>Traditional rectangular cabin with pitched roof</td></tr>
+    <tr><td><strong>Look &amp; Feel</strong></td><td>Classic Scandinavian, rustic charm</td><td>Sleek, contemporary, modern architecture</td><td>Traditional cabin, cottage-like</td></tr>
+    <tr><td><strong>Heating Efficiency</strong></td><td>Excellent &mdash; round shape means less air volume to heat, heats faster</td><td>Good &mdash; standard rectangular room</td><td>Good &mdash; thicker walls (especially GL at 1.57") compensate</td></tr>
+    <tr><td><strong>Headroom</strong></td><td>81" (E) or 91" (EE) diameter &mdash; very generous</td><td>82&ndash;93" ceiling height</td><td>85&ndash;98" interior peak height</td></tr>
+    <tr><td><strong>Assembly</strong></td><td>Moderate &mdash; staves + bands, 6&ndash;15 hours DIY</td><td>Moderate &mdash; panel construction, 8&ndash;28 hours</td><td>Moderate-High &mdash; cabin framing, 4&ndash;40 hours</td></tr>
+    <tr><td><strong>Best For</strong></td><td>Backyards with natural landscaping</td><td>Modern homes, contemporary patios</td><td>Large properties, rustic aesthetics</td></tr>
+</table>
+
+<div class="framing">
+    <p><strong>How to Frame This:</strong></p>
+    <p><strong>The core analogy:</strong> Choosing between barrel, cube, and cabin is like choosing between a sports car, a sedan, and an SUV. They all get you where you're going (hot sauna session), but they <em>feel</em> different and fit different lifestyles.</p>
+    <p><strong>The key question to ask:</strong> "When you picture your sauna in your backyard, what do you see?" If they say "something classic and natural," point them to barrels. "Something modern and clean," point to cubes. "Something spacious like a little cabin," point to G-Series.</p>
+</div>
+
+<h2>Wood Types &mdash; Why SaunaLife's Materials Matter</h2>
+
+<table>
+    <tr><th>Wood</th><th>Where It's Used</th><th>Why It Matters</th></tr>
+    <tr><td><strong>Thermo-Spruce</strong></td><td>Exterior walls, staves (most models)</td><td>European spruce, thermally treated for rot/weather resistance. The "armor" of the sauna. Outlasts standard cedar by 10+ years.</td></tr>
+    <tr><td><strong>Thermo-Aspen</strong></td><td>Benches, interior seating</td><td>Naturally low thermal conductivity &mdash; <strong>it never gets hot to the touch</strong> even at 200&deg;F. Your bare skin sits directly on this. The knotless grade (EE &amp; CL-Series) is smoother and more premium.</td></tr>
+    <tr><td><strong>Nordic Spruce</strong></td><td>G2, X2 models (non-thermo)</td><td>Standard European spruce. Still quality, but not thermally treated. More affordable entry point.</td></tr>
+    <tr><td><strong>Thermo-Pine</strong></td><td>S1, S2 immersion tubs</td><td>Thermally treated pine. Water-resistant, perfect for tub applications.</td></tr>
+    <tr><td><strong>Thermo-Spruce</strong></td><td>S4, S6 wood-burning hot tubs</td><td>Same thermally treated spruce used in sauna exteriors. Durable for full-size hot tub construction.</td></tr>
+    <tr><td><strong>Sawn Spruce (painted black)</strong></td><td>G6 exterior</td><td>Non-thermo standard spruce with a black painted finish. Unique to the pre-assembled G6 &mdash; different construction from other G-Series models.</td></tr>
+    <tr><td><strong>Alder</strong></td><td>G6 interior benches</td><td>Traditional Finnish bench wood. Used in the premium pre-assembled G6 model.</td></tr>
+</table>
+
+<div class="pro-tip">
+    <p><strong>Pro Tip:</strong> When a customer asks "Why not just buy a cedar sauna from Amazon?", the answer is thermo-modified wood. Cedar is okay for a few years, but it doesn't have the structural treatment that thermo-spruce has. SaunaLife's treatment process fundamentally changes the wood at a cellular level. It's the difference between painting a house and building it with concrete &mdash; one resists the elements on the surface, the other resists them all the way through.</p>
+</div>
+
+<h2>Assembly &mdash; What Customers Need to Know</h2>
+
+<p>Almost every SaunaLife sauna is a <strong>DIY flat-pack kit</strong>. The one exception is the G6 ($24,900), which arrives fully pre-assembled. Here's how to set customer expectations:</p>
+
+<ul>
+    <li><strong>Ships flat-packed:</strong> All parts, staves, bands, hardware arrive in crates on a freight truck.</li>
+    <li><strong>2 people minimum:</strong> Every model requires at least two adults for assembly.</li>
+    <li><strong>Time range:</strong> 6 hours (small barrel) to 40 hours (G11 two-room cabin). See Chapter 6 for exact times per model.</li>
+    <li><strong>Tools:</strong> Basic hand tools, drill, level. Larger models may need crane assistance.</li>
+    <li><strong>Professional option:</strong> Assembly services available &mdash; get a quote from local installers. PPW's Peak Protection Concierge can help coordinate.</li>
+    <li><strong>Heater separate:</strong> After sauna assembly, a licensed electrician installs the heater (typically 2&ndash;3 hours &mdash; recommend customers get a local quote).</li>
+</ul>
+
+<div class="watch-out">
+    <p><strong>Watch Out:</strong> Never tell a customer "it's easy to assemble." Assembly ranges from moderate to high difficulty. Always be upfront: "Budget a full weekend for assembly, or we can connect you with professional installers." Under-promising and over-delivering on assembly expectations prevents returns and bad reviews.</p>
+</div>
+
+
+<!-- ============================================ -->
+<!-- CHAPTER 3: PRODUCT LINEUP -->
+<!-- ============================================ -->
+<h1 id="ch3">Chapter 3: The SaunaLife Product Lineup</h1>
+
+<p>SaunaLife offers <strong>30+ models across 7 product series</strong>. This chapter walks through each series in detail. For every model, you'll learn: what it is, who it's for, key specs, and how to frame it for customers.</p>
+
+<p>A quick navigation reminder &mdash; the series are:</p>
+<ul>
+    <li><strong>E-Series:</strong> Barrel saunas (81" ERGO diameter) &mdash; the volume sellers</li>
+    <li><strong>EE-Series:</strong> Premium barrels (91" diameter) &mdash; the stealth upsell</li>
+    <li><strong>CL-Series:</strong> Cube saunas &mdash; modern, contemporary design</li>
+    <li><strong>G-Series:</strong> Garden cabin saunas &mdash; traditional rectangular cabins</li>
+    <li><strong>GL-Series:</strong> Garden Luxury cabins &mdash; premium 1.57" thick walls</li>
+    <li><strong>X-Series:</strong> Indoor saunas &mdash; for customers without outdoor space</li>
+    <li><strong>S-Series:</strong> Hot tubs &amp; immersion tubs &mdash; contrast therapy companions</li>
+</ul>
+
+<!-- ==================== E-SERIES ==================== -->
+<h2 id="ch3-e">E-Series: ERGO Barrel Saunas <span class="series-badge badge-barrel">8 Models</span></h2>
+
+<p>The E-Series is where most of your sales will happen. These are <strong>traditional barrel saunas with SaunaLife's signature 81-inch ERGO diameter</strong> &mdash; about 10&ndash;14 inches wider than most competitors. That extra width translates directly to comfort: adults can sit upright on the upper bench without ducking.</p>
+
+<p>The series has <strong>8 models</strong> built on 3 barrel lengths (E6, E7, E8), each available in three door/window configurations:</p>
+<ul>
+    <li><strong>Standard (E6, E7, E8):</strong> Wooden door, solid rear wall. Lowest price.</li>
+    <li><strong>W (Window) variant (E6W, E7W, E8W):</strong> Standard door + rear panoramic window. +$500 premium.</li>
+    <li><strong>G (Glass) variant (E7G, E8G):</strong> Full tempered glass front door. +$1,000 premium. The statement pieces.</li>
+</ul>
+
+<div class="framing">
+    <p><strong>How to Frame This:</strong></p>
+    <p><strong>The core concept:</strong> Think of E-Series sizes like car models &mdash; the E6 is the compact (3-person), the E7 is the mid-size (4-person), and the E8 is the full-size (6-person). Then W and G variants are like trim levels &mdash; you're getting the same car with upgraded features.</p>
+    <p><strong>The key value pitch:</strong> The E8 at $5,990 is only $800 more than the E7 at $5,190, but seats 6 instead of 4. That's the best value jump in the entire lineup. If the customer is debating, nudge them toward the E8.</p>
+</div>
+
+<h3>E-Series Comparison Table</h3>
+<table>
+    <tr><th>Model</th><th>Capacity</th><th>Barrel Dims</th><th>Door/Window</th><th>Weight</th><th>Assembly</th><th>Price</th></tr>
+    <tr><td><strong>E6</strong></td><td>3 persons</td><td>59"L x 81"D</td><td>Wood door</td><td>450&ndash;500 lbs</td><td>6&ndash;8 hrs DIY</td><td>$4,390</td></tr>
+    <tr><td><strong>E6W</strong></td><td>3 persons</td><td>59"L x 81"D</td><td>Wood door + rear window</td><td>450&ndash;500 lbs</td><td>6&ndash;8 hrs DIY</td><td>$4,890</td></tr>
+    <tr class="highlight-row"><td><strong>E7</strong></td><td>4 persons</td><td>71"L x 81"D</td><td>Wood door</td><td>530&ndash;600 lbs</td><td>8&ndash;10 hrs DIY</td><td>$5,190</td></tr>
+    <tr><td><strong>E7W</strong></td><td>4 persons</td><td>71"L x 81"D</td><td>Wood door + rear window</td><td>530&ndash;600 lbs</td><td>8&ndash;10 hrs DIY</td><td>$5,690</td></tr>
+    <tr><td><strong>E7G</strong></td><td>4 persons</td><td>71"L x 81"D</td><td>Tempered glass front</td><td>610&ndash;685 lbs</td><td>9&ndash;11 hrs DIY</td><td>$6,190</td></tr>
+    <tr><td><strong>E8</strong></td><td>6 persons</td><td>87"L x 81"D</td><td>Wood door</td><td>650&ndash;750 lbs</td><td>10&ndash;12 hrs DIY</td><td>$5,990</td></tr>
+    <tr><td><strong>E8W</strong></td><td>6 persons</td><td>87"L x 81"D</td><td>Wood door + rear window</td><td>650&ndash;750 lbs</td><td>10&ndash;12 hrs DIY</td><td>$6,490</td></tr>
+    <tr><td><strong>E8G</strong></td><td>6 persons</td><td>87"L x 81"D</td><td>Tempered glass front</td><td>1,370 lbs</td><td>11&ndash;14 hrs DIY</td><td>$6,990</td></tr>
+</table>
+
+<div class="pro-tip">
+    <p><strong>Pro Tip:</strong> The <strong>E7 is the best-seller</strong> in the entire SaunaLife lineup. It's the most popular model, the volume leader. At $5,190 for a 4-person barrel with 81" ERGO diameter and LED lighting, it hits the sweet spot of size, price, and features. When in doubt, lead with the E7.</p>
+</div>
+
+<h3>What's Included (All E-Series Models)</h3>
+<ul>
+    <li>Flat-pack barrel sauna kit (Thermo-Spruce staves)</li>
+    <li>Thermo-Aspen benches (ergonomic seating)</li>
+    <li>Stainless steel barrel bands</li>
+    <li>Support cradles</li>
+    <li>LED Neon light system (24VDC, 200W, RF dimming remote, IP20 rated)</li>
+    <li>Assembly hardware and instructions</li>
+    <li><strong>NOT included:</strong> Heater (budget $2,000&ndash;$4,000 additional)</li>
+</ul>
+
+<h3>E-Series Shared Specs</h3>
+<ul>
+    <li><strong>Barrel diameter:</strong> 81" (ERGO)</li>
+    <li><strong>Overall dimensions with cradles:</strong> ~80.7"W x 84.6"H (footprint: 77.2"W between cradle feet)</li>
+    <li><strong>Exterior wood:</strong> Thermo-Spruce</li>
+    <li><strong>Bench wood:</strong> Thermo-Aspen</li>
+    <li><strong>LED system:</strong> Standard on all &mdash; 24VDC, 200W, self-powered RF remote (no batteries), 100-foot range</li>
+    <li><strong>Warranty:</strong> 2-year limited residential</li>
+</ul>
+
+<h3>E6 / E6W Deep Dive (3-Person, Entry-Level)</h3>
+<div class="model-card">
+    <h3>E6 &mdash; $4,390 | E6W &mdash; $4,890</h3>
+    <p>The <strong>entry point</strong> to SaunaLife's barrel lineup. At 59 inches long and 81 inches in diameter, it comfortably fits 3 people. The E6W adds a rear window for natural light and scenery at a $500 premium.</p>
+    <p><strong>Electrical:</strong> 240V / 30A circuit. Recommended heater: 6kW.</p>
+    <p><strong>Compatible heaters:</strong> Harvia KIP60B, KIP60W.</p>
+    <p><strong>Best for:</strong> Couples, budget-conscious buyers, smaller yards. The E6 is the most affordable barrel in the lineup.</p>
+</div>
+
+<h3>E7 / E7W / E7G Deep Dive (4-Person, Best Seller)</h3>
+<div class="model-card featured">
+    <h3>E7 &mdash; $5,190 | E7W &mdash; $5,690 | E7G &mdash; $6,190</h3>
+    <p>The <strong>best-selling SaunaLife model</strong>. At 71 inches long, it fits 4 people comfortably &mdash; perfect for a family. The E7G with its tempered glass front is the "wow factor" version that looks stunning in any backyard.</p>
+    <p><strong>Electrical:</strong> 240V / 40A circuit. Recommended heater: 7.5kW.</p>
+    <p><strong>Compatible heaters:</strong> Harvia KIP60B, KIP60W (all E7 variants).</p>
+    <p><strong>Best for:</strong> Families of 3&ndash;4. The E7 is the default recommendation for the "average" customer.</p>
+</div>
+
+<div class="pro-tip">
+    <p><strong>Pro Tip &mdash; The EE6G Stealth Upsell:</strong> When a customer is considering the E7G ($6,190), always mention the EE6G ($5,990). It's $200 <em>less</em>, has a 91" diameter (10 inches wider), knotless Thermo-Aspen benches, AND includes a glass front as standard. The EE6G is objectively the better value. More on this in the EE-Series section.</p>
+</div>
+
+<h3>E8 / E8W / E8G Deep Dive (6-Person, Best Value)</h3>
+<div class="model-card">
+    <h3>E8 &mdash; $5,990 | E8W &mdash; $6,490 | E8G &mdash; $6,990</h3>
+    <p>The largest E-Series barrel at 87 inches long, fitting 6 people. The E8 at $5,990 is <strong>only $800 more than the E7</strong> but doubles the capacity from 4 to 6. This is the best value proposition in the barrel lineup.</p>
+    <p><strong>Electrical:</strong> 240V / 40A circuit. Recommended heater: 8kW.</p>
+    <p><strong>Compatible heaters:</strong> Harvia KIP60B, KIP60W (all E8 variants).</p>
+    <p><strong>Best for:</strong> Entertainers, larger families, anyone who might have guests over. The E8G at $6,990 is the flagship E-Series model.</p>
+</div>
+
+<div class="framing">
+    <p><strong>How to Frame This (E8 Value Play):</strong></p>
+    <p><strong>The core concept:</strong> "The E8 is our best-kept secret. It's only $800 more than the E7, but it seats 6 instead of 4. That's like paying 15% more for 50% more space. Even if you only have a family of 4, the extra room means you can stretch out, bring friends, or just enjoy a more spacious session."</p>
+    <p><strong>PPW framework to apply:</strong> Use the <strong>Bridge Technique</strong> &mdash; answer their question about the E7 first, then bridge: "The E7 is great for 4 people. But since you mentioned you sometimes have friends over, let me show you the E8&hellip;"</p>
+</div>
+
+
+<!-- ==================== EE-SERIES ==================== -->
+<h2 id="ch3-ee">EE-Series: Ergo Elegance Premium Barrels <span class="series-badge badge-premium">2 Models</span></h2>
+
+<p>The EE-Series is SaunaLife's <strong>premium barrel line</strong>. Two models, two things that make them special: a <strong>90&ndash;91-inch diameter</strong> (roughly 10 inches wider than E-Series) and <strong>knotless Thermo-Aspen benches</strong> (smoother, more refined look and feel).</p>
+
+<p>Both EE models come with a tempered glass front as standard &mdash; no need to pay extra for the G variant.</p>
+
+<table>
+    <tr><th>Model</th><th>Capacity</th><th>Barrel Dims</th><th>Weight</th><th>Assembly</th><th>Electrical</th><th>Price</th></tr>
+    <tr class="highlight-row"><td><strong>EE6G</strong></td><td>4 persons</td><td>63"L x 91"D</td><td>800&ndash;900 lbs</td><td>10&ndash;12 hrs DIY</td><td>240V / 50A</td><td>$5,990</td></tr>
+    <tr><td><strong>EE8G</strong></td><td>6 persons</td><td>79"L x 90"D</td><td>950&ndash;1,100 lbs</td><td>12&ndash;15 hrs DIY</td><td>240V / 50&ndash;60A</td><td>$7,190</td></tr>
+</table>
+
+<h3>EE6G &mdash; The Smart Upsell</h3>
+<div class="model-card featured">
+    <h3>EE6G &mdash; $5,990 (4 Persons)</h3>
+    <p>This is one of the most powerful selling points in the SaunaLife lineup. Compare the EE6G to the E7G:</p>
+    <table>
+        <tr><th>Feature</th><th>E7G ($6,190)</th><th>EE6G ($5,990)</th></tr>
+        <tr><td>Price</td><td>$6,190</td><td><strong>$5,990 ($200 less)</strong></td></tr>
+        <tr><td>Diameter</td><td>81"</td><td><strong>91" (10" wider)</strong></td></tr>
+        <tr><td>Glass front</td><td>Yes</td><td>Yes (standard)</td></tr>
+        <tr><td>Bench wood</td><td>Thermo-Aspen</td><td><strong>Knotless Thermo-Aspen</strong></td></tr>
+        <tr><td>Capacity</td><td>4 persons</td><td>4 persons</td></tr>
+        <tr><td>Wi-Fi</td><td>No</td><td><strong>Yes</strong></td></tr>
+    </table>
+    <p><strong>Compatible heaters:</strong> Harvia KIP80B, KIP80W, HUUM DROP 9. Recommended: 8&ndash;9kW.</p>
+    <p><strong>Overall dims with cradles:</strong> 90.93"W x 94.9"H.</p>
+</div>
+
+<div class="framing">
+    <p><strong>How to Frame This:</strong></p>
+    <p><strong>The core concept:</strong> "The EE6G is our insider recommendation. It costs $200 LESS than the E7G, but it's 10 inches wider, has premium knotless benches, and includes the glass front as standard. It's like finding a BMW that's cheaper than the Toyota but has more features."</p>
+    <p><strong>When to use it:</strong> Every time a customer is considering the E7G. This is your primary upsell-to-better-value move.</p>
+</div>
+
+<h3>EE8G &mdash; The Flagship Barrel</h3>
+<div class="model-card">
+    <h3>EE8G &mdash; $7,190 (6 Persons)</h3>
+    <p>The <strong>largest barrel sauna</strong> in the SaunaLife lineup. 90-inch diameter, 79-inch length, glass front, knotless benches. Only $200 more than the E8G ($6,990) but with a significantly larger diameter and premium bench upgrade.</p>
+    <p><strong>Dims with cradles:</strong> 90.93"W x 94.9"H. Cradle feet: 87.41"W, spacing: 70.86".</p>
+    <p><strong>Compatible heaters:</strong> Harvia KIP80B, KIP80W, HUUM DROP 9. Recommended: 9&ndash;10kW.</p>
+    <p><strong>Best for:</strong> Customers who want the absolute best barrel experience. This is the top of the barrel line.</p>
+</div>
+
+<div class="watch-out">
+    <p><strong>Watch Out &mdash; EE-Series Foundation:</strong> The 90&ndash;91-inch diameter and 800&ndash;1,100 lb assembly weight means a strong foundation is critical. The foundation must support wet operating weight with people and steam. Always confirm the customer has a concrete pad or reinforced deck.</p>
+</div>
+
+
+<!-- ==================== CL-SERIES ==================== -->
+<h2 id="ch3-cl">CL-Series: Cube Luxury Modern Saunas <span class="series-badge badge-cube">5 Models</span></h2>
+
+<p>The CL-Series is for <strong>customers who want a modern, contemporary look</strong>. Instead of a barrel's round curves, these are rectangular cubes with shingle roofs, tempered glass fronts, and clean architectural lines. They look right at home next to a modern pool or on a contemporary patio.</p>
+
+<p>All CL models use <strong>Thermo-Spruce exteriors with knotless Thermo-Aspen benches</strong> &mdash; the premium bench wood is standard across the entire cube line.</p>
+
+<table>
+    <tr><th>Model</th><th>Capacity</th><th>Exterior Dims</th><th>Weight</th><th>Assembly</th><th>Electrical</th><th>Price</th></tr>
+    <tr><td><strong>CL3G</strong></td><td>2 persons</td><td>52"D x 54"W x 82"H</td><td>1,800 lbs</td><td>6&ndash;8 hrs pro + 2&ndash;3 hrs electrical</td><td>240V / 30A / 4.5kW</td><td>$3,990</td></tr>
+    <tr><td><strong>CL4G</strong></td><td>3 persons</td><td>50"D x 81"W x 83"H</td><td>2,400 lbs</td><td>8&ndash;10 hrs pro + 3&ndash;4 hrs electrical</td><td>240V / 50A / 6kW</td><td>$4,990</td></tr>
+    <tr class="highlight-row"><td><strong>CL5G</strong></td><td>4 persons</td><td>63"D x 81"W x 83"H</td><td>2,800 lbs</td><td>10&ndash;12 hrs pro</td><td>240V / 50A / 7.5kW</td><td>$5,990</td></tr>
+    <tr><td><strong>CL7G</strong></td><td>6 persons</td><td>87"D x 91"W x 93"H</td><td>4,200 lbs</td><td>14&ndash;18 hrs pro</td><td>240V / 60A / 9kW</td><td>$7,990</td></tr>
+    <tr><td><strong>CL12GCP</strong></td><td>8 persons</td><td>152"D x 91"W x 93"H</td><td>6,500 lbs</td><td>20&ndash;28 hrs (3-person crew)</td><td>240V / 60&ndash;80A / 12kW</td><td>$10,990</td></tr>
+</table>
+
+<h3>CL3G &mdash; Entry-Level Cube ($3,990)</h3>
+<div class="model-card">
+    <h3>CL3G &mdash; $3,990 (2 Persons)</h3>
+    <p>The <strong>most affordable sauna in the entire SaunaLife lineup</strong> (among saunas, not tubs). At $3,990, it's a 2-person cube with a tempered glass front and knotless aspen benches. Floor area: 53.15"W x 49.21"D.</p>
+    <p><strong>Compatible heaters:</strong> Harvia KIP60B, KIP60W.</p>
+    <p><strong>Best for:</strong> Couples on a budget who want the modern cube look.</p>
+</div>
+
+<h3>CL5G &mdash; The Sweet Spot Cube ($5,990)</h3>
+<div class="model-card featured">
+    <h3>CL5G &mdash; $5,990 (4 Persons)</h3>
+    <p>The <strong>#1 selling sauna in the entire SaunaLife lineup &mdash; and arguably the #1 selling sauna in the American market</strong>. 4-person capacity at $5,990 &mdash; the same price as the E8 barrel and EE6G premium barrel. Floor area: 80.71"W x 73.23"D (77.17" usable width). This is the model to recommend when a customer says "modern" and "4 people."</p>
+    <p><strong>Compatible heaters:</strong> Harvia KIP60B, KIP60W.</p>
+    <p><strong>Best for:</strong> Families who prioritize contemporary design. The CL5G is the cube equivalent of the E7 &mdash; right-sized for most families.</p>
+</div>
+
+<h3>CL12GCP &mdash; The Cube Suite ($10,990)</h3>
+<div class="model-card">
+    <h3>CL12GCP &mdash; $10,990 (8 Persons)</h3>
+    <p>A complete <strong>multi-function wellness suite</strong> with a sauna room, changing room, and porch &mdash; all in the cube design language. At 152 inches deep (nearly 13 feet), this is a serious installation. Floor: ~91"W x ~151.57"D total length. Requires a 3-person professional assembly team and potentially heavy equipment.</p>
+    <p><strong>Compatible heaters:</strong> Harvia KIP80B, KIP80W, HUUM DROP 9.</p>
+    <p><strong>Best for:</strong> Premium customers wanting a modern wellness center with changing room functionality.</p>
+</div>
+
+<div class="watch-out">
+    <p><strong>Watch Out &mdash; CL-Series Weight:</strong> Cube saunas are heavy. The CL3G is 1,800 lbs assembled and the CL12GCP hits 6,500 lbs. Foundation requirements are serious &mdash; concrete pad preferred, especially for glass models. Always confirm the customer's foundation can handle the weight.</p>
+</div>
+
+
+<!-- ==================== G-SERIES ==================== -->
+<h2 id="ch3-g">G-Series: Garden Cabin Saunas <span class="series-badge badge-garden">6 Models</span></h2>
+
+<p>The G-Series offers <strong>traditional rectangular cabin saunas</strong> ranging from a compact 4-person DIY kit to a fully pre-assembled flagship. This is where you'll find the widest price spread in the SaunaLife lineup: $4,990 to $32,900.</p>
+
+<table>
+    <tr><th>Model</th><th>Capacity</th><th>Exterior Dims</th><th>Weight</th><th>Assembly</th><th>Price</th></tr>
+    <tr><td><strong>G2</strong></td><td>4 persons</td><td>64"D x 72"W x 92"H</td><td>1,100 lbs</td><td>4&ndash;6 hrs DIY</td><td>$4,990</td></tr>
+    <tr><td><strong>G3</strong></td><td>6 persons</td><td>~63"D x ~95"W x ~92"H</td><td>3,500 lbs</td><td>8&ndash;10 hrs DIY</td><td>$6,990</td></tr>
+    <tr><td><strong>G4</strong></td><td>6 persons</td><td><span class="gap-flag">[NOT FOUND IN SOURCE &mdash; SKU: SL-MODELG4]</span></td><td><span class="gap-flag">[NOT FOUND IN SOURCE]</span></td><td><span class="gap-flag">[NOT FOUND IN SOURCE]</span></td><td>$6,990</td></tr>
+    <tr class="highlight-row"><td><strong>G6</strong></td><td>5 persons</td><td>95"W x 83"D x 96"H</td><td>2,800 lbs</td><td>NONE &mdash; Pre-assembled</td><td>$24,900</td></tr>
+    <tr><td><strong>G7</strong></td><td>6 persons</td><td><span class="gap-flag">[NOT FOUND IN SOURCE &mdash; SKU: SL-MODELG7-L]</span></td><td><span class="gap-flag">[NOT FOUND IN SOURCE]</span></td><td><span class="gap-flag">[NOT FOUND IN SOURCE]</span></td><td>$32,900</td></tr>
+    <tr><td><strong>G11</strong></td><td>8 persons</td><td>~161"L x 118"W x ~98"H</td><td>3,200 lbs</td><td>24&ndash;40 hrs DIY</td><td>$14,990</td></tr>
+</table>
+
+<h3>G2 &mdash; Entry Cabin ($4,990)</h3>
+<div class="model-card">
+    <h3>G2 &mdash; $4,990 (4 Persons)</h3>
+    <p>The <strong>entry-level garden cabin</strong>. Uses Nordic Spruce (not thermo-treated) with Knotless Aspen benches. Roof overhang: 86"W x 75"D. At 4&ndash;6 hours, it's one of the quickest assemblies. Same price as the X2 indoor model.</p>
+    <p><strong>Electrical:</strong> 240V / 20A / 3kW heater.</p>
+    <p><strong>Compatible heaters:</strong> Harvia KIP60B, KIP60W.</p>
+    <p><strong>Best for:</strong> DIY-comfortable customers who want a cabin aesthetic on a barrel budget.</p>
+</div>
+
+<h3>G3 &mdash; Premium Cabin ($6,990)</h3>
+<div class="model-card">
+    <h3>G3 &mdash; $6,990 (6 Persons)</h3>
+    <p>Steps up to <strong>weather-resistant Thermo-Pine</strong> construction. Compact parabolic roof design. At 3,500 lbs assembled, this is a substantial structure requiring a reinforced concrete pad or heavy-duty deck.</p>
+    <p><strong>Electrical:</strong> 240V / 50A / 6kW heater.</p>
+    <p><strong>Compatible heaters:</strong> Harvia KIP60B, KIP60W.</p>
+    <p><strong>Best for:</strong> Larger groups wanting premium materials in a cabin form factor.</p>
+</div>
+
+<h3>G6 &mdash; The Pre-Assembled Flagship ($24,900)</h3>
+<div class="model-card featured">
+    <h3>G6 &mdash; $24,900 (5 Persons) &mdash; LEFT or RIGHT configuration</h3>
+    <p>The <strong>only pre-assembled sauna in the entire SaunaLife lineup</strong>. It arrives fully built via heavy cargo truck with a <strong>professional placement crew included</strong> &mdash; they position it on your prepared foundation. No stave fitting, no band tightening, no weekend assembly projects. You prep the site, the crew places the sauna, your electrician hooks up the heater, and you're done.</p>
+
+    <p><strong>Construction:</strong> Sawn Spruce (painted black exterior) with Alder wood benches &mdash; different from the thermo-spruce used in other series.</p>
+
+    <p><strong>Dual electrical system:</strong></p>
+    <ul>
+        <li><strong>Circuit 1 (120VAC):</strong> LED lights + ventilation fan. 9 amps max, 1,080W max.</li>
+        <li><strong>Circuit 2 (240VAC):</strong> Heater control. 50 amps max, 11kW max.</li>
+        <li>Three conduit pipes run underneath: left two = 240VAC, right single = 120VAC.</li>
+        <li>Pre-installed dual electrical box system with labeled cable connections.</li>
+    </ul>
+
+    <p><strong>Available in Left (SL-MODELG6-L) or Right (SL-MODELG6-R) configurations</strong> for different door orientations. Features Bluetooth LED lighting, insulated windows, and a ventilation fan system.</p>
+    <p><strong>Compatible heaters:</strong> Varies &mdash; contact Bathing Brands for specific compatibility (special requirements due to pre-assembly).</p>
+</div>
+
+<div class="framing">
+    <p><strong>How to Frame This (G6):</strong></p>
+    <p><strong>The core concept:</strong> "The G6 is for customers who want the experience without the project. Every other sauna in our lineup is a kit you build. The G6 shows up ready to use. It's the difference between building a house from plans and buying a move-in-ready home."</p>
+    <p><strong>The power combo:</strong> G6 sauna ($24,900) + S6B hot tub ($6,990) = <strong>$31,890 complete wellness sanctuary</strong>. Hot sauna + cold plunge for contrast therapy. This is the ultimate package for high-end customers.</p>
+    <p><strong>PPW framework:</strong> Use <strong>Three Tens</strong> &mdash; the customer needs certainty that this premium price is justified. The pre-assembly, the dual electrical system, the professional placement &mdash; everything screams "we handle it all."</p>
+</div>
+
+<h3>G11 &mdash; Two-Room Suite ($14,990)</h3>
+<div class="model-card">
+    <h3>G11 &mdash; $14,990 (8 Persons)</h3>
+    <p>A <strong>2-room sauna with porch/lounge area</strong>. At approximately 13.4 feet long by 9.8 feet wide, this is a substantial structure. Features 1.65-inch Thermo-Spruce walls, natural light design, and dimmable lighting. Ships in a massive crate (47"H x 47"D x 197"L).</p>
+    <p><strong>Assembly:</strong> 24&ndash;40 hours DIY, 16&ndash;20 hours professional. <strong>Professional assembly strongly recommended</strong> &mdash; contact PPW for installer referrals.</p>
+    <p><strong>Compatible heaters:</strong> Harvia KIP80B, KIP80W.</p>
+    <p><strong>Best for:</strong> Retreat centers, wellness enthusiasts, large properties. The porch area is perfect for cooling off between sessions.</p>
+</div>
+
+<div class="pro-tip">
+    <p><strong>Pro Tip &mdash; G4 and G7:</strong> The G4 ($6,990) and G7 ($32,900) appear in our Shopify catalog but detailed specifications are not yet available in our training materials. The G7 features Bluetooth and LED lighting and appears to be a pre-assembled model at $32,900 (SKU: SL-MODELG7-L). If a customer asks about these models, contact Bathing Brands directly for current specs and availability.</p>
+</div>
+
+
+<!-- ==================== GL-SERIES ==================== -->
+<h2 id="ch3-gl">GL-Series: Garden Luxury Premium Kits <span class="series-badge badge-luxury">2 Models</span></h2>
+
+<p>The GL-Series takes the garden cabin concept and adds <strong>premium construction: 1.57-inch thick Thermo-Spruce staves</strong>. That's notably thicker than standard models, providing superior insulation and a lifespan of 20+ years. If a customer says "I want the best-built cabin sauna," this is it.</p>
+
+<table>
+    <tr><th>Model</th><th>Capacity</th><th>Exterior Dims</th><th>Weight</th><th>Assembly</th><th>Electrical</th><th>Price</th></tr>
+    <tr><td><strong>GL4</strong></td><td>4 persons</td><td>80"D x 59"W x 85"H</td><td>2,000 lbs</td><td>6&ndash;8 hrs pro</td><td>240V / 30A / 4.5kW</td><td>$9,490</td></tr>
+    <tr><td><strong>GL6</strong></td><td>6 persons</td><td>91"D x 91"W x 93"H</td><td>3,200 lbs</td><td>10&ndash;12 hrs pro</td><td>240V / 50A / 6kW</td><td>$12,790</td></tr>
+</table>
+
+<div class="model-card">
+    <h3>GL4 &mdash; $9,490 (4 Persons)</h3>
+    <p><strong>Alternate dimensions:</strong> 58-7/8"W x 79-1/2"D x 85-1/8"H. Thermo-Spruce throughout with 1.57" thick staves.</p>
+    <p><strong>Compatible heaters:</strong> Harvia KIP60B, KIP60W, Cilindro PC60E.</p>
+    <p><strong>Best for:</strong> Quality-focused buyers who want maximum build quality in a 4-person cabin.</p>
+</div>
+
+<div class="model-card">
+    <h3>GL6 &mdash; $12,790 (6 Persons)</h3>
+    <p><strong>Interior:</strong> 92-1/2"H interior height, 79-1/8"H side wall, 69-7/8" floor. Heavy-duty construction at 3,200 lbs assembled. Requires reinforced concrete pad or load-bearing deck.</p>
+    <p><strong>Compatible heaters:</strong> Saunum Air L 10, Harvia Spirit SP90E. Note: the GL6 is one of the few models recommended with a <strong>Saunum heater</strong> &mdash; our Bentley-tier heater brand with air blending and salt therapy capabilities.</p>
+    <p><strong>Best for:</strong> Maximum durability seekers. The premium materials justify the price for customers who plan to use their sauna for decades.</p>
+</div>
+
+<div class="framing">
+    <p><strong>How to Frame This (GL-Series):</strong></p>
+    <p><strong>The core analogy:</strong> "The GL-Series is like buying a brick house instead of a wood-frame house. The 1.57-inch thick thermo-spruce walls provide insulation and durability that thinner-walled saunas simply can't match. You're investing in a structure that will outlast you."</p>
+    <p><strong>The heater investment reframe:</strong> A customer spending $9,490&ndash;$12,790 on a GL sauna should pair it with a premium heater. The Saunum Air L 10 on the GL6 is like putting a V8 in a luxury SUV &mdash; the premium sauna deserves premium heating.</p>
+</div>
+
+
+<!-- ==================== X-SERIES ==================== -->
+<h2 id="ch3-x">X-Series: Indoor Saunas <span class="series-badge badge-indoor">3 Models</span></h2>
+
+<p>The X-Series is SaunaLife's <strong>indoor sauna line</strong> for customers who don't have outdoor space, live in apartments/condos, or want year-round sauna access without weather concerns. These are cabin-style saunas designed to fit in basements, garages, spare rooms, or dedicated wellness spaces.</p>
+
+<div class="model-card featured">
+    <h3>X2 &mdash; $4,990 (1&ndash;2 Persons)</h3>
+    <p>The <strong>core indoor model</strong> with complete specifications available. Dimensions: 60"W x 60"D x 80"H interior. Uses Nordic Spruce with Knotless Aspen benches. Includes LED lighting as standard. Weight: ~1,100 lbs assembled. Assembly: 6&ndash;8 hours DIY (2 people).</p>
+    <p><strong>Electrical:</strong> 240V circuit (indoor installation).</p>
+    <p><strong>Compatible heaters:</strong> Harvia KIP60B, smaller electric heaters.</p>
+    <p><strong>Installation notes:</strong> Level, dry indoor floor (basement or dedicated room). Adequate room ventilation or external venting recommended. 240V circuit within 15 feet of installation location.</p>
+    <p><strong>Best for:</strong> Apartments, basements, studio homes. The only indoor-only option with full verified specs.</p>
+</div>
+
+<div class="model-card">
+    <h3>X6 &mdash; $4,990 (6 Persons)</h3>
+    <p>A 6-person indoor sauna at the same $4,990 price point as the X2. Available accessories include floor kits ($195 standard / $425 full-floor in premium Aspen) and a Mood Lighting system ($345) with chromotherapy and app control.</p>
+    <p><span class="gap-flag">[NOT FOUND IN SOURCE &mdash; SKU: SL-MODELX6] Dimensions, wood type, electrical, weight, assembly time, heater compatibility not available in current training materials.</span></p>
+</div>
+
+<div class="model-card">
+    <h3>X7 &mdash; $5,790</h3>
+    <p>The premium indoor model. Available accessories include floor kits ($295 standard / $595 full-floor in premium Aspen) and a Mood Lighting system ($345) with app-controlled RGB LED and chromotherapy.</p>
+    <p><span class="gap-flag">[NOT FOUND IN SOURCE &mdash; SKU: SL-MODELX7] Dimensions, capacity, wood type, electrical, weight, assembly time, heater compatibility not available in current training materials.</span></p>
+</div>
+
+<div class="framing">
+    <p><strong>How to Frame This (Indoor Saunas):</strong></p>
+    <p><strong>The core concept:</strong> "Want sauna year-round without dealing with weather? The X-Series goes right in your basement, garage, or any enclosed room with proper ventilation. Same quality wood, same heater options, just designed for indoor installation."</p>
+    <p><strong>Decision driver:</strong> Indoor = X-Series. Outdoor = everything else. This is the first fork in your discovery tree.</p>
+</div>
+
+
+<!-- ==================== S-SERIES ==================== -->
+<h2 id="ch3-s">S-Series: Soak Hot Tubs &amp; Immersion Tubs <span class="series-badge badge-soak">8 Models</span></h2>
+
+<p>The S-Series isn't saunas &mdash; it's <strong>hot tubs and cold/hot immersion tubs</strong>. They're in this guide because they're a critical companion product for contrast therapy (sauna + cold plunge). Selling a sauna? Always ask about a tub pairing.</p>
+
+<h3>Cold/Hot Immersion Tubs (S1, S2)</h3>
+<p>Small tubs designed for cold plunge or hot immersion contrast therapy. No heater &mdash; you fill with cold water (or add ice) for cold therapy, or warm water for hot immersion.</p>
+
+<table>
+    <tr><th>Model</th><th>Capacity</th><th>Dimensions</th><th>Finish</th><th>Material</th><th>Price</th></tr>
+    <tr><td><strong>S1N</strong></td><td>1 person</td><td>34.4"&Oslash; x 36"H</td><td>Natural</td><td>Thermo-Pine</td><td>$2,490</td></tr>
+    <tr><td><strong>S1B</strong></td><td>1 person</td><td>34.4"&Oslash; x 36"H</td><td>Black</td><td>Thermo-Pine</td><td>$2,690</td></tr>
+    <tr><td><strong>S2N</strong></td><td>2 persons</td><td>66.5"L x 39.1"W x 36"H</td><td>Natural</td><td>Thermo-Pine</td><td>$3,790</td></tr>
+    <tr><td><strong>S2B</strong></td><td>2 persons</td><td>66.5"L x 39.1"W x 36"H</td><td>Black</td><td>Thermo-Pine</td><td>$3,990</td></tr>
+</table>
+
+<p>Insulated covers available: S1 cover $390, S2 cover $590.</p>
+
+<h3>Wood-Burning Hot Tubs (S4, S6)</h3>
+<p>Full-size hot tubs heated by an integrated wood-burning stove. No electricity needed &mdash; just firewood. Heats in 1.5&ndash;2 hours.</p>
+
+<table>
+    <tr><th>Model</th><th>Capacity</th><th>Diameter</th><th>Finish</th><th>Material</th><th>Price</th></tr>
+    <tr><td><strong>S4N</strong></td><td>6 persons</td><td>79" (227 cm)</td><td>Natural</td><td>Thermo-Spruce</td><td>$5,690</td></tr>
+    <tr><td><strong>S4</strong></td><td>6 persons</td><td>79" (227 cm)</td><td>Black</td><td>Thermo-Spruce</td><td>$5,990</td></tr>
+    <tr><td><strong>S6N</strong></td><td>7 persons</td><td>89" (226.1 cm)</td><td>Natural</td><td>Thermo-Spruce</td><td>$6,690</td></tr>
+    <tr><td><strong>S6B</strong></td><td>7 persons</td><td>89" (226.1 cm)</td><td>Black</td><td>Thermo-Spruce</td><td>$6,990</td></tr>
+</table>
+
+<div class="watch-out">
+    <p><strong>Watch Out &mdash; S-Series Winter Maintenance:</strong> These tubs MUST be completely drained in winter if not in use. Failure to drain = freeze damage = $5,000+ in repairs. This is a <strong>mandatory sales talking point</strong>. Every customer buying an S-Series tub must understand winter drain requirements.</p>
+</div>
+
+<div class="pro-tip">
+    <p><strong>Pro Tip &mdash; The Wellness Sanctuary Package:</strong> G6 sauna ($24,900) + S6B hot tub ($6,990) = $31,890 complete hot/cold wellness retreat. For high-end customers, this is your signature offering. The customer gets pre-assembled sauna (zero DIY) plus a wood-burning hot tub for contrast therapy. That's a transformative backyard experience, not just a product purchase.</p>
+</div>
+
+
+<!-- ==================== ACCESSORIES ==================== -->
+<h2 id="ch3-acc">Accessories &amp; Add-Ons</h2>
+
+<p>Accessories build order value and enhance the customer experience. Here are the key SaunaLife accessories to offer with every sauna sale:</p>
+
+<table>
+    <tr><th>Accessory</th><th>SKU</th><th>Price</th><th>Best For</th></tr>
+    <tr><td><strong>Bucket &amp; Ladle Package (Aluminum)</strong></td><td>SL-PACKAGE2</td><td>$219.85</td><td>Every sauna &mdash; essential for l&ouml;yly</td></tr>
+    <tr><td><strong>Bucket &amp; Ladle (Abachi Wood)</strong></td><td>SL-PACKAGE1</td><td>$245.00</td><td>Premium upgrade</td></tr>
+    <tr><td><strong>Accessory Package 3</strong> (bucket, ladle, thermometer, hygrometer)</td><td>ACCPKG-3-BK</td><td>$198.00</td><td>Best value bundle</td></tr>
+    <tr><td><strong>Accessory Package 4</strong> (bucket, ladle, thermometer)</td><td>ACCPKG-4</td><td>$159.00</td><td>Budget bundle (BK or WHT)</td></tr>
+    <tr><td><strong>Accessory Package 5</strong> (aluminum bucket, bamboo ladle, thermometer)</td><td>ACCPKG-5-BK</td><td>$209.00</td><td>Modern look</td></tr>
+    <tr><td><strong>Accessory Package 6</strong> (aluminum bucket, bamboo ladle, thermometer)</td><td>ACCPKG-6</td><td>$164.00</td><td>Budget modern (BK or WH)</td></tr>
+    <tr><td><strong>Headrest 1</strong></td><td>SL-HEADREST-1</td><td>$29.00</td><td>Comfort upgrade</td></tr>
+    <tr><td><strong>Headrest 2</strong></td><td>SL-HEADREST-2</td><td>$39.00</td><td>Premium comfort</td></tr>
+    <tr><td><strong>Headrest 3</strong></td><td>SL-HEADREST-3</td><td>$29.00</td><td>Comfort upgrade</td></tr>
+    <tr><td><strong>Bluetooth Speaker</strong></td><td>SAUNAGEAR-BT-SPEAKER</td><td>$74.00</td><td>Music lovers</td></tr>
+    <tr><td><strong>SaunaZone Speaker + LED + Bucket combo</strong></td><td>127924</td><td>$299.95</td><td>All-in-one upgrade</td></tr>
+    <tr><td><strong>Waterproof Electrical Enclosure (IP67)</strong></td><td>SAUNAGEAR301</td><td>$593.43</td><td>All outdoor saunas</td></tr>
+    <tr><td><strong>Barrel Electrical Enclosure (IP67)</strong></td><td>SAUNAGEAR302</td><td>$378.57</td><td>E/EE barrel saunas</td></tr>
+    <tr><td><strong>Paraffin Oil (wood protector)</strong></td><td>22805-OIL</td><td>$25.90</td><td>Annual maintenance</td></tr>
+    <tr><td><strong>Sauna Wax</strong> (Clear/Black/White/Gray)</td><td>64200-*-WAX</td><td>$23.90&ndash;$24.90</td><td>Wood protection &amp; aesthetics</td></tr>
+    <tr><td><strong>Sauna Cleaner 32oz</strong></td><td>SL-SAUNACLEANER-32oz</td><td>$16.95</td><td>Regular cleaning</td></tr>
+    <tr><td><strong>Sauna Cleaner 1 Gallon</strong></td><td>SL-SAUNACLEANER-1g</td><td>$29.95</td><td>Long-term value</td></tr>
+    <tr><td><strong>E-Series Floor Kits</strong></td><td>SL-E6FLOOR, SL-E7FLOOR</td><td>$195+</td><td>Model-specific barrel flooring</td></tr>
+    <tr><td><strong>X6 Floor Kit / Full Floor</strong></td><td>SL-X6FLOOR / SL-X6FULLFLOOR</td><td>$195 / $425</td><td>X6 indoor sauna flooring</td></tr>
+    <tr><td><strong>X7 Floor Kit / Full Floor</strong></td><td>SL-X7FLOOR / SL-X7FULLFLOOR</td><td>$295 / $595</td><td>X7 indoor sauna flooring</td></tr>
+    <tr><td><strong>X6 Mood Lighting</strong></td><td>SL-X6MOOD</td><td>$345</td><td>X6 ambient lighting upgrade</td></tr>
+    <tr><td><strong>X7 Mood Lighting</strong></td><td>SL-X7MOOD</td><td>$345</td><td>X7 ambient lighting upgrade</td></tr>
+    <tr><td><strong>Sconce+ LED Sets</strong></td><td>SL-E6SCONCE+, etc.</td><td>$495</td><td>Premium lighting upgrade (E-Series)</td></tr>
+    <tr><td><strong>ERGO Mood LED Valance</strong></td><td>SL-EMOOD</td><td>$595</td><td>RGB color lighting (E-Series)</td></tr>
+    <tr><td><strong>Rain R3 Barrel Shower</strong></td><td>SL-MODELR3</td><td>$2,990</td><td>Outdoor rinse station &mdash; pairs with any outdoor sauna</td></tr>
+</table>
+
+<div class="pro-tip">
+    <p><strong>Pro Tip &mdash; Accessory Timing:</strong> Offer a bucket/ladle package and headrests <strong>during the sale</strong> (they bundle naturally). Offer cleaning supplies and wood treatment oil <strong>at delivery or 30-day follow-up</strong>. The R3 Barrel Shower ($2,990) is a premium add-on for customers who want the full outdoor wellness experience.</p>
+</div>
+
+
+<!-- ============================================ -->
+<!-- CHAPTER 4: MATCHING CUSTOMERS TO SAUNAS -->
+<!-- ============================================ -->
+<h1 id="ch4">Chapter 4: Matching Customers to Saunas</h1>
+
+<p>This is where The Journey translates into sales skills. You've learned the products &mdash; now learn how to match the right one to each customer. The key tool is the <strong>Discovery Decision Tree</strong>, a series of qualifying questions that narrows 30+ models down to 2&ndash;3 perfect recommendations.</p>
+
+<h2>The Discovery Decision Tree</h2>
+
+<h3>Question 1: Indoor or Outdoor?</h3>
+<div class="key-def">
+    <p><strong>Indoor &rarr;</strong> X-Series only. X2 ($4,990) is the flagship indoor model at 60"x60"x80". X6 and X7 also available.</p>
+    <p><strong>Outdoor &rarr;</strong> Continue to Question 2. All other series are outdoor.</p>
+</div>
+
+<h3>Question 2: How Many People?</h3>
+<table>
+    <tr><th>Capacity Need</th><th>Recommended Models</th></tr>
+    <tr><td><strong>1&ndash;2 persons</strong></td><td>CL3G ($3,990), S1 immersion tub ($2,490&ndash;$2,690)</td></tr>
+    <tr><td><strong>3&ndash;4 persons</strong></td><td>E6/E6W ($4,390&ndash;$4,890), E7 ($5,190), CL4G ($4,990), CL5G ($5,990), EE6G ($5,990)</td></tr>
+    <tr><td><strong>5&ndash;6 persons</strong></td><td>E8 ($5,990), E8G ($6,990), EE8G ($7,190), CL7G ($7,990), G3 ($6,990), GL4 ($9,490), GL6 ($12,790)</td></tr>
+    <tr><td><strong>7&ndash;8+ persons</strong></td><td>G11 ($14,990), CL12GCP ($10,990), G6 ($24,900)</td></tr>
+</table>
+
+<h3>Question 3: What Style Do You Like?</h3>
+<table>
+    <tr><th>Style Preference</th><th>Series</th><th>Why</th></tr>
+    <tr><td><strong>Classic/Traditional barrel</strong></td><td>E-Series, EE-Series</td><td>Round barrel shape, Scandinavian charm</td></tr>
+    <tr><td><strong>Modern/Contemporary</strong></td><td>CL-Series</td><td>Cube design, glass fronts, shingle roofs</td></tr>
+    <tr><td><strong>Rustic cabin</strong></td><td>G-Series, GL-Series</td><td>Rectangular cabins, cottage feel</td></tr>
+</table>
+
+<h3>Question 4: DIY or Pre-Assembled?</h3>
+<div class="key-def">
+    <p><strong>DIY &rarr;</strong> Almost all models. Budget 6&ndash;40 hours assembly depending on size. Professional assembly available &mdash; PPW can help coordinate.</p>
+    <p><strong>Pre-Assembled / No DIY &rarr;</strong> G6 only ($24,900). The only turnkey option. Arrives ready to use.</p>
+</div>
+
+<h3>Question 5: Budget Range?</h3>
+<table>
+    <tr><th>Budget</th><th>Best Options</th></tr>
+    <tr><td><strong>Under $5,000</strong></td><td>CL3G ($3,990), E6 ($4,390), E6W ($4,890), G2 ($4,990), X2 ($4,990), S1 tubs ($2,490&ndash;$2,690)</td></tr>
+    <tr><td><strong>$5,000&ndash;$7,000</strong></td><td>E7 ($5,190), E7W ($5,690), E8 ($5,990), CL5G ($5,990), EE6G ($5,990), E7G ($6,190), G3 ($6,990), E8G ($6,990)</td></tr>
+    <tr><td><strong>$7,000&ndash;$15,000</strong></td><td>EE8G ($7,190), CL7G ($7,990), GL4 ($9,490), CL12GCP ($10,990), GL6 ($12,790), G11 ($14,990)</td></tr>
+    <tr><td><strong>$15,000+</strong></td><td>G6 ($24,900), G7 ($32,900). Add S6B hot tub ($6,990) for complete wellness retreat.</td></tr>
+</table>
+
+<div class="watch-out">
+    <p><strong>Watch Out &mdash; Always Include Heater Cost:</strong> The prices above are for the sauna body only. ALWAYS tell the customer to budget an additional $2,000&ndash;$4,000 for the heater plus electrician installation (varies by area). Total investment = sauna + heater + electrical. If a customer's budget is $7,000, the sauna body should be $4,000&ndash;$5,000 max. Springing the heater cost on them later destroys trust.</p>
+</div>
+
+<div class="watch-out">
+    <p><strong>Watch Out &mdash; $950 Mandatory Freight Shipping Fee:</strong> SaunaLife saunas carry a mandatory <strong>$950 flat-rate freight shipping fee</strong> &mdash; even though the website says free shipping. Disclose this upfront in your first pricing message to avoid sticker shock. Frame it as: these are large structures shipped on pallets via truck. Position any discounts as offsetting shipping.</p>
+</div>
+
+<h2>Common Customer Scenarios</h2>
+
+<div class="model-card">
+    <h3>Scenario 1: Young Professional Couple</h3>
+    <p><strong>Profile:</strong> Budget $5,500 total, small yard, modern home, limited DIY tolerance.</p>
+    <p><strong>Discovery:</strong> 2 people, outdoor, modern preferred.</p>
+    <p><strong>Recommendation:</strong> CL3G ($3,990) or CL4G ($4,990). Both cube-design, modern look, glass fronts. Leaves $1,500&ndash;$2,500 for a Harvia heater + electrician.</p>
+</div>
+
+<div class="model-card">
+    <h3>Scenario 2: Active Family of 4</h3>
+    <p><strong>Profile:</strong> Budget $8,000&ndash;$9,000 total, traditional aesthetics, willing to DIY.</p>
+    <p><strong>Discovery:</strong> 4 people, outdoor, barrel preferred, DIY okay.</p>
+    <p><strong>Recommendation:</strong> Lead with E7 ($5,190 &mdash; best seller). Mention EE6G ($5,990 &mdash; wider, knotless benches, glass front included, $200 less than E7G). Budget $2,500&ndash;$3,000 for heater + electrical.</p>
+</div>
+
+<div class="model-card">
+    <h3>Scenario 3: The Entertainer</h3>
+    <p><strong>Profile:</strong> Budget $10,000&ndash;$12,000 total, hosts friends/family, wants spacious.</p>
+    <p><strong>Discovery:</strong> 6&ndash;8 people, outdoor, open to barrel or cabin.</p>
+    <p><strong>Recommendation:</strong> E8 ($5,990) or EE8G ($7,190) for barrel fans. CL7G ($7,990) for modern fans. GL6 ($12,790) if max durability matters. Each leaves room for heater investment.</p>
+</div>
+
+<div class="model-card">
+    <h3>Scenario 4: Wellness Entrepreneur / High-End Buyer</h3>
+    <p><strong>Profile:</strong> Budget $30,000+, hosts retreats, wants turnkey luxury.</p>
+    <p><strong>Discovery:</strong> 8+ people, premium experience, no assembly.</p>
+    <p><strong>Recommendation:</strong> G6 ($24,900) pre-assembled sauna + S6B ($6,990) hot tub = $31,890 complete wellness sanctuary. No assembly. Ready for guests. Add R3 Barrel Shower ($2,990) for the complete experience.</p>
+</div>
+
+<div class="framing">
+    <p><strong>How to Frame This (Discovery):</strong></p>
+    <p><strong>PPW framework:</strong> Apply <strong>Gap Selling</strong> throughout discovery. The customer's current state is "no sauna, wanting wellness." Their desired state is "personal retreat, daily wellness ritual, family bonding." Your job is to paint the gap clearly, then position the right SaunaLife model as the bridge.</p>
+    <p><strong>The key insight:</strong> Don't lead with models and prices. Lead with their <em>why</em>. "What wellness goals drew you to looking at saunas?" starts the conversation in the right place. Then the model selection becomes a natural fit, not a sales pitch.</p>
+</div>
+
+
+<!-- ============================================ -->
+<!-- CHAPTER 5: HEATER PAIRINGS -->
+<!-- ============================================ -->
+<h1 id="ch5">Chapter 5: Recommended Heater Pairings</h1>
+
+<p>This is the <strong>key chapter</strong> that ties the SaunaLife sauna guide to your heater knowledge from the Harvia, HUUM, and Saunum brand guides. Every SaunaLife sauna ships without a heater. Your job is to recommend the right heater based on the sauna model, the customer's budget, and their desired experience.</p>
+
+<h2>The Three Heater Brands &mdash; Quick Recap</h2>
+
+<table>
+    <tr><th>Brand</th><th>Tier</th><th>Analogy</th><th>Key Strength</th><th>Price Tier</th></tr>
+    <tr><td><strong>Harvia</strong></td><td>Standard</td><td>Toyota</td><td>Reliable, consistent, proven. The most popular choice.</td><td>Mid-range ($2,000&ndash;$3,500)</td></tr>
+    <tr><td><strong>HUUM</strong></td><td>Premium</td><td>BMW</td><td>Modern design, app control, aesthetic statement.</td><td>Premium ($3,000&ndash;$4,500)</td></tr>
+    <tr><td><strong>Saunum</strong></td><td>Ultra-Premium</td><td>Bentley</td><td>Air blending, salt therapy, large stone capacity, UL listed, 4 safety systems.</td><td>Premium+ ($4,000+)</td></tr>
+</table>
+
+<div class="framing">
+    <p><strong>How to Frame This (Heater Tiers):</strong></p>
+    <p><strong>The core analogy:</strong> "Choosing your heater is like choosing the engine for your car. The Harvia is a reliable V6 &mdash; it'll heat your sauna perfectly every time. The HUUM is a turbocharged engine with a gorgeous design and app control. The Saunum is the handcrafted V12 &mdash; air blending technology that eliminates the hot-ceiling/cold-floor problem entirely."</p>
+    <p><strong>The heater investment reframe:</strong> "A $500 heater in a $7,000 sauna is like putting a 2-liter engine in a Bentley. The heater IS the experience. It's what creates the heat, the steam, the ambiance. This is where you don't want to cut corners."</p>
+</div>
+
+<h2>Complete Heater Compatibility Chart</h2>
+
+<table>
+    <tr><th>Sauna Model(s)</th><th>Capacity</th><th>Recommended kW</th><th>Compatible Heaters</th><th>Notes</th></tr>
+    <tr><td><strong>E6, E6W</strong></td><td>3</td><td>6kW</td><td>Harvia KIP60B, KIP60W</td><td>Standard E-series. 240V/30A circuit.</td></tr>
+    <tr><td><strong>E7, E7W, E7G</strong></td><td>4</td><td>7.5kW</td><td>Harvia KIP60B, KIP60W</td><td>Best seller. 240V/40A circuit.</td></tr>
+    <tr><td><strong>E8, E8W, E8G</strong></td><td>6</td><td>8kW</td><td>Harvia KIP60B, KIP60W</td><td>Larger barrel. 240V/40A circuit.</td></tr>
+    <tr><td><strong>EE6G</strong></td><td>4</td><td>8&ndash;9kW</td><td>Harvia KIP80B, KIP80W, HUUM DROP 9</td><td>91" diameter. 240V/50A.</td></tr>
+    <tr><td><strong>EE8G</strong></td><td>6</td><td>9&ndash;10kW</td><td>Harvia KIP80B, KIP80W, HUUM DROP 9</td><td>90" diameter = more air volume. 240V/50&ndash;60A.</td></tr>
+    <tr><td><strong>G2</strong></td><td>4</td><td>3kW</td><td>Harvia KIP60B, KIP60W</td><td>Smaller cabin. 240V/20A.</td></tr>
+    <tr><td><strong>G3</strong></td><td>6</td><td>6kW</td><td>Harvia KIP60B, KIP60W</td><td>Mid-size cabin. 240V/50A.</td></tr>
+    <tr><td><strong>G6</strong></td><td>5</td><td>Up to 11kW</td><td>Varies &mdash; contact Bathing Brands</td><td>Pre-assembled, special dual-box electrical. 240V/50A heater circuit.</td></tr>
+    <tr><td><strong>G11</strong></td><td>8</td><td>8kW+</td><td>Harvia KIP80B, KIP80W</td><td>2-room sauna, large volume. 240V.</td></tr>
+    <tr><td><strong>GL4</strong></td><td>4</td><td>4.5kW</td><td>Harvia KIP60B, KIP60W, Cilindro PC60E</td><td>Luxury cabin. 2,000 lbs. 240V/30A.</td></tr>
+    <tr class="highlight-row"><td><strong>GL6</strong></td><td>6</td><td>6kW+</td><td>Saunum Air L 10, Harvia Spirit SP90E</td><td>Premium cabin deserves premium heater. 240V/50A.</td></tr>
+    <tr><td><strong>CL3G, CL4G, CL5G</strong></td><td>2&ndash;4</td><td>4.5&ndash;7.5kW</td><td>Harvia KIP60B, KIP60W</td><td>Small/mid cubes. 240V/30&ndash;50A.</td></tr>
+    <tr><td><strong>CL7G, CL12GCP</strong></td><td>6&ndash;8</td><td>9&ndash;12kW</td><td>Harvia KIP80B, KIP80W, HUUM DROP 9</td><td>Large cubes. 240V/60&ndash;80A.</td></tr>
+    <tr><td><strong>X2</strong></td><td>1&ndash;2</td><td>4.5kW</td><td>Harvia KIP60B, smaller electric heaters</td><td>Indoor. 240V.</td></tr>
+</table>
+
+<div class="watch-out">
+    <p><strong>Watch Out &mdash; Heaters Are ALWAYS Sold Separately:</strong> No SaunaLife sauna includes a heater. This surprises many customers. Mention it during discovery, not at checkout. "Your total investment will be the sauna body plus the heater &mdash; typically $2,000&ndash;$4,000 for the heater and installation." Being upfront builds trust and prevents sticker shock.</p>
+</div>
+
+<h2>Heater Pairing Rationale by Series</h2>
+
+<h3>E-Series (All Models Including E7G, E8G)</h3>
+<p>All E-Series models pair with the <strong>Harvia KIP60B or KIP60W</strong>. The KIP is a traditional wall-mounted stove &mdash; reliable, affordable, proven. It's "Toyota tier" &mdash; gets the job done well at a reasonable price. This is the confirmed pairing from Bathing Brands for the entire E-Series lineup.</p>
+
+<h3>EE-Series (EE6G, EE8G)</h3>
+<p>The wider 90&ndash;91" diameter EE barrels need more heating power: <strong>Harvia KIP80B, KIP80W, or HUUM DROP 9</strong>. Why larger heaters? The EE-Series' wider diameter means more air volume to heat (8&ndash;9kW for EE6G, 9&ndash;10kW for EE8G). The HUUM DROP 9 is a beautiful option here &mdash; its teardrop design complements the glass aesthetics, and the app control appeals to the premium customer already spending $5,990&ndash;$7,190 on their sauna body.</p>
+
+<h3>GL6 &mdash; The Saunum Pairing</h3>
+<p>The GL6 at $12,790 is one of the few saunas specifically recommended for a <strong>Saunum Air L 10 or Harvia Spirit SP90E</strong>. The rationale: a customer investing nearly $13,000 in a 1.57-inch thick luxury cabin with 20+ year lifespan deserves a heater that matches. The Saunum's air blending technology eliminates the typical hot-ceiling/cold-floor problem, creating a more uniform sauna experience. It's our Bentley heater in our Bentley cabin.</p>
+
+<h3>G6 &mdash; Special Case</h3>
+<p>The G6 is pre-assembled with a specific dual electrical box system. Heater compatibility <strong>must be confirmed with Bathing Brands</strong> before recommending. The pre-installed 240VAC box supports up to 11kW and 50 amps. Don't guess on this one &mdash; the wrong heater may not integrate with the pre-installed wiring.</p>
+
+<div class="framing">
+    <p><strong>How to Frame Heater Recommendations:</strong></p>
+    <p><strong>The three-option strategy:</strong> Present three heater options at different price points: (1) Harvia KIP as the reliable standard, (2) HUUM DROP as the premium design choice, (3) Saunum as the ultimate experience upgrade. Let the customer self-select their comfort level.</p>
+    <p><strong>PPW framework:</strong> Use <strong>LAER</strong> when they push back on heater cost. Listen to the objection ("That's more than I expected"), Acknowledge ("Totally fair &mdash; the heater cost surprises a lot of people"), Explore ("What's driving the concern &mdash; is it total budget or did you already allocate for a heater?"), Respond (match their actual concern with the right heater tier).</p>
+</div>
+
+
+<!-- ==================== OBJECTIONS ==================== -->
+<h2 id="ch5-objections">Handling Questions &amp; Objections</h2>
+
+<h3>Top Customer Questions</h3>
+
+<div class="script-box">
+    <h3>"Why doesn't the sauna come with a heater?"</h3>
+    <p><strong>Customer:</strong> "Wait, the heater isn't included? That seems like it should come with it."</p>
+    <p><strong>You:</strong> "Great question &mdash; and I totally get why that surprises people. Here's the thing: by keeping them separate, you actually get to choose your heater. We carry three brands at different price points &mdash; Harvia is our reliable workhorse, HUUM is the design-forward option, and Saunum is the top-of-the-line with air blending technology. It's like buying a house and picking your own appliances instead of being stuck with whatever the builder chose."</p>
+    <p><strong>Customer:</strong> "So what does a heater typically run?"</p>
+    <p><strong>You:</strong> "Budget $2,000 to $4,000 depending on the brand and features. I'll walk you through the options once we nail down which sauna body is right for you."</p>
+</div>
+
+<div class="script-box">
+    <h3>"Why is this more expensive than the sauna I saw on Amazon?"</h3>
+    <p><strong>Customer:</strong> "I saw a barrel sauna on Amazon for like $3,000. Why is this one so much more?"</p>
+    <p><strong>You:</strong> "That's a fair comparison &mdash; let's break it down. That Amazon sauna is likely untreated cedar with a 67-inch diameter and thin walls. SaunaLife uses thermo-modified European spruce &mdash; it's heat-treated in a kiln to resist rot at the cellular level, not just on the surface. And the ERGO diameter is 81 inches, so you can actually sit upright on the top bench without ducking."</p>
+    <p><strong>Customer:</strong> "But the price difference is significant."</p>
+    <p><strong>You:</strong> "Think of it this way: $5,190 for an E7 over 20 years is about $260 a year, or $0.71 a day. That Amazon sauna? You'll likely replace it in 3 to 5 years. So the real question isn't which costs less today &mdash; it's which one are you still enjoying a decade from now."</p>
+</div>
+
+<div class="script-box">
+    <h3>"Is assembly really that hard?"</h3>
+    <p><strong>Customer:</strong> "I'm not super handy. Is this going to be a nightmare to put together?"</p>
+    <p><strong>You:</strong> "Honestly, it depends on the model. A barrel like the E6 takes about 6 to 8 hours with a friend &mdash; think large IKEA furniture, not a construction project. The bigger cabins like the G11 can take a couple weekends. But here's the thing &mdash; if DIY isn't your style, we can connect you with professional installers in your area. Or if you want zero assembly, the G6 arrives fully pre-assembled with a placement crew."</p>
+    <p><strong>Customer:</strong> "What does professional assembly cost?"</p>
+    <p><strong>You:</strong> "That varies by your area, but it's worth getting a quote. And PPW's Peak Protection Concierge can help coordinate that for you &mdash; it's part of what we do."</p>
+</div>
+
+<div class="script-box">
+    <h3>"I need to think about it."</h3>
+    <p><strong>Customer:</strong> "This all sounds great, but I think I need to think about it."</p>
+    <p><strong>You:</strong> "Absolutely &mdash; a sauna is a real investment and you should feel 100% confident. Can I ask &mdash; what's the main thing you'd want to sort through? Is it the total budget, choosing the right model, or more about the logistics like installation and delivery?"</p>
+    <p><strong>Customer:</strong> "Honestly, I think it's the total cost with the heater and everything."</p>
+    <p><strong>You:</strong> "That's the most common concern, and I'm glad you brought it up. Let me put together a complete quote &mdash; sauna body, heater, delivery, and estimated installation &mdash; so you have one number to look at. No surprises. Would that help?"</p>
+</div>
+
+<div class="script-box">
+    <h3>"Your competitor is cheaper."</h3>
+    <p><strong>Customer:</strong> "I found a similar barrel sauna from [competitor] for about $1,000 less."</p>
+    <p><strong>You:</strong> "That's worth looking into &mdash; which model are you comparing? Let's put them side by side."</p>
+    <p><strong>Customer:</strong> "It's a 4-person barrel, looks pretty similar."</p>
+    <p><strong>You:</strong> "Okay, a few things to check: What's the barrel diameter? Most competitors are 67 to 72 inches &mdash; SaunaLife is 81. That's the difference between ducking your head and sitting comfortably. Is their wood thermo-treated or just standard cedar? And what's the warranty? SaunaLife gives you 2 years residential. A lot of competitors offer 1 year or less. That $1,000 difference usually disappears when you compare spec for spec."</p>
+</div>
+
+<h3>Peak Protection Concierge Positioning</h3>
+
+<div class="framing">
+    <p><strong>How to Frame PPW's Differentiator:</strong></p>
+    <p><strong>The core concept:</strong> PPW doesn't just sell saunas. We provide Peak Protection Concierge &mdash; personal order management, free electrician coordination (we help schedule the electrician), and manufacturer advocacy (if anything goes wrong, we go to bat for you with SaunaLife/Bathing Brands).</p>
+    <p><strong>Why it matters:</strong> Buying a sauna online from a random retailer means you're on your own for delivery issues, assembly questions, heater selection, and warranty claims. With PPW, you have a dedicated advisor who handles all of that. It's the difference between booking a trip yourself and having a travel concierge.</p>
+    <p><strong>PPW framework:</strong> <strong>Three Tens</strong> &mdash; the customer needs certainty in the Product (SaunaLife quality), in You (your expertise), and in the Company (PPW's concierge support). Peak Protection Concierge closes the gap on #3.</p>
+</div>
+
+
+<!-- ============================================ -->
+<!-- CHAPTER 6: TECHNICAL REFERENCE -->
+<!-- ============================================ -->
+<h1 id="ch6">Chapter 6: Technical Reference</h1>
+
+<p>This chapter is for <strong>reference during calls</strong>, not for reading start-to-finish. Pull it up when a customer needs specific dimensions, electrical requirements, or assembly details.</p>
+
+<h2>Complete Sauna Specifications</h2>
+
+<h3>E-Series Full Specs</h3>
+<table>
+    <tr><th>Spec</th><th>E6 / E6W</th><th>E7 / E7W / E7G</th><th>E8 / E8W / E8G</th></tr>
+    <tr><td>SKU</td><td>SL-MODELE6 / SL-MODELE6W</td><td>SL-MODELE7 / SL-MODELE7W / SL-MODELE7G</td><td>SL-MODELE8 / SL-MODELE8W / SL-MODELE8G</td></tr>
+    <tr><td>Price</td><td>$4,390 / $4,890</td><td>$5,190 / $5,690 / $6,190</td><td>$5,990 / $6,490 / $6,990</td></tr>
+    <tr><td>Capacity</td><td>3 persons</td><td>4 persons</td><td>6 persons</td></tr>
+    <tr><td>Barrel Length</td><td>59"</td><td>71"</td><td>87"</td></tr>
+    <tr><td>Barrel Diameter</td><td>81" (ERGO)</td><td>81" (ERGO)</td><td>81" (ERGO)</td></tr>
+    <tr><td>Overall W x H (with cradles)</td><td>80.7"W x 84.6"H</td><td>80.7"W x 84.6"H</td><td>80.7"&ndash;81"W x 84.6"&ndash;84.65"H</td></tr>
+    <tr><td>Cradle Feet Width</td><td>77.2"</td><td>77.2"</td><td>77.17"&ndash;77.2"</td></tr>
+    <tr><td>Cradle Spacing</td><td>51.2"</td><td>78.7"</td><td>78.7"&ndash;78.74"</td></tr>
+    <tr><td>Exterior Wood</td><td>Thermo-Spruce</td><td>Thermo-Spruce</td><td>Thermo-Spruce</td></tr>
+    <tr><td>Bench Wood</td><td>Thermo-Aspen</td><td>Thermo-Aspen</td><td>Thermo-Aspen</td></tr>
+    <tr><td>Weight</td><td>450&ndash;500 lbs</td><td>E7/E7W: 530&ndash;600 lbs (E7G: 610&ndash;685 lbs)</td><td>E8/E8W: 650&ndash;750 lbs (E8G: 1,370 lbs)</td></tr>
+    <tr><td>Assembly Time (DIY)</td><td>6&ndash;8 hrs</td><td>8&ndash;10 hrs (E7G: 9&ndash;11 hrs)</td><td>10&ndash;12 hrs (E8G: 11&ndash;14 hrs)</td></tr>
+    <tr><td>Electrical</td><td>240V / 30A</td><td>240V / 40A</td><td>240V / 40A</td></tr>
+    <tr><td>Recommended Heater kW</td><td>6kW</td><td>7.5kW</td><td>8kW</td></tr>
+    <tr><td>Compatible Heaters</td><td>Harvia KIP60B, KIP60W</td><td>Harvia KIP60B, KIP60W</td><td>Harvia KIP60B, KIP60W</td></tr>
+    <tr><td>LED System</td><td>Included (24VDC, 200W)</td><td>Included</td><td>Included</td></tr>
+    <tr><td>Door Type</td><td>Wood (E6) / Wood+Window (E6W)</td><td>Wood / Wood+Window / Glass front</td><td>Wood / Wood+Window / Glass front</td></tr>
+    <tr><td>Warranty</td><td>2-year residential</td><td>2-year residential</td><td>2-year residential</td></tr>
+</table>
+
+<h3>EE-Series Full Specs</h3>
+<table>
+    <tr><th>Spec</th><th>EE6G</th><th>EE8G</th></tr>
+    <tr><td>SKU</td><td>SL-MODELEE6G</td><td>SL-MODELEE8G</td></tr>
+    <tr><td>Price</td><td>$5,990</td><td>$7,190</td></tr>
+    <tr><td>Capacity</td><td>4 persons</td><td>6 persons</td></tr>
+    <tr><td>Barrel Length</td><td>63"</td><td>79"</td></tr>
+    <tr><td>Barrel Diameter</td><td>91"</td><td>90"</td></tr>
+    <tr><td>Overall W x H (with cradles)</td><td>90.93"W x 94.9"H</td><td>90.93"W x 94.9"H</td></tr>
+    <tr><td>Cradle Feet Width</td><td>&mdash;</td><td>87.41"</td></tr>
+    <tr><td>Cradle Spacing</td><td>&mdash;</td><td>70.86"</td></tr>
+    <tr><td>Exterior Wood</td><td>Thermo-Spruce</td><td>Thermo-Spruce</td></tr>
+    <tr><td>Bench Wood</td><td>Knotless Thermo-Aspen</td><td>Knotless Thermo-Aspen</td></tr>
+    <tr><td>Weight</td><td>800&ndash;900 lbs</td><td>950&ndash;1,100 lbs</td></tr>
+    <tr><td>Assembly Time (DIY)</td><td>10&ndash;12 hrs (Pro: 6&ndash;8 hrs)</td><td>12&ndash;15 hrs (Pro: 6&ndash;8 hrs)</td></tr>
+    <tr><td>Electrical</td><td>240V / 50A</td><td>240V / 50&ndash;60A</td></tr>
+    <tr><td>Recommended Heater kW</td><td>8&ndash;9kW</td><td>9&ndash;10kW</td></tr>
+    <tr><td>Compatible Heaters</td><td>Harvia KIP80B/W, HUUM DROP 9</td><td>Harvia KIP80B/W, HUUM DROP 9</td></tr>
+    <tr><td>Glass Front</td><td>Standard (included)</td><td>Standard (included)</td></tr>
+    <tr><td>Wi-Fi</td><td>Yes</td><td>Yes</td></tr>
+    <tr><td>Warranty</td><td>2-year residential</td><td>2-year residential</td></tr>
+</table>
+
+<h3>CL-Series Full Specs</h3>
+<table>
+    <tr><th>Spec</th><th>CL3G</th><th>CL4G</th><th>CL5G</th><th>CL7G</th><th>CL12GCP</th></tr>
+    <tr><td>SKU</td><td>SL-MODELCL3G</td><td>SL-MODELCL4G</td><td>SL-MODELCL5G</td><td>SL-MODELCL7G</td><td>CL12GCP</td></tr>
+    <tr><td>Price</td><td>$3,990</td><td>$4,990</td><td>$5,990</td><td>$7,990</td><td>$10,990</td></tr>
+    <tr><td>Capacity</td><td>2</td><td>3</td><td>4</td><td>6</td><td>8</td></tr>
+    <tr><td>Exterior Dims</td><td>52"D x 54"W x 82"H</td><td>50"D x 81"W x 83"H</td><td>63"D x 81"W x 83"H</td><td>87"D x 91"W x 93"H</td><td>152"D x 91"W x 93"H</td></tr>
+    <tr><td>Floor Dims</td><td>53.15"W x 49.21"D</td><td>80.71"W x 49.21"D</td><td>80.71"W x 73.23"D</td><td>~91"W x ~87.5"D</td><td>~91"W x ~151.57"D</td></tr>
+    <tr><td>Weight</td><td>1,800 lbs</td><td>2,400 lbs</td><td>2,800 lbs</td><td>4,200 lbs</td><td>6,500 lbs</td></tr>
+    <tr><td>Assembly</td><td>6&ndash;8 hrs pro</td><td>8&ndash;10 hrs pro</td><td>10&ndash;12 hrs pro</td><td>14&ndash;18 hrs pro</td><td>20&ndash;28 hrs (3-person crew)</td></tr>
+    <tr><td>Electrical</td><td>240V/30A</td><td>240V/50A</td><td>240V/50A</td><td>240V/60A</td><td>240V/60&ndash;80A</td></tr>
+    <tr><td>Heater kW</td><td>4.5kW</td><td>6kW</td><td>7.5kW</td><td>9kW</td><td>12kW</td></tr>
+    <tr><td>Heaters</td><td>KIP60B/W</td><td>KIP60B/W</td><td>KIP60B/W</td><td>KIP80B/W, DROP 9</td><td>KIP80B/W, DROP 9</td></tr>
+    <tr><td>Exterior Wood</td><td colspan="5">Thermo-Spruce (all models)</td></tr>
+    <tr><td>Bench Wood</td><td colspan="5">Knotless Thermo-Aspen (all models)</td></tr>
+    <tr><td>Roof</td><td colspan="5">Shingle roof (all models)</td></tr>
+    <tr><td>Glass Front</td><td colspan="5">Tempered glass (all models)</td></tr>
+    <tr><td>Warranty</td><td colspan="5">2-year residential (all models)</td></tr>
+</table>
+
+<h3>G-Series &amp; GL-Series Full Specs</h3>
+<table>
+    <tr><th>Spec</th><th>G2</th><th>G3</th><th>G6</th><th>G11</th><th>GL4</th><th>GL6</th></tr>
+    <tr><td>SKU</td><td>SL-MODELG2</td><td>SL-MODELG3</td><td>SL-MODELG6-L/R</td><td>SL-MODELG11</td><td>SL-MODELGL4</td><td>SL-MODELGL6</td></tr>
+    <tr><td>Price</td><td>$4,990</td><td>$6,990</td><td>$24,900</td><td>$14,990</td><td>$9,490</td><td>$12,790</td></tr>
+    <tr><td>Capacity</td><td>4</td><td>6</td><td>5</td><td>8</td><td>4</td><td>6</td></tr>
+    <tr><td>Ext. Dims</td><td>64"D x 72"W x 92"H</td><td>~63"D x ~95"W x ~92"H</td><td>83"D x 95"W x 96"H</td><td>~161"L x 118"W x ~98"H</td><td>80"D x 59"W x 85"H</td><td>91"D x 91"W x 93"H</td></tr>
+    <tr><td>Weight</td><td>1,100 lbs</td><td>3,500 lbs</td><td>2,800 lbs</td><td>3,200 lbs</td><td>2,000 lbs</td><td>3,200 lbs</td></tr>
+    <tr><td>Assembly</td><td>4&ndash;6 hrs DIY</td><td>8&ndash;10 hrs DIY</td><td>Pre-assembled</td><td>24&ndash;40 hrs DIY</td><td>6&ndash;8 hrs pro</td><td>10&ndash;12 hrs pro</td></tr>
+    <tr><td>Electrical</td><td>240V/20A</td><td>240V/50A</td><td>240V/50A + 120V</td><td>240V</td><td>240V/30A</td><td>240V/50A</td></tr>
+    <tr><td>Heater kW</td><td>3kW</td><td>6kW</td><td>Up to 11kW</td><td>8kW+</td><td>4.5kW</td><td>6kW+</td></tr>
+    <tr><td>Wood</td><td>Nordic Spruce / Aspen</td><td>Thermo-Pine</td><td>Sawn Spruce (black) / Alder</td><td>Thermo-Spruce 1.65"</td><td>Thermo-Spruce 1.57"</td><td>Thermo-Spruce 1.57"</td></tr>
+    <tr><td>Heaters</td><td>KIP60B, KIP60W</td><td>KIP60B, KIP60W</td><td>Contact Bathing Brands</td><td>KIP80B, KIP80W</td><td>KIP60B/W, PC60E</td><td>Saunum Air L10, Spirit SP90E</td></tr>
+    <tr><td>Warranty</td><td colspan="6">2-year residential (all models)</td></tr>
+</table>
+
+<h2>Electrical Requirements Summary</h2>
+<table>
+    <tr><th>Circuit Type</th><th>Voltage</th><th>Amperage</th><th>Models</th></tr>
+    <tr><td>Light duty</td><td>240V</td><td>20A</td><td>G2</td></tr>
+    <tr><td>Standard</td><td>240V</td><td>30A</td><td>E6, E6W, GL4, CL3G</td></tr>
+    <tr><td>Medium</td><td>240V</td><td>40A</td><td>E7, E7W, E7G, E8, E8W, E8G</td></tr>
+    <tr><td>Heavy</td><td>240V</td><td>50A</td><td>EE6G, G3, G6 (heater circuit), GL6, CL4G, CL5G</td></tr>
+    <tr><td>Extra heavy</td><td>240V</td><td>50&ndash;60A</td><td>EE8G, CL7G</td></tr>
+    <tr><td>Maximum</td><td>240V</td><td>60&ndash;80A</td><td>CL12GCP</td></tr>
+    <tr><td>G6 Lights/Vent</td><td>120V</td><td>9A max</td><td>G6 (second circuit)</td></tr>
+</table>
+
+<h2>Installation Essentials</h2>
+
+<h3>Foundation Requirements (All Outdoor Models)</h3>
+<ul>
+    <li><strong>Surface:</strong> Level, stable, load-bearing foundation (concrete pad, compacted gravel, or reinforced deck)</li>
+    <li><strong>Height:</strong> Minimum 3 inches above surrounding ground to prevent water pooling</li>
+    <li><strong>Clearance:</strong> 12 inches minimum on all sides for maintenance and airflow</li>
+    <li><strong>Drainage:</strong> Remove soil underneath to prevent moisture/fungal growth; ensure water drains away</li>
+    <li><strong>Heater ventilation:</strong> 3&ndash;4 feet clearance for heater ventilation (check specific heater requirements)</li>
+    <li><strong>Access:</strong> Clear path for delivery truck (barrels: 500&ndash;1,500 lbs; cabins/cubes: 1,100&ndash;6,500 lbs)</li>
+</ul>
+
+<h3>Indoor Installation (X-Series)</h3>
+<ul>
+    <li>Level, dry indoor floor (basement or dedicated room)</li>
+    <li>Adequate room ventilation or external venting recommended</li>
+    <li>240V circuit within 15 feet of installation location</li>
+    <li>Waterproof flooring recommended under and around sauna</li>
+</ul>
+
+<h2>Warranty Details</h2>
+<table>
+    <tr><th>Coverage</th><th>Details</th></tr>
+    <tr><td><strong>Residential</strong></td><td>2 years from delivery to original retail purchaser</td></tr>
+    <tr><td><strong>Commercial</strong></td><td>6 months from delivery</td></tr>
+    <tr><td><strong>What's Covered</strong></td><td>Defects in workmanship under normal use. SaunaLife will repair or replace defective components.</td></tr>
+    <tr><td><strong>NOT Covered</strong></td><td>Normal wear/aging, user damage/misuse, heaters (covered by heater manufacturer), labor costs, natural wood characteristics (grain, knots, expansion), transport damage, cosmetic issues, incidental/consequential damages</td></tr>
+    <tr><td><strong>Warranty-Voiding Actions</strong></td><td>Altering from assembly instructions, unauthorized repairs, non-approved heating systems, commercial use (on residential warranty), misuse/abuse, operation above safe temperatures, harsh cleaning agents, moving after installation, acts of God</td></tr>
+    <tr><td><strong>Contact</strong></td><td>(800) 957-2862 or SAUNALIFE, 511 Glenn Avenue, Wheeling, Illinois 60090</td></tr>
+    <tr><td><strong>Turnaround</strong></td><td>Typical 2&ndash;4 weeks for repair and return shipping</td></tr>
+</table>
+
+<h2>LED Light System Specs (E-Series, G2, X2)</h2>
+<table>
+    <tr><th>Component</th><th>Specification</th></tr>
+    <tr><td>Power Supply</td><td>24VDC, 200W output, 9 Amps max</td></tr>
+    <tr><td>Driver/Receiver</td><td>24VDC, RF 433MHz</td></tr>
+    <tr><td>LED Flexible Neon</td><td>4 lights per 25-foot spool, IP20 rating</td></tr>
+    <tr><td>Dimming Remote</td><td>RF self-powered (no battery), 100-foot range</td></tr>
+    <tr><td>Operating Temps</td><td>-4&deg;F to 131&deg;F</td></tr>
+    <tr><td>Requires</td><td>120VAC outlet (separate from heater circuit)</td></tr>
+</table>
+
+
+<!-- ============================================ -->
+<!-- CHAPTER 7: QUICK REFERENCE CHEAT SHEET -->
+<!-- ============================================ -->
+<h1 id="ch7">Chapter 7: Quick Reference Cheat Sheet</h1>
+
+<p>Pull this up during live calls. Everything you need at a glance.</p>
+
+<h2>All Sauna Models at a Glance</h2>
+
+<table>
+    <tr><th>Model</th><th>Series</th><th>Capacity</th><th>Price</th><th>Key Feature</th><th>Heater Match</th></tr>
+    <tr><td>E6</td><td>Barrel</td><td>3</td><td>$4,390</td><td>Entry ERGO barrel</td><td>KIP60</td></tr>
+    <tr><td>E6W</td><td>Barrel</td><td>3</td><td>$4,890</td><td>+ Rear window</td><td>KIP60</td></tr>
+    <tr class="highlight-row"><td>E7</td><td>Barrel</td><td>4</td><td>$5,190</td><td>BEST SELLER</td><td>KIP60</td></tr>
+    <tr><td>E7W</td><td>Barrel</td><td>4</td><td>$5,690</td><td>+ Rear window</td><td>KIP60</td></tr>
+    <tr><td>E7G</td><td>Barrel</td><td>4</td><td>$6,190</td><td>+ Glass front</td><td>KIP60</td></tr>
+    <tr><td>E8</td><td>Barrel</td><td>6</td><td>$5,990</td><td>Best value (only +$800 vs E7)</td><td>KIP60</td></tr>
+    <tr><td>E8W</td><td>Barrel</td><td>6</td><td>$6,490</td><td>+ Rear window</td><td>KIP60</td></tr>
+    <tr><td>E8G</td><td>Barrel</td><td>6</td><td>$6,990</td><td>+ Glass front</td><td>KIP60</td></tr>
+    <tr class="highlight-row"><td>EE6G</td><td>Premium</td><td>4</td><td>$5,990</td><td>91" diam, knotless, glass &mdash; UPSELL from E7G</td><td>KIP80 / DROP 9</td></tr>
+    <tr><td>EE8G</td><td>Premium</td><td>6</td><td>$7,190</td><td>Largest barrel, flagship</td><td>KIP80 / DROP 9</td></tr>
+    <tr><td>CL3G</td><td>Cube</td><td>2</td><td>$3,990</td><td>Most affordable cube</td><td>KIP60</td></tr>
+    <tr><td>CL4G</td><td>Cube</td><td>3</td><td>$4,990</td><td>Modern, small family</td><td>KIP60</td></tr>
+    <tr><td>CL5G</td><td>Cube</td><td>4</td><td>$5,990</td><td>#1 SELLER &mdash; sweet spot cube</td><td>KIP60</td></tr>
+    <tr><td>CL7G</td><td>Cube</td><td>6</td><td>$7,990</td><td>Modern entertainer</td><td>KIP80 / DROP 9</td></tr>
+    <tr><td>CL12GCP</td><td>Cube</td><td>8</td><td>$10,990</td><td>Suite + changing room</td><td>KIP80 / DROP 9</td></tr>
+    <tr><td>G2</td><td>Garden</td><td>4</td><td>$4,990</td><td>DIY cabin entry</td><td>KIP60</td></tr>
+    <tr><td>G3</td><td>Garden</td><td>6</td><td>$6,990</td><td>Premium cabin DIY</td><td>KIP60</td></tr>
+    <tr><td>G4</td><td>Garden</td><td>6</td><td>$6,990</td><td>Outdoor traditional</td><td><span class="gap-flag">[TBD]</span></td></tr>
+    <tr class="highlight-row"><td>G6</td><td>Garden</td><td>5</td><td>$24,900</td><td>PRE-ASSEMBLED flagship</td><td>Contact BB</td></tr>
+    <tr><td>G7</td><td>Garden</td><td>6</td><td>$32,900</td><td>Pre-assembled premium, BT+LED</td><td><span class="gap-flag">[TBD]</span></td></tr>
+    <tr><td>G11</td><td>Garden</td><td>8</td><td>$14,990</td><td>2-room + porch</td><td>KIP80</td></tr>
+    <tr><td>GL4</td><td>Luxury</td><td>4</td><td>$9,490</td><td>1.57" thick premium</td><td>KIP60 / PC60E</td></tr>
+    <tr><td>GL6</td><td>Luxury</td><td>6</td><td>$12,790</td><td>1.57" thick, Saunum-ready</td><td>Saunum Air L10 / Spirit SP90E</td></tr>
+    <tr><td>X2</td><td>Indoor</td><td>1&ndash;2</td><td>$4,990</td><td>Indoor only, 60x60x80"</td><td>KIP60 / smaller electric</td></tr>
+    <tr><td>X6</td><td>Indoor</td><td>6</td><td>$4,990</td><td>Indoor, 6 person</td><td><span class="gap-flag">[TBD]</span></td></tr>
+    <tr><td>X7</td><td>Indoor</td><td>&mdash;</td><td>$5,790</td><td>Premium indoor</td><td><span class="gap-flag">[TBD]</span></td></tr>
+</table>
+
+<h2>Key Decision Shortcuts</h2>
+
+<table>
+    <tr><th>Customer Says...</th><th>You Recommend...</th><th>Why</th></tr>
+    <tr><td>"Just me and my partner, budget is tight"</td><td>CL3G ($3,990)</td><td>Most affordable, modern look, 2-person</td></tr>
+    <tr><td>"Family of 4, classic barrel look"</td><td>E7 ($5,190)</td><td>Best seller, perfect size, proven choice</td></tr>
+    <tr><td>"I want the best barrel"</td><td>EE6G ($5,990) or EE8G ($7,190)</td><td>90&ndash;91" diameter, knotless benches, glass front standard</td></tr>
+    <tr><td>"Modern look, 4 people"</td><td>CL5G ($5,990)</td><td>Sweet spot cube, contemporary design</td></tr>
+    <tr><td>"No DIY, money is no object"</td><td>G6 ($24,900) + S6B ($6,990)</td><td>Pre-assembled sauna + hot tub = complete wellness</td></tr>
+    <tr><td>"I have no outdoor space"</td><td>X2 ($4,990)</td><td>Only indoor option with full specs</td></tr>
+    <tr><td>"Maximum durability"</td><td>GL6 ($12,790) + Saunum</td><td>1.57" walls, 20+ year lifespan, Bentley-tier heater</td></tr>
+    <tr><td>"6 people, best value"</td><td>E8 ($5,990)</td><td>Only $800 more than 4-person E7</td></tr>
+</table>
+
+<h2>Key Framing Concepts (Quick Recall)</h2>
+
+<table>
+    <tr><th>Concept</th><th>The Frame</th></tr>
+    <tr><td>Heater sold separately</td><td>"Like buying a house and choosing your own appliances &mdash; you pick the right heater for your budget and preference."</td></tr>
+    <tr><td>Thermo-modified wood</td><td>"Heat-treated at the cellular level. It's the difference between painting a house and building with concrete."</td></tr>
+    <tr><td>81" ERGO diameter</td><td>"Economy vs. business class legroom. Most competitors are 67&ndash;72 inches. You sit fully upright."</td></tr>
+    <tr><td>EE6G vs E7G value</td><td>"$200 less, 10 inches wider, knotless benches, glass included. It's the insider pick."</td></tr>
+    <tr><td>E8 value play</td><td>"15% more money for 50% more space. Best value jump in the lineup."</td></tr>
+    <tr><td>G6 turnkey</td><td>"Move-in ready vs. building from plans. The only pre-assembled option."</td></tr>
+    <tr><td>Total investment</td><td>"Sauna + heater + electrician. Always quote the full picture upfront."</td></tr>
+    <tr><td>20+ year lifespan</td><td>"$6,000 over 20 years = $0.82/day for a genuine Finnish sauna experience."</td></tr>
+</table>
+
+<h2>S-Series Quick Reference (Tubs)</h2>
+<table>
+    <tr><th>Model</th><th>Type</th><th>Capacity</th><th>Finish</th><th>Price</th></tr>
+    <tr><td>S1N / S1B</td><td>Cold/Hot Immersion</td><td>1</td><td>Natural / Black</td><td>$2,490 / $2,690</td></tr>
+    <tr><td>S2N / S2B</td><td>Cold/Hot Immersion</td><td>2</td><td>Natural / Black</td><td>$3,790 / $3,990</td></tr>
+    <tr><td>S4N / S4</td><td>Wood-Burning Hot Tub</td><td>6</td><td>Natural / Black</td><td>$5,690 / $5,990</td></tr>
+    <tr><td>S6N / S6B</td><td>Wood-Burning Hot Tub</td><td>7</td><td>Natural / Black</td><td>$6,690 / $6,990</td></tr>
+</table>
+
+
+<!-- ============================================ -->
+<!-- INFORMATION GAPS -->
+<!-- ============================================ -->
+<h1 id="gaps">INFORMATION GAPS &mdash; REQUIRES REVIEW</h1>
+
+<p>The following items could not be verified against the provided source data. Each needs confirmation before use in customer conversations.</p>
+
+<table>
+    <tr><th>#</th><th>Model</th><th>Missing Data</th><th>Flag</th></tr>
+    <tr><td>1</td><td><strong>G4</strong></td><td>All specs (dimensions, weight, wood type, electrical, heater compatibility, assembly time)</td><td>[NOT FOUND IN SOURCE &mdash; SKU: SL-MODELG4]. Exists in Shopify CSV at $6,990, 6-person outdoor traditional, but no Bathing Brands product page or training guide entry exists.</td></tr>
+    <tr><td>2</td><td><strong>G7</strong></td><td>All specs (dimensions, weight, wood type, electrical, heater compatibility, assembly time)</td><td>[NOT FOUND IN SOURCE &mdash; SKU: SL-MODELG7-L]. Exists in Shopify CSV at $32,900, 6-person outdoor traditional with Bluetooth &amp; LED. No product page or training guide entry.</td></tr>
+    <tr><td>3</td><td><strong>X6</strong></td><td>All specs (dimensions, wood type, electrical, weight, assembly time, heater compatibility)</td><td>[NOT FOUND IN SOURCE &mdash; SKU: SL-MODELX6]. Exists in Shopify at $4,990, "6 Person Indoor Sauna." No Bathing Brands product page or training guide entry. Accessories (floor kits, mood lighting) are listed.</td></tr>
+    <tr><td>4</td><td><strong>X7</strong></td><td>All specs (dimensions, capacity, wood type, electrical, weight, assembly time, heater compatibility)</td><td>[NOT FOUND IN SOURCE &mdash; SKU: SL-MODELX7]. Exists in Shopify at $5,790, "Indoor Home Sauna." No product page or training guide entry. Accessories (floor kits, mood lighting) are listed.</td></tr>
+    <tr><td>5</td><td><strong>EE6G</strong></td><td>Cradle feet width, cradle spacing</td><td>[NOT FOUND IN SOURCE &mdash; SKU: SL-MODELEE6G]. Overall dims with cradles confirmed (90.93"W x 94.9"H) but individual cradle measurements not found.</td></tr>
+    <tr><td>6</td><td><strong>G6</strong></td><td>Specific compatible heater models</td><td>[NOT FOUND IN SOURCE &mdash; SKU: SL-MODELG6-L/R]. Training guide states "Varies &mdash; contact Bathing Brands." Electrical system supports up to 11kW/50A but specific heater model compatibility not confirmed.</td></tr>
+    <tr><td>7</td><td><strong>S1/S2 Tubs</strong></td><td>Weight, detailed dimensions beyond listed</td><td>[PARTIAL GAP]. Assembly time confirmed: 2&ndash;3 hours for S1/S2 and 3&ndash;4 hours for S4/S6 per Training Guide. Individual weights and detailed specs still minimal.</td></tr>
+    <tr><td>8</td><td><strong>G3</strong></td><td>Precise interior dimensions</td><td>[NOT FOUND IN SOURCE &mdash; SKU: SL-MODELG3]. Only approximate exterior dims (~95"W x ~92"H) and base (~91"W x ~63"D) available.</td></tr>
+    <tr><td>9</td><td><strong>E-Series stave thickness</strong></td><td>Exact stave thickness for E/EE series barrels</td><td>[NOT FOUND IN SOURCE]. GL-Series confirmed at 1.57", G11 at 1.65", but standard E-Series stave thickness not explicitly stated.</td></tr>
+</table>
+
+<div class="watch-out">
+    <p><strong>Action Required:</strong> Contact Bathing Brands to obtain complete product specifications for the G4, G7, X6, and X7 models. These are listed in our Shopify catalog but have no supporting product documentation. Until verified, do not quote specs for these models &mdash; provide only the SKU, price, and general category.</p>
+</div>
+
+</div><!-- end .main -->
+
+<button id="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">&uarr;</button>
+
+<script>
+// Scroll spy
+const navLinks = document.querySelectorAll('.sidebar a[data-nav]');
+const sections = [];
+navLinks.forEach(link => {
+    const id = link.getAttribute('href')?.substring(1);
+    if (id) {
+        const el = document.getElementById(id);
+        if (el) sections.push({ id, el, link });
+    }
+});
+
+function updateScrollSpy() {
+    const scrollPos = window.scrollY + 120;
+    let current = sections[0];
+    for (const s of sections) {
+        if (s.el.offsetTop <= scrollPos) current = s;
+    }
+    navLinks.forEach(l => l.classList.remove('active'));
+    if (current) current.link.classList.add('active');
+}
+window.addEventListener('scroll', updateScrollSpy);
+updateScrollSpy();
+
+// Back to top
+const btn = document.getElementById('back-to-top');
+window.addEventListener('scroll', () => {
+    btn.style.display = window.scrollY > 400 ? 'block' : 'none';
+});
+
+// Search filter
+function filterNav(query) {
+    const q = query.toLowerCase();
+    navLinks.forEach(link => {
+        const text = link.textContent.toLowerCase();
+        link.style.display = !q || text.includes(q) ? 'block' : 'none';
+    });
+}
+
+// Smooth scroll
+document.querySelectorAll('.sidebar a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+        e.preventDefault();
+        const target = document.getElementById(a.getAttribute('href').substring(1));
+        if (target) {
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            // Close mobile sidebar
+            document.querySelector('.sidebar').classList.remove('open');
+        }
+    });
+});
+</script>
+
+</body>
+</html>

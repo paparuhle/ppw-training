@@ -1,0 +1,1404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HUUM Sauna Heaters &mdash; PPW Sales Training Guide</title>
+<style>
+/* ===== RESET & BASE ===== */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:#f5f5f5;color:#333;line-height:1.65;font-size:16px}
+
+/* ===== SIDEBAR ===== */
+#sidebar{position:fixed;top:0;left:0;width:280px;height:100vh;background:#0F2439;color:#fff;overflow-y:auto;z-index:100;transition:transform .3s}
+#sidebar .brand{padding:24px 20px 12px;border-bottom:1px solid rgba(255,255,255,.1)}
+#sidebar .brand h2{font-size:1.3rem;color:#C8862A;margin-bottom:2px;letter-spacing:1px}
+#sidebar .brand p{font-size:.78rem;color:rgba(255,255,255,.55)}
+#sidebar .search-box{padding:12px 16px}
+#sidebar .search-box input{width:100%;padding:8px 12px;border:1px solid rgba(255,255,255,.2);border-radius:4px;background:rgba(255,255,255,.08);color:#fff;font-size:.85rem}
+#sidebar .search-box input::placeholder{color:rgba(255,255,255,.4)}
+.nav-section{padding:4px 0}
+.nav-section-title{font-size:.7rem;text-transform:uppercase;letter-spacing:1.5px;color:#C8862A;padding:12px 20px 4px;font-weight:700}
+.nav-section a{display:block;padding:6px 20px 6px 28px;color:rgba(255,255,255,.75);text-decoration:none;font-size:.84rem;border-left:3px solid transparent;transition:all .15s}
+.nav-section a:hover,.nav-section a.active{color:#fff;background:rgba(255,255,255,.06);border-left-color:#C8862A}
+
+/* ===== MAIN ===== */
+#main{margin-left:280px;padding:36px 48px 80px;max-width:1060px}
+.verified{text-align:center;font-size:.82rem;color:#777;margin-bottom:30px;font-style:italic}
+
+h1{font-size:2.1rem;color:#0F2439;margin-bottom:6px}
+h2.chapter{font-size:1.55rem;color:#0F2439;margin-top:56px;padding-bottom:10px;border-bottom:3px solid #C8862A}
+h3{font-size:1.2rem;color:#1A3C5E;margin-top:32px;margin-bottom:10px}
+h4{font-size:1.05rem;color:#0F2439;margin-top:22px;margin-bottom:8px}
+p{margin-bottom:14px}
+ul,ol{margin:0 0 16px 24px}
+li{margin-bottom:6px}
+
+/* ===== CALLOUT BOXES ===== */
+.script-box{background:#EAF2F8;border-top:3px solid #0F2439;padding:20px;margin:20px 0;border-radius:4px}
+.pro-tip{background:#FDF3E7;border-left:4px solid #C8862A;padding:20px;margin:20px 0;border-radius:4px}
+.watch-out{background:#fde8e8;border-left:4px solid #d9534f;padding:20px;margin:20px 0;border-radius:4px}
+.key-def{background:#f0f0f0;border-left:4px solid #0F2439;padding:20px;margin:20px 0;border-radius:4px}
+
+/* ===== TABLES ===== */
+table{width:100%;border-collapse:collapse;margin:20px 0;font-size:.92rem}
+thead tr{background:#0F2439;color:#fff}
+th{padding:12px 14px;text-align:left;font-weight:600}
+td{padding:10px 14px;border-bottom:1px solid #ddd}
+tbody tr:nth-child(even){background:#EAF2F8}
+tbody tr:hover{background:#dce9f3}
+.highlight-row{background:#FDF3E7 !important;font-weight:600}
+
+/* ===== BACK-TO-TOP ===== */
+#btt{position:fixed;bottom:32px;right:32px;width:48px;height:48px;background:#C8862A;color:#fff;border:none;border-radius:50%;font-size:1.4rem;cursor:pointer;opacity:0;transition:opacity .3s;z-index:200;box-shadow:0 2px 8px rgba(0,0,0,.25)}
+#btt.show{opacity:1}
+
+/* ===== MOBILE ===== */
+#menu-toggle{display:none;position:fixed;top:12px;left:12px;z-index:150;background:#0F2439;color:#C8862A;border:none;padding:8px 14px;border-radius:4px;font-size:1.2rem;cursor:pointer}
+@media(max-width:860px){
+  #sidebar{transform:translateX(-100%)}
+  #sidebar.open{transform:translateX(0)}
+  #main{margin-left:0;padding:24px 18px 80px}
+  #menu-toggle{display:block}
+}
+
+/* ===== MISC ===== */
+.family-header{background:#1A3C5E;color:#fff;padding:14px 20px;border-radius:6px 6px 0 0;margin-top:36px}
+.family-body{border:1px solid #ddd;border-top:none;padding:20px;border-radius:0 0 6px 6px;background:#fff;margin-bottom:24px}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media(max-width:700px){.two-col{grid-template-columns:1fr}}
+.badge{display:inline-block;padding:3px 10px;border-radius:12px;font-size:.75rem;font-weight:600;margin-right:6px}
+.badge-electric{background:#EAF2F8;color:#1A3C5E}
+.badge-wood{background:#FDF3E7;color:#8B5E1A}
+.badge-wall{background:#e8f5e9;color:#2e7d32}
+.badge-floor{background:#f3e5f5;color:#7b1fa2}
+</style>
+</head>
+<body>
+
+<!-- MOBILE MENU TOGGLE -->
+<button id="menu-toggle" onclick="document.getElementById('sidebar').classList.toggle('open')">&#9776;</button>
+
+<!-- ===== SIDEBAR ===== -->
+<nav id="sidebar">
+  <div class="brand">
+    <h2>HUUM</h2>
+    <p>PPW Sales Training Guide</p>
+  </div>
+  <div class="search-box">
+    <input type="text" id="nav-search" placeholder="Search chapters..." oninput="filterNav(this.value)">
+  </div>
+
+  <div class="nav-section" data-section="foundations">
+    <div class="nav-section-title">Foundations</div>
+    <a href="#ch1" class="nav-link">1. Introduction to HUUM</a>
+    <a href="#ch2" class="nav-link">2. Understanding Sauna Heaters</a>
+  </div>
+  <div class="nav-section" data-section="products">
+    <div class="nav-section-title">Product Knowledge</div>
+    <a href="#ch3" class="nav-link">3. HUUM Product Lineup</a>
+    <a href="#ch3-cliff" class="nav-link">&nbsp;&nbsp;CLIFF Family</a>
+    <a href="#ch3-drop" class="nav-link">&nbsp;&nbsp;DROP Family</a>
+    <a href="#ch3-steel" class="nav-link">&nbsp;&nbsp;STEEL Family</a>
+    <a href="#ch3-core" class="nav-link">&nbsp;&nbsp;CORE Family</a>
+    <a href="#ch3-hivemini" class="nav-link">&nbsp;&nbsp;HIVE Mini Family</a>
+    <a href="#ch3-hive" class="nav-link">&nbsp;&nbsp;HIVE Family</a>
+    <a href="#ch3-hivewood" class="nav-link">&nbsp;&nbsp;HIVE Wood Family</a>
+    <a href="#ch3-hiveflow" class="nav-link">&nbsp;&nbsp;HIVE Flow Family</a>
+    <a href="#ch3-uku" class="nav-link">&nbsp;&nbsp;UKU Controls</a>
+  </div>
+  <div class="nav-section" data-section="selling">
+    <div class="nav-section-title">Customer &amp; Sales</div>
+    <a href="#ch4" class="nav-link">4. Matching Customers</a>
+    <a href="#ch5" class="nav-link">5. Questions, Objections &amp; Concierge</a>
+  </div>
+  <div class="nav-section" data-section="reference">
+    <div class="nav-section-title">Reference</div>
+    <a href="#ch6" class="nav-link">6. Technical Reference</a>
+    <a href="#ch7" class="nav-link">7. Quick Reference Cheat Sheet</a>
+    <a href="#gaps" class="nav-link">Info Gaps</a>
+  </div>
+</nav>
+
+<!-- ===== MAIN CONTENT ===== -->
+<div id="main">
+
+<h1>HUUM Sauna Heaters</h1>
+<p style="font-size:1.1rem;color:#1A3C5E;margin-bottom:4px;">Peak Primal Wellness &mdash; Sales Training Knowledge Base</p>
+<p class="verified">Product information verified as of April 13, 2026</p>
+
+<!-- ============================================================ -->
+<!-- CHAPTER 1 -->
+<!-- ============================================================ -->
+<h2 class="chapter" id="ch1">Chapter 1: Introduction to HUUM</h2>
+
+<h3>What Is HUUM?</h3>
+<p>HUUM is an Estonian sauna heater manufacturer that designs, engineers, and builds every product in Estonia &mdash; a country where sauna culture isn't a hobby, it's a way of life. Estonia has roughly 1.3 million people and an estimated 1+ million saunas &mdash; nearly one for every person in the country. Sauna is woven into daily life there the way morning coffee is here. HUUM was born from that culture, and their design philosophy reflects it: the heater should be beautiful enough to be the centerpiece of the room, powerful enough to produce authentic l&ouml;yly (the Finnish/Estonian word for the steam that rises from sauna stones), and engineered to last in the extreme environment of a sauna. That combination of <strong>design ambition + cultural authenticity + engineering rigor</strong> is what makes HUUM different from brands that just happen to make heaters.</p>
+
+<p>HUUM's lineup spans <strong>electric heaters</strong> (wall-mount and floor-standing) and <strong>wood-burning stoves</strong>, covering saunas from tiny 106 cu. ft. home builds all the way up to 989 cu. ft. commercial installations.</p>
+
+<h3>Why Do We Carry HUUM?</h3>
+<p>HUUM fills a critical gap in our lineup. They sit between our entry-level brand (Harvia) and our ultra-premium brand (Saunum). HUUM gives customers who care about <strong>design and aesthetics</strong> a step up from the utilitarian look of most heaters &mdash; without jumping to the price point of Saunum.</p>
+
+<div class="script-box">
+<p><strong>How to Frame This:</strong></p>
+<p><strong>The core concept:</strong> The car analogy. If Harvia is Toyota &mdash; reliable, gets the job done, great value &mdash; then HUUM is BMW or Mercedes. You're paying for superior design, better materials, and a more refined experience. It's for the customer who wants their sauna to look as good as it feels. And if they ask about the absolute top of the market, Saunum is the Bentley &mdash; air blending technology, salt therapy, UL listed. HUUM sits in the premium-but-attainable BMW lane: stunning design without the Bentley price tag.</p>
+<p><strong>What the customer needs to understand:</strong> HUUM heaters are designed to be a visual centerpiece, not just functional hardware. Products like the DROP (Red Dot Award winner) and the HIVE (iconic beehive shape) turn the heater into a statement piece.</p>
+<p><strong>PPW framework to apply:</strong> Three Tens &mdash; build certainty in the Product. HUUM's design pedigree and Estonian craftsmanship are the proof points.</p>
+</div>
+
+<h3>What Makes HUUM Different?</h3>
+<ul>
+<li><strong>Design-forward:</strong> The DROP won the prestigious European Red Dot Award. The HIVE's beehive shape is instantly recognizable. The CORE can be embedded into a bench and customized with wood, tile, or stone. No other brand in our lineup offers this level of aesthetic flexibility.</li>
+<li><strong>Massive stone capacity for their size:</strong> HUUM heaters consistently hold more stone than competitors of the same kW rating. More stone = softer, longer-lasting heat and better steam.</li>
+<li><strong>Estonian heritage:</strong> Every heater is designed, engineered, and manufactured in Estonia. This isn't a brand that outsources production.</li>
+<li><strong>The UKU control ecosystem:</strong> HUUM's proprietary UKU controllers come in 5 finishes (Local, Wi-Fi, Glass, Mirror, Gold) and offer Wi-Fi smartphone control on most models.</li>
+<li><strong>Direct stone-to-element contact:</strong> Across the entire lineup, stones sit directly on heating elements. This means faster heat transfer and more efficient steam production when you pour water.</li>
+</ul>
+
+<div class="pro-tip">
+<p><strong>Pro Tip:</strong> HUUM's sweet spot customer is someone who has already decided they want a quality sauna and is now choosing between brands. They care about how the heater looks in their space. When you hear a customer mention "aesthetics," "design," or "I want it to look good," that's your cue to pivot to HUUM.</p>
+</div>
+
+<div class="watch-out">
+<p><strong>Watch Out &mdash; HUUM vs. Saunum Cross-Sell:</strong> Per Bathing Brands training, when you compare HUUM HIVE heater prices to Saunum prices, <strong>they are in the same price range</strong>. The key insight: HUUM wins on design and aesthetics, but Saunum wins on performance and health benefits (air blending, salt therapy, UL listing, 4 safety systems). If a customer's #1 priority is <em>how the sauna feels</em> rather than <em>how the heater looks</em>, pivot to Saunum. If design is king, stay with HUUM. Know when to bridge between the two.</p>
+</div>
+
+<div class="key-def">
+<p><strong>Key Definition &mdash; Brand Positioning (from Bathing Brands):</strong> Prit at Bathing Brands uses a car analogy for our heater tiers: <strong>Harvia = Toyota</strong> (reliable, affordable, gets the job done), <strong>HUUM = BMW / Mercedes</strong> (great design, premium look and feel, higher price range), <strong>Saunum = Bentley / Rolls Royce</strong> (best sauna experience, air blending technology, salt therapy, UL listed). Interesting context: in Europe, Harvia and HUUM are considered everyday brands. In the US market, HUUM occupies a premium position because of its design-forward approach. Use this to your advantage &mdash; you're offering customers something that Europeans treat as standard quality at a price point that feels premium but is actually well-positioned.</p>
+</div>
+
+<!-- ============================================================ -->
+<!-- CHAPTER 2 -->
+<!-- ============================================================ -->
+<h2 class="chapter" id="ch2">Chapter 2: Understanding Sauna Heaters (Foundations)</h2>
+
+<p>Before we dive into specific HUUM products, let's make sure you understand the fundamentals. If you already know this material, skip ahead to Chapter 3. But if you've never sold a sauna heater before, <strong>read this carefully</strong> &mdash; it's the foundation everything else builds on.</p>
+
+<h3>Key Terms You Need to Know</h3>
+
+<div class="key-def">
+<p><strong>Key Definition &mdash; Kilowatt (kW):</strong> A unit of power that measures how much heat a heater produces. Think of it like horsepower in a car. A 6kW heater is like a 4-cylinder engine &mdash; fine for a small car (small sauna). An 18kW heater is like a V8 &mdash; built for a bigger vehicle (large or commercial sauna). More kW = more heating power = can heat a bigger room.</p>
+</div>
+
+<div class="key-def">
+<p><strong>Key Definition &mdash; Cubic Feet (cu. ft.):</strong> The volume of the sauna room, calculated as Length &times; Width &times; Height (all in feet). A 6' &times; 6' &times; 7' sauna = 252 cu. ft. This is the number you match to a heater's rated capacity.</p>
+</div>
+
+<div class="key-def">
+<p><strong>Key Definition &mdash; 240V / Single Phase (1PH):</strong> The electrical supply the heater needs. 240V is the same type of circuit your clothes dryer or electric oven runs on &mdash; it's a dedicated, higher-voltage circuit. "Single phase" means standard residential power (as opposed to three-phase commercial power). All HUUM electric heaters operate on 240V/1PH, which is great news: your customer's home already has this type of power available.</p>
+</div>
+
+<div class="key-def">
+<p><strong>Key Definition &mdash; Amperage (Amps):</strong> How much electrical current the heater draws. Higher kW heaters draw more amps and need thicker wiring and larger circuit breakers. This determines the electrical work the customer's electrician needs to do.</p>
+</div>
+
+<div class="key-def">
+<p><strong>Key Definition &mdash; AWG (American Wire Gauge):</strong> The standard for wire thickness. Lower numbers = thicker wire. A 10 AWG wire handles smaller heaters; 6 AWG handles larger ones. The electrician needs to know this.</p>
+</div>
+
+<div class="key-def">
+<p><strong>Key Definition &mdash; Stone Capacity:</strong> How many pounds of sauna stones the heater holds. This is a critical performance indicator. Think of stones as a <strong>thermal battery</strong> &mdash; they absorb heat, store it, and release it slowly and evenly. More stone mass = softer, more consistent heat and better steam when you pour water (called "l&ouml;yly" in Finnish/Estonian sauna culture).</p>
+</div>
+
+<div class="key-def">
+<p><strong>Key Definition &mdash; Safety Distances:</strong> The minimum clearance required between the heater and combustible surfaces (walls, benches, ceilings). These are non-negotiable &mdash; they're set by the manufacturer and by building codes. Smaller safety distances mean the heater can fit in tighter spaces.</p>
+</div>
+
+<div class="key-def">
+<p><strong>Key Definition &mdash; LS (Lungo Sportello / Firebox Extension):</strong> On wood-burning HUUM stoves, "LS" means the firebox is extended so it can poke through the wall. This lets you load firewood from <em>outside</em> the sauna room (like a changing room or hallway) instead of opening the door and letting heat escape.</p>
+</div>
+
+<h3>Electric vs. Wood-Burning: Two Different Experiences</h3>
+
+<table>
+<thead><tr><th style="width:30%">Factor</th><th>Electric Heaters</th><th>Wood-Burning Stoves</th></tr></thead>
+<tbody>
+<tr><td><strong>Power source</strong></td><td>240V electrical circuit</td><td>Firewood</td></tr>
+<tr><td><strong>Requires</strong></td><td>Dedicated circuit, UKU controller</td><td>Chimney/flue connection</td></tr>
+<tr><td><strong>Convenience</strong></td><td>Push-button or Wi-Fi start; set-and-forget</td><td>Manual fire tending; 30-60 min warmup</td></tr>
+<tr><td><strong>Experience</strong></td><td>Consistent, precise temperature control</td><td>Traditional crackling fire ambiance; more ritual</td></tr>
+<tr><td><strong>Best for</strong></td><td>Homes, condos, commercial, anyone wanting convenience</td><td>Cabins, outdoor saunas, purists who love the ritual</td></tr>
+<tr><td><strong>Installation</strong></td><td>Electrician for wiring</td><td>Chimney installer + fireproofing</td></tr>
+</tbody>
+</table>
+
+<h3>Wall-Mount vs. Floor-Standing</h3>
+<p><strong>Wall-mount heaters</strong> (DROP, CLIFF Mini) hang on the wall, saving floor space. They're ideal for small saunas where every square inch matters.</p>
+<p><strong>Floor-standing heaters</strong> (HIVE, HIVE Mini, STEEL, CLIFF 6/9/11, CORE) sit on the sauna floor. They typically hold more stones and are better for medium-to-large rooms.</p>
+
+<div class="pro-tip">
+<p><strong>Pro Tip:</strong> Note that the CLIFF 6, 9, and 11 are listed as "floor models" in the source data despite the CLIFF family sometimes being associated with wall mounting. The CLIFF Mini 4 is specifically a wall-mount model. Always confirm mounting type from the spec sheet.</p>
+</div>
+
+<h3>How Stone Capacity Affects the Experience</h3>
+<p>This is one of the most important concepts you'll explain to customers. Consider this: Prit from Bathing Brands &mdash; who is <em>Estonian</em>, from a country where everyone has a sauna &mdash; admitted on our training call that he <strong>didn't enjoy saunas for years</strong> because of heat stratification and poor heater experiences. If someone from the sauna capital of the world can be put off by an inadequate heater, it underscores just how much the heater choice matters. The right stone capacity is a huge part of that equation. Here's the analogy:</p>
+
+<div class="script-box">
+<p><strong>How to Frame This:</strong></p>
+<p><strong>The core concept:</strong> Stones are a thermal battery. A heater with 66 lbs of stone is like a small battery pack &mdash; it heats up fast but doesn't store as much energy. A heater with 528 lbs of stone is like a massive battery bank &mdash; it takes longer to charge but delivers smooth, consistent power for hours.</p>
+<p><strong>What the customer needs to understand:</strong> More stones = softer heat (less "prickly"), longer sessions without temperature drops, and better steam when you pour water. HUUM heaters are designed to maximize stone-to-element contact, which means even their smaller heaters punch above their weight.</p>
+</div>
+
+<h3>Why the Heater Is the Most Important Purchase</h3>
+<p>This is a foundational concept from Bathing Brands training. Customers routinely spend $5,000&ndash;$7,000+ on a sauna cabin but then try to save money on the heater. That's backwards &mdash; the heater <em>is</em> the sauna experience.</p>
+
+<div class="script-box">
+<p><strong>How to Frame &mdash; The Heater Upgrade Conversation:</strong></p>
+<p><em>When a customer hesitates on the heater budget:</em></p>
+<p>Lead with the industry data point: according to Harvia's quarterly earnings report, <strong>70 to 80 percent of heater sales go to second-time buyers</strong>, and they almost always upgrade to a better, more expensive model. The implication is clear &mdash; most people regret cheaping out on the heater the first time around.</p>
+<p><em>Reinforce with the First Car Analogy:</em></p>
+<p>Compare the heater purchase to buying a car. The first time, people are just excited to have one and don't think about features. By the second purchase, they care about comfort, quality, and longevity. Saunas follow the same pattern &mdash; position the better heater as skipping the costly do-over.</p>
+</div>
+
+<div class="pro-tip">
+<p><strong>Pro Tip &mdash; The Saunum Air Solo Upsell:</strong> If a customer has already committed to a HUUM heater but you think they'd benefit from air blending technology, Saunum sells the <strong>Air Solo</strong> as a standalone wall-mount device. It works with <em>any</em> heater &mdash; including HUUM &mdash; and transforms the sauna experience by evening out temperature from floor to ceiling. This is a great add-on sale that doesn't require the customer to change their heater choice.</p>
+</div>
+
+<!-- ============================================================ -->
+<!-- CHAPTER 3 -->
+<!-- ============================================================ -->
+<h2 class="chapter" id="ch3">Chapter 3: Our HUUM Product Lineup</h2>
+
+<p>HUUM makes <strong>8 product families</strong> spanning electric and wood-burning heaters. Let's walk through each one, from smallest/simplest to largest/most specialized.</p>
+
+<h3>Family Overview at a Glance</h3>
+
+<table>
+<thead>
+<tr><th>Family</th><th>Type</th><th>Mount</th><th>kW Range</th><th>Room Size (cu.ft.)</th><th>Stone Cap.</th><th>Best For</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>CLIFF</strong></td><td><span class="badge badge-electric">Electric</span></td><td>Wall/Floor</td><td>4&ndash;11 kW</td><td>106&ndash;566</td><td>132&ndash;165 lbs</td><td>Space-constrained saunas</td></tr>
+<tr><td><strong>DROP</strong></td><td><span class="badge badge-electric">Electric</span></td><td><span class="badge badge-wall">Wall</span></td><td>4.5&ndash;9 kW</td><td>106&ndash;460</td><td>122 lbs</td><td>Design statement / small-medium</td></tr>
+<tr><td><strong>STEEL</strong></td><td><span class="badge badge-electric">Electric</span></td><td><span class="badge badge-floor">Floor</span></td><td>6&ndash;10.5 kW</td><td>177&ndash;566</td><td>331 lbs</td><td>Huge stone capacity in slim form</td></tr>
+<tr><td><strong>CORE</strong></td><td><span class="badge badge-electric">Electric</span></td><td><span class="badge badge-floor">Floor</span></td><td>6.5&ndash;10.5 kW</td><td>177&ndash;566</td><td>66 lbs</td><td>Custom aesthetics / bench embed</td></tr>
+<tr><td><strong>HIVE Mini</strong></td><td><span class="badge badge-electric">Electric</span></td><td><span class="badge badge-floor">Floor</span></td><td>6&ndash;10.6 kW</td><td>177&ndash;566</td><td>330 lbs</td><td>Residential iconic look</td></tr>
+<tr><td><strong>HIVE</strong></td><td><span class="badge badge-electric">Electric</span></td><td><span class="badge badge-floor">Floor</span></td><td>12&ndash;18 kW</td><td>424&ndash;989</td><td>528 lbs</td><td>Large / commercial saunas</td></tr>
+<tr><td><strong>HIVE Wood</strong></td><td><span class="badge badge-wood">Wood</span></td><td><span class="badge badge-floor">Floor</span></td><td>13&ndash;17 kW</td><td>212&ndash;565</td><td>199&ndash;287 lbs</td><td>Traditional wood-burning</td></tr>
+<tr><td><strong>HIVE Flow</strong></td><td><span class="badge badge-wood">Wood</span></td><td><span class="badge badge-floor">Floor</span></td><td>8.5&ndash;9.8 kW</td><td>212&ndash;635</td><td>231&ndash;330 lbs</td><td>High-efficiency wood-burning</td></tr>
+</tbody>
+</table>
+
+<!-- ===== CLIFF ===== -->
+<div class="family-header" id="ch3-cliff">
+<h3 style="color:#fff;margin:0">CLIFF Family &mdash; The Space Saver</h3>
+<p style="color:#C8862A;margin:4px 0 0;font-size:.9rem">Electric | Wall &amp; Floor Mount | 4&ndash;11 kW</p>
+</div>
+<div class="family-body">
+
+<p>The CLIFF is HUUM's answer to tight spaces. It's a slim, tower-style heater with <strong>remarkably small safety distances</strong> &mdash; as little as 6 cm (about 2.4") from combustible walls on smaller models, and 12 cm (~4.7") on larger ones. That means it can tuck into corners that would be off-limits for bulkier heaters.</p>
+
+<p><strong>Understanding the variants:</strong> The number after "CLIFF" is the kW rating (6, 9, 11). Higher kW = more heating power for bigger rooms. The <strong>CLIFF Mini 4</strong> is a compact 4kW version that mounts on the wall &mdash; it's the only wall-mount in the family and is purpose-built for very small saunas (106&ndash;177 cu. ft.).</p>
+
+<h4>Key Features &mdash; What They Are and Why They Matter</h4>
+<ul>
+<li><strong>Internal air duct:</strong> A channel inside the heater body that pre-heats incoming air. This means the CLIFF heats up to <strong>25% faster</strong> than heaters without this feature. <em>Why it matters to the customer:</em> Less waiting. Frame this as "you get in your sauna faster, and your electricity bill is lower because it's not running as long to reach temperature."</li>
+<li><strong>165 lb stone capacity (132 lbs on Mini):</strong> Impressive for a heater this slim. All those stones sit in direct contact with the heating elements. <em>Frame it:</em> "It's like a sports car with a surprisingly big engine &mdash; it doesn't look like it should hold this much stone, but it does."</li>
+<li><strong>Removable ribs:</strong> The vertical slats on the heater body can be removed to allow more precise stone stacking. The CLIFF ships with 2 prop blocks specifically for removing the rib slats. This is a small but thoughtful design detail that shows HUUM's attention to the user experience.</li>
+<li><strong>Stainless steel construction:</strong> Industrial-quality elements and body. Built to handle the extreme moisture and temperature cycles of a sauna.</li>
+</ul>
+
+<h4>CLIFF Specs Comparison</h4>
+<table>
+<thead><tr><th>Spec</th><th>CLIFF Mini 4</th><th>CLIFF 6</th><th>CLIFF 9</th><th>CLIFF 11</th></tr></thead>
+<tbody>
+<tr><td><strong>kW</strong></td><td>4 kW</td><td>6 kW</td><td>9 kW</td><td>11 kW</td></tr>
+<tr><td><strong>Room Size</strong></td><td>106&ndash;177 cu.ft.</td><td>177&ndash;318 cu.ft.</td><td>283&ndash;460 cu.ft.</td><td>354&ndash;566 cu.ft.</td></tr>
+<tr><td><strong>Mounting</strong></td><td>Wall</td><td>Floor</td><td>Floor</td><td>Floor</td></tr>
+<tr><td><strong>Stone Capacity</strong></td><td>132 lbs</td><td>165 lbs</td><td>165 lbs</td><td>165 lbs</td></tr>
+<tr><td><strong>Amperage (240V)</strong></td><td>14.58 A</td><td>25 A</td><td>37.5 A</td><td>43.75 A</td></tr>
+<tr><td><strong>Dimensions (W&times;D&times;H)</strong></td><td>10.6"&times;6.3"&times;38.4"</td><td>10.6"&times;10.6"&times;38.4"</td><td>10.6"&times;10.6"&times;38.4"</td><td>10.6"&times;10.6"&times;38.4"</td></tr>
+<tr><td><strong>Heater Weight</strong></td><td>33 lbs</td><td>35.2 lbs</td><td>35.2 lbs</td><td>37.5 lbs</td></tr>
+<tr><td><strong>Stones Required</strong></td><td>4 boxes</td><td>5 boxes</td><td>5 boxes</td><td>5 boxes</td></tr>
+<tr><td><strong>Stone Size</strong></td><td>1&ndash;2" (3&ndash;5cm)</td><td>1&ndash;2" (3&ndash;5cm)</td><td>1&ndash;2" (3&ndash;5cm)</td><td>1&ndash;2" (3&ndash;5cm)</td></tr>
+<tr><td><strong>Requires Ext Box?</strong></td><td>No</td><td>No</td><td>No</td><td>Yes</td></tr>
+<tr><td><strong>SKU</strong></td><td>H1005012</td><td>H1004012</td><td>H1004022</td><td>H1004032</td></tr>
+</tbody>
+</table>
+
+<div class="script-box">
+<p><strong>How to Frame This for Customers:</strong></p>
+<p><strong>The analogy:</strong> "The CLIFF is like a high-rise apartment &mdash; it goes vertical instead of horizontal. It gives you all the stone and power you need without eating up your sauna floor space."</p>
+<p><strong>When to recommend:</strong> Customer has a smaller sauna, tight clearances to walls, or is building a sauna into an existing space where every inch counts.</p>
+</div>
+
+<div class="watch-out">
+<p><strong>Watch Out:</strong> The CLIFF 6, 9, and 11 are <strong>floor-standing</strong> models despite the slim profile. Only the CLIFF Mini 4 is wall-mounted. Don't tell a customer they can wall-mount a CLIFF 9.</p>
+</div>
+</div>
+
+<!-- ===== DROP ===== -->
+<div class="family-header" id="ch3-drop">
+<h3 style="color:#fff;margin:0">DROP Family &mdash; The Design Icon</h3>
+<p style="color:#C8862A;margin:4px 0 0;font-size:.9rem">Electric | Wall Mount | 4.5&ndash;9 kW | Red Dot Award Winner</p>
+</div>
+<div class="family-body">
+
+<p>The DROP is HUUM's most visually striking heater and the one that wins the most "wow" reactions. Its <strong>hemispheric, water-droplet shape</strong> is unlike anything else on the market. It won the <strong>Red Dot Award</strong> &mdash; one of the most prestigious design awards in Europe &mdash; and it deserves it. This heater turns your sauna from a hot room into a <em>designed space</em>.</p>
+
+<p><strong>Understanding the variants:</strong> The number indicates kW: 4.5, 6, 7.5, 9. All four share the same iconic shape and wall-mount design. They differ only in power output and the room sizes they can handle.</p>
+
+<h4>Key Features</h4>
+<ul>
+<li><strong>122 lb stone capacity (wall-mounted!):</strong> This is extraordinary. Most wall-mount heaters hold 30&ndash;50 lbs of stone. The DROP holds 122 lbs &mdash; more than many <em>floor-standing</em> heaters and even some wood-burning stoves. This is the DROP's killer feature.</li>
+<li><strong>Wall-mount bracket included:</strong> The DROP ships with a wall-mount bracket in the box. No separate bracket purchase needed.</li>
+<li><strong>SGS Listed:</strong> Third-party safety certification. This is important for customer confidence and code compliance.</li>
+<li><strong>Nearly identical body dimensions across the range:</strong> The DROP 4.5, 6, and 9 share the same body at 15.4"W &times; 13.2"D &times; 23.3"H. The DROP 7.5 is fractionally smaller at 15"W &times; 13"D &times; 23"H. The heater looks virtually the same regardless of kW &mdash; only the internal elements change.</li>
+</ul>
+
+<h4>DROP Specs Comparison</h4>
+<table>
+<thead><tr><th>Spec</th><th>DROP 4.5</th><th>DROP 6</th><th>DROP 7.5</th><th>DROP 9</th></tr></thead>
+<tbody>
+<tr><td><strong>kW</strong></td><td>4.5 kW</td><td>6.0 kW</td><td>7.5 kW</td><td>9.0 kW</td></tr>
+<tr><td><strong>Room Size</strong></td><td>106&ndash;248 cu.ft.</td><td>177&ndash;318 cu.ft.</td><td>248&ndash;389 cu.ft.</td><td>283&ndash;460 cu.ft.</td></tr>
+<tr><td><strong>Stone Capacity</strong></td><td>122 lbs</td><td>122 lbs</td><td>122 lbs</td><td>122 lbs</td></tr>
+<tr><td><strong>Amperage (240V)</strong></td><td>18.75 A</td><td>25 A</td><td>31.25 A</td><td>37.5 A</td></tr>
+<tr><td><strong>Wire Size</strong></td><td>10 AWG</td><td>10 AWG</td><td>8 AWG</td><td>8 AWG</td></tr>
+<tr><td><strong>Heater Weight</strong></td><td>24 lbs</td><td>24 lbs</td><td>25 lbs</td><td>26.5 lbs</td></tr>
+<tr><td><strong>Dimensions</strong></td><td>15.4"&times;13.2"&times;23.3"</td><td>15.4"&times;13.2"&times;23.3"</td><td>15"&times;13"&times;23"</td><td>15.4"&times;13.2"&times;23.3"</td></tr>
+<tr><td><strong>Ship Wt w/ Stones</strong></td><td>146 lbs</td><td>146 lbs</td><td>157 lbs</td><td>148.5 lbs</td></tr>
+<tr><td><strong>Stones Required</strong></td><td>4 boxes</td><td>4 boxes</td><td>4 boxes</td><td>4 boxes</td></tr>
+<tr><td><strong>Stone Size</strong></td><td>2&ndash;4" (5&ndash;10cm)</td><td>2&ndash;4" (5&ndash;10cm)</td><td>2&ndash;4" (5&ndash;10cm)</td><td>2&ndash;4" (5&ndash;10cm)</td></tr>
+<tr><td><strong>Includes Heat Reflector</strong></td><td>No</td><td>No</td><td>No</td><td>Yes</td></tr>
+<tr><td><strong>SKU</strong></td><td>H1001052</td><td>H1001062</td><td>H1001082</td><td>H1001072</td></tr>
+</tbody>
+</table>
+
+<div class="script-box">
+<p><strong>How to Frame This for Customers:</strong></p>
+<p><strong>The analogy:</strong> "The DROP is the sculptural centerpiece of your sauna. Other heaters are appliances. The DROP is a piece of functional art that happens to produce incredible steam."</p>
+<p><strong>The key selling insight:</strong> 122 lbs of stone on a wall-mount is unheard of. Most wall-mount heaters hold a fraction of that. Frame it as: "You get the space savings of a wall-mount with the steam performance of a floor heater."</p>
+<p><strong>PPW framework:</strong> Use The Gap &mdash; the customer's current state is a boring sauna. Their desired state is a spa-like experience that impresses guests. The DROP is the bridge.</p>
+</div>
+
+<div class="pro-tip">
+<p><strong>Pro Tip:</strong> The DROP 9 is the only model that includes a heat reflector in the box. For the 4.5, 6, and 7.5, the customer may need to check the IOM for whether one is recommended for their installation.</p>
+</div>
+</div>
+
+<!-- ===== STEEL ===== -->
+<div class="family-header" id="ch3-steel">
+<h3 style="color:#fff;margin:0">STEEL Family &mdash; The Stone Monster</h3>
+<p style="color:#C8862A;margin:4px 0 0;font-size:.9rem">Electric | Floor Mount | 6&ndash;10.5 kW | 331 lbs of stone</p>
+</div>
+<div class="family-body">
+
+<p>The STEEL is a sleeper hit. It doesn't look as dramatic as the DROP or HIVE, but it has a <strong>massive</strong> stone capacity: <strong>331 lbs</strong> across all three models. That's 10 boxes of stones. For context, the CLIFF holds 165 lbs and the CORE holds 66 lbs. The STEEL is a stone-storage machine disguised as a slim tower.</p>
+
+<p><strong>Understanding the variants:</strong> Numbers indicate kW: 6.0, 9.0, 10.5. All share the same slim tower body (12.6" &times; 12.6" &times; 38.4"). The STEEL also has the smallest safety distances in the electric lineup &mdash; as little as <strong>2" (5 cm)</strong> on smaller models and <strong>4" (10 cm)</strong> on larger ones.</p>
+
+<h4>Key Features</h4>
+<ul>
+<li><strong>331 lb stone capacity:</strong> The highest stone-to-kW ratio of any HUUM electric heater outside the HIVE series. <em>Frame it:</em> "All that stone mass means your sauna stays at a consistent temperature. No hot-cold swings. Pour water on the stones and you get thick, lingering steam."</li>
+<li><strong>Internal air duct:</strong> Same as the CLIFF &mdash; heats up to 25% faster.</li>
+<li><strong>Tiny safety distances:</strong> 2&ndash;4" from walls. This heater can go almost anywhere.</li>
+<li><strong>Uses smaller stones:</strong> 1&ndash;2" (3&ndash;5cm) stones, not the 2&ndash;4" stones used by most other HUUM heaters. This creates tighter packing and more surface area for steam.</li>
+</ul>
+
+<h4>STEEL Specs Comparison</h4>
+<table>
+<thead><tr><th>Spec</th><th>STEEL 6.0</th><th>STEEL 9.0</th><th>STEEL 10.5</th></tr></thead>
+<tbody>
+<tr><td><strong>kW</strong></td><td>6.0 kW</td><td>9.0 kW</td><td>10.5 kW</td></tr>
+<tr><td><strong>Room Size</strong></td><td>177&ndash;318 cu.ft.</td><td>283&ndash;460 cu.ft.</td><td>354&ndash;566 cu.ft.</td></tr>
+<tr><td><strong>Stone Capacity</strong></td><td>331 lbs</td><td>331 lbs</td><td>331 lbs</td></tr>
+<tr><td><strong>Amperage (240V)</strong></td><td>25 A</td><td>37.5 A</td><td>43.75 A</td></tr>
+<tr><td><strong>Heater Weight</strong></td><td>33 lbs</td><td>33 lbs</td><td>35 lbs</td></tr>
+<tr><td><strong>Dimensions (W&times;D&times;H)</strong></td><td>12.6"&times;12.6"&times;38.4"</td><td>12.6"&times;12.6"&times;38.4"</td><td>12.6"&times;12.6"&times;38.4"</td></tr>
+<tr><td><strong>Ship Wt w/ Stones</strong></td><td>364 lbs</td><td>364 lbs</td><td>366 lbs</td></tr>
+<tr><td><strong>Stones Required</strong></td><td>10 boxes</td><td>10 boxes</td><td>10 boxes</td></tr>
+<tr><td><strong>Stone Size</strong></td><td>1&ndash;2" (3&ndash;5cm)</td><td>1&ndash;2" (3&ndash;5cm)</td><td>1&ndash;2" (3&ndash;5cm)</td></tr>
+<tr><td><strong>SKU</strong></td><td>H1006012</td><td>H1006022</td><td>H1006032</td></tr>
+</tbody>
+</table>
+
+<div class="script-box">
+<p><strong>How to Frame This for Customers:</strong></p>
+<p><strong>The analogy:</strong> "The STEEL is the sleeper sports car of our lineup. It doesn't shout for attention like the DROP, but under the hood it's packing 331 lbs of stone &mdash; twice what most heaters this size hold. If your priority is the best possible steam and the most consistent heat, the STEEL delivers."</p>
+<p><strong>When to recommend:</strong> Customer prioritizes performance over aesthetics. They want maximum stone mass in a compact footprint. They're building a serious sauna and care most about steam quality.</p>
+</div>
+
+<div class="watch-out">
+<p><strong>Watch Out:</strong> The STEEL 10.5 requires a UKU Extension Box (sold separately) for heaters over 10kW. Make sure to add this to the order. The STEEL 6.0 and 9.0 do not need it.</p>
+</div>
+</div>
+
+<!-- ===== CORE ===== -->
+<div class="family-header" id="ch3-core">
+<h3 style="color:#fff;margin:0">CORE Family &mdash; The Customizable Chameleon</h3>
+<p style="color:#C8862A;margin:4px 0 0;font-size:.9rem">Electric | Floor Mount | 6.5&ndash;10.5 kW | Embeddable in bench</p>
+</div>
+<div class="family-body">
+
+<p>The CORE is HUUM's most versatile heater from a design perspective. It can be <strong>completely embedded into a sauna bench</strong>, making it nearly invisible. It comes in 5 exterior finish options, and the BK/ST version ships without panels so customers can customize with their own tile, stone, glass, or wood.</p>
+
+<p><strong>Understanding the variants:</strong> Unlike other families where the number = kW, CORE variants differ by <strong>exterior material/finish</strong>. All CORE variants are available in 6.5kW, 9kW, or 10.5kW (selected at time of order). The five finishes are:</p>
+<ul>
+<li><strong>CORE Alder</strong> &mdash; Alder wood panels. Classic, natural look.</li>
+<li><strong>CORE Aspen</strong> &mdash; Aspen wood panels. Lighter, more modern.</li>
+<li><strong>CORE Thermo-Aspen</strong> &mdash; Heat-treated Aspen for a darker, more durable finish.</li>
+<li><strong>CORE Black</strong> &mdash; Sleek matte black metal casing. No wood.</li>
+<li><strong>CORE BK/ST</strong> &mdash; Ships unfinished (bare metal shields). Customer adds their own tile, stone, glass, or wood for a fully custom look.</li>
+</ul>
+
+<p>The wood-paneled versions (Alder, Aspen, Thermo-Aspen) and the BK/ST also let you choose between <strong>Black or Stainless Steel inlay finishes</strong> for accent details.</p>
+
+<h4>Key Features</h4>
+<ul>
+<li><strong>Bench-embeddable:</strong> The CORE can sit inside a bench cutout so only the stone surface is visible from above. This is unique in our lineup and a huge design selling point.</li>
+<li><strong>66 lb stone capacity:</strong> Lower than other HUUM families, but the CORE isn't competing on stone mass &mdash; it's competing on aesthetics and integration. The 66 lbs still provides good steam for its rated room sizes.</li>
+<li><strong>Compact footprint:</strong> The BK/ST base model is just 12.2" &times; 12.2". The CORE Black is larger at 15.2" &times; 15.2", and the wood-panel variants (Alder, Aspen, Thermo-Aspen) are 15.1" wide. Even the largest CORE variant has a modest footprint compared to other floor-standing heaters.</li>
+<li><strong>Wood panels prevent burns:</strong> The Alder, Aspen, and Thermo-Aspen panels aren't just decorative &mdash; they add a layer of insulation that reduces the risk of accidental burns on the heater exterior.</li>
+</ul>
+
+<h4>CORE Specs (All Variants Share These Specs)</h4>
+<table>
+<thead><tr><th>Spec</th><th>CORE (All Finishes)</th></tr></thead>
+<tbody>
+<tr><td><strong>kW Options</strong></td><td>6.5 kW, 9 kW, 10.5 kW</td></tr>
+<tr><td><strong>Room Size</strong></td><td>177&ndash;566 cu.ft.</td></tr>
+<tr><td><strong>Stone Capacity</strong></td><td>66 lbs (30 kg)</td></tr>
+<tr><td><strong>Stone Size</strong></td><td>2&ndash;4" (5&ndash;10cm)</td></tr>
+<tr><td><strong>Amperage Range</strong></td><td>25&ndash;43.75 A</td></tr>
+<tr><td><strong>Wire Size</strong></td><td>10 or 8 AWG</td></tr>
+<tr><td><strong>Voltage / Phase</strong></td><td>240V / 1PH</td></tr>
+<tr><td><strong>Min Ceiling Height</strong></td><td>80" (203 cm)</td></tr>
+<tr><td><strong>Heater Weight</strong></td><td>41.9 lbs (19 kg)</td></tr>
+<tr><td><strong>Ship Wt w/ Stones</strong></td><td>107.9 lbs (48.9 kg)</td></tr>
+<tr><td><strong>Safety Listing</strong></td><td>CE</td></tr>
+<tr><td><strong>Stones Required</strong></td><td>2 boxes</td></tr>
+</tbody>
+</table>
+
+<h4>CORE Variant Dimensions</h4>
+<table>
+<thead><tr><th>Variant</th><th>Width</th><th>Depth</th><th>Height</th><th>SKU</th></tr></thead>
+<tbody>
+<tr><td><strong>CORE Alder</strong></td><td>15.1" (38.4cm)</td><td>1.1" (2.7cm)*</td><td>31.5" (80cm)</td><td>CORE6-ALD-BK</td></tr>
+<tr><td><strong>CORE Aspen</strong></td><td>15.1" (38.4cm)</td><td>1.1" (2.7cm)*</td><td>31.5" (80cm)</td><td>CORE6-ASP-BK</td></tr>
+<tr><td><strong>CORE Thermo-Aspen</strong></td><td>15.1" (38.4cm)</td><td>1.1" (2.7cm)*</td><td>31.5" (80cm)</td><td>CORE6-TASP-BK</td></tr>
+<tr><td><strong>CORE Black</strong></td><td>15.2" (38.5cm)</td><td>15.2" (38.5cm)</td><td>32.7" (83cm)</td><td>H1013072</td></tr>
+<tr><td><strong>CORE BK/ST</strong></td><td>12.2" (31cm)</td><td>12.2" (31cm)</td><td>32.7" (83cm)</td><td>H1013012</td></tr>
+</tbody>
+</table>
+
+<div class="watch-out">
+<p><strong>Watch Out:</strong> The depth listed for CORE Alder, Aspen, and Thermo-Aspen in the source data shows 1.1" (2.7 cm), which appears to be a panel thickness measurement rather than the full heater depth. The actual heater unit is approximately 12.2" deep based on the BK/ST dimensions. When discussing installation clearances with customers, refer them to the CORE IOM for accurate safety distances. [CONFLICTING &mdash; Source shows Depth as 1.1" for wood panel variants vs. 12.2"&ndash;15.2" for Black/BK/ST &mdash; likely panel measurement vs. heater body]</p>
+</div>
+
+<div class="script-box">
+<p><strong>How to Frame This for Customers:</strong></p>
+<p><strong>The analogy:</strong> "The CORE is like a built-in kitchen appliance vs. a freestanding one. You can embed it into your bench so it becomes part of the architecture. Or with the BK/ST version, you can clad it in the same tile or stone as your sauna walls so it visually disappears."</p>
+<p><strong>When to recommend:</strong> Customer is working with a designer or architect. They want the heater to blend into the sauna, not stand out. They want options.</p>
+</div>
+
+<div class="pro-tip">
+<p><strong>Pro Tip:</strong> The CORE ships via freight on a pallet and requires a scheduled delivery appointment. Make sure to set this expectation with the customer upfront. For freight quotes, email customerservice@bathingbrands.com with the model and shipping address.</p>
+</div>
+</div>
+
+<!-- ===== HIVE MINI ===== -->
+<div class="family-header" id="ch3-hivemini">
+<h3 style="color:#fff;margin:0">HIVE Mini Family &mdash; The Residential Sweet Spot</h3>
+<p style="color:#C8862A;margin:4px 0 0;font-size:.9rem">Electric | Floor Mount | 6&ndash;10.6 kW | 330 lbs of stone | Iconic HIVE shape</p>
+</div>
+<div class="family-body">
+
+<p>The HIVE Mini gives you HUUM's iconic cylindrical "beehive" shape in a residential-friendly size. It's the same design language as the full HIVE but scaled down to an 18.1" diameter (vs. the HIVE's 22"). With <strong>330 lbs of stone capacity</strong>, it delivers an outstanding steam experience for medium-sized home saunas.</p>
+
+<p><strong>Understanding the variants:</strong> Numbers indicate kW: 6, 9, 10.6. The HIVE Mini 10.6 is listed as "HIVE Mini 11" in some marketing materials but is technically <strong>10.6 kW</strong> (the internal SKU references 10.5kW).</p>
+
+<h4>Key Features</h4>
+<ul>
+<li><strong>330 lb stone capacity:</strong> Nearly identical to the STEEL's 331 lbs, but in the iconic HIVE cylindrical shape rather than a rectangular tower.</li>
+<li><strong>Pre-installed air tunnel:</strong> A central tube inside the stone chamber that creates a chimney effect, pulling cool air from the bottom and pushing heated air through the stones. This shortens heat-up time and extends the life of the heating elements by reducing thermal stress.</li>
+<li><strong>Adjustable legs:</strong> Fine-tune the height for level placement on any floor.</li>
+<li><strong>SGS Listed:</strong> Third-party safety certification.</li>
+</ul>
+
+<h4>HIVE Mini Specs Comparison</h4>
+<table>
+<thead><tr><th>Spec</th><th>HIVE Mini 6</th><th>HIVE Mini 9</th><th>HIVE Mini 10.6</th></tr></thead>
+<tbody>
+<tr><td><strong>kW</strong></td><td>6.0 kW</td><td>9.0 kW</td><td>10.6 kW</td></tr>
+<tr><td><strong>Room Size</strong></td><td>177&ndash;318 cu.ft.</td><td>283&ndash;460 cu.ft.</td><td>354&ndash;566 cu.ft.</td></tr>
+<tr><td><strong>Stone Capacity</strong></td><td>330 lbs</td><td>330 lbs</td><td>330 lbs</td></tr>
+<tr><td><strong>Amperage (240V)</strong></td><td>25 A</td><td>37.5 A</td><td>43.75 A</td></tr>
+<tr><td><strong>Wire Size</strong></td><td>10 AWG</td><td>6 AWG</td><td>6 AWG</td></tr>
+<tr><td><strong>Diameter</strong></td><td>18.1" (460mm)</td><td>18.1" (460mm)</td><td>18.1" (460mm)</td></tr>
+<tr><td><strong>Height</strong></td><td>29.5" (750mm)</td><td>29.5" (750mm)</td><td>29.5" (750mm)</td></tr>
+<tr><td><strong>Heater Weight</strong></td><td>35.9 lbs</td><td>40.3 lbs</td><td>40.3 lbs</td></tr>
+<tr><td><strong>Ship Wt w/ Stones</strong></td><td>365.9 lbs</td><td>370.3 lbs</td><td>370.3 lbs</td></tr>
+<tr><td><strong>Stones Required</strong></td><td>10 boxes</td><td>10 boxes</td><td>10 boxes</td></tr>
+<tr><td><strong>SKU</strong></td><td>H1002012</td><td>H1002022</td><td>H1002032</td></tr>
+</tbody>
+</table>
+
+<div class="script-box">
+<p><strong>How to Frame This for Customers:</strong></p>
+<p><strong>The analogy:</strong> "The HIVE Mini is the iconic HUUM. When you see pictures of beautiful modern saunas with that distinctive cylindrical heater covered in stones, that's the HIVE. The Mini version is sized for home saunas but doesn't compromise on stone capacity &mdash; 330 lbs."</p>
+<p><strong>Key insight:</strong> Position this as "the HIVE experience at home." The full HIVE (12&ndash;18kW) is overkill for most residential saunas. The Mini gives them the same look and feel at the right scale.</p>
+</div>
+
+<div class="watch-out">
+<p><strong>Watch Out:</strong> The HIVE Mini 10.6 is sometimes listed as "HIVE Mini 11" in marketing materials and product listings. It is technically a <strong>10.6 kW</strong> heater (internal SKU references 10.5kW). Don't confuse it with the CLIFF 11, which is a completely different product. If a customer says "I want the HIVE Mini 11," they mean the 10.6kW model.</p>
+</div>
+</div>
+
+<!-- ===== HIVE ===== -->
+<div class="family-header" id="ch3-hive">
+<h3 style="color:#fff;margin:0">HIVE Family &mdash; The Commercial Powerhouse</h3>
+<p style="color:#C8862A;margin:4px 0 0;font-size:.9rem">Electric | Floor Mount | 12&ndash;18 kW | 528 lbs of stone | For large &amp; commercial saunas</p>
+</div>
+<div class="family-body">
+
+<p>The full-size HIVE is built for large saunas: health clubs, spas, gyms, and oversized residential builds. It holds a staggering <strong>528 lbs of sauna stones</strong> (16 boxes!) and delivers up to 18kW of power. This is the big brother.</p>
+
+<p><strong>Understanding the variants:</strong> kW ratings: 12, 15, 18. All share the same 22" diameter body.</p>
+
+<h4>Key Features</h4>
+<ul>
+<li><strong>528 lb stone capacity:</strong> The most stone of any HUUM electric heater. This is a massive thermal reservoir.</li>
+<li><strong>Requires UKU Extension Box:</strong> All HIVE models need the extension box due to their higher power draw.</li>
+<li><strong>Air tunnel (pre-installed):</strong> Same technology as the HIVE Mini but scaled up.</li>
+<li><strong>Adjustable legs:</strong> For leveling on commercial installations.</li>
+</ul>
+
+<h4>HIVE Specs Comparison</h4>
+<table>
+<thead><tr><th>Spec</th><th>HIVE 12</th><th>HIVE 15</th><th>HIVE 18</th></tr></thead>
+<tbody>
+<tr><td><strong>kW</strong></td><td>12.0 kW</td><td>15.0 kW</td><td>18.0 kW</td></tr>
+<tr><td><strong>Room Size</strong></td><td>424&ndash;636 cu.ft.</td><td>530&ndash;813 cu.ft.</td><td>636&ndash;989 cu.ft.</td></tr>
+<tr><td><strong>Stone Capacity</strong></td><td>528 lbs</td><td>528 lbs</td><td>528 lbs</td></tr>
+<tr><td><strong>Amperage (240V)</strong></td><td>50 A</td><td>62.5 A</td><td>75 A</td></tr>
+<tr><td><strong>Wire Size</strong></td><td>10+10 AWG</td><td>6+6 AWG</td><td>6+6 AWG</td></tr>
+<tr><td><strong>Diameter</strong></td><td>22" (560mm)</td><td>22" (560mm)</td><td>22" (560mm)</td></tr>
+<tr><td><strong>Height</strong></td><td>29.5" (750mm)</td><td>29.5" (750mm)</td><td>29.5" (750mm)</td></tr>
+<tr><td><strong>Heater Weight</strong></td><td>49.1 lbs</td><td>51.3 lbs</td><td>53.5 lbs</td></tr>
+<tr><td><strong>Ship Wt w/ Stones</strong></td><td>577.1 lbs</td><td>579.3 lbs</td><td>581.5 lbs</td></tr>
+<tr><td><strong>Stones Required</strong></td><td>16 boxes</td><td>16 boxes</td><td>16 boxes</td></tr>
+<tr><td><strong>Requires Ext Box</strong></td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+<tr><td><strong>SKU</strong></td><td>H1003012</td><td>H1003022</td><td>H1003032</td></tr>
+</tbody>
+</table>
+
+<div class="watch-out">
+<p><strong>Watch Out:</strong> The HIVE 15 and 18 draw 62.5A and 75A respectively. These are serious electrical requirements. The customer's electrician needs to verify their panel can handle this. The dual wire runs (6+6 AWG) mean two separate circuits may be needed. Always flag this during the qualifying call.</p>
+</div>
+
+<div class="script-box">
+<p><strong>How to Frame This for Customers:</strong></p>
+<p><strong>The key insight:</strong> 528 lbs of stone is the thermal equivalent of a masonry fireplace. Once heated, this heater will hold temperature for hours. For commercial facilities where the sauna runs all day, this consistency is critical. The stones absorb heat during low-use periods and release it steadily during peak use.</p>
+</div>
+
+<div class="pro-tip">
+<p><strong>Pro Tip:</strong> All HIVE models ship on pallets via freight and require scheduled delivery. Shipping weight with stones exceeds 575 lbs. Make sure the customer's installation location can handle delivery logistics (loading dock, wide doorways, etc.).</p>
+</div>
+</div>
+
+<!-- ===== HIVE WOOD ===== -->
+<div class="family-header" id="ch3-hivewood">
+<h3 style="color:#fff;margin:0">HIVE Wood Family &mdash; Traditional Wood-Burning</h3>
+<p style="color:#C8862A;margin:4px 0 0;font-size:.9rem">Wood-Burning | Floor Mount | 13&ndash;17 kW</p>
+</div>
+<div class="family-body">
+
+<p>The HIVE Wood brings the iconic HIVE shape to wood-burning. These are traditional stoves for customers who want the authentic experience: the crackle of the fire, the ritual of tending it, and the deep, penetrating heat that only wood can produce.</p>
+
+<p><strong>Understanding the variants:</strong></p>
+<ul>
+<li><strong>HIVE Wood 13</strong> &mdash; 13kW, smaller model for rooms 212&ndash;459 cu.ft. Holds 199 lbs of stone.</li>
+<li><strong>HIVE Wood 17</strong> &mdash; 17kW, larger model for rooms 283&ndash;565 cu.ft. Holds 287 lbs of stone.</li>
+<li><strong>HIVE Wood LS 17</strong> &mdash; Same 17kW power as the Wood 17, but with a <strong>firebox extension (LS)</strong> that allows loading firewood from an adjacent room through the wall. "LS" stands for "Lungo Sportello" (extended firebox).</li>
+</ul>
+
+<h4>Key Features</h4>
+<ul>
+<li><strong>1/5" thick stainless steel flame tamer:</strong> A robust internal component that distributes heat evenly across the stone bed. This is a durability feature &mdash; it protects the heater body from direct flame contact.</li>
+<li><strong>Stainless steel furnace door:</strong> Built to last. The LS 17 features a tempered glass window in the door so you can see the fire.</li>
+<li><strong>Treated with natural oils only:</strong> No chemical coatings. This matters to health-conscious customers.</li>
+<li><strong>Requires chimney connection:</strong> These are real wood-burning stoves. The customer needs a chimney/flue system.</li>
+</ul>
+
+<h4>HIVE Wood Specs Comparison</h4>
+<table>
+<thead><tr><th>Spec</th><th>HIVE Wood 13</th><th>HIVE Wood 17</th><th>HIVE Wood LS 17</th></tr></thead>
+<tbody>
+<tr><td><strong>kW</strong></td><td>13 kW</td><td>17 kW</td><td>17 kW</td></tr>
+<tr><td><strong>Stone Capacity</strong></td><td>199 lbs (90 kg)</td><td>287 lbs (130 kg)</td><td>287 lbs (130 kg)</td></tr>
+<tr><td><strong>Dimensions (W&times;D&times;H)</strong></td><td>17.7"&times;18.11"&times;29.6"</td><td>21.9"&times;23.2"&times;29.6"</td><td>21.9"&times;29.1"&times;29.6"</td></tr>
+<tr><td><strong>Weight</strong></td><td>104 lbs (47 kg)</td><td>143 lbs (65 kg)</td><td>170 lbs (77 kg)</td></tr>
+<tr><td><strong>Firebox Extension</strong></td><td>No</td><td>No</td><td>Yes (thru-wall)</td></tr>
+<tr><td><strong>Stones Required</strong></td><td>6 boxes</td><td>9 boxes</td><td>9 boxes</td></tr>
+<tr><td><strong>SKU</strong></td><td>H1008012</td><td>H1009012</td><td>H1010012</td></tr>
+</tbody>
+</table>
+
+<div class="key-def">
+<p><strong>Key Definition &mdash; Room Size for HIVE Wood:</strong> The source data for HIVE Wood models lists room sizes in the internal description (212&ndash;459 cu.ft. for the 13; 283&ndash;565 cu.ft. for the 17 and LS 17) but these are not in the formal specifications table. [FAMILY SPEC &mdash; room size from internal_desc, not formal specs &mdash; confirm for SKU: HIVE Wood 13, HIVE Wood 17, HIVE Wood LS 17]</p>
+</div>
+
+<div class="script-box">
+<p><strong>How to Frame This for Customers:</strong></p>
+<p><strong>The analogy:</strong> "The HIVE Wood is for the sauna purist who wants the real experience. It's like choosing a manual transmission sports car over an automatic &mdash; it requires more involvement, but the connection to the experience is deeper."</p>
+<p><strong>The LS decision:</strong> "If your sauna has an adjacent room (changing room, hallway), the LS version lets you feed the fire without opening the sauna door. You keep all the heat inside and manage the fire from a cooler space. It's a significant upgrade in convenience."</p>
+</div>
+</div>
+
+<!-- ===== HIVE FLOW ===== -->
+<div class="family-header" id="ch3-hiveflow">
+<h3 style="color:#fff;margin:0">HIVE Flow Family &mdash; High-Efficiency Wood-Burning</h3>
+<p style="color:#C8862A;margin:4px 0 0;font-size:.9rem">Wood-Burning | Floor Mount | 8.5&ndash;9.8 kW | 75% heat retention</p>
+</div>
+<div class="family-body">
+
+<p>The HIVE Flow is HUUM's next-generation wood-burning stove, and its headline feature is remarkable: <strong>75% of the heat from the firewood goes into heating your sauna</strong> instead of escaping through the chimney. Most conventional wood stoves lose 40&ndash;60% of their heat up the chimney. The Flow's patent-pending furnace construction redirects that wasted heat back into the stone bed.</p>
+
+<p><strong>Understanding the variants:</strong></p>
+<ul>
+<li><strong>HIVE Flow</strong> &mdash; Standard 9.8kW, 282&ndash;635 cu.ft., 330 lbs stone, 16" max firewood length</li>
+<li><strong>HIVE Flow LS</strong> &mdash; Same 9.8kW but with firebox extension for thru-wall feeding</li>
+<li><strong>HIVE Flow Mini</strong> &mdash; Smaller 8.5kW, 212&ndash;494 cu.ft., 231 lbs stone, 12" max firewood length</li>
+<li><strong>HIVE Flow Mini LS</strong> &mdash; Mini with firebox extension</li>
+</ul>
+
+<h4>Key Features</h4>
+<ul>
+<li><strong>75% heat retention:</strong> Patent-pending furnace design. This means less wood used per session and faster heat-up times.</li>
+<li><strong>BImSchV and CPR certified:</strong> German emissions certification (BImSchV is the strictest emissions standard in Europe) and European Construction Products Regulation compliance. This means the stove burns cleaner than most competitors.</li>
+<li><strong>Top and back flue connection:</strong> Flexibility in chimney routing. The chimney can exit from the top of the stove or from the back.</li>
+<li><strong>Ash drawer:</strong> Easy cleaning &mdash; pull out the drawer, empty it, slide it back in.</li>
+<li><strong>Minimum room height: 75" (191 cm):</strong> Lower ceiling requirement than most, making it suitable for more installations.</li>
+</ul>
+
+<h4>HIVE Flow Specs Comparison</h4>
+<table>
+<thead><tr><th>Spec</th><th>Flow Mini</th><th>Flow Mini LS</th><th>Flow</th><th>Flow LS</th></tr></thead>
+<tbody>
+<tr><td><strong>kW</strong></td><td>8.5 kW</td><td>8.5 kW</td><td>9.8 kW</td><td>9.8 kW</td></tr>
+<tr><td><strong>Room Size</strong></td><td>212&ndash;494 cu.ft.</td><td>212&ndash;494 cu.ft.</td><td>282&ndash;635 cu.ft.</td><td>282&ndash;635 cu.ft.</td></tr>
+<tr><td><strong>Stone Capacity</strong></td><td>231 lbs</td><td>231 lbs</td><td>330 lbs</td><td>330 lbs</td></tr>
+<tr><td><strong>Max Firewood</strong></td><td>12" (30cm)</td><td>12" (30cm)</td><td>16" (40cm)</td><td>16" (40cm)</td></tr>
+<tr><td><strong>Firebox Extension</strong></td><td>No</td><td>Yes</td><td>No</td><td>Yes</td></tr>
+<tr><td><strong>Flue Location</strong></td><td>Top &amp; Back</td><td>Top &amp; Back</td><td>Top &amp; Back</td><td>Top &amp; Back</td></tr>
+<tr><td><strong>Min Room Height</strong></td><td>75" (191cm)</td><td>75" (191cm)</td><td>75" (191cm)</td><td>75" (191cm)</td></tr>
+<tr><td><strong>Dimensions (W&times;D&times;H)</strong></td><td>17.7"&times;21.1"&times;34.8"</td><td>17.7"&times;26.5"&times;34.8"</td><td>20.7"&times;24.8"&times;34.8"</td><td>20.7"&times;29.5"&times;34.8"</td></tr>
+<tr><td><strong>Heater Weight</strong></td><td>119 lbs (54 kg)</td><td>130 lbs (59 kg)</td><td>148 lbs (67 kg)</td><td>161 lbs (73 kg)</td></tr>
+<tr><td><strong>Ship Wt w/ Stones</strong></td><td>350 lbs</td><td>361 lbs</td><td>478 lbs</td><td>491 lbs</td></tr>
+<tr><td><strong>Stones Required</strong></td><td>7 boxes</td><td>7 boxes</td><td>10 boxes</td><td>10 boxes</td></tr>
+<tr><td><strong>SKU</strong></td><td>H1017012</td><td>H1018012</td><td>H1015012</td><td>H1016012</td></tr>
+</tbody>
+</table>
+
+<div class="script-box">
+<p><strong>How to Frame This for Customers:</strong></p>
+<p><strong>The analogy:</strong> "Think of a regular wood stove like an open fireplace &mdash; a lot of heat goes up the chimney. The HIVE Flow is like a modern sealed woodstove &mdash; it captures 75% of that heat and puts it into your stones instead of wasting it. You use less wood, get up to temperature faster, and produce less smoke."</p>
+<p><strong>Key differentiator vs. HIVE Wood:</strong> The Flow is about efficiency and environmental performance. The HIVE Wood is about raw power and traditional simplicity. If the customer cares about wood consumption and emissions, the Flow is the answer.</p>
+</div>
+
+<div class="pro-tip">
+<p><strong>Pro Tip:</strong> The German BImSchV certification is a strong selling point for environmentally conscious customers. Germany has the strictest wood-burning emissions standards in Europe. If a stove meets BImSchV, it's among the cleanest-burning on the market.</p>
+</div>
+</div>
+
+<!-- ===== UKU CONTROLS ===== -->
+<div class="family-header" id="ch3-uku">
+<h3 style="color:#fff;margin:0">UKU Control System &mdash; The Brain of Every Electric HUUM</h3>
+<p style="color:#C8862A;margin:4px 0 0;font-size:.9rem">Required for all electric models | Sold separately | 5 finish options</p>
+</div>
+<div class="family-body">
+
+<p>Every HUUM electric heater requires a <strong>UKU controller</strong> (sold separately). This is not optional &mdash; the heater won't function without it. The UKU is the thermostat and timer that controls the heater. It mounts on the wall outside the sauna (or in a dry area).</p>
+
+<h4>UKU Controller Options</h4>
+<table>
+<thead><tr><th>Controller</th><th>SKU</th><th>Wi-Fi?</th><th>Key Feature</th></tr></thead>
+<tbody>
+<tr><td><strong>UKU Local</strong></td><td>H2004022</td><td>No</td><td>Basic on/off and temperature control. No smartphone app.</td></tr>
+<tr><td><strong>UKU Wi-Fi</strong></td><td>H2004012</td><td>Yes</td><td>Smartphone app control. Preheat from anywhere.</td></tr>
+<tr><td><strong>UKU Glass</strong></td><td>H2004032</td><td>Yes</td><td>Wi-Fi + premium glass front panel.</td></tr>
+<tr><td><strong>UKU Mirror</strong></td><td>536-BDL-UKU-WIFI-MIRROR</td><td>Yes</td><td>Wi-Fi + mirror finish front panel.</td></tr>
+<tr><td><strong>UKU Gold</strong></td><td>536-BDL-UKU-WIFI-GOLD</td><td>Yes</td><td>Wi-Fi + gold accent finish.</td></tr>
+</tbody>
+</table>
+
+<h4>UKU Extension Box</h4>
+<p>The <strong>UKU Extension Box</strong> (SKU: H2003012) is required for all HUUM heaters that draw more than a certain amperage (specifically, the HIVE 12, 15, 18, and the CLIFF 11 per source data). It acts as a power relay between the controller and the heater. Without it, the UKU controller can't handle the electrical load.</p>
+
+<div class="watch-out">
+<p><strong>Watch Out:</strong> NEVER let a customer order an electric HUUM heater without a UKU controller. The heater is useless without it. This is the #1 thing to verify before submitting any HUUM electric order. Also confirm whether the Extension Box is needed based on the model.</p>
+</div>
+
+<div class="script-box">
+<p><strong>How to Frame This for Customers:</strong></p>
+<p><strong>The analogy:</strong> "The UKU controller is like the thermostat for your home HVAC. You wouldn't install a furnace without a thermostat. The UKU does the same thing for your sauna &mdash; and with the Wi-Fi versions, you can start heating your sauna from your phone while you're still at the gym."</p>
+<p><strong>Upsell opportunity:</strong> The UKU Glass, Mirror, and Gold are premium finishes that appeal to design-conscious customers (the same type who choose HUUM in the first place). If someone is already spending on a CORE or DROP for aesthetics, they'll likely appreciate a matching premium controller.</p>
+</div>
+</div>
+
+<!-- ============================================================ -->
+<!-- CHAPTER 4 -->
+<!-- ============================================================ -->
+<h2 class="chapter" id="ch4">Chapter 4: Matching Customers to Products</h2>
+
+<div class="pro-tip">
+<p><strong>Pro Tip &mdash; Apply the Three Tens Before You Recommend:</strong> Before suggesting a specific HUUM product, mentally score where the customer sits on the Three Tens: (1) <strong>Certainty in the Product</strong> &mdash; do they believe this heater will deliver the sauna experience they want? (2) <strong>Certainty in You</strong> &mdash; do they trust you as their advisor? (3) <strong>Certainty in PPW</strong> &mdash; do they trust our company to deliver and support them? If any score is below a 7, address that gap before talking price. For HUUM specifically, the Product score is usually the one to work on &mdash; use the Estonian heritage story, the Red Dot Award, and the stone capacity advantage to build certainty.</p>
+</div>
+
+<h3>The Qualifying Checklist &mdash; 12 Questions That Drive Every Recommendation</h3>
+<p>Here's how the PPW qualifying questions map to HUUM product recommendations:</p>
+
+<table>
+<thead><tr><th style="width:35%">Question</th><th>What You're Learning</th><th>How It Maps to HUUM</th></tr></thead>
+<tbody>
+<tr><td>1. What's your first name?</td><td>Build rapport</td><td>&mdash;</td></tr>
+<tr><td>2. What got you interested in a sauna?</td><td>Motivation / desired outcome</td><td>Health focus &rarr; any HUUM. Design focus &rarr; DROP or CORE. Tradition &rarr; HIVE Wood/Flow.</td></tr>
+<tr><td>3. Have you looked at specific models?</td><td>Research level</td><td>If they mention HUUM, they already know the brand. Ask which family.</td></tr>
+<tr><td>4. Where is it going?</td><td>Indoor/outdoor, room context</td><td>Outdoor cabin &rarr; HIVE Wood/Flow. Indoor home &rarr; electric families. Commercial &rarr; HIVE 12/15/18.</td></tr>
+<tr><td>5. Rough dimensions of the space?</td><td>Calculate cu. ft.</td><td>Match to the room size ranges in specs. See sizing guide below.</td></tr>
+<tr><td>6. Indoor or outdoor?</td><td>Installation type</td><td>Outdoor with no electricity &rarr; wood-burning. Otherwise &rarr; electric.</td></tr>
+<tr><td>7. How many people?</td><td>Size validation</td><td>1&ndash;2 people: 4&ndash;6kW. 3&ndash;4 people: 6&ndash;9kW. 5+: 10kW+. Commercial: 12&ndash;18kW.</td></tr>
+<tr><td>8. What electrical do you have?</td><td>Power availability</td><td>All electric HUUMs need 240V/1PH. Confirm they have (or can add) a dedicated circuit.</td></tr>
+<tr><td>9. Infrared, traditional, or both?</td><td>Heat type preference</td><td>HUUM is <strong>traditional only</strong> (convection heat + steam). If they want infrared, HUUM is not the right brand.</td></tr>
+<tr><td>10. Budget range?</td><td>Price positioning</td><td>HUUM is mid-to-premium. If budget is very tight, consider Harvia instead.</td></tr>
+<tr><td>11. Timeline?</td><td>Urgency</td><td>HUUM freight shipments require scheduling. Factor in delivery lead time.</td></tr>
+<tr><td>12. Best email for follow-up?</td><td>Contact capture</td><td>&mdash;</td></tr>
+</tbody>
+</table>
+
+<h3>The Decision Tree: Electric Heater Selection</h3>
+
+<h4>Step 1: Calculate Room Volume</h4>
+<p>Length (ft) &times; Width (ft) &times; Height (ft) = Cubic Feet</p>
+<p>Example: 5' &times; 6' &times; 7' = 210 cu. ft.</p>
+
+<div class="pro-tip">
+<p><strong>Pro Tip:</strong> Adjustment factors matter. Uninsulated surfaces (glass doors, stone/tile walls) radiate heat away. Add 20&ndash;30% to the cu. ft. calculation for each uninsulated surface. A 200 cu. ft. sauna with a glass door might calculate as 240&ndash;260 cu. ft. for heater sizing purposes. Refer to the official "Sizing Your HUUM" PDF for the exact adjustment methodology.</p>
+</div>
+
+<h4>Step 2: Match Room Size to kW Range</h4>
+<table>
+<thead><tr><th>Room Size (cu. ft.)</th><th>Recommended kW</th><th>HUUM Options</th></tr></thead>
+<tbody>
+<tr><td>106&ndash;177</td><td>3.5&ndash;4.5 kW</td><td>CLIFF Mini 4, DROP 4.5</td></tr>
+<tr><td>177&ndash;318</td><td>6&ndash;6.5 kW</td><td>CLIFF 6, DROP 6, STEEL 6, CORE 6.5, HIVE Mini 6</td></tr>
+<tr><td>248&ndash;389</td><td>7.5 kW</td><td>DROP 7.5</td></tr>
+<tr><td>283&ndash;460</td><td>9 kW</td><td>CLIFF 9, DROP 9, STEEL 9, CORE 9, HIVE Mini 9</td></tr>
+<tr><td>354&ndash;566</td><td>10.5&ndash;11 kW</td><td>CLIFF 11, STEEL 10.5, CORE 10.5, HIVE Mini 10.6</td></tr>
+<tr><td>424&ndash;636</td><td>12 kW</td><td>HIVE 12</td></tr>
+<tr><td>530&ndash;813</td><td>15 kW</td><td>HIVE 15</td></tr>
+<tr><td>636&ndash;989</td><td>18 kW</td><td>HIVE 18</td></tr>
+</tbody>
+</table>
+
+<h4>Step 3: Choose a Family Based on Customer Priorities</h4>
+
+<table>
+<thead><tr><th>Customer Priority</th><th>Best HUUM Family</th><th>Why</th></tr></thead>
+<tbody>
+<tr><td>Tight space / small safety distances</td><td>CLIFF or STEEL</td><td>Both have the smallest clearances. CLIFF Mini for wall-mount.</td></tr>
+<tr><td>Visual design statement</td><td>DROP</td><td>Red Dot Award. Nothing else looks like it.</td></tr>
+<tr><td>Maximum stone / best steam</td><td>STEEL or HIVE Mini</td><td>330&ndash;331 lbs of stone in residential sizes.</td></tr>
+<tr><td>Custom aesthetics / bench integration</td><td>CORE</td><td>Only HUUM that embeds into bench. 5 finish options.</td></tr>
+<tr><td>Iconic HUUM look</td><td>HIVE Mini</td><td>The classic cylindrical shape at home scale.</td></tr>
+<tr><td>Commercial / large room</td><td>HIVE</td><td>12&ndash;18kW, 528 lbs stone. Built for the job.</td></tr>
+<tr><td>Wood-burning / traditional</td><td>HIVE Wood</td><td>Simple, powerful, authentic.</td></tr>
+<tr><td>Wood-burning / efficient</td><td>HIVE Flow</td><td>75% heat retention. Less wood, lower emissions.</td></tr>
+<tr><td>Wall-mount required</td><td>DROP or CLIFF Mini</td><td>Only wall-mount options in the HUUM lineup.</td></tr>
+</tbody>
+</table>
+
+<h3>Common Customer Scenarios</h3>
+
+<h4>Scenario 1: "We're building a 4'x6'x7' home sauna in our basement."</h4>
+<p>Room = 168 cu. ft. Options: CLIFF Mini 4 (106&ndash;177) or DROP 4.5 (106&ndash;248). If they want wall-mount to save space, both work. If design matters, DROP. If budget is tighter, CLIFF Mini.</p>
+
+<h4>Scenario 2: "5'x7'x7' indoor sauna. We want something that looks amazing."</h4>
+<p>Room = 245 cu. ft. The DROP 6 (177&ndash;318) or DROP 7.5 (248&ndash;389) are perfect. Lead with design story, Red Dot Award. If they want floor-standing, HIVE Mini 6 (177&ndash;318) brings the iconic look.</p>
+
+<h4>Scenario 3: "8'x8'x7' sauna in our outdoor barrel."</h4>
+<p>Room = 448 cu. ft. They need ~9&ndash;10.5kW. If electric: CLIFF 9 (283&ndash;460), STEEL 9 (283&ndash;460), HIVE Mini 9 (283&ndash;460), or HIVE Mini 10.6 (354&ndash;566). If wood-burning: HIVE Flow (282&ndash;635) or HIVE Wood 13 (212&ndash;459). Ask if they have electricity to the barrel or prefer wood.</p>
+
+<h4>Scenario 4: "Commercial gym sauna, 10'x12'x8'."</h4>
+<p>Room = 960 cu. ft. This is HIVE 18 territory (636&ndash;989 cu. ft.). Confirm electrical capacity: 75A at 240V, dual 6 AWG wire runs. They'll also need the UKU Extension Box.</p>
+
+<div class="script-box">
+<p><strong>How to Frame &mdash; Bridge Technique for HUUM Recommendation:</strong></p>
+<p><em>After the customer describes their sauna project:</em></p>
+<p>Restate the customer's room size, priorities, and use case back to them, then bridge directly into your recommendation with a phrase like "that's exactly why" to connect their need to the specific model. Explain why the model fits their stated situation, and tie a specific feature back to something they mentioned caring about.</p>
+<p><em>The bridge technique ensures your recommendation never feels generic. Every suggestion should be explicitly anchored to something the customer told you. Never just say you recommend something &mdash; always tie back to their words.</em></p>
+</div>
+
+<h3>Electrical Requirements Quick Reference</h3>
+<table>
+<thead><tr><th>Amperage</th><th>Wire Size (AWG)</th><th>Models at This Level</th></tr></thead>
+<tbody>
+<tr><td>14.58 A</td><td>See IOM</td><td>CLIFF Mini 4</td></tr>
+<tr><td>18.75 A</td><td>10</td><td>DROP 4.5</td></tr>
+<tr><td>25 A</td><td>10</td><td>CLIFF 6, DROP 6, STEEL 6, CORE 6.5, HIVE Mini 6</td></tr>
+<tr><td>31.25 A</td><td>8</td><td>DROP 7.5</td></tr>
+<tr><td>37.5 A</td><td>8 or 6</td><td>CLIFF 9, DROP 9, STEEL 9, CORE 9, HIVE Mini 9</td></tr>
+<tr><td>43.75 A</td><td>8 or 6</td><td>CLIFF 11, STEEL 10.5, CORE 10.5, HIVE Mini 10.6</td></tr>
+<tr><td>50 A</td><td>10+10</td><td>HIVE 12</td></tr>
+<tr><td>62.5 A</td><td>6+6</td><td>HIVE 15</td></tr>
+<tr><td>75 A</td><td>6+6</td><td>HIVE 18</td></tr>
+</tbody>
+</table>
+
+
+<!-- ============================================================ -->
+<!-- CHAPTER 5 -->
+<!-- ============================================================ -->
+<h2 class="chapter" id="ch5">Chapter 5: Handling Questions, Objections &amp; the Concierge Advantage</h2>
+
+<h3>Top Customer Questions</h3>
+
+<h4>"Why is HUUM more expensive than [Harvia / other brand]?"</h4>
+<div class="script-box">
+<p><strong>How to Frame This:</strong></p>
+<p><strong>Apply the Heater Investment Reframe:</strong> Remind the customer that the heater is the heart of the sauna. A $500 heater in a $7,000 sauna is like putting a 2-liter engine in a Bentley. HUUM's premium comes from Estonian craftsmanship, award-winning design, industrial-grade stainless steel, and stone capacities that outperform competitors at the same kW level.</p>
+<p><strong>Bridge Technique:</strong> Acknowledge their question directly ("Great question &mdash; let me explain exactly what you're getting for the difference"), then bridge to the specific value: design pedigree (Red Dot Award), stone capacity advantage, UKU smart control ecosystem, and the fact that these are designed and made in Estonia, not mass-produced overseas.</p>
+</div>
+
+<div class="pro-tip">
+<p><strong>Pro Tip &mdash; Daily Cost Breakdown:</strong> Always break the price into a daily cost over the product's lifespan. HUUM heaters are built for years of dependable operation. Take the heater price, divide by over years of daily use, and the per-day cost is almost always well under a dollar. Use this on every price objection: <em>"Think about how many years you'll use this heater. When you break the price down to a daily cost, you're spending less per day on your sauna experience than you spend on a cup of coffee. Except the sauna actually improves your sleep, your recovery, and your stress levels every single day."</em> This reframes a lump-sum purchase into a negligible daily investment.</p>
+</div>
+
+<h4>"Do I need a UKU controller? Can I use a different brand?"</h4>
+<div class="script-box">
+<p><strong>How to Frame This:</strong></p>
+<p>Answer first: Yes, you need a UKU controller. HUUM heaters are engineered to work exclusively with UKU controls. They won't operate with third-party controllers. The upside? The UKU system is excellent &mdash; Wi-Fi control, smartphone app, multiple premium finishes. Frame it as an integrated system advantage, not a limitation. "It's like how Apple devices work best together &mdash; the heater and controller are designed as a matched pair."</p>
+</div>
+
+<h4>"What stones do I need and how many?"</h4>
+<div class="script-box">
+<p><strong>How to Frame This:</strong></p>
+<p>HUUM uses <strong>rounded olivine sauna stones</strong> sold in 33 lb boxes. The number of boxes varies by model (see specs). There are two products: <strong>HUUM Stones 1-2in</strong> (1&ndash;2" / 3&ndash;5cm) for CLIFF and STEEL families, and <strong>HUUM Stones 24</strong> (2&ndash;4" / 5&ndash;10cm) for DROP, CORE, HIVE Mini, HIVE, and all wood-burning models. Stones are sold separately &mdash; make sure to include them in every order.</p>
+</div>
+
+<h4>"Is HUUM UL Listed?"</h4>
+<div class="watch-out">
+<p><strong>Watch Out:</strong> HUUM heaters are <strong>CE certified</strong> (European safety standard) and many models are <strong>SGS Listed</strong> (third-party testing). They are NOT UL Listed. If a customer or their local building code specifically requires UL listing, HUUM may not be the right fit. In that case, consider Saunum (which is UL listed) or check with the local authority having jurisdiction (AHJ) on whether CE/SGS is accepted.</p>
+</div>
+
+<h4>"How long does it take to heat up?"</h4>
+<div class="script-box">
+<p><strong>How to Frame This:</strong></p>
+<p>Heat-up time depends on room size, insulation quality, and starting temperature. The CLIFF and STEEL families heat up to <strong>25% faster</strong> than comparable heaters thanks to their internal air duct. As a general guideline for a properly insulated home sauna, expect 30&ndash;45 minutes. With the Wi-Fi UKU controller, customers can start pre-heating from their phone so the sauna is ready when they are.</p>
+</div>
+
+<h3>The Peak Protection Concierge Advantage</h3>
+<p>This is your secret weapon against online retailers and "I can find it cheaper" objections. <strong>Peak Protection Concierge</strong> is what makes buying from PPW fundamentally different from clicking "add to cart" on a random website:</p>
+
+<div class="script-box">
+<p><strong>How to Frame &mdash; Peak Protection Concierge Pitch:</strong></p>
+<p>Position the purchase as a concierge experience, not just a transaction. Emphasize these four pillars:</p>
+<ul>
+<li><strong>Personal order management</strong> &mdash; You handle the order from purchase through freight delivery, coordinating scheduling and tracking so the customer doesn't have to.</li>
+<li><strong>Free electrician coordination</strong> &mdash; You get on the phone with their electrician to walk through wiring requirements for the specific model, eliminating guesswork.</li>
+<li><strong>Manufacturer advocacy</strong> &mdash; If anything goes wrong (shipping damage, warranty questions, parts), you advocate directly with HUUM on their behalf.</li>
+<li><strong>Expert sizing &amp; product matching</strong> &mdash; You ensure the right heater for their space upfront, preventing costly freight returns from ordering the wrong kW online.</li>
+</ul>
+<p>Close by contrasting the concierge experience against the impersonal online checkout. Frame it as the difference between a transaction and a relationship.</p>
+</div>
+
+<h3>Objection Handling with LAER</h3>
+
+<div class="key-def">
+<p><strong>Key Definition &mdash; LAER Framework:</strong> Listen &rarr; Acknowledge &rarr; Explore &rarr; Respond. Never jump to "respond" immediately. The customer's stated objection is often not their real concern. Listen fully, acknowledge their feeling, explore what's really driving it, then respond to the actual issue.</p>
+</div>
+
+<h4>Objection: "It's too expensive."</h4>
+<p><strong>Listen:</strong> Let them finish. Don't interrupt.</p>
+<p><strong>Acknowledge:</strong> "I totally understand. This is a significant investment."</p>
+<p><strong>Explore:</strong> "When you say it's more than you expected, are you comparing to a specific brand, or is it the total project cost that's higher than planned?" This tells you whether they're comparing HUUM to Harvia (brand objection) or whether their overall sauna budget is strained (budget objection). These require different responses.</p>
+<p><strong>Respond:</strong> If brand comparison &rarr; Heater Investment Reframe. If total budget &rarr; help them find a HUUM model that fits (CLIFF or DROP in lower kW) or explore financing.</p>
+
+<h4>Objection: "I can find it cheaper online."</h4>
+<p><strong>Listen &amp; Acknowledge:</strong> Don't dismiss this. They probably can.</p>
+<p><strong>Explore:</strong> "Are you finding the same model at a lower price, or a different brand?"</p>
+<p><strong>Respond:</strong> Apply the <strong>Peak Protection Concierge</strong> framework. What they get from PPW that they don't get from a random website:</p>
+<ul>
+<li>Personal order management from purchase through delivery</li>
+<li>Free electrician coordination &mdash; we'll talk to their electrician about wiring requirements</li>
+<li>Manufacturer advocacy &mdash; if anything goes wrong, we go to bat with HUUM on their behalf</li>
+<li>Expert sizing and product matching (what if they order the wrong kW?)</li>
+</ul>
+
+<h4>Objection: "I want UL listing."</h4>
+<p><strong>Acknowledge &amp; Explore:</strong> Find out if this is a personal preference or a building code requirement. Many jurisdictions accept CE/SGS certification.</p>
+<p><strong>Respond:</strong> If it's code-required UL, recommend they check with their local AHJ. If UL is a must, steer toward Saunum. If CE/SGS is acceptable, HUUM is great.</p>
+
+<h4>Objection: "I've heard HUUM isn't as reliable as Harvia."</h4>
+<p><strong>Listen &amp; Acknowledge:</strong> "That's worth discussing. Reliability matters &mdash; you want a heater that performs for years."</p>
+<p><strong>Explore:</strong> "Where did you hear that? Was it a specific experience or something you read online?" This helps you understand whether they had a bad experience, read a review, or are repeating something a competitor said.</p>
+<p><strong>Respond:</strong> Be transparent. Harvia has been in the market longer and has massive volume &mdash; they're the Toyota of sauna heaters. HUUM is the BMW. BMWs require a bit more attention, but the driving experience is in a different league. HUUM backs their products with a <strong>3-year residential / 1-year commercial warranty</strong>, and as a PPW customer, they get our <strong>Peak Protection Concierge</strong> &mdash; if anything goes wrong, we handle it directly with HUUM on their behalf. They're not on their own.</p>
+
+<div class="watch-out">
+<p><strong>Watch Out:</strong> Per Bathing Brands distributor training, Prit acknowledged that HUUM is "maybe not as reliable as Harvia." Don't oversell reliability claims. Instead, redirect to what HUUM <em>does</em> better: design, stone capacity, and the overall aesthetic experience. Honesty builds trust and prevents returns.</p>
+</div>
+
+<h4>"How should I ventilate my sauna?"</h4>
+<div class="script-box">
+<p><strong>How to Frame &mdash; Sauna Ventilation Basics:</strong></p>
+<p><em>From Bathing Brands training &mdash; this applies to all HUUM installations:</em></p>
+<p>Emphasize that ventilation is one of the most overlooked parts of a sauna build. Walk the customer through the three-vent concept: (1) A <strong>fresh air intake</strong> low on the wall near the heater, on the same side as the heater's air inlet. (2) An <strong>exhaust vent</strong> on the opposite wall, under the bench &mdash; larger than the intake and positioned higher. (3) A <strong>drying vent</strong> near the ceiling on the opposite wall &mdash; kept <em>closed</em> during use and opened afterward to let moisture escape and prevent mold. Always direct them to the HUUM installation manual for exact vent sizes for their specific model.</p>
+</div>
+
+<h4>Objection: "I want infrared, not traditional."</h4>
+<p><strong>Acknowledge:</strong> "Infrared is a popular option."</p>
+<p><strong>Explore:</strong> "What draws you to infrared specifically?" Often they've read about health benefits or want lower temperatures. Traditional saunas (like HUUM) operate at higher temps with steam. Infrared operates at lower temps with radiant heat. They're genuinely different experiences.</p>
+<p><strong>Respond:</strong> If they truly want infrared, HUUM isn't the right brand &mdash; be honest. If they're open to traditional, explain the steam/l&ouml;yly experience and why many sauna enthusiasts prefer it.</p>
+
+<h4>Objection: "I need to think about it / talk to my spouse."</h4>
+<p><strong>Listen:</strong> This is the most common stall on any sales call. Don't push. Let them finish.</p>
+<p><strong>Acknowledge:</strong> "Absolutely. This is a big decision and you should feel good about it."</p>
+<p><strong>Explore:</strong> "Just so I can help &mdash; is there a specific part you want to think through? Is it the model choice, the price, or the installation side of things?" This question is critical because "I need to think about it" almost always masks a specific concern. If you can surface it, you can address it now instead of losing them to analysis paralysis.</p>
+<p><strong>Respond:</strong> Based on what they reveal:</p>
+<ul>
+<li><em>Model uncertainty</em> &rarr; Offer to email a side-by-side comparison of their top two choices with your recommendation and reasoning.</li>
+<li><em>Price concern</em> &rarr; Daily Cost Breakdown + Heater Investment Reframe.</li>
+<li><em>Spouse buy-in</em> &rarr; "Would it help if I put together a one-page summary you can share? I'll include the model, the specs for your room size, what the electrician needs, and why I recommended this one specifically." Give them ammunition to sell it at home.</li>
+<li><em>General hesitation</em> &rarr; "No problem at all. I'll send you my direct contact and the product page. When you're ready, just reply to that email and I'll pick up right where we left off." Leave the door open, don't push.</li>
+</ul>
+
+<div class="script-box">
+<p><strong>How to Frame &mdash; The Follow-Up Close:</strong></p>
+<p><em>The situation:</em> The customer wants to pause and discuss the purchase with a partner before committing.</p>
+<p><em>Your approach:</em> Validate their decision to consult their partner &mdash; don't resist the delay. Instead, make yourself useful during it by offering to prepare a concise summary covering the recommended model, room fit, electrical requirements, and total investment. This gives them something concrete to review together rather than relying on memory from the call.</p>
+<p><em>Why this works:</em> You're not objecting to their delay. You're making yourself useful during the delay. The summary email becomes your follow-up touchpoint.</p>
+</div>
+
+<h4>Objection: "The installation sounds complicated."</h4>
+<p><strong>Listen:</strong> This is a real fear, especially for customers who haven't done a major electrical project before.</p>
+<p><strong>Acknowledge:</strong> "I hear you. The electrical side can sound intimidating if you haven't done it before."</p>
+<p><strong>Explore:</strong> "Have you already talked to an electrician, or is finding one part of the concern?" This tells you whether they're overwhelmed by the concept or whether they have a practical logistics problem.</p>
+<p><strong>Respond:</strong> Normalize it and offer help:</p>
+
+<div class="script-box">
+<p><strong>How to Frame &mdash; Installation Reassurance:</strong></p>
+<p><em>The situation:</em> The customer feels overwhelmed by electrical requirements &mdash; 240 volts, wire gauges, and breaker boxes sound intimidating.</p>
+<p><em>Your approach:</em> Reassure them that the electrical knowledge is the electrician's job, not theirs. Normalize the work by comparing a 240-volt sauna circuit to common household hookups like a clothes dryer or electric oven. Offer to send the spec sheet directly to their electrician, and remind them that Peak Protection Concierge includes a free call with the electrician to walk through the requirements.</p>
+<p><em>Why this works:</em> You've reduced a scary unknown to a familiar household comparison and offered to remove the burden entirely by coordinating with the electrician yourself.</p>
+</div>
+
+<h4>"What are the health benefits of a traditional sauna?"</h4>
+<div class="script-box">
+<p><strong>How to Frame &mdash; Health Benefits (from Bathing Brands Training):</strong></p>
+<p>The key insight is that real health benefits require <strong>15 to 20 minutes of regular use</strong>, but most people leave too early because their head overheats before their body is ready. The brain tolerates far less heat than the rest of the body. Connect this to stone capacity &mdash; HUUM heaters with 300+ lbs of stone produce a softer, more even heat that makes longer sessions comfortable. Frame the heater choice as the difference between a sauna someone uses occasionally and one they use every day.</p>
+</div>
+
+<div class="pro-tip">
+<p><strong>Pro Tip &mdash; Heat Stratification Is Your Friend:</strong> If a customer mentions discomfort in previous saunas (head too hot, feet too cold), that's <strong>heat stratification</strong>. Traditional saunas without good ventilation or air movement have hot air trapped at the ceiling and cooler air near the floor. HUUM heaters with large stone mass help reduce this because they radiate heat more evenly from the stone bed rather than just blasting hot air upward. For the most extreme solution, mention the <strong>Saunum Air Solo</strong> add-on device &mdash; it actively blends the air for uniform temperature from floor to ceiling.</p>
+</div>
+
+<!-- ============================================================ -->
+<!-- CHAPTER 6 -->
+<!-- ============================================================ -->
+<h2 class="chapter" id="ch6">Chapter 6: Technical Reference</h2>
+
+<p>This chapter is your spec-lookup resource during live calls. It's organized by family for fast scanning.</p>
+
+<h3>Complete Electric Heater Specs</h3>
+
+<h4>CLIFF Family</h4>
+<table>
+<thead><tr><th>Spec</th><th>CLIFF Mini 4</th><th>CLIFF 6</th><th>CLIFF 9</th><th>CLIFF 11</th></tr></thead>
+<tbody>
+<tr><td>SKU</td><td>H1005012</td><td>H1004012</td><td>H1004022</td><td>H1004032</td></tr>
+<tr><td>Internal SKU</td><td>534-CLIFFMIN35-240/1</td><td>534-CLIFF60-240/1</td><td>534-CLIFF90-240/1</td><td>534-CLIFF105-240/1</td></tr>
+<tr><td>kW</td><td>4 kW</td><td>6 kW</td><td>9 kW</td><td>11 kW</td></tr>
+<tr><td>Min cu.ft.</td><td>106</td><td>177</td><td>283</td><td>354</td></tr>
+<tr><td>Max cu.ft.</td><td>177</td><td>318</td><td>460</td><td>566</td></tr>
+<tr><td>Voltage/Phase</td><td>240V/1PH</td><td>240V/1PH</td><td>240V/1PH</td><td>240V/1PH</td></tr>
+<tr><td>Amperage</td><td>14.58 A</td><td>25 A</td><td>37.5 A</td><td>43.75 A</td></tr>
+<tr><td>Mount</td><td>Wall</td><td>Floor</td><td>Floor</td><td>Floor</td></tr>
+<tr><td>Width</td><td>10.6" (270mm)</td><td>10.6" (270mm)</td><td>10.6" (270mm)</td><td>10.6" (270mm)</td></tr>
+<tr><td>Depth</td><td>6.3" (160mm)</td><td>10.6" (270mm)</td><td>10.6" (270mm)</td><td>10.6" (270mm)</td></tr>
+<tr><td>Height</td><td>38.4" (975mm)</td><td>38.4" (975mm)</td><td>38.4" (975mm)</td><td>38.4" (975mm)</td></tr>
+<tr><td>Heater Weight</td><td>33 lbs (15 kg)</td><td>35.2 lbs (16 kg)</td><td>35.2 lbs (16 kg)</td><td>37.5 lbs (17 kg)</td></tr>
+<tr><td>Ship Wt w/ Stones</td><td>165 lbs (75 kg)</td><td>200 lbs (91 kg)</td><td>200 lbs (91 kg)</td><td>202.5 lbs (92 kg)</td></tr>
+<tr><td>Stone Capacity</td><td>132 lbs</td><td>165 lbs</td><td>165 lbs</td><td>165 lbs</td></tr>
+<tr><td>Stone Size</td><td>1&ndash;2" (3&ndash;5cm)</td><td>1&ndash;2" (3&ndash;5cm)</td><td>1&ndash;2" (3&ndash;5cm)</td><td>1&ndash;2" (3&ndash;5cm)</td></tr>
+<tr><td>Boxes Required</td><td>4</td><td>5</td><td>5</td><td>5</td></tr>
+<tr><td>Ext Box Required</td><td>No</td><td>No</td><td>No</td><td>Yes</td></tr>
+<tr><td>Warranty</td><td>3yr res / 1yr com</td><td>3yr res / 1yr com</td><td>3yr res / 1yr com</td><td>3yr res / 1yr com</td></tr>
+</tbody>
+</table>
+
+<h4>DROP Family</h4>
+<table>
+<thead><tr><th>Spec</th><th>DROP 4.5</th><th>DROP 6</th><th>DROP 7.5</th><th>DROP 9</th></tr></thead>
+<tbody>
+<tr><td>SKU</td><td>H1001052</td><td>H1001062</td><td>H1001082</td><td>H1001072</td></tr>
+<tr><td>Internal SKU</td><td>534-DROP45-240/1</td><td>534-DROP60-240/1</td><td>534-DROP75-240/1</td><td>534-DROP90-240/1</td></tr>
+<tr><td>kW</td><td>4.5 kW</td><td>6.0 kW</td><td>7.5 kW</td><td>9.0 kW</td></tr>
+<tr><td>Min cu.ft.</td><td>106</td><td>177</td><td>248</td><td>283</td></tr>
+<tr><td>Max cu.ft.</td><td>248</td><td>318</td><td>389</td><td>460</td></tr>
+<tr><td>Voltage/Phase</td><td>240V/1PH</td><td>240V/1PH</td><td>240V/1PH</td><td>240V/1PH</td></tr>
+<tr><td>Amperage</td><td>18.75 A</td><td>25 A</td><td>31.25 A</td><td>37.5 A</td></tr>
+<tr><td>Wire Size</td><td>10 AWG</td><td>10 AWG</td><td>8 AWG</td><td>8 AWG</td></tr>
+<tr><td>Width</td><td>15.4" (390mm)</td><td>15.4" (390mm)</td><td>15" (390mm)</td><td>15.4" (390mm)</td></tr>
+<tr><td>Depth</td><td>13.2" (335mm)</td><td>13.2" (335mm)</td><td>13" (335mm)</td><td>13.2" (335mm)</td></tr>
+<tr><td>Height</td><td>23.3" (590mm)</td><td>23.3" (590mm)</td><td>23" (590mm)</td><td>23.3" (590mm)</td></tr>
+<tr><td>Heater Weight</td><td>24 lbs</td><td>24 lbs</td><td>25 lbs</td><td>26.5 lbs</td></tr>
+<tr><td>Ship Wt w/ Stones</td><td>146 lbs</td><td>146 lbs</td><td>157 lbs</td><td>148.5 lbs</td></tr>
+<tr><td>Stone Capacity</td><td>122 lbs</td><td>122 lbs</td><td>122 lbs</td><td>122 lbs</td></tr>
+<tr><td>Stone Size</td><td>2&ndash;4" (5&ndash;10cm)</td><td>2&ndash;4" (5&ndash;10cm)</td><td>2&ndash;4" (5&ndash;10cm)</td><td>2&ndash;4" (5&ndash;10cm)</td></tr>
+<tr><td>Boxes Required</td><td>4</td><td>4</td><td>4</td><td>4</td></tr>
+<tr><td>Safety Listing</td><td>SGS</td><td>SGS</td><td>SGS</td><td>SGS</td></tr>
+<tr><td>Warranty</td><td>3yr res / 1yr com</td><td>3yr res / 1yr com</td><td>3yr res / 1yr com</td><td>3yr res / 1yr com</td></tr>
+</tbody>
+</table>
+
+<h4>STEEL Family</h4>
+<table>
+<thead><tr><th>Spec</th><th>STEEL 6.0</th><th>STEEL 9.0</th><th>STEEL 10.5</th></tr></thead>
+<tbody>
+<tr><td>SKU</td><td>H1006012</td><td>H1006022</td><td>H1006032</td></tr>
+<tr><td>Internal SKU</td><td>534-STEEL60-240/1</td><td>534-STEEL90-240/1</td><td>534-STEEL105-240/1</td></tr>
+<tr><td>kW</td><td>6.0 kW</td><td>9.0 kW</td><td>10.5 kW</td></tr>
+<tr><td>Min cu.ft.</td><td>177</td><td>283</td><td>354</td></tr>
+<tr><td>Max cu.ft.</td><td>318</td><td>460</td><td>566</td></tr>
+<tr><td>Amperage</td><td>25 A</td><td>37.5 A</td><td>43.75 A</td></tr>
+<tr><td>Width</td><td>12.6" (320mm)</td><td>12.6" (320mm)</td><td>12.6" (320mm)</td></tr>
+<tr><td>Depth</td><td>12.6" (320mm)</td><td>12.6" (320mm)</td><td>12.6" (320mm)</td></tr>
+<tr><td>Height</td><td>38.4" (975mm)</td><td>38.4" (975mm)</td><td>38.4" (975mm)</td></tr>
+<tr><td>Heater Weight</td><td>33 lbs</td><td>33 lbs</td><td>35 lbs</td></tr>
+<tr><td>Ship Wt w/ Stones</td><td>364 lbs</td><td>364 lbs</td><td>366 lbs</td></tr>
+<tr><td>Stone Capacity</td><td>331 lbs</td><td>331 lbs</td><td>331 lbs</td></tr>
+<tr><td>Stone Size</td><td>1&ndash;2" (3&ndash;5cm)</td><td>1&ndash;2" (3&ndash;5cm)</td><td>1&ndash;2" (3&ndash;5cm)</td></tr>
+<tr><td>Boxes Required</td><td>10</td><td>10</td><td>10</td></tr>
+<tr><td>Warranty</td><td>3yr res / 1yr com</td><td>3yr res / 1yr com</td><td>3yr res / 1yr com</td></tr>
+</tbody>
+</table>
+
+<h4>HIVE Mini Family</h4>
+<table>
+<thead><tr><th>Spec</th><th>HIVE Mini 6</th><th>HIVE Mini 9</th><th>HIVE Mini 10.6</th></tr></thead>
+<tbody>
+<tr><td>SKU</td><td>H1002012</td><td>H1002022</td><td>H1002032</td></tr>
+<tr><td>Internal SKU</td><td>534-HIVEMINI60-240/1</td><td>534-HIVEMINI90-240/1</td><td>534-HIVEMIN105-240/1</td></tr>
+<tr><td>kW</td><td>6.0 kW</td><td>9.0 kW</td><td>10.6 kW</td></tr>
+<tr><td>Min cu.ft.</td><td>177</td><td>283</td><td>354</td></tr>
+<tr><td>Max cu.ft.</td><td>318</td><td>460</td><td>566</td></tr>
+<tr><td>Amperage</td><td>25 A</td><td>37.5 A</td><td>43.75 A</td></tr>
+<tr><td>Wire Size</td><td>10 AWG</td><td>6 AWG</td><td>6 AWG</td></tr>
+<tr><td>Diameter</td><td>18.1" (460mm)</td><td>18.1" (460mm)</td><td>18.1" (460mm)</td></tr>
+<tr><td>Height</td><td>29.5" (750mm)</td><td>29.5" (750mm)</td><td>29.5" (750mm)</td></tr>
+<tr><td>Heater Weight</td><td>35.9 lbs</td><td>40.3 lbs</td><td>40.3 lbs</td></tr>
+<tr><td>Ship Wt w/ Stones</td><td>365.9 lbs</td><td>370.3 lbs</td><td>370.3 lbs</td></tr>
+<tr><td>Stone Capacity</td><td>330 lbs</td><td>330 lbs</td><td>330 lbs</td></tr>
+<tr><td>Boxes Required</td><td>10</td><td>10</td><td>10</td></tr>
+<tr><td>Safety Listing</td><td>SGS</td><td>SGS</td><td>SGS</td></tr>
+<tr><td>Warranty</td><td>3yr res / 1yr com</td><td>3yr res / 1yr com</td><td>3yr res / 1yr com</td></tr>
+</tbody>
+</table>
+
+<h4>HIVE Family</h4>
+<table>
+<thead><tr><th>Spec</th><th>HIVE 12</th><th>HIVE 15</th><th>HIVE 18</th></tr></thead>
+<tbody>
+<tr><td>SKU</td><td>H1003012</td><td>H1003022</td><td>H1003032</td></tr>
+<tr><td>Internal SKU</td><td>534-HIVE120-240/1</td><td>534-HIVE150-240/1</td><td>534-HIVE180-240/1</td></tr>
+<tr><td>kW</td><td>12.0 kW</td><td>15.0 kW</td><td>18.0 kW</td></tr>
+<tr><td>Min cu.ft.</td><td>424</td><td>530</td><td>636</td></tr>
+<tr><td>Max cu.ft.</td><td>636</td><td>813</td><td>989</td></tr>
+<tr><td>Amperage</td><td>50 A</td><td>62.5 A</td><td>75 A</td></tr>
+<tr><td>Wire Size</td><td>10+10 AWG</td><td>6+6 AWG</td><td>6+6 AWG</td></tr>
+<tr><td>Diameter</td><td>22" (560mm)</td><td>22" (560mm)</td><td>22" (560mm)</td></tr>
+<tr><td>Height</td><td>29.5" (750mm)</td><td>29.5" (750mm)</td><td>29.5" (750mm)</td></tr>
+<tr><td>Heater Weight</td><td>49.1 lbs</td><td>51.3 lbs</td><td>53.5 lbs</td></tr>
+<tr><td>Ship Wt w/ Stones</td><td>577.1 lbs</td><td>579.3 lbs</td><td>581.5 lbs</td></tr>
+<tr><td>Stone Capacity</td><td>528 lbs</td><td>528 lbs</td><td>528 lbs</td></tr>
+<tr><td>Boxes Required</td><td>16</td><td>16</td><td>16</td></tr>
+<tr><td>Ext Box Required</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+<tr><td>Safety Listing</td><td>SGS</td><td>SGS</td><td>SGS</td></tr>
+<tr><td>Warranty</td><td>3yr res / 1yr com</td><td>3yr res / 1yr com</td><td>3yr res / 1yr com</td></tr>
+</tbody>
+</table>
+
+<h3>Complete Wood-Burning Stove Specs</h3>
+
+<h4>HIVE Wood Family</h4>
+<table>
+<thead><tr><th>Spec</th><th>HIVE Wood 13</th><th>HIVE Wood 17</th><th>HIVE Wood LS 17</th></tr></thead>
+<tbody>
+<tr><td>SKU</td><td>H1008012</td><td>H1009012</td><td>H1010012</td></tr>
+<tr><td>Internal SKU</td><td>537-HIVEWOOD-13</td><td>537-HIVEWOOD-17</td><td>537-HIVEWOOD-LS-17</td></tr>
+<tr><td>kW</td><td>13 kW</td><td>17 kW</td><td>17 kW</td></tr>
+<tr><td>Stone Capacity</td><td>199 lbs (90 kg)</td><td>287 lbs (130 kg)</td><td>287 lbs (130 kg)</td></tr>
+<tr><td>Firebox Extension</td><td>No</td><td>No</td><td>Yes (thru-wall)</td></tr>
+<tr><td>Width</td><td>17.7" (450mm)</td><td>21.9" (555mm)</td><td>21.9" (555mm)</td></tr>
+<tr><td>Depth</td><td>18.11" (460mm)</td><td>23.2" (590mm)</td><td>29.1" (740mm)</td></tr>
+<tr><td>Height</td><td>29.6" (750mm)</td><td>29.6" (750mm)</td><td>29.6" (750mm)</td></tr>
+<tr><td>Weight</td><td>104 lbs (47 kg)</td><td>143 lbs (65 kg)</td><td>170 lbs (77 kg)</td></tr>
+<tr><td>Boxes Required</td><td>6</td><td>9</td><td>9</td></tr>
+<tr><td>Warranty</td><td>3yr res / 1yr com</td><td>3yr res / 1yr com</td><td>3yr res / 1yr com</td></tr>
+</tbody>
+</table>
+
+<h4>HIVE Flow Family</h4>
+<table>
+<thead><tr><th>Spec</th><th>Flow Mini</th><th>Flow Mini LS</th><th>Flow</th><th>Flow LS</th></tr></thead>
+<tbody>
+<tr><td>SKU</td><td>H1017012</td><td>H1018012</td><td>H1015012</td><td>H1016012</td></tr>
+<tr><td>Internal SKU</td><td>537-128265</td><td>537-128266</td><td>537-128267</td><td>537-128268</td></tr>
+<tr><td>kW</td><td>8.5 kW</td><td>8.5 kW</td><td>9.8 kW</td><td>9.8 kW</td></tr>
+<tr><td>Min cu.ft.</td><td>212</td><td>212</td><td>282</td><td>282</td></tr>
+<tr><td>Max cu.ft.</td><td>494</td><td>494</td><td>635</td><td>635</td></tr>
+<tr><td>Min Room Height</td><td>75" (191cm)</td><td>75" (191cm)</td><td>75" (191cm)</td><td>75" (191cm)</td></tr>
+<tr><td>Stone Capacity</td><td>231 lbs</td><td>231 lbs</td><td>330 lbs</td><td>330 lbs</td></tr>
+<tr><td>Max Firewood Length</td><td>12" (30cm)</td><td>12" (30cm)</td><td>16" (40cm)</td><td>16" (40cm)</td></tr>
+<tr><td>Firebox Extension</td><td>No</td><td>Yes</td><td>No</td><td>Yes</td></tr>
+<tr><td>Flue Connection</td><td>Top &amp; Back</td><td>Top &amp; Back</td><td>Top &amp; Back</td><td>Top &amp; Back</td></tr>
+<tr><td>Width</td><td>17.7" (45cm)</td><td>17.7" (45cm)</td><td>20.7" (53cm)</td><td>20.7" (53cm)</td></tr>
+<tr><td>Depth</td><td>21.1" (54cm)</td><td>26.5" (67cm)</td><td>24.8" (63cm)</td><td>29.5" (75cm)</td></tr>
+<tr><td>Height</td><td>34.8" (88cm)</td><td>34.8" (88cm)</td><td>34.8" (88cm)</td><td>34.8" (88cm)</td></tr>
+<tr><td>Heater Weight</td><td>119 lbs (54 kg)</td><td>130 lbs (59 kg)</td><td>148 lbs (67 kg)</td><td>161 lbs (73 kg)</td></tr>
+<tr><td>Ship Wt w/ Stones</td><td>350 lbs</td><td>361 lbs</td><td>478 lbs</td><td>491 lbs</td></tr>
+<tr><td>Boxes Required</td><td>7</td><td>7</td><td>10</td><td>10</td></tr>
+<tr><td>Certifications</td><td>BImSchV, CPR</td><td>BImSchV, CPR</td><td>BImSchV, CPR</td><td>BImSchV, CPR</td></tr>
+<tr><td>Warranty</td><td>3yr res / 1yr com</td><td>3yr res / 1yr com</td><td>3yr res / 1yr com</td><td>3yr res / 1yr com</td></tr>
+</tbody>
+</table>
+
+<h3>CORE Family Complete Specs</h3>
+<table>
+<thead><tr><th>Spec</th><th>All CORE Variants</th></tr></thead>
+<tbody>
+<tr><td>Available Finishes</td><td>Alder, Aspen, Thermo-Aspen, Black, BK/ST (unfinished)</td></tr>
+<tr><td>kW Options</td><td>6.5, 9, 10.5 kW</td></tr>
+<tr><td>Room Size</td><td>177&ndash;566 cu.ft.</td></tr>
+<tr><td>Amperage Range</td><td>25&ndash;43.75 A</td></tr>
+<tr><td>Wire Size</td><td>10 or 8 AWG</td></tr>
+<tr><td>Voltage / Phase</td><td>240V / 1PH</td></tr>
+<tr><td>Min Ceiling Height</td><td>80" (203cm)</td></tr>
+<tr><td>Stone Capacity</td><td>66 lbs (30 kg)</td></tr>
+<tr><td>Stone Size</td><td>2&ndash;4" (5&ndash;10cm)</td></tr>
+<tr><td>Boxes Required</td><td>2</td></tr>
+<tr><td>Heater Weight</td><td>41.9 lbs (19 kg)</td></tr>
+<tr><td>Ship Wt w/ Stones</td><td>107.9 lbs (48.9 kg)</td></tr>
+<tr><td>Safety Listing</td><td>CE</td></tr>
+<tr><td>Warranty</td><td>3yr res / 1yr com</td></tr>
+</tbody>
+</table>
+
+<h3>Warranty Summary</h3>
+<table>
+<thead><tr><th>Use Type</th><th>Warranty Period</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td>Residential (Private)</td><td>3 Years Limited</td><td>Excludes heating elements</td></tr>
+<tr><td>Commercial</td><td>1 Year Limited</td><td>Excludes heating elements</td></tr>
+</tbody>
+</table>
+
+<div class="watch-out">
+<p><strong>Watch Out:</strong> The warranty <strong>excludes heating elements</strong> on all models, both residential and commercial. Elements are a wear item. If a customer asks about element warranty coverage, be transparent about this exclusion upfront.</p>
+</div>
+
+<div class="script-box">
+<p><strong>How to Frame &mdash; Walking a Customer Through Specs on a Live Call:</strong></p>
+<p><em>When a customer asks technical questions during a call, don't just read numbers. Translate them:</em></p>
+<p>Start with their room size and confirm which models cover that range, showing they're in the right zone. Then translate the amperage into practical terms for their electrician (wire gauge, dedicated breaker) and normalize it by comparing to common household circuits. Highlight the stone capacity as the experiential payoff. Close by offering to email the spec sheet so their electrician has everything in one place. The goal is to make every number meaningful rather than overwhelming.</p>
+</div>
+
+<div class="pro-tip">
+<p><strong>Pro Tip:</strong> When reviewing specs with a customer, focus on the <strong>three numbers that matter most</strong>: (1) Room size range &mdash; confirms the heater fits their space, (2) Stone capacity &mdash; determines the quality of the sauna experience, (3) Amperage &mdash; determines the electrical work needed. Everything else is for the electrician and installer. Don't overwhelm customers with dimensions and wire gauges unless they ask.</p>
+</div>
+
+<h3>Required Components Checklist</h3>
+<table>
+<thead><tr><th>Family</th><th>UKU Controller</th><th>Ext Box</th><th>Stones (Boxes)</th><th>Stone Size</th></tr></thead>
+<tbody>
+<tr><td>CLIFF Mini 4</td><td>Required</td><td>No</td><td>4</td><td>1&ndash;2" (3&ndash;5cm)</td></tr>
+<tr><td>CLIFF 6/9</td><td>Required</td><td>No</td><td>5</td><td>1&ndash;2" (3&ndash;5cm)</td></tr>
+<tr><td>CLIFF 11</td><td>Required</td><td>Yes</td><td>5</td><td>1&ndash;2" (3&ndash;5cm)</td></tr>
+<tr><td>DROP (all)</td><td>Required</td><td>No</td><td>4</td><td>2&ndash;4" (5&ndash;10cm)</td></tr>
+<tr><td>STEEL (all)</td><td>Required</td><td>No*</td><td>10</td><td>1&ndash;2" (3&ndash;5cm)</td></tr>
+<tr><td>CORE (all)</td><td>Required</td><td>No*</td><td>2</td><td>2&ndash;4" (5&ndash;10cm)</td></tr>
+<tr><td>HIVE Mini (all)</td><td>Required</td><td>No</td><td>10</td><td>2&ndash;4" (5&ndash;10cm)</td></tr>
+<tr><td>HIVE 12/15/18</td><td>Required</td><td>Yes</td><td>16</td><td>2&ndash;4" (5&ndash;10cm)</td></tr>
+<tr><td>HIVE Wood (all)</td><td>N/A</td><td>N/A</td><td>6 or 9</td><td>2&ndash;4" (5&ndash;10cm)</td></tr>
+<tr><td>HIVE Flow (all)</td><td>N/A</td><td>N/A</td><td>7 or 10</td><td>2&ndash;4" (5&ndash;10cm)</td></tr>
+</tbody>
+</table>
+<p style="font-size:.85rem;color:#777;">* STEEL 10.5 and CORE 10.5kW may require Ext Box at higher kW &mdash; confirm per IOM.</p>
+
+
+<!-- ============================================================ -->
+<!-- CHAPTER 7 -->
+<!-- ============================================================ -->
+<h2 class="chapter" id="ch7">Chapter 7: Quick Reference Cheat Sheet</h2>
+
+<p>Pull this up during live calls. It has everything you need at a glance.</p>
+
+<h3>Electric Heaters &mdash; At a Glance</h3>
+<table>
+<thead><tr><th>Model</th><th>kW</th><th>Room (cu.ft.)</th><th>Mount</th><th>Stones</th><th>Amps</th><th>Sell It As...</th></tr></thead>
+<tbody>
+<tr><td>CLIFF Mini 4</td><td>4</td><td>106&ndash;177</td><td>Wall</td><td>132 lbs (4 box)</td><td>14.58</td><td>Tiny space, wall mount</td></tr>
+<tr class="highlight-row"><td>DROP 4.5</td><td>4.5</td><td>106&ndash;248</td><td>Wall</td><td>122 lbs (4 box)</td><td>18.75</td><td>Design icon, small room</td></tr>
+<tr><td>CLIFF 6</td><td>6</td><td>177&ndash;318</td><td>Floor</td><td>165 lbs (5 box)</td><td>25</td><td>Slim space saver</td></tr>
+<tr><td>DROP 6</td><td>6</td><td>177&ndash;318</td><td>Wall</td><td>122 lbs (4 box)</td><td>25</td><td>Red Dot design, wall mount</td></tr>
+<tr><td>STEEL 6</td><td>6</td><td>177&ndash;318</td><td>Floor</td><td>331 lbs (10 box)</td><td>25</td><td>Max stone, slim tower</td></tr>
+<tr><td>CORE 6.5</td><td>6.5</td><td>177&ndash;566</td><td>Floor</td><td>66 lbs (2 box)</td><td>25</td><td>Custom look, bench embed</td></tr>
+<tr><td>HIVE Mini 6</td><td>6</td><td>177&ndash;318</td><td>Floor</td><td>330 lbs (10 box)</td><td>25</td><td>Iconic shape, big stones</td></tr>
+<tr><td>DROP 7.5</td><td>7.5</td><td>248&ndash;389</td><td>Wall</td><td>122 lbs (4 box)</td><td>31.25</td><td>Design icon, mid room</td></tr>
+<tr><td>CLIFF 9</td><td>9</td><td>283&ndash;460</td><td>Floor</td><td>165 lbs (5 box)</td><td>37.5</td><td>Slim space saver</td></tr>
+<tr><td>DROP 9</td><td>9</td><td>283&ndash;460</td><td>Wall</td><td>122 lbs (4 box)</td><td>37.5</td><td>Design icon, wall mount</td></tr>
+<tr><td>STEEL 9</td><td>9</td><td>283&ndash;460</td><td>Floor</td><td>331 lbs (10 box)</td><td>37.5</td><td>Max stone, slim tower</td></tr>
+<tr><td>CORE 9</td><td>9</td><td>177&ndash;566</td><td>Floor</td><td>66 lbs (2 box)</td><td>37.5</td><td>Custom look, bench embed</td></tr>
+<tr class="highlight-row"><td>HIVE Mini 9</td><td>9</td><td>283&ndash;460</td><td>Floor</td><td>330 lbs (10 box)</td><td>37.5</td><td>Iconic shape, big stones</td></tr>
+<tr><td>CLIFF 11</td><td>11</td><td>354&ndash;566</td><td>Floor</td><td>165 lbs (5 box)</td><td>43.75</td><td>Slim, high power</td></tr>
+<tr><td>STEEL 10.5</td><td>10.5</td><td>354&ndash;566</td><td>Floor</td><td>331 lbs (10 box)</td><td>43.75</td><td>Stone monster, high power</td></tr>
+<tr><td>CORE 10.5</td><td>10.5</td><td>177&ndash;566</td><td>Floor</td><td>66 lbs (2 box)</td><td>43.75</td><td>Custom, high power</td></tr>
+<tr><td>HIVE Mini 10.6</td><td>10.6</td><td>354&ndash;566</td><td>Floor</td><td>330 lbs (10 box)</td><td>43.75</td><td>Iconic shape, high power</td></tr>
+<tr class="highlight-row"><td>HIVE 12</td><td>12</td><td>424&ndash;636</td><td>Floor</td><td>528 lbs (16 box)</td><td>50</td><td>Commercial / large</td></tr>
+<tr><td>HIVE 15</td><td>15</td><td>530&ndash;813</td><td>Floor</td><td>528 lbs (16 box)</td><td>62.5</td><td>Commercial / large</td></tr>
+<tr><td>HIVE 18</td><td>18</td><td>636&ndash;989</td><td>Floor</td><td>528 lbs (16 box)</td><td>75</td><td>Max commercial</td></tr>
+</tbody>
+</table>
+
+<h3>Wood-Burning Stoves &mdash; At a Glance</h3>
+<table>
+<thead><tr><th>Model</th><th>kW</th><th>Room (cu.ft.)</th><th>Stones</th><th>Weight</th><th>LS?</th><th>Sell It As...</th></tr></thead>
+<tbody>
+<tr><td>HIVE Flow Mini</td><td>8.5</td><td>212&ndash;494</td><td>231 lbs (7 box)</td><td>119 lbs</td><td>No</td><td>Efficient, smaller rooms</td></tr>
+<tr><td>HIVE Flow Mini LS</td><td>8.5</td><td>212&ndash;494</td><td>231 lbs (7 box)</td><td>130 lbs</td><td>Yes</td><td>Efficient + thru-wall feed</td></tr>
+<tr class="highlight-row"><td>HIVE Flow</td><td>9.8</td><td>282&ndash;635</td><td>330 lbs (10 box)</td><td>148 lbs</td><td>No</td><td>75% efficient, bigger rooms</td></tr>
+<tr><td>HIVE Flow LS</td><td>9.8</td><td>282&ndash;635</td><td>330 lbs (10 box)</td><td>161 lbs</td><td>Yes</td><td>75% efficient + thru-wall</td></tr>
+<tr><td>HIVE Wood 13</td><td>13</td><td>212&ndash;459*</td><td>199 lbs (6 box)</td><td>104 lbs</td><td>No</td><td>Traditional, medium</td></tr>
+<tr><td>HIVE Wood 17</td><td>17</td><td>283&ndash;565*</td><td>287 lbs (9 box)</td><td>143 lbs</td><td>No</td><td>Traditional, powerful</td></tr>
+<tr><td>HIVE Wood LS 17</td><td>17</td><td>283&ndash;565*</td><td>287 lbs (9 box)</td><td>170 lbs</td><td>Yes</td><td>Traditional + thru-wall</td></tr>
+</tbody>
+</table>
+<p style="font-size:.85rem;color:#777;">* Room sizes from internal descriptions, not formal spec tables. See gaps section.</p>
+
+<h3>Key Framing Concepts &mdash; Quick Recall</h3>
+<table>
+<thead><tr><th>Concept</th><th>The Analogy / Framework</th></tr></thead>
+<tbody>
+<tr><td>HUUM brand position</td><td>BMW/Mercedes of saunas &mdash; design-forward, premium, Estonian craftsmanship</td></tr>
+<tr><td>Stone capacity</td><td>Thermal battery &mdash; more stone = smoother, longer-lasting heat</td></tr>
+<tr><td>Heater cost justification</td><td>$500 heater in $7K sauna = 2L engine in a Bentley</td></tr>
+<tr><td>CLIFF positioning</td><td>High-rise apartment &mdash; goes vertical to save space</td></tr>
+<tr><td>DROP positioning</td><td>Functional art / statement piece. Red Dot Award winner.</td></tr>
+<tr><td>STEEL positioning</td><td>Sleeper sports car &mdash; doesn't shout, but 331 lbs of stone under the hood</td></tr>
+<tr><td>CORE positioning</td><td>Built-in appliance &mdash; disappears into the bench, fully customizable</td></tr>
+<tr><td>HIVE Flow efficiency</td><td>Modern sealed woodstove vs. open fireplace &mdash; 75% heat retention</td></tr>
+<tr><td>LS firebox extension</td><td>Feed the fire without opening the sauna door &mdash; keep all the heat inside</td></tr>
+<tr><td>UKU controller</td><td>Thermostat for your sauna &mdash; not optional, required to operate</td></tr>
+<tr><td>PPW differentiator</td><td>Peak Protection Concierge: personal order management, free electrician coord, mfr advocacy</td></tr>
+<tr><td>Heater upgrade urgency</td><td>70&ndash;80% of Harvia sales are second-time buyers who upgrade. Skip the $500 mistake.</td></tr>
+<tr><td>HUUM vs Saunum</td><td>Same price range. HUUM wins on design/aesthetics. Saunum wins on performance/health.</td></tr>
+<tr><td>Reliability objection</td><td>Be honest: HUUM = BMW (premium, design-focused). Harvia = Toyota (reliable workhorse). Redirect to what HUUM does best.</td></tr>
+</tbody>
+</table>
+
+<div class="pro-tip">
+<p><strong>Pro Tip &mdash; Your 60-Second HUUM Pitch:</strong> If you have one minute to explain HUUM to a customer, hit these four points in order: (1) "HUUM is an Estonian manufacturer &mdash; Estonia has more saunas per capita than almost anywhere on Earth." (2) "Their heaters hold significantly more stone than competitors at the same power level &mdash; that means better, softer steam." (3) "The DROP won a Red Dot Award. The HIVE is iconic. These aren't just heaters, they're design pieces." (4) "Every HUUM electric heater pairs with their UKU smart controller &mdash; Wi-Fi enabled, start your sauna from your phone." That's it. Estonian heritage, stone advantage, design awards, smart control.</p>
+</div>
+
+<div class="watch-out">
+<p><strong>Watch Out &mdash; The Three Things to Never Forget on a HUUM Order:</strong> (1) <strong>UKU controller</strong> &mdash; every electric HUUM requires one, sold separately. (2) <strong>Stones</strong> &mdash; sold separately, check the box count for the model. (3) <strong>Extension Box</strong> &mdash; required for HIVE 12/15/18 and CLIFF 11. Missing any of these three means the customer can't use their heater on arrival. Triple-check every order.</p>
+</div>
+
+<h3>Decision Tree Summary</h3>
+<table>
+<thead><tr><th>If the customer wants...</th><th>Recommend...</th></tr></thead>
+<tbody>
+<tr><td>Smallest sauna (under 177 cu.ft.)</td><td>CLIFF Mini 4 or DROP 4.5</td></tr>
+<tr><td>Wall-mount electric</td><td>DROP (any) or CLIFF Mini 4</td></tr>
+<tr><td>Best design / aesthetics</td><td>DROP or CORE</td></tr>
+<tr><td>Maximum steam / stone mass</td><td>STEEL or HIVE Mini</td></tr>
+<tr><td>Tight clearances to walls</td><td>CLIFF or STEEL</td></tr>
+<tr><td>Embed heater in bench</td><td>CORE</td></tr>
+<tr><td>Commercial / large room (400+ cu.ft.)</td><td>HIVE 12/15/18</td></tr>
+<tr><td>Wood-burning, high efficiency</td><td>HIVE Flow</td></tr>
+<tr><td>Wood-burning, traditional</td><td>HIVE Wood</td></tr>
+<tr><td>Thru-wall wood feeding</td><td>Any LS variant</td></tr>
+<tr><td>HUUM heater + better air blending</td><td>Add Saunum Air Solo (wall-mount add-on, works with any heater)</td></tr>
+</tbody>
+</table>
+
+<!-- ============================================================ -->
+<!-- INFORMATION GAPS -->
+<!-- ============================================================ -->
+<h2 class="chapter" id="gaps">INFORMATION GAPS &mdash; REQUIRES REVIEW</h2>
+
+<div class="watch-out">
+<p><strong>Watch Out &mdash; Do Not Quote These to Customers:</strong> The items below flag specs or details that could not be fully verified from the source data provided during guide generation. <strong>Do not cite any of these flagged numbers to a customer without first confirming them</strong> from the official HUUM Installation and Operation Manual (IOM) or by contacting Bathing Brands directly at customerservice@bathingbrands.com. When in doubt, tell the customer: "Let me verify that exact spec and get back to you" &mdash; that's always better than guessing.</p>
+</div>
+
+<p>The following items could not be fully verified from the provided source data:</p>
+
+<ol>
+<li><strong>[CONFLICTING]</strong> &mdash; CORE Alder, Aspen, and Thermo-Aspen list Depth as "1.1&rdquo; (2.7 cm)" in specs, which appears to be a panel thickness measurement, not the full heater depth. CORE BK/ST shows 12.2" and CORE Black shows 15.2". The actual heater body depth for wood-paneled variants needs confirmation. &mdash; SKU: CORE6-ALD-BK, CORE6-ASP-BK, CORE6-TASP-BK</li>
+
+<li><strong>[NOT FOUND IN SOURCE]</strong> &mdash; Exact safety distances (cm/inches from combustible walls) for all models. Source data says "See Installation and Operation Manual" for most models. The CLIFF description mentions "6 cm smaller models / 12 cm larger models" and STEEL mentions "2&rdquo; smaller / 4&rdquo; larger" but these are from marketing descriptions, not formal spec tables. &mdash; All SKUs</li>
+
+<li><strong>[NOT FOUND IN SOURCE]</strong> &mdash; PDF extraction data for all Installation and Operation Manuals came back empty ({}). Detailed installation instructions, safety distance diagrams, wiring diagrams, and sizing formulas from the official IOMs are not available in the provided data. &mdash; All families</li>
+
+<li><strong>[FAMILY SPEC]</strong> &mdash; Room size ranges for HIVE Wood 13 (212&ndash;459 cu.ft.), HIVE Wood 17 (283&ndash;565 cu.ft.), and HIVE Wood LS 17 (283&ndash;565 cu.ft.) are sourced from internal_desc fields, not from formal specification tables which do not include min/max cubic feet for these models. &mdash; SKU: H1008012, H1009012, H1010012</li>
+
+<li><strong>[NOT FOUND IN SOURCE]</strong> &mdash; Whether the STEEL 10.5 and CORE 10.5kW specifically require the UKU Extension Box. The CLIFF 11 features list mentions it, and the HIVE 12/15/18 required components list it, but the STEEL and CORE required components do not explicitly state this requirement for their 10.5kW variants. &mdash; SKU: H1006032, H1013012/H1013072/CORE6-*</li>
+
+<li><strong>[NOT FOUND IN SOURCE]</strong> &mdash; Circuit breaker sizes for all models. Source data says "See Installation and Operation Manual" across the board. &mdash; All electric SKUs</li>
+
+<li><strong>[NOT FOUND IN SOURCE]</strong> &mdash; Pricing information for any HUUM products. No MSRP or MAP pricing was provided in the source data. &mdash; All SKUs</li>
+
+<li><strong>[NOT FOUND IN SOURCE]</strong> &mdash; HIVE Mini 9 (H1002022) and HIVE Mini 6 (H1002012) required_components data came back empty for some items, and HIVE 18 (H1003032) has no required_components data at all. Assumed same requirements (UKU controller + stones) as other models in the family. &mdash; SKU: H1002012, H1002022, H1003032</li>
+
+<li><strong>[NOT FOUND IN SOURCE]</strong> &mdash; The DROP 4.5 and DROP 6 have type listed as "wood" in the source JSON, which appears to be a data entry error. These are electric wall-mount heaters based on all other data (240V operation, UKU controller required, features list). &mdash; SKU: H1001052, H1001062</li>
+</ol>
+
+</div><!-- /main -->
+
+<!-- BACK TO TOP -->
+<button id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})">&uarr;</button>
+
+<script>
+// Scroll spy
+const sections = document.querySelectorAll('h2.chapter, .family-header');
+const navLinks = document.querySelectorAll('.nav-link');
+
+function updateScrollSpy(){
+  let current = '';
+  sections.forEach(s => {
+    const top = s.getBoundingClientRect().top;
+    if(top < 160) current = s.id || s.querySelector('h3')?.parentElement?.id || '';
+  });
+  navLinks.forEach(a => {
+    a.classList.remove('active');
+    if(a.getAttribute('href') === '#' + current) a.classList.add('active');
+  });
+  // Back to top
+  document.getElementById('btt').classList.toggle('show', window.scrollY > 400);
+}
+window.addEventListener('scroll', updateScrollSpy);
+
+// Search filter
+function filterNav(q){
+  q = q.toLowerCase();
+  document.querySelectorAll('.nav-section a').forEach(a => {
+    a.style.display = a.textContent.toLowerCase().includes(q) || q === '' ? 'block' : 'none';
+  });
+}
+
+// Smooth scroll
+document.querySelectorAll('#sidebar a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    e.preventDefault();
+    const target = document.querySelector(a.getAttribute('href'));
+    if(target) target.scrollIntoView({behavior:'smooth', block:'start'});
+    // Close mobile sidebar
+    document.getElementById('sidebar').classList.remove('open');
+  });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,1372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Narvi Wood-Burning Sauna Stoves — PPW Sales Training Guide</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f5f5f5; color: #333; line-height: 1.7; }
+
+  /* Sidebar */
+  .sidebar {
+    position: fixed; top: 0; left: 0; width: 280px; height: 100vh;
+    background: #0F2439; color: #ccc; overflow-y: auto; z-index: 100;
+    padding: 20px 0; scrollbar-width: thin; scrollbar-color: #1A3C5E #0F2439;
+  }
+  .sidebar::-webkit-scrollbar { width: 6px; }
+  .sidebar::-webkit-scrollbar-thumb { background: #1A3C5E; border-radius: 3px; }
+  .sidebar-logo { text-align: center; padding: 10px 20px 20px; border-bottom: 1px solid #1A3C5E; margin-bottom: 15px; }
+  .sidebar-logo h2 { color: #C8862A; font-size: 1.3rem; letter-spacing: 1px; }
+  .sidebar-logo p { color: #8aa8c7; font-size: 0.75rem; margin-top: 4px; }
+  .sidebar-search { padding: 0 15px 15px; }
+  .sidebar-search input {
+    width: 100%; padding: 8px 12px; background: #1A3C5E; border: 1px solid #2a5070;
+    color: #fff; border-radius: 4px; font-size: 0.85rem; outline: none;
+  }
+  .sidebar-search input::placeholder { color: #6a8eab; }
+  .sidebar-search input:focus { border-color: #C8862A; }
+  .nav-section-title {
+    color: #C8862A; font-size: 0.7rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 1.5px; padding: 12px 20px 6px; margin-top: 5px;
+  }
+  .sidebar a {
+    display: block; padding: 6px 20px 6px 28px; color: #8aa8c7; text-decoration: none;
+    font-size: 0.82rem; border-left: 3px solid transparent; transition: all 0.2s;
+  }
+  .sidebar a:hover { color: #fff; background: rgba(255,255,255,0.05); }
+  .sidebar a.active { color: #C8862A; border-left-color: #C8862A; background: rgba(200,134,42,0.08); }
+
+  /* Main */
+  .main { margin-left: 280px; padding: 40px 50px 80px; max-width: 1100px; }
+  .verified-badge {
+    background: #FDF3E7; border: 1px solid #C8862A; color: #8a5a1a; padding: 10px 18px;
+    border-radius: 4px; font-size: 0.85rem; margin-bottom: 30px; display: inline-block;
+  }
+  h1 { font-size: 2.2rem; color: #0F2439; margin-bottom: 8px; }
+  .subtitle { color: #666; font-size: 1.1rem; margin-bottom: 30px; }
+  h2 { font-size: 1.6rem; color: #0F2439; margin: 50px 0 20px; padding-bottom: 10px; border-bottom: 3px solid #C8862A; }
+  h3 { font-size: 1.25rem; color: #1A3C5E; margin: 30px 0 12px; }
+  h4 { font-size: 1.05rem; color: #0F2439; margin: 20px 0 10px; }
+  p { margin-bottom: 14px; }
+  ul, ol { margin: 10px 0 16px 24px; }
+  li { margin-bottom: 6px; }
+  strong { color: #0F2439; }
+
+  /* Callout boxes */
+  .framing-box {
+    background: #EAF2F8; border-top: 3px solid #0F2439; padding: 20px; margin: 20px 0; border-radius: 4px;
+  }
+  .pro-tip {
+    background: #FDF3E7; border-left: 4px solid #C8862A; padding: 20px; margin: 20px 0; border-radius: 4px;
+  }
+  .watch-out {
+    background: #fde8e8; border-left: 4px solid #d9534f; padding: 20px; margin: 20px 0; border-radius: 4px;
+  }
+  .key-def {
+    background: #f0f0f0; border-left: 4px solid #0F2439; padding: 20px; margin: 20px 0; border-radius: 4px;
+  }
+
+  /* Tables */
+  table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+  thead tr { background: #0F2439; color: #fff; }
+  th { padding: 12px 14px; text-align: left; font-size: 0.9rem; font-weight: 600; }
+  td { padding: 10px 14px; font-size: 0.88rem; border-bottom: 1px solid #ddd; }
+  tbody tr:nth-child(even) { background: #EAF2F8; }
+  tbody tr:hover { background: #ddeaf5; }
+  .highlight-row { background: #FDF3E7 !important; font-weight: 600; }
+
+  /* Back to top */
+  .back-to-top {
+    position: fixed; bottom: 30px; right: 30px; width: 46px; height: 46px;
+    background: #C8862A; color: #fff; border: none; border-radius: 50%;
+    font-size: 1.3rem; cursor: pointer; display: none; z-index: 200;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3); transition: opacity 0.3s;
+  }
+  .back-to-top:hover { background: #b07524; }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .sidebar { transform: translateX(-100%); transition: transform 0.3s; }
+    .sidebar.open { transform: translateX(0); }
+    .main { margin-left: 0; padding: 20px; }
+    .mobile-toggle {
+      display: block !important; position: fixed; top: 10px; left: 10px; z-index: 300;
+      background: #0F2439; color: #C8862A; border: none; padding: 10px 14px;
+      border-radius: 4px; font-size: 1.2rem; cursor: pointer;
+    }
+  }
+  .mobile-toggle { display: none; }
+
+  .gap-flag {
+    background: #fff3cd; border: 1px solid #ffc107; padding: 4px 8px; border-radius: 3px;
+    font-size: 0.82rem; color: #856404; font-style: italic;
+  }
+
+  /* Script boxes */
+  .script-box {
+    background: #f8f4ff; border: 2px solid #7b5ea7; border-radius: 6px; margin: 20px 0; overflow: hidden;
+  }
+  .script-box .script-header {
+    background: #7b5ea7; color: #fff; padding: 10px 16px; font-weight: 700; font-size: 0.9rem; cursor: pointer;
+  }
+  .script-box .script-header::after { content: ' \25BC'; font-size: 0.7rem; }
+  .script-box .script-content { padding: 16px 20px; }
+  .script-box .script-text { font-style: italic; color: #444; margin: 6px 0; padding-left: 14px; border-left: 3px solid #d4c4e8; }
+
+  /* Sales summary box */
+  .sales-summary {
+    background: #e8f5e9; border-top: 3px solid #388e3c; padding: 20px; margin: 20px 0; border-radius: 4px;
+  }
+</style>
+</head>
+<body>
+
+<button class="mobile-toggle" onclick="document.querySelector('.sidebar').classList.toggle('open')">&#9776;</button>
+
+<nav class="sidebar" id="sidebar">
+  <div class="sidebar-logo">
+    <h2>PEAK PRIMAL WELLNESS</h2>
+    <p>Narvi Brand Training Guide</p>
+  </div>
+  <div class="sidebar-search">
+    <input type="text" id="navSearch" placeholder="Search chapters..." oninput="filterNav(this.value)">
+  </div>
+
+  <div class="nav-section-title">The Journey</div>
+  <a href="#ch1" class="nav-link" data-section="ch1">1. Introduction to Narvi</a>
+  <a href="#ch2" class="nav-link" data-section="ch2">2. Wood-Burning Foundations</a>
+
+  <div class="nav-section-title">Product Knowledge</div>
+  <a href="#ch3" class="nav-link" data-section="ch3">3. The Narvi Product Lineup</a>
+  <a href="#ch3-kuru" class="nav-link" data-section="ch3-kuru">&nbsp;&nbsp;Kuru Family</a>
+  <a href="#ch3-luosto" class="nav-link" data-section="ch3-luosto">&nbsp;&nbsp;Luosto Family</a>
+  <a href="#ch3-inari" class="nav-link" data-section="ch3-inari">&nbsp;&nbsp;Inari Family</a>
+  <a href="#ch3-nc" class="nav-link" data-section="ch3-nc">&nbsp;&nbsp;NC Family</a>
+  <a href="#ch3-3050" class="nav-link" data-section="ch3-3050">&nbsp;&nbsp;30/50 Family</a>
+
+  <div class="nav-section-title">Selling Narvi</div>
+  <a href="#ch4" class="nav-link" data-section="ch4">4. Matching Customers to Products</a>
+  <a href="#ch5" class="nav-link" data-section="ch5">5. Questions &amp; Objections</a>
+
+  <div class="nav-section-title">Reference</div>
+  <a href="#ch6" class="nav-link" data-section="ch6">6. Technical Reference</a>
+  <a href="#ch7" class="nav-link" data-section="ch7">7. Quick Reference Cheat Sheet</a>
+  <a href="#closing" class="nav-link" data-section="closing">You're Ready</a>
+
+  <div class="nav-section-title">Appendix</div>
+  <a href="#gaps" class="nav-link" data-section="gaps">Information Gaps</a>
+</nav>
+
+<main class="main">
+
+<div class="verified-badge">Product information verified as of April 13, 2026</div>
+
+<h1>Narvi Wood-Burning Sauna Stoves</h1>
+<p class="subtitle">PPW Sales Training Guide &mdash; From Zero to Product Expert</p>
+
+<!-- ===================== CHAPTER 1 ===================== -->
+<h2 id="ch1">Chapter 1: Introduction to Narvi</h2>
+
+<p>Picture this: a customer calls and says, <em>"I want the real thing. Not a push-button box that gets hot &mdash; I want to load the wood, watch the fire, and hear the stones hiss."</em> That customer is about to become your favorite call of the day, because you're about to introduce them to Narvi &mdash; and by the end of this guide, you'll know exactly how to match them to the perfect stove.</p>
+
+<h3>What Is Narvi?</h3>
+<p><strong>Narvi</strong> is a Finnish sauna stove manufacturer that specializes in <strong>wood-burning sauna stoves</strong>. While many brands in our lineup offer electric heaters, Narvi is our go-to for customers who want the traditional, authentic Finnish sauna experience &mdash; real fire, real wood, real steam.</p>
+
+<p>Every Narvi stove is <strong>designed, engineered, and manufactured in Finland</strong>. That's not just a tagline &mdash; Finland is the birthplace of sauna culture. When your customer buys a Narvi, they're getting a stove built by people who have been heating saunas for generations.</p>
+
+<h3>Why Do We Carry Narvi?</h3>
+<p>PPW carries a complete ecosystem of sauna brands at different tiers. Here's where Narvi fits:</p>
+
+<div class="key-def">
+  <p><strong>The PPW Brand Tier System (Car Analogy):</strong></p>
+  <ul>
+    <li><strong>Harvia</strong> = Toyota &mdash; reliable, affordable, the everyday workhorse</li>
+    <li><strong>HUUM</strong> = BMW/Mercedes &mdash; design-forward, premium aesthetics</li>
+    <li><strong>Saunum</strong> = Bentley/Rolls Royce &mdash; the absolute pinnacle of technology</li>
+    <li><strong>Narvi</strong> = the craftsman's pick &mdash; heritage-built, rugged, purpose-driven for the original terrain</li>
+    <li><strong>Cozy Heat</strong> = Best wood-fired on the market &mdash; dual combustion, German efficiency</li>
+  </ul>
+</div>
+
+<p>Narvi fills a specific niche: <strong>customers who want an authentic wood-burning Finnish sauna experience at a range of sizes, from compact residential to large commercial.</strong> They're not looking for digital controls or WiFi &mdash; they want to load wood, watch the fire through the glass door, and hear the hiss of water on hot stones.</p>
+
+<div class="pro-tip">
+  <p><strong>Pro Tip:</strong> In Finland and across Scandinavia, Narvi is a recognized name in traditional wood-burning sauna culture. In the U.S. market, most customers won't have heard of it. Use that to your advantage &mdash; you're introducing them to something authentically Finnish that hasn't been mass-marketed here yet. The European sauna community values brands very differently than the American market does, and Narvi has deep roots where sauna is a daily way of life.</p>
+</div>
+
+<h3>What Makes Narvi Different?</h3>
+<ul>
+  <li><strong>100% wood-burning lineup</strong> &mdash; they focus entirely on what they do best</li>
+  <li><strong>Made in Finland</strong> &mdash; authentic Finnish craftsmanship, not manufactured overseas</li>
+  <li><strong>Glass doors on every model</strong> &mdash; the fire becomes part of the sauna experience</li>
+  <li><strong>Size range from small to commercial</strong> &mdash; models covering 283 to 2,472 cu. ft.</li>
+  <li><strong>Olivine diabase stones</strong> &mdash; Narvi's own stones, engineered for durability and steam quality</li>
+</ul>
+
+<div class="framing-box">
+  <p><strong>How to Frame This:</strong></p>
+  <p>The core concept: Narvi is the <em>heritage play</em>. Think of it like buying a handcrafted tool from the country that invented the craft. Finland didn't just adopt saunas &mdash; they created sauna culture. Narvi has been part of that tradition.</p>
+  <p>What the customer needs to understand: This isn't mass-produced. It's built by Finnish craftsmen who understand what makes a sauna experience authentic.</p>
+  <p>PPW framework to apply: <strong>The Gap</strong> &mdash; the customer's current state is "wanting a sauna." Their desired state is "the authentic Finnish experience." Narvi is the bridge.</p>
+</div>
+
+<div class="watch-out">
+  <p><strong>Watch Out:</strong> Don't position Narvi as a <em>competitor</em> to Cozy Heat. Both are wood-burning, but they serve different customer values. Narvi is Finnish heritage, visual fire, and a full size range. Cozy Heat is German-engineered efficiency and dual combustion. Treating them as competitors undercuts both brands and confuses the customer. They are complementary options for different priorities.</p>
+</div>
+
+<div class="key-def">
+  <p><strong>Key Definition &mdash; Peak Protection Concierge:</strong> PPW's signature support program that provides personal order management, installation coordination, and manufacturer advocacy. For Narvi customers, this means help with flue routing planning, safety clearance verification, stone selection guidance, freight coordination, and direct advocacy with Narvi if any warranty or product issue arises. This is a significant differentiator &mdash; the customer isn't just buying a stove, they're getting a dedicated support team.</p>
+</div>
+
+<div class="framing-box">
+  <p><strong>How to Frame: Introducing Narvi on a Call</strong></p>
+  <p><strong>Mental model:</strong> You are introducing the customer to a heritage brand they likely haven't heard of. Your goal is to establish credibility and authenticity immediately &mdash; Narvi is Finnish-made, wood-burning-only, and built by people who live sauna culture daily.</p>
+  <p><strong>Approach:</strong> Lead with the origin story (made in Finland, the birthplace of sauna), use a relatable analogy (pasta made in Italy, whisky from Scotland), and then transition into discovery questions about their space. Don't pitch specs yet &mdash; build intrigue first.</p>
+  <p><strong>PPW framework:</strong> <strong>The Gap</strong> &mdash; the customer's current state is curiosity about wood-burning. Your job is to paint the desired state (authentic Finnish experience) and position Narvi as the bridge. Transition quickly to qualifying questions so you can match their vision to the right model.</p>
+</div>
+
+<div class="sales-summary">
+  <p><strong>Why This Matters for Sales:</strong> Narvi customers are experience-driven buyers. They aren't comparison-shopping on specs alone &mdash; they're buying into a ritual. When you understand that, every conversation becomes about matching their vision to the right stove. That's an easier, more enjoyable sale than convincing someone to spend more on a commodity.</p>
+</div>
+
+<!-- ===================== CHAPTER 2 ===================== -->
+<h2 id="ch2">Chapter 2: Understanding Wood-Burning Sauna Stoves (Foundations)</h2>
+
+<p>If you've never worked with wood-burning sauna stoves before, this chapter will give you everything you need. We'll define every term before we use it.</p>
+
+<h3>What Is a Wood-Burning Sauna Stove?</h3>
+<p>A <strong>wood-burning sauna stove</strong> (also called a <strong>wood-fired stove</strong>) is a heating device that burns firewood to heat a sauna room. It's the oldest and most traditional way to heat a sauna. Instead of plugging into an electrical outlet, you load wood into a <strong>firebox</strong> (the combustion chamber), light it, and the fire heats the stove body and the stones sitting on top.</p>
+
+<div class="key-def">
+  <p><strong>Key Definition &mdash; Firebox:</strong> The enclosed chamber inside the stove where wood burns. Think of it like the fire pit inside a wood stove or fireplace. Narvi stoves have glass doors on the firebox so you can watch the flames.</p>
+</div>
+
+<h3>How Does It Work?</h3>
+<p>Here's the step-by-step process, explained simply:</p>
+<ol>
+  <li><strong>Load firewood</strong> into the firebox through the stove door. Narvi stoves use firewood no longer than <strong>13 inches (33 cm)</strong> and about <strong>2 inches (5 cm) in diameter</strong>.</li>
+  <li><strong>Light the fire.</strong> As wood burns, it produces heat measured in <strong>kilowatts (kW)</strong>.</li>
+  <li><strong>Heat rises</strong> through the stove body into the <strong>stones</strong> stacked on top and around the stove.</li>
+  <li><strong>Stones absorb and store heat</strong> &mdash; they act like a thermal battery. The more stone mass, the more heat energy is stored.</li>
+  <li><strong>Pour water on the hot stones</strong> to create <strong>l&ouml;yly</strong> (the Finnish word for sauna steam). The water instantly flashes into steam, filling the room with moist heat.</li>
+</ol>
+
+<div class="key-def">
+  <p><strong>Key Definition &mdash; Kilowatt (kW):</strong> A measurement of heat output. Think of it like horsepower for a car engine &mdash; the higher the kW, the more heat the stove produces and the larger the sauna it can heat. A 13kW stove heats a smaller room; a 50kW stove can heat a large commercial space.</p>
+</div>
+
+<div class="key-def">
+  <p><strong>Key Definition &mdash; L&ouml;yly:</strong> (pronounced "LOY-loo") The steam that rises when you throw water on hot sauna stones. In Finnish culture, good l&ouml;yly is soft, enveloping, and never harsh. Stone mass and stone type directly affect l&ouml;yly quality.</p>
+</div>
+
+<h3>Key Components of a Wood-Burning Setup</h3>
+
+<h4>The Stove</h4>
+<p>The stove itself &mdash; the steel body with the firebox, stone compartment, and glass door. All Narvi stoves are <strong>floor-mounted</strong>, meaning they sit on the sauna floor (not wall-hung).</p>
+
+<h4>The Stones</h4>
+<p>Sauna stones sit on top of and around the stove. They absorb heat from the fire and release it as radiant warmth and steam. Narvi uses <strong>olivine diabase</strong> stones.</p>
+
+<div class="key-def">
+  <p><strong>Key Definition &mdash; Olivine Diabase:</strong> A type of volcanic rock known for being extremely heat-resistant and durable. It doesn't crack as easily as regular river rocks when exposed to repeated heating and water dousing. Think of it as the difference between tempered glass and regular glass &mdash; same concept, but engineered to handle thermal stress.</p>
+</div>
+
+<p>Narvi offers two stone types:</p>
+<ul>
+  <li><strong>Split-Face Stones</strong> &mdash; rough-cut surface, more traditional look, excellent steam production</li>
+  <li><strong>Round Stones</strong> &mdash; smooth and rounded, more modern aesthetic, also excellent steam</li>
+</ul>
+
+<h4>The Flue (Chimney Connection)</h4>
+<p>Since wood-burning stoves produce smoke, they need a <strong>flue</strong> &mdash; a pipe that channels smoke out of the building. All Narvi stoves offer <strong>top or back flue connection</strong>, giving installation flexibility.</p>
+
+<div class="key-def">
+  <p><strong>Key Definition &mdash; Flue:</strong> The pipe or duct that carries smoke and combustion gases from the stove out through the roof or wall. Think of it like the exhaust pipe on a car. Every wood-burning stove requires one &mdash; this is a critical installation consideration.</p>
+</div>
+
+<h3>Wood-Burning vs. Electric: Why Choose Wood?</h3>
+<p>You'll encounter customers who are deciding between electric and wood-burning. Here's what you need to know:</p>
+
+<table>
+  <thead>
+    <tr><th>Factor</th><th>Wood-Burning</th><th>Electric</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><strong>Experience</strong></td><td>Authentic, ritualistic &mdash; fire, crackling, aroma</td><td>Convenient, push-button</td></tr>
+    <tr><td><strong>Installation</strong></td><td>Requires chimney/flue</td><td>Requires electrical circuit</td></tr>
+    <tr><td><strong>Operating Cost</strong></td><td>Cost of firewood</td><td>Electricity cost</td></tr>
+    <tr><td><strong>Warm-up Time</strong></td><td>30-60+ minutes (part of the ritual)</td><td>30-45 minutes typically</td></tr>
+    <tr><td><strong>Best For</strong></td><td>Purists, cabins, off-grid, outdoor builds</td><td>Convenience, indoor builds, urban settings</td></tr>
+    <tr><td><strong>Ambiance</strong></td><td>Visible fire through glass door</td><td>No fire element</td></tr>
+  </tbody>
+</table>
+
+<div class="framing-box">
+  <p><strong>How to Frame This:</strong></p>
+  <p>The core concept: Wood-burning isn't better or worse than electric &mdash; it's a <em>different experience</em>. It's the difference between cooking over a campfire and using a microwave. Both get food hot. One is an experience.</p>
+  <p>What the customer needs to understand: If they want the full sensory ritual &mdash; loading wood, watching flames, smelling the fire &mdash; wood-burning is the only way.</p>
+  <p>PPW framework to apply: <strong>The Gap</strong> &mdash; explore what "sauna experience" means to them. If they describe anything involving fire, ritual, or tradition, you're in Narvi territory.</p>
+</div>
+
+<h3>Safety and Certification</h3>
+<p>All Narvi stoves carry a <strong>CE safety listing</strong>.</p>
+
+<div class="key-def">
+  <p><strong>Key Definition &mdash; CE Marking:</strong> A European conformity marking indicating the product meets EU safety, health, and environmental requirements. It's the European equivalent of a UL listing in North America. CE-marked products have been tested and certified to meet strict safety standards.</p>
+</div>
+
+<div class="watch-out">
+  <p><strong>Watch Out:</strong> CE is a European certification, not a North American UL listing. Some local building codes in the U.S. and Canada may require UL-listed products. Always advise customers to check with their local building department and installer before purchasing. Do NOT claim these are UL listed &mdash; they are not.</p>
+</div>
+
+<div class="pro-tip">
+  <p><strong>Pro Tip:</strong> Lead with CE certification proactively. Customers who do online research will find this and ask. Getting ahead of it builds trust: <em>"I want to be upfront &mdash; Narvi stoves carry CE certification, which is the European safety standard. It's not a UL listing, which is the North American standard. Most sauna installations don't require UL, but I always recommend checking with your local building department to be sure."</em></p>
+</div>
+
+<h3>Why Stone Mass Matters: Heat Stratification</h3>
+<p>Here's something most customers don't know: in a typical sauna, <strong>hot air rises and stays at the top</strong>. Your head cooks while your feet stay cool. This is called <strong>heat stratification</strong>, and it's the reason people lay down on sauna benches &mdash; not because they're tired, but because they want their entire body at the same temperature.</p>
+
+<p>Wood-burning stoves with <strong>high stone mass</strong> (like the Narvi Inari Plus with 198 lbs of stone) address this differently than low-stone heaters. All those stones act as a massive radiant heat source, radiating warmth in all directions rather than just blasting hot air upward. The result: <strong>more even heat distribution, longer-lasting warmth, and gentler steam</strong>. When a customer says "I want really good steam," what they're actually describing is the experience that high stone mass delivers.</p>
+
+<div class="framing-box">
+  <p><strong>How to Frame: Wood-Burning vs. Electric Conversation</strong></p>
+  <p><strong>Mental model:</strong> This is not a "which is better" conversation &mdash; it's a "which experience do you want" conversation. Electric is convenience; wood-burning is ritual. Neither is wrong. Your job is to help the customer discover which one matches their vision.</p>
+  <p><strong>Approach:</strong> Use the campfire-vs-microwave analogy to make the distinction intuitive. Never knock electric &mdash; PPW sells both. Instead, explore what the customer's ideal sauna session looks like. If they describe fire, aroma, tradition, or off-grid use, guide them toward wood-burning. If they describe push-button convenience, respect that and offer electric options.</p>
+  <p><strong>PPW framework:</strong> <strong>The Gap</strong> &mdash; explore what "sauna experience" means to them. Their answer reveals whether they're a wood-burning customer or an electric customer. Let their words guide the recommendation, not yours.</p>
+</div>
+
+<div class="sales-summary">
+  <p><strong>Why This Matters for Sales:</strong> Understanding wood-burning fundamentals makes you credible. When you can explain kW, flue routing, and stone mass in plain language, the customer trusts that you know what you're talking about. That trust is the foundation of every recommendation you'll make in the next chapters.</p>
+</div>
+
+<!-- ===================== CHAPTER 3 ===================== -->
+<h2 id="ch3">Chapter 3: The Narvi Product Lineup</h2>
+
+<p>Narvi's lineup covers everything from compact residential saunas to large commercial installations. Let's walk through each product family, starting with the smallest and working up to the largest.</p>
+
+<h3>Full Lineup Overview</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Family</th><th>kW Options</th><th>Room Size (cu. ft.)</th><th>Stone Capacity</th><th>Key Feature</th><th>Warranty</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Kuru</strong></td><td>13kW, 16kW</td><td>283 &ndash; 706</td><td>77&ndash;88 lbs</td><td>Compact &amp; stylish, square form</td><td>1 year</td>
+    </tr>
+    <tr>
+      <td><strong>Luosto</strong></td><td>16kW</td><td>283 &ndash; 706</td><td>77 lbs</td><td>Round design, fast heat-up</td><td>2 years</td>
+    </tr>
+    <tr>
+      <td><strong>Luosto VS</strong></td><td>16kW</td><td>283 &ndash; 706</td><td>77 lbs</td><td>Integrated 30L water tank</td><td>2 years</td>
+    </tr>
+    <tr>
+      <td><strong>Inari</strong></td><td>16kW</td><td>283 &ndash; 636</td><td>132&ndash;198 lbs</td><td>Exposed stone grid, huge mass</td><td>2 years</td>
+    </tr>
+    <tr>
+      <td><strong>NC Black</strong></td><td>16/17kW (3 sizes)</td><td>283 &ndash; 848</td><td>110&ndash;176 lbs</td><td>Clean-burn firebox, timeless design</td><td>2 years</td>
+    </tr>
+    <tr class="highlight-row">
+      <td><strong>30/50</strong></td><td>24kW, 50kW</td><td>706 &ndash; 2,472</td><td>143&ndash;220 lbs</td><td>Commercial powerhouse</td><td>2 years</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="pro-tip">
+  <p><strong>Pro Tip:</strong> Notice the Inari has a much larger stone capacity (up to 198 lbs) than other 16kW models. More stone mass = better thermal storage = softer, longer-lasting steam. This is the key differentiator of the Inari within the residential lineup.</p>
+</div>
+
+<!-- KURU -->
+<h3 id="ch3-kuru">The Kuru Family</h3>
+<p><strong>What it is:</strong> The Kuru is Narvi's compact, entry-level wood-burning stove. It has a clean, boxy design with a square steel housing painted in black. It's the smallest and lightest stove in the Narvi lineup.</p>
+
+<p><strong>Variant explanation:</strong> The Kuru comes in two kW ratings &mdash; <strong>13kW</strong> and <strong>16kW</strong> &mdash; to match different room sizes. Same design, different heat output.</p>
+
+<table>
+  <thead>
+    <tr><th>Spec</th><th>Kuru 13kW</th><th>Kuru 16kW</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Room Size</td><td>283 &ndash; 494 cu. ft.</td><td>353 &ndash; 706 cu. ft.</td></tr>
+    <tr><td>Stone Capacity</td><td>Min. 77 lbs</td><td>Min. 88 lbs (40 kg)</td></tr>
+    <tr><td>Dimensions (W x D x H)</td><td>16.5" x 18.7" x 25.6"/26.6" (42 x 47 x 65/68 cm)</td><td>18.1" x 18.7" x 25.6"/26.6" (46 x 47 x 65/68 cm)</td></tr>
+    <tr><td>Weight</td><td>108 lbs (49 kg)</td><td>121 lbs (55 kg)</td></tr>
+    <tr><td>Shipping Weight w/ Stones</td><td>185 lbs (84 kg)</td><td>209 lbs (95 kg)</td></tr>
+    <tr><td>Warranty</td><td colspan="2">1 year limited</td></tr>
+  </tbody>
+</table>
+
+<p><strong>Key features and why they matter:</strong></p>
+<ul>
+  <li><strong>Compact square form factor</strong> &mdash; fits in tight spaces where round stoves won't work. Why it matters: many residential saunas are small, and every inch counts.</li>
+  <li><strong>Glass door with wooden handle</strong> &mdash; lets the customer watch the fire. Why it matters: the visible fire is a huge selling point for the wood-burning experience.</li>
+  <li><strong>Adjustable feet</strong> &mdash; makes leveling easy on uneven floors. Why it matters: simplifies installation, which reduces customer anxiety about the process.</li>
+  <li><strong>Top or back flue connection</strong> &mdash; installation flexibility. Why it matters: the installer can route the chimney in whichever direction works best for the building.</li>
+</ul>
+
+<div class="framing-box">
+  <p><strong>How to Frame This:</strong></p>
+  <p>The core concept: The Kuru is the "starter home" of the Narvi lineup. It's everything you need for a genuine Finnish wood-burning experience without excess.</p>
+  <p>What the customer needs to understand: You don't need a massive stove to get an authentic sauna. The Kuru proves that a well-engineered compact stove can deliver excellent steam in a properly-sized room.</p>
+  <p>PPW framework to apply: <strong>Three Tens</strong> &mdash; build certainty in the product by emphasizing Finnish engineering and that the compact size is intentional, not a compromise.</p>
+</div>
+
+<div class="watch-out">
+  <p><strong>Watch Out:</strong> The Kuru has only a <strong>1-year warranty</strong> &mdash; the shortest in the Narvi lineup. Every other Narvi model has a 2-year warranty. Don't let a customer discover this after purchase. Be upfront about it and frame it honestly.</p>
+</div>
+
+<!-- LUOSTO -->
+<h3 id="ch3-luosto">The Luosto Family</h3>
+<p><strong>What it is:</strong> The Luosto is Narvi's round-bodied, sleek wood-burning stove. Its cylindrical design makes it a natural fit for any sauna layout &mdash; it doesn't have "sides" that need to align with walls. Two variants exist: the <strong>Luosto</strong> (base model) and the <strong>Luosto VS</strong> (with integrated water tank).</p>
+
+<div class="key-def">
+  <p><strong>Key Definition &mdash; VS (Vesis&auml;ili&ouml;):</strong> Finnish for "water tank." The Luosto VS includes a built-in stainless steel water tank and faucet. The base Luosto does not have a water tank.</p>
+</div>
+
+<table>
+  <thead>
+    <tr><th>Spec</th><th>Luosto</th><th>Luosto VS</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Model</td><td>LUOSTO</td><td>LUOSTO VS</td></tr>
+    <tr><td>SKU</td><td>2142</td><td>2145 / 163442</td></tr>
+    <tr><td>Room Size</td><td>283 &ndash; 706 cu. ft.</td><td>283 &ndash; 706 cu. ft.</td></tr>
+    <tr><td>Kilowatt Rating</td><td>16kW</td><td>16kW</td></tr>
+    <tr><td>Stone Capacity</td><td>77 lbs (35 kg)</td><td>77 lbs (35 kg)</td></tr>
+    <tr><td>Diameter</td><td>19.7" (50 cm)</td><td>23.6" (60 cm)</td></tr>
+    <tr><td>Height</td><td>29.5" (75 cm)</td><td>29.5" (75 cm)</td></tr>
+    <tr><td>Weight</td><td>104 lbs (47 kg)</td><td>119 lbs (54 kg)</td></tr>
+    <tr><td>Shipping Weight w/ Stones</td><td>181 lbs (82 kg)</td><td>196 lbs (89 kg)</td></tr>
+    <tr class="highlight-row"><td>Water Tank</td><td>None</td><td>30-Liter stainless steel</td></tr>
+    <tr><td>Warranty</td><td>2 years limited</td><td>2 years limited</td></tr>
+  </tbody>
+</table>
+
+<p><strong>Key features and why they matter:</strong></p>
+<ul>
+  <li><strong>Round cylindrical design</strong> &mdash; fits in corners or center of room. Why it matters: more placement options = easier for the customer to design their sauna layout.</li>
+  <li><strong>Fast heat-up with small amount of wood</strong> &mdash; efficient combustion. Why it matters: customers don't want to wait forever or burn through cords of wood.</li>
+  <li><strong>Steel construction with black painted finish</strong> &mdash; durable in humid sauna environments. Why it matters: the cylindrical design and painted steel hold up well in high-moisture conditions.</li>
+  <li><strong>Glass door with cast-iron frame</strong> &mdash; premium feel and fire visibility.</li>
+  <li><strong>30L water tank (VS only)</strong> &mdash; hot water on demand without a separate system. Why it matters: customers in cabins or off-grid settings may not have a hot water source nearby. The VS solves that.</li>
+</ul>
+
+<div class="framing-box">
+  <p><strong>How to Frame This:</strong></p>
+  <p>The core concept: The Luosto is the "Swiss Army knife" of the lineup &mdash; round, versatile, fits anywhere. The VS variant adds a practical hot water solution.</p>
+  <p>What the customer needs to understand: If they want simplicity plus the option of hot water (for rinsing, cleaning, humidity), the Luosto VS is the smart choice. If they don't need the water tank, the base Luosto is a slightly smaller investment and more compact in diameter.</p>
+  <p>PPW framework to apply: <strong>Bridge Technique</strong> &mdash; when a customer asks "What's the difference between the Luosto and the Luosto VS?" answer directly (water tank), then bridge to discovery: "Do you have a hot water source near where your sauna will be?"</p>
+</div>
+
+<div class="pro-tip">
+  <p><strong>Pro Tip:</strong> The Luosto VS can only connect the flue from the <strong>top</strong> when supplied with the water tank (cauldron). The base Luosto can connect from top or back. Make sure to flag this during the installation conversation &mdash; it affects how the chimney gets routed.</p>
+</div>
+
+<!-- INARI -->
+<h3 id="ch3-inari">The Inari Family</h3>
+<p><strong>What it is:</strong> The Inari is Narvi's showpiece wood-burning stove. It's round like the Luosto, but features a distinctive <strong>stone grid</strong> that wraps around the exterior, leaving the stones <em>visible</em>. This creates a striking visual &mdash; you can see the stones glowing with heat.</p>
+
+<p><strong>Variant explanation:</strong> The Inari comes in two versions: <strong>Inari</strong> (base) and <strong>Inari Plus</strong> (greater stone capacity). Same stove design, but the Plus version holds significantly more stone mass.</p>
+
+<table>
+  <thead>
+    <tr><th>Spec</th><th>Inari</th><th>Inari Plus</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Room Size</td><td>283 &ndash; 636 cu. ft.</td><td>283 &ndash; 636 cu. ft.</td></tr>
+    <tr><td>Kilowatt Rating</td><td>16kW</td><td>16kW</td></tr>
+    <tr><td>Stone Capacity</td><td>Min. 132 lbs</td><td>198 lbs (90 kg)</td></tr>
+    <tr><td>Diameter</td><td colspan="2">21.7" (55 cm)</td></tr>
+    <tr><td>Height</td><td colspan="2">30.3" (77 cm)</td></tr>
+    <tr><td>Weight</td><td>119 lbs (54 kg)</td><td>135 lbs (61 kg)</td></tr>
+    <tr><td>Shipping Weight w/ Stones</td><td>251 lbs (114 kg)</td><td>333 lbs (151 kg)</td></tr>
+    <tr><td>Stones Required</td><td>3 boxes</td><td>5 boxes</td></tr>
+    <tr><td>Warranty</td><td colspan="2">2 years limited</td></tr>
+  </tbody>
+</table>
+
+<div class="key-def">
+  <p><strong>Key Definition &mdash; Stone Grid:</strong> An open metal cage that wraps around the stove body, holding stones in place while leaving them visible. Unlike enclosed stone compartments (where stones sit hidden in a tray on top), a stone grid lets heat radiate outward through the stones in all directions. This means more even heating and a more dramatic visual effect.</p>
+</div>
+
+<p><strong>Key features and why they matter:</strong></p>
+<ul>
+  <li><strong>Exposed stone grid design</strong> &mdash; visual impact and 360-degree heat radiation. Why it matters: it's the most aesthetically striking stove in the Narvi lineup. Customers who care about how their sauna looks will gravitate to this.</li>
+  <li><strong>Massive stone capacity (up to 198 lbs)</strong> &mdash; the largest in any 16kW Narvi model. Why it matters: more stones = more thermal mass = softer, longer-lasting l&ouml;yly. This is the "steam quality" stove.</li>
+  <li><strong>Environmentally friendly</strong> &mdash; heats up with a relatively small amount of wood. Why it matters: efficiency appeals to environmentally conscious customers.</li>
+</ul>
+
+<div class="framing-box">
+  <p><strong>How to Frame This:</strong></p>
+  <p>The core concept: Think of the Inari as the "thermal battery" of the lineup. All those exposed stones aren't just for looks &mdash; they store an enormous amount of heat energy. The result is softer, more consistent steam that lasts longer between fires.</p>
+  <p>What the customer needs to understand: The Inari Plus holds <strong>198 lbs of stone</strong> &mdash; that's nearly 2.5x more than the Luosto (77 lbs) and more than double the Kuru 16kW (88 lbs). More stone mass means the sauna holds temperature longer and the steam quality is notably better.</p>
+  <p>PPW framework to apply: <strong>The Gap</strong> &mdash; if a customer describes wanting "really good steam" or "long sauna sessions," the Inari Plus is the answer. The gap between their current state and desired state is filled by that massive stone capacity.</p>
+</div>
+
+<div class="pro-tip">
+  <p><strong>Pro Tip:</strong> The flue can connect from top or back, but if connecting from the back, you'll need to cut through three steel wires in the stone basket using an iron saw. Make sure the customer's installer knows this upfront.</p>
+</div>
+
+<!-- NC -->
+<h3 id="ch3-nc">The NC Black Family</h3>
+<p><strong>What it is:</strong> The NC Black is Narvi's "timeless design" stove. It bridges the gap between the compact Kuru and the large 30/50, offering three kW sizes and a unique fire chamber designed for <strong>cleaner, more efficient combustion</strong>.</p>
+
+<p><strong>Variant explanation:</strong> Three sizes share the same design language &mdash; <strong>NC 16</strong>, <strong>NC 20</strong>, and <strong>NC 24</strong> &mdash; covering a wide range of room sizes. All in black finish, corrosion-resistant steel. <strong>Important:</strong> The numbers 16, 20, and 24 are model designations, <em>not</em> kW ratings. Both the NC 16 and NC 20 are rated at 16kW; only the NC 24 is rated at 17kW. Don't assume the model number equals the power output.</p>
+
+<table>
+  <thead>
+    <tr><th>Spec</th><th>NC 16</th><th>NC 20</th><th>NC 24</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Room Size</td><td>283 &ndash; 565 cu. ft.</td><td>353 &ndash; 706 cu. ft.</td><td>353 &ndash; 848 cu. ft.</td></tr>
+    <tr><td>Kilowatt Rating</td><td>16kW</td><td>16kW</td><td>17kW</td></tr>
+    <tr><td>Stone Capacity</td><td>Min. 110 lbs</td><td>Min. 132 lbs</td><td>176 lbs (80 kg)</td></tr>
+    <tr><td>Stone Boxes Required</td><td>3 boxes</td><td>3 boxes</td><td>4 boxes</td></tr>
+    <tr><td>Dimensions (W x D x H)</td><td>19.7" x 22.8" x 30.7" (50 x 58 x 78 cm)</td><td>21.3" x 22.8" x 31.5" (54 x 58 x 80 cm)</td><td>22.8" x 22.8" x 32.3" (58 x 58 x 82 cm)</td></tr>
+    <tr><td>Weight</td><td>159 lbs (72 kg)</td><td>168 lbs (76 kg)</td><td>181 lbs (82 kg)</td></tr>
+    <tr><td>Shipping Weight w/ Stones</td><td>269 lbs (122 kg)</td><td>300 lbs (136 kg)</td><td>357 lbs (162 kg)</td></tr>
+    <tr><td>Warranty</td><td colspan="3">2 years limited</td></tr>
+  </tbody>
+</table>
+
+<p><strong>Key features and why they matter:</strong></p>
+<ul>
+  <li><strong>Unique fire chamber for efficient, clean combustion</strong> &mdash; burns wood more completely. Why it matters: less smoke, less creosote buildup in the chimney, less environmental impact. This is the "green" selling point.</li>
+  <li><strong>Corrosion-resistant steel</strong> &mdash; specifically noted as corrosion-resistant, not just painted. Why it matters: longer lifespan in the harsh sauna environment.</li>
+  <li><strong>Three sizes in one design</strong> &mdash; customers can match the stove to their room without compromising on aesthetics. Why it matters: the NC looks the same whether it's the 16 or the 24 &mdash; just different performance levels.</li>
+  <li><strong>Top or back flue connection</strong> &mdash; note that top connection requires a separate connection pipe. Flag this to installers.</li>
+</ul>
+
+<div class="framing-box">
+  <p><strong>How to Frame This:</strong></p>
+  <p>The core concept: The NC is the "Goldilocks" stove &mdash; not too small, not too big, available in just the right size. Its clean-burn technology means it's also the most environmentally responsible option in the lineup.</p>
+  <p>What the customer needs to understand: If they want a traditional box-style stove that covers a wide range of room sizes AND they care about efficient combustion, the NC is the answer.</p>
+  <p>PPW framework to apply: <strong>Three Tens</strong> &mdash; the three sizes build product certainty. No matter what room size the customer has (up to 848 cu. ft.), there's an NC that fits perfectly.</p>
+</div>
+
+<div class="watch-out">
+  <p><strong>Watch Out:</strong> The NC 16 and NC 20 both have a 16kW rating but different room size ranges. Don't confuse them &mdash; the NC 20 covers a larger room despite the same kW. The NC 24 bumps up to 17kW. Also, the chimney connection at the top requires a <strong>separate connection pipe</strong> &mdash; it's not included. Make sure customers and installers know this.</p>
+</div>
+
+<!-- 30/50 -->
+<h3 id="ch3-3050">The 30/50 Family</h3>
+<p><strong>What it is:</strong> The 30/50 is Narvi's <strong>commercial-grade powerhouse</strong>. This is the stove you recommend when the customer is building a large sauna &mdash; a spa, a gym sauna, a large cabin build, or a commercial facility. Available in <strong>24kW</strong> and <strong>50kW</strong> configurations.</p>
+
+<p><strong>Variant explanation:</strong> Dual-capacity stove rated up to 50kW for large commercial saunas. The "30" and "50" refer to the model designations within this family. <strong>Note:</strong> "Narvi 30" does <em>not</em> mean 30kW &mdash; it is actually rated at 24kW. "Narvi 50" is rated at 50kW. Don't assume the model name equals the power output.</p>
+
+<table>
+  <thead>
+    <tr><th>Spec</th><th>Narvi 30 (24kW)</th><th>Narvi 50 (50kW)</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Room Size</td><td>706 &ndash; 1,236 cu. ft.</td><td>1,589 &ndash; 2,472 cu. ft.</td></tr>
+    <tr><td>Kilowatt Rating</td><td>24kW</td><td>50kW</td></tr>
+    <tr><td>Stone Capacity</td><td>Min. 143 lbs</td><td>220 lbs (100 kg)</td></tr>
+    <tr><td>Stone Boxes Required</td><td>4 boxes</td><td>5 boxes</td></tr>
+    <tr><td>Dimensions (W x D x H)</td><td>21.1" x 26.4" x 37.4" (53 x 67 x 95 cm)</td><td>26.4" x 33.5" x 43.3" (67 x 85 x 110 cm)</td></tr>
+    <tr><td>Weight</td><td>331 lbs (150 kg)</td><td>606 lbs (275 kg)</td></tr>
+    <tr><td>Shipping Weight w/ Stones</td><td>474 lbs (215 kg)</td><td>826 lbs (375 kg)</td></tr>
+    <tr><td>Max Firewood Length</td><td colspan="2">13" (33 cm)</td></tr>
+    <tr><td>Warranty</td><td colspan="2">2 years limited</td></tr>
+  </tbody>
+</table>
+
+<p><strong>Key features and why they matter:</strong></p>
+<ul>
+  <li><strong>50kW heat output</strong> &mdash; the largest in the Narvi lineup by far. Why it matters: this can heat spaces up to <strong>2,472 cubic feet</strong>. That's a seriously large sauna.</li>
+  <li><strong>331&ndash;606 lbs stove weight</strong> &mdash; even the Narvi 30 at 331 lbs is a substantial piece of equipment; the Narvi 50 at 606 lbs is massive. Why it matters: heavy = durable. These stoves are built to withstand daily commercial use.</li>
+  <li><strong>Glass door</strong> &mdash; even at commercial scale, you get the fire-viewing experience.</li>
+  <li><strong>Steel casing painted in black</strong> &mdash; bold, professional appearance for commercial settings.</li>
+</ul>
+
+<div class="framing-box">
+  <p><strong>How to Frame This:</strong></p>
+  <p>The core concept: The 30/50 is the "industrial strength" option. If the Kuru is a sedan and the NC is an SUV, the 30/50 is a commercial truck. Built for big jobs.</p>
+  <p>What the customer needs to understand: At 331&ndash;606 lbs and up to 50kW, this isn't a residential stove &mdash; it's engineered for high-capacity, high-frequency use. Think spa facilities, large cabin groups, or commercial sauna rooms.</p>
+  <p>PPW framework to apply: <strong>The Gap</strong> &mdash; commercial customers have a very specific gap: they need to heat a large space reliably, day after day. The 30/50 is purpose-built for that.</p>
+</div>
+
+<div class="watch-out">
+  <p><strong>Watch Out:</strong> These stoves ship on a wooden pallet &mdash; the Narvi 30 ships at <strong>474 lbs</strong> and the Narvi 50 at <strong>826 lbs</strong> with stones. Delivery requires a <strong>scheduled freight appointment</strong>. The driver provides "delivery only" with limited assistance. Make sure the customer understands they'll need help getting it into position. This is not a carry-inside-yourself situation. Contact Customerservice@bathingbrands.com for freight quotes.</p>
+</div>
+
+<div class="pro-tip">
+  <p><strong>Pro Tip:</strong> Accessories can be shipped with the 30/50 to save on freight. If the customer needs stones, accessories, or other items, bundle them with the stove order. This saves the customer money and bolsters your margins.</p>
+</div>
+
+<div class="framing-box">
+  <p><strong>How to Frame: Comparing Luosto vs. Luosto VS</strong></p>
+  <p><strong>Mental model:</strong> These are the same stove with one key difference: the VS adds a 30-liter stainless steel water tank. The distinction is purely about whether the customer needs hot water at the sauna location. Don't overcomplicate it.</p>
+  <p><strong>Approach:</strong> Answer the difference directly (water tank), then immediately bridge to a discovery question about their setup: do they have a hot water source nearby? Cabin and off-grid customers often don't &mdash; the VS solves that. Urban or plumbed-in customers may not need it. Also flag the installation difference: the VS only supports top flue connection when the tank is installed, while the base Luosto allows top or back.</p>
+  <p><strong>PPW framework:</strong> <strong>Bridge Technique</strong> &mdash; answer the direct question first (the difference is the water tank), then bridge to discovery (do they have hot water access?) to guide the recommendation naturally.</p>
+</div>
+
+<div class="sales-summary">
+  <p><strong>Why This Matters for Sales:</strong> Product knowledge is your credibility on a live call. When you can explain why the Inari Plus has 198 lbs of stone vs. the Luosto's 77 lbs &mdash; and what that means for the customer's steam experience &mdash; you become the trusted advisor, not just a salesperson. Know each family's personality so you can lead with the story, not the spec sheet.</p>
+</div>
+
+<!-- ===================== CHAPTER 4 ===================== -->
+<h2 id="ch4">Chapter 4: Matching Customers to Products</h2>
+
+<p>This is where your product knowledge becomes sales skill. You now know what each Narvi model does &mdash; now you need to figure out which one is right for each customer.</p>
+
+<h3>The Qualifying Checklist (Applied to Narvi)</h3>
+<p>Remember the PPW Qualifying Checklist? Here's how each question maps to Narvi product decisions:</p>
+
+<table>
+  <thead>
+    <tr><th>Question</th><th>What You're Learning</th><th>How It Maps to Narvi</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>What got you interested in a sauna?</strong></td>
+      <td>Motivation, desired experience</td>
+      <td>If they mention "authentic," "Finnish," "wood-burning," "fire," or "traditional" &mdash; you're in Narvi territory</td>
+    </tr>
+    <tr>
+      <td><strong>Where is it going?</strong></td>
+      <td>Indoor vs. outdoor, setting type</td>
+      <td>Wood-burning stoves work great outdoors (cabins, backyards). Indoor requires chimney routing consideration</td>
+    </tr>
+    <tr>
+      <td><strong>Rough dimensions of the space?</strong></td>
+      <td>Room volume in cubic feet</td>
+      <td>Determines which model/kW rating fits. See sizing guide below</td>
+    </tr>
+    <tr>
+      <td><strong>How many people?</strong></td>
+      <td>Capacity needs</td>
+      <td>More people = larger room = higher kW needed</td>
+    </tr>
+    <tr>
+      <td><strong>What electrical do you have?</strong></td>
+      <td>Electrical capacity</td>
+      <td><strong>Not relevant for Narvi!</strong> Wood-burning = no electrical requirements. This can be a selling point for off-grid customers</td>
+    </tr>
+    <tr>
+      <td><strong>Infrared, traditional, or both?</strong></td>
+      <td>Heat type preference</td>
+      <td>Narvi is 100% traditional. If they want infrared, Narvi is not the answer</td>
+    </tr>
+    <tr>
+      <td><strong>Budget range?</strong></td>
+      <td>Price sensitivity</td>
+      <td>Narvi covers a range. Kuru is entry; 30/50 is top-tier commercial</td>
+    </tr>
+    <tr>
+      <td><strong>Timeline?</strong></td>
+      <td>Urgency</td>
+      <td>Narvi stoves ship from distributor &mdash; lead times may apply</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Room Size Decision Tree</h3>
+<p>Once you know the customer's room size (in cubic feet), use this chart to narrow down the right model:</p>
+
+<table>
+  <thead>
+    <tr><th>Room Size (cu. ft.)</th><th>Recommended Model(s)</th><th>Why</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><strong>283 &ndash; 494</strong></td><td>Kuru 13kW</td><td>Smallest room? Smallest stove. Perfect match.</td></tr>
+    <tr><td><strong>283 &ndash; 565</strong></td><td>Kuru 16kW, Luosto, Luosto VS, NC 16</td><td>Multiple options. Let design preference and features guide the choice.</td></tr>
+    <tr><td><strong>353 &ndash; 706</strong></td><td>Kuru 16kW, Luosto, Luosto VS, Inari, NC 20</td><td>The sweet spot. Most models cover this range.</td></tr>
+    <tr><td><strong>353 &ndash; 848</strong></td><td>NC 24</td><td>Larger residential or small commercial. Only NC 24 reaches 848 cu. ft.</td></tr>
+    <tr><td><strong>706 &ndash; 1,236</strong></td><td>Narvi 30 (24kW)</td><td>Large residential or mid-size commercial.</td></tr>
+    <tr><td><strong>1,589 &ndash; 2,472</strong></td><td>Narvi 50 (50kW)</td><td>Full commercial. The only option at this scale.</td></tr>
+  </tbody>
+</table>
+
+<h3>Feature-Based Decision Tree</h3>
+<p>Room size isn't the only factor. Use these customer preferences to differentiate between models that cover the same room range:</p>
+
+<table>
+  <thead>
+    <tr><th>If the Customer Wants...</th><th>Recommend</th><th>Because</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Most affordable, compact stove</td><td>Kuru</td><td>Smallest, lightest, most affordable entry point</td></tr>
+    <tr><td>Round, sleek design</td><td>Luosto</td><td>Cylindrical form fits anywhere, steel with black painted finish</td></tr>
+    <tr><td>Hot water in the sauna</td><td>Luosto VS</td><td>Only model with integrated 30L water tank</td></tr>
+    <tr><td>Maximum steam quality</td><td>Inari Plus</td><td>198 lbs of stone &mdash; most thermal mass at 16kW</td></tr>
+    <tr><td>Striking visual / exposed stones</td><td>Inari</td><td>Stone grid design is visually dramatic</td></tr>
+    <tr><td>Clean-burn / eco-friendly</td><td>NC Black</td><td>Unique fire chamber for more efficient combustion</td></tr>
+    <tr><td>Timeless box-style design</td><td>NC Black</td><td>Simple, classic aesthetic in three sizes</td></tr>
+    <tr><td>Large commercial sauna</td><td>30/50</td><td>Only option for rooms over 848 cu. ft.</td></tr>
+    <tr><td>Off-grid / no electricity</td><td>Any Narvi</td><td>All are wood-burning &mdash; zero electrical requirements</td></tr>
+  </tbody>
+</table>
+
+<div class="framing-box">
+  <p><strong>How to Frame This:</strong></p>
+  <p>The core concept: Matching a customer to a Narvi stove is a two-step process. First, narrow by <em>room size</em> (eliminates most options). Then, narrow by <em>preference</em> (design, features, steam quality).</p>
+  <p>What the customer needs to understand: There's no "best" Narvi &mdash; there's only the best Narvi <em>for their specific sauna</em>.</p>
+  <p>PPW framework to apply: <strong>The Qualifying Checklist</strong> &mdash; use discovery questions to understand the space first, then preferences second. Let the data guide the recommendation.</p>
+</div>
+
+<h3>Common Customer Scenarios</h3>
+
+<h4>Scenario 1: The Cabin Builder</h4>
+<p><em>"We're building a cabin up north and want a wood-burning sauna. The room will be about 400 cubic feet. We like the idea of watching the fire."</em></p>
+<p><strong>Recommendation:</strong> Start with the <strong>Luosto VS</strong>. At 400 cu. ft., the 16kW rating is perfect. The cabin setting means they may not have easy hot water access &mdash; the VS's 30-liter water tank solves that. The glass door lets them enjoy the fire. If they don't need hot water, the base <strong>Luosto</strong> is a slightly smaller investment and a bit more compact in diameter.</p>
+
+<h4>Scenario 2: The Steam Enthusiast</h4>
+<p><em>"I've been to Finnish saunas in Helsinki and want that exact steam quality at home. My room is about 500 cubic feet."</em></p>
+<p><strong>Recommendation:</strong> <strong>Inari Plus</strong>. At 198 lbs of stone, it has the most thermal mass of any residential Narvi model. This customer knows what good l&ouml;yly feels like &mdash; the Inari Plus delivers it. The exposed stone grid also evokes the look of traditional Finnish public saunas.</p>
+
+<h4>Scenario 3: The Spa Owner</h4>
+<p><em>"I'm building a commercial sauna for my spa. The room is about 2,000 cubic feet and will be used all day."</em></p>
+<p><strong>Recommendation:</strong> <strong>Narvi 50 (50kW)</strong>. This is the only Narvi that can handle 2,000 cu. ft. At 606 lbs and 220 lbs of stone, it's built for all-day commercial use. Discuss freight delivery logistics early &mdash; this is an 826 lb shipment. Also confirm the safety clearances: the Narvi 50 needs 92.6" front-to-back and 65.8" left-to-right &mdash; verify the room can accommodate this.</p>
+
+<h4>Scenario 4: The Budget-Conscious First Timer</h4>
+<p><em>"I want to try a wood-burning sauna but I'm on a tight budget. My room is small, about 300 cubic feet."</em></p>
+<p><strong>Recommendation:</strong> <strong>Kuru 13kW</strong>. The most compact and affordable option. At 283&ndash;494 cu. ft., it's perfectly sized. Set expectations on the 1-year warranty vs. 2-year on other models.</p>
+
+<div class="framing-box">
+  <p><strong>How to Frame: The Harvia M3 Budget Alternative</strong></p>
+  <p><strong>Mental model:</strong> For price-driven customers where even the Kuru is a stretch, Harvia offers the <strong>M3</strong> as the budget wood-burning entry point. Narvi is the heritage choice &mdash; Finnish-designed, glass door, premium build. The Harvia M3 is the budget entry point &mdash; a functional, no-frills wood-burning stove at a much lower price.</p>
+  <p><strong>Approach:</strong> Don't volunteer the M3 unless price is the primary barrier and the customer is at risk of walking away entirely. Position it honestly: <em>"If budget is the deciding factor, we also carry the Harvia M3, which is our most affordable wood-burning option. It won't have the glass door or the Finnish heritage of Narvi, but it'll get you into a real wood-burning sauna."</em> This keeps the customer in the PPW ecosystem rather than losing them to an outside purchase.</p>
+  <p><strong>PPW framework:</strong> <strong>Three Tens</strong> &mdash; transparency about all available options builds certainty in you as the advisor. Offering a lower-priced alternative when appropriate shows the customer you're solving their problem, not just maximizing the sale.</p>
+</div>
+
+<div class="framing-box">
+  <p><strong>How to Frame This &mdash; The "$7,000 Sauna, $500 Heater" Problem:</strong></p>
+  <p>A customer might spend $5,000&ndash;$10,000 on their sauna build &mdash; the room, the benches, the wood, the labor &mdash; and then try to save money on the most important component: the stove. As one of our distributor partners put it: <em>"They'll spend $7,000 on the sauna but get a $500 heater in there. And then they figure out why it doesn't make them feel so good."</em></p>
+  <p>The stove isn't an accessory to the sauna &mdash; <strong>for a wood-burning sauna, the stove IS the experience.</strong> The wood you burn, the stones that hold the heat, the fire you watch through the glass door &mdash; that's the entire point. Everything else is the container.</p>
+  <p>When you're talking to a budget-conscious customer, it's okay to recommend the Kuru. But also give them the honest context: <em>"If your budget allows, the Inari or the NC gives you better steam, a longer warranty, and a stove you won't want to upgrade in two years."</em></p>
+</div>
+
+<div class="pro-tip">
+  <p><strong>Pro Tip &mdash; The 70-80% Second-Buyer Stat:</strong> Harvia's own quarterly earnings report showed that 70&ndash;80% of their heater sales come from <em>second-time buyers</em>. And every time someone buys their second heater, they buy a better, more expensive one. The customer buying the entry-level Kuru today is statistically likely to want to upgrade later. Acknowledge this with them &mdash; it builds trust and lets you position the first purchase honestly: <em>"A lot of people start with the entry-level option and come back for an upgrade within a couple of years. If your budget has any flexibility, I'd rather set you up right the first time."</em></p>
+</div>
+
+<div class="framing-box">
+  <p><strong>How to Frame: When the Customer Wants the Cheapest Option</strong></p>
+  <p><strong>Mental model:</strong> A budget-conscious customer isn't a lost sale &mdash; they're someone who needs help understanding long-term value. The Kuru is a legitimate option, but most entry-level buyers upgrade within a few years (Harvia's data: 70&ndash;80% of heater sales are second-time buyers who buy better). Help them see the total cost of ownership, not just today's price tag.</p>
+  <p><strong>Approach:</strong> Validate their budget concern genuinely &mdash; don't dismiss it. Then introduce the "first car vs. second car" mental model: the first purchase is about getting started, but the second purchase is about getting it right. Position the Inari or NC as the "skip the upgrade" choice: more stone mass, better steam, longer warranty (2 years vs. 1). Use a side-by-side comparison to make the value gap concrete.</p>
+  <p><strong>PPW framework:</strong> <strong>Three Tens</strong> &mdash; build certainty in the product (the upgrade stove delivers measurably better steam) and certainty in you (you're being honest about the trade-offs, not just upselling). The 70&ndash;80% second-buyer stat is a powerful trust-building data point.</p>
+</div>
+
+<h3>Space &amp; Installation Requirements</h3>
+<p>Wood-burning stoves have specific safety distance requirements. Here's what your customer needs to know <em>before</em> they finalize their room design:</p>
+
+<table>
+  <thead>
+    <tr><th>Model</th><th>Min. Ceiling Height</th><th>Safety Dist. F-to-B</th><th>Safety Dist. L-to-R</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Kuru 13kW</td><td>79.7" (202 cm)</td><td>48.2" (122 cm)</td><td>36.1" (92 cm)</td></tr>
+    <tr><td>Kuru 16kW</td><td>79.7" (202 cm)</td><td>48.2" (122 cm)</td><td>37.7" (96 cm)</td></tr>
+    <tr><td>Luosto</td><td>80" (203 cm)</td><td>53.2" (135 cm)</td><td>43.3" (110 cm)</td></tr>
+    <tr><td>Luosto VS</td><td>80" (203 cm)</td><td>57.1" (145 cm)</td><td>47.2" (120 cm)</td></tr>
+    <tr><td>Inari / Inari Plus</td><td>81" (205 cm)</td><td>55.2" (140 cm)</td><td>45.3" (115 cm)</td></tr>
+    <tr><td>NC 16 Black</td><td>79.7" (202 cm)</td><td>48.4" (123 cm)</td><td>31.5" (80 cm)</td></tr>
+    <tr><td>NC 20 Black</td><td>79.7" (202 cm)</td><td>48.4" (123 cm)</td><td>33.1" (84 cm)</td></tr>
+    <tr><td>NC 24 Black</td><td>79.7" (202 cm)</td><td>48.4" (123 cm)</td><td>34.6" (88 cm)</td></tr>
+    <tr><td>Narvi 30</td><td>87" (220 cm)</td><td>59.9" (152 cm)</td><td>48.7" (124 cm)</td></tr>
+    <tr><td>Narvi 50</td><td>87" (220 cm)</td><td>92.6" (235 cm)</td><td>65.8" (167 cm)</td></tr>
+  </tbody>
+</table>
+
+<div class="watch-out">
+  <p><strong>Watch Out:</strong> The safety distances above are the <strong>minimum total room dimensions</strong> front-to-back and left-to-right that include the stove and required clearances. The Narvi 50 requires nearly 8 feet front-to-back &mdash; make sure the customer's room can accommodate this before you recommend it. Always recommend the customer consult their installer and reference the official IOM for their specific model.</p>
+</div>
+
+<div class="pro-tip">
+  <p><strong>Pro Tip:</strong> All Narvi stoves use firewood no longer than <strong>13 inches (33 cm)</strong> and about <strong>2 inches (5 cm) in diameter</strong>. This is smaller than what most people picture when they think "firewood." Let customers know so they can source or cut the right size. Standard firewood from a store will likely need to be split further.</p>
+</div>
+
+<div class="sales-summary">
+  <p><strong>Why This Matters for Sales:</strong> Matching the right customer to the right stove is where your expertise becomes visible. A customer who feels <em>heard</em> &mdash; room size accounted for, preferences respected, budget acknowledged honestly &mdash; is far more likely to buy confidently and recommend you to others. The qualifying process isn't a script to recite; it's a conversation to lead.</p>
+</div>
+
+<!-- ===================== CHAPTER 5 ===================== -->
+<h2 id="ch5">Chapter 5: Handling Questions &amp; Objections</h2>
+
+<p>This chapter prepares you for the most common things customers will ask about Narvi stoves, and applies the <strong>LAER framework</strong> to handle objections confidently.</p>
+
+<h3>The LAER Framework Refresher</h3>
+<div class="key-def">
+  <p><strong>Key Definition &mdash; LAER:</strong></p>
+  <ul>
+    <li><strong>Listen</strong> &mdash; Let the customer express their full concern. Don't interrupt.</li>
+    <li><strong>Acknowledge</strong> &mdash; Show you understand. "That's a fair concern..."</li>
+    <li><strong>Explore</strong> &mdash; Ask questions to understand the <em>real</em> concern behind the surface objection.</li>
+    <li><strong>Respond</strong> &mdash; Address the real concern with relevant information.</li>
+  </ul>
+  <p>The key insight: the first thing a customer says is rarely the real objection. LAER helps you dig to the root.</p>
+</div>
+
+<h3>Top Customer Questions</h3>
+
+<h4>"Is this safe to use? It's a fire inside my sauna..."</h4>
+<div class="framing-box">
+  <p><strong>How to Frame This:</strong></p>
+  <p>This is one of the most common questions for wood-burning stoves. The customer is expressing a safety concern, and your job is to acknowledge it genuinely, then educate.</p>
+  <p><strong>Key points to convey:</strong> All Narvi stoves are CE-certified. They're designed with specific safety distances that, when followed, create a safe installation. Wood-burning saunas have been used in Finland for hundreds of years &mdash; this is proven, time-tested technology, not experimental. The stove body is heavy steel designed to contain the fire completely.</p>
+  <p><strong>Bridge to:</strong> "What does your installation space look like? I want to make sure we can confirm the safety clearances for whichever model we land on."</p>
+</div>
+
+<h4>"Why would I choose wood-burning over electric? Seems like a lot more work."</h4>
+<div class="framing-box">
+  <p><strong>How to Frame This:</strong></p>
+  <p>Don't argue against convenience. Instead, reframe: the "work" of loading wood and tending the fire IS the experience for many sauna enthusiasts. It's the difference between driving a manual transmission sports car and an automatic &mdash; one involves more engagement, and some people love that.</p>
+  <p><strong>Key points to convey:</strong> No electrical requirements (great for off-grid or cabins), visible fire adds ambiance, the ritual of building the fire is part of the relaxation, and the heat quality from a real fire is different from electric coils.</p>
+  <p><strong>PPW framework:</strong> <strong>The Gap</strong> &mdash; explore what "sauna experience" means to them. If it's just "get hot and sweat," electric might actually be better for them. If it's "ritual, atmosphere, tradition" &mdash; wood-burning is the answer.</p>
+</div>
+
+<h4>"What about the chimney? That sounds complicated and expensive."</h4>
+<div class="framing-box">
+  <p><strong>How to Frame This:</strong></p>
+  <p>Acknowledge that yes, a chimney/flue is an additional installation consideration compared to electric. But frame it as a one-time installation, not ongoing complexity. All Narvi stoves offer top or back flue connection for flexibility. Compare it to installing a fireplace &mdash; it requires a chimney, but once it's in, it works for decades.</p>
+  <p><strong>Bridge to:</strong> "Where is your sauna located? I can help think through the simplest flue routing option." This is also a great moment to mention <strong>Peak Protection Concierge</strong> &mdash; we help coordinate with installers.</p>
+</div>
+
+<h4>"Only CE listed? I need UL listing for my building code."</h4>
+<div class="framing-box">
+  <p><strong>How to Frame This:</strong></p>
+  <p>Be honest. Narvi stoves carry CE certification (European standard), not UL listing (North American standard). Some jurisdictions accept CE; others require UL. <strong>Never tell a customer CE is "the same as" UL</strong> &mdash; it's not.</p>
+  <p><strong>The right approach:</strong> Recommend the customer check with their local building department or installer. If their code strictly requires UL listing, you may need to steer them toward a different brand in the PPW lineup that has UL certification.</p>
+  <p><strong>PPW framework:</strong> <strong>Three Tens</strong> &mdash; be honest about what Narvi has and doesn't have. Transparency builds trust (certainty in YOU, the salesperson).</p>
+</div>
+
+<h3>Common Objections</h3>
+
+<h4>Objection: "The warranty is only 1 year / 2 years. That seems short."</h4>
+<p><strong>LAER Application:</strong></p>
+<ul>
+  <li><strong>Listen:</strong> Let them express the concern fully. They may be comparing to an electric heater with a 5-year warranty.</li>
+  <li><strong>Acknowledge:</strong> "I hear you &mdash; warranty length is something worth looking at carefully."</li>
+  <li><strong>Explore:</strong> "What's driving that concern? Is it worrying about the stove failing, or the cost if something goes wrong?" Often the real concern is fear of a lemon product, not the warranty itself.</li>
+  <li><strong>Respond:</strong> These are heavy-duty Finnish steel stoves with very few moving parts. There are no electronics, no control boards, no heating elements to burn out. A wood-burning stove is fundamentally simpler than an electric heater, which means there's less that <em>can</em> fail. The warranty covers manufacturing defects. Also mention <strong>Peak Protection Concierge</strong> &mdash; if something does come up, PPW advocates on their behalf with the manufacturer.</li>
+</ul>
+
+<h4>Objection: "It's too heavy. How do I even get this in my sauna?"</h4>
+<p><strong>LAER Application:</strong></p>
+<ul>
+  <li><strong>Listen:</strong> Valid concern, especially for the 30/50 at 606 lbs.</li>
+  <li><strong>Acknowledge:</strong> "You're right, these are substantial pieces of equipment."</li>
+  <li><strong>Explore:</strong> "Is your sauna on the ground floor, or do you need to get it up stairs or into a basement?" Understand the actual logistics.</li>
+  <li><strong>Respond:</strong> The weight is actually a feature &mdash; it reflects the durability and thermal mass of the stove. For delivery, it ships on a pallet with a freight carrier. The driver handles delivery to the site. For final placement, most customers hire their sauna installer to position it. PPW's Peak Protection Concierge can help coordinate this.</li>
+</ul>
+
+<h4>Objection: "Why Narvi over Cozy Heat? Aren't they both wood-burning?"</h4>
+<p><strong>LAER Application:</strong></p>
+<ul>
+  <li><strong>Listen:</strong> The customer is comparing &mdash; that means they're doing research. Good sign.</li>
+  <li><strong>Acknowledge:</strong> "Great question &mdash; both are excellent wood-burning options."</li>
+  <li><strong>Explore:</strong> "What matters most to you in a stove? The look, the steam quality, the efficiency, the size?"</li>
+  <li><strong>Respond:</strong> Position based on what they care about. Narvi is traditional Finnish craftsmanship with a focus on authenticity, visible fire, and a range of sizes from compact to commercial. Cozy Heat uses a <strong>dual combustion system</strong> that also burns the gases the wood produces &mdash; in testing, that makes it roughly <strong>40% more efficient</strong>. Cozy Heat is also designed to meet Germany's strict emissions regulations (the strictest in the world). If the customer's primary concern is using less wood or emissions, Cozy Heat is the answer. If they want the traditional Finnish look, the glass door, and a specific size range from compact to commercial, Narvi is built for that. They're different tools for different priorities. Neither is "better" &mdash; it depends on the customer's values.</li>
+</ul>
+
+<h4>Objection: "The price seems high for a wood-burning stove."</h4>
+<p><strong>LAER Application:</strong></p>
+<ul>
+  <li><strong>Listen:</strong> Let them share the full concern. They may be comparing to a cheap imported stove or don't yet understand the value of Finnish craftsmanship.</li>
+  <li><strong>Acknowledge:</strong> "That's a fair point &mdash; I want to make sure the investment makes sense for you."</li>
+  <li><strong>Explore:</strong> "When you say the price seems high, what are you comparing it to? And how long are you planning to use this sauna?" Often the real concern is uncertainty about the value, not the dollar amount itself.</li>
+  <li><strong>Respond:</strong> Reframe the investment using the daily cost breakdown (see Pro Tip below). Then reinforce: these are heavy-duty Finnish steel stoves with no electronics, no control boards, no heating elements to burn out. A well-maintained Narvi will last 15&ndash;20 years. The stove isn't a component of the sauna &mdash; <strong>for a wood-burning sauna, the stove IS the experience.</strong> The wood you burn, the stones that hold the heat, the fire you watch through the glass door &mdash; that's the entire reason the room was built.</li>
+</ul>
+
+<div class="framing-box">
+  <p><strong>How to Frame: Price Objection Response</strong></p>
+  <p><strong>Mental model:</strong> A price objection is really a value-certainty gap. The customer isn't saying "I can't afford this" &mdash; they're saying "I'm not yet sure this is worth it." Your job is to reframe the investment from a lump-sum cost into a daily cost over the product's lifespan, and to position the stove as the heart of the sauna (not an accessory to it).</p>
+  <p><strong>Approach:</strong> Use the daily cost breakdown: divide the price by years of daily use. The result is less than a cup of coffee per day. Then use the "engine in the car" analogy &mdash; the stove is the one component that determines whether they love the sauna or regret the build. Reinforce with the 70&ndash;80% second-buyer stat: most people who buy cheap end up buying again. Getting it right the first time saves money long-term.</p>
+  <p><strong>PPW framework:</strong> <strong>The Gap + Three Tens</strong> &mdash; the gap is between "this costs a lot today" and "this is worth it over 20 years." Build certainty in the product (Finnish steel, no electronics to fail, engineered for durability) and certainty in the decision (skip the upgrade cycle).</p>
+</div>
+
+<div class="pro-tip">
+  <p><strong>Pro Tip &mdash; The Daily Cost Breakdown:</strong> Always break the price into a daily investment over the product's lifespan. A Narvi stove built for years of heavy use means even a higher-tier model works out to a remarkably low daily cost. That's the kind of long-term value that makes an authentic Finnish sauna experience easy to justify. This reframe moves the conversation from "how much does this cost right now?" to "what is this worth to me over time?" &mdash; and that's a much easier conversation to win.</p>
+</div>
+
+<div class="pro-tip">
+  <p><strong>Pro Tip &mdash; Heater Investment Reframe:</strong> Never call the stove a "cost." It's an <strong>investment</strong> in the sauna experience. When a customer spends $5,000&ndash;$10,000 on the sauna build, the stove is the one component that determines whether they love that sauna or regret the build. Frame it this way: <em>"When you're going to buy yourself a Bentley, you don't want the Bentley with a two-liter diesel engine. You want that V12. Same with a sauna &mdash; if you're making the investment to build it, invest in the stove that makes it worth building."</em></p>
+</div>
+
+<div class="watch-out">
+  <p><strong>Watch Out:</strong> When a customer asks about CE vs. UL in the context of a pricing discussion, do <strong>not</strong> conflate the two. CE is a European standard and is NOT the same as UL (North American). If their local code requires UL, be honest &mdash; Narvi doesn't have it. Transparency here builds trust even if it means steering them to another brand.</p>
+</div>
+
+<h3>The Bridge Technique with Narvi</h3>
+<div class="framing-box">
+  <p><strong>How to Frame This:</strong></p>
+  <p>The Bridge Technique means: <strong>answer the customer's question first, then bridge to a discovery question</strong>. Never dodge. Here are examples of how it works with Narvi:</p>
+  <ul>
+    <li><em>Customer:</em> "How long does it take to heat up?" <em>Bridge:</em> "Typically 30-60 minutes depending on the model and room size. &mdash; What size room are you working with?"</li>
+    <li><em>Customer:</em> "What stones does it use?" <em>Bridge:</em> "Narvi uses olivine diabase stones, which are volcanic rock known for durability and steam quality. &mdash; Have you used a sauna with natural stones before?"</li>
+    <li><em>Customer:</em> "Does it come with everything I need?" <em>Bridge:</em> "The stove comes with the stove body, IOM manual, and warranty. Stones are ordered separately so you can choose the style you prefer. &mdash; Do you have a chimney/flue system in place already, or is that something we need to plan for?"</li>
+  </ul>
+</div>
+
+<h3>Peak Protection Concierge Positioning</h3>
+<div class="pro-tip">
+  <p><strong>Pro Tip:</strong> Wood-burning stoves involve more installation complexity than electric. This makes <strong>Peak Protection Concierge</strong> even more valuable for Narvi customers. You're not just selling a stove &mdash; you're offering personal order management, help coordinating with their installer on flue requirements, safety distances, and stone selection, plus manufacturer advocacy if anything ever comes up. For wood-burning customers, this is a significant differentiator.</p>
+</div>
+
+<div class="framing-box">
+  <p><strong>How to Frame: Introducing Peak Protection Concierge</strong></p>
+  <p><strong>Mental model:</strong> Wood-burning stove installations are more complex than electric (flue routing, safety clearances, freight logistics). This complexity is exactly what makes Peak Protection Concierge a powerful differentiator. The customer isn't just buying a stove &mdash; they're getting a personal project manager who handles the hard parts.</p>
+  <p><strong>Approach:</strong> Position Concierge as the answer to installation anxiety. When the customer expresses concern about chimney routing, clearance specs, or delivery logistics, that's your opening. Frame it as: "This is exactly why we offer Peak Protection Concierge." Cover the key services: installer coordination, clearance verification, freight logistics, and manufacturer advocacy if any issue arises.</p>
+  <p><strong>PPW framework:</strong> <strong>Three Tens</strong> &mdash; Concierge builds certainty in the company (PPW stands behind the sale with hands-on support) and reduces perceived risk. For wood-burning customers, this is the single biggest differentiator between buying from PPW vs. ordering a stove online and figuring it out alone.</p>
+</div>
+
+<div class="sales-summary">
+  <p><strong>Why This Matters for Sales:</strong> Objections aren't obstacles &mdash; they're buying signals. A customer who asks "Why is this expensive?" is telling you they're interested but need help justifying the investment. Every objection in this chapter is an opportunity to demonstrate expertise, build trust, and move the conversation forward. The LAER framework ensures you never get defensive, and the Bridge Technique ensures you never lose control of the conversation.</p>
+</div>
+
+<!-- ===================== CHAPTER 6 ===================== -->
+<h2 id="ch6">Chapter 6: Technical Reference</h2>
+<p>This section is for <strong>reference during live calls</strong>, not for reading start-to-finish. Bookmark it.</p>
+
+<h3>Complete Specification Tables</h3>
+
+<h4>Narvi Kuru</h4>
+<table>
+  <thead><tr><th>Specification</th><th>Kuru 13kW</th><th>Kuru 16kW (KURU 20)</th></tr></thead>
+  <tbody>
+    <tr><td>SKU</td><td colspan="2">2146 (Internal: 304-127925)</td></tr>
+    <tr><td>Room Size</td><td>283 &ndash; 494 cu. ft.</td><td>353 &ndash; 706 cu. ft.</td></tr>
+    <tr><td>Kilowatt Rating</td><td>13kW</td><td>16kW</td></tr>
+    <tr><td>Primary Fuel</td><td colspan="2">Wood</td></tr>
+    <tr><td>Max Firewood Length</td><td colspan="2">13" (33 cm)</td></tr>
+    <tr><td>Firewood Diameter</td><td colspan="2">2" (5 cm)</td></tr>
+    <tr><td>Flue Connection</td><td colspan="2">Top or Back</td></tr>
+    <tr><td>Safety Listing</td><td colspan="2">CE</td></tr>
+    <tr><td>Min. Ceiling Height</td><td colspan="2">79.7" (202 cm)</td></tr>
+    <tr><td>Safety Dist. Front to Back</td><td colspan="2">48.2" (122 cm)</td></tr>
+    <tr><td>Safety Dist. Left to Right</td><td>36.1" (92 cm)</td><td>37.7" (96 cm)</td></tr>
+    <tr><td>Stone Capacity</td><td>Min. 77 lbs</td><td>88 lbs (40 kg)</td></tr>
+    <tr><td>Stone Size</td><td colspan="2">4" to 6" (10&ndash;15 cm)</td></tr>
+    <tr><td>Stove Width</td><td>16.5" (42 cm)</td><td>18.1" (46 cm)</td></tr>
+    <tr><td>Stove Depth</td><td colspan="2">18.7" (47 cm)</td></tr>
+    <tr><td>Stove Height</td><td colspan="2">25.6" / 26.6" (65/68 cm)</td></tr>
+    <tr><td>Stove Weight</td><td>108 lbs (49 kg)</td><td>121 lbs (55 kg)</td></tr>
+    <tr><td>Shipping Weight w/ Stones</td><td>185 lbs (84 kg)</td><td>209 lbs (95 kg)</td></tr>
+    <tr><td>Stones Required</td><td colspan="2">2 boxes (split-face or round)</td></tr>
+    <tr><td>Warranty</td><td colspan="2">1 year limited</td></tr>
+  </tbody>
+</table>
+
+<h4>Narvi Luosto</h4>
+<table>
+  <thead><tr><th>Specification</th><th>Value</th></tr></thead>
+  <tbody>
+    <tr><td>SKU</td><td>2142 (Internal: 304-BDL-129376)</td></tr>
+    <tr><td>Model</td><td>LUOSTO</td></tr>
+    <tr><td>Room Size</td><td>283 &ndash; 706 cu. ft.</td></tr>
+    <tr><td>Kilowatt Rating</td><td>16kW</td></tr>
+    <tr><td>Primary Fuel</td><td>Wood</td></tr>
+    <tr><td>Max Firewood Length</td><td>13" (33 cm)</td></tr>
+    <tr><td>Firewood Diameter</td><td>2" (5 cm)</td></tr>
+    <tr><td>Flue Connection</td><td>Top or Back</td></tr>
+    <tr><td>Safety Listing</td><td>CE</td></tr>
+    <tr><td>Min. Ceiling Height</td><td>80" (203 cm)</td></tr>
+    <tr><td>Safety Dist. Front to Back</td><td>53.2" (135 cm)</td></tr>
+    <tr><td>Safety Dist. Left to Right</td><td>43.3" (110 cm)</td></tr>
+    <tr><td>Stone Capacity</td><td>77 lbs (35 kg)</td></tr>
+    <tr><td>Stone Size</td><td>4" to 6" (10&ndash;15 cm)</td></tr>
+    <tr><td>Stove Diameter</td><td>19.7" (50 cm)</td></tr>
+    <tr><td>Stove Height</td><td>29.5" (75 cm)</td></tr>
+    <tr><td>Stove Weight</td><td>104 lbs (47 kg)</td></tr>
+    <tr><td>Shipping Weight w/ Stones</td><td>181 lbs (82 kg)</td></tr>
+    <tr><td>Stones Required</td><td>2 boxes (split-face or round)</td></tr>
+    <tr><td>Warranty</td><td>2 years limited</td></tr>
+  </tbody>
+</table>
+
+<h4>Narvi Luosto VS</h4>
+<table>
+  <thead><tr><th>Specification</th><th>Value</th></tr></thead>
+  <tbody>
+    <tr><td>SKU</td><td>2145 / 163442 (Internal: 304-BDL-129377)</td></tr>
+    <tr><td>Model</td><td>LUOSTO VS</td></tr>
+    <tr><td>Room Size</td><td>283 &ndash; 706 cu. ft.</td></tr>
+    <tr><td>Kilowatt Rating</td><td>16kW</td></tr>
+    <tr><td>Primary Fuel</td><td>Wood</td></tr>
+    <tr><td>Max Firewood Length</td><td>13" (33 cm)</td></tr>
+    <tr><td>Firewood Diameter</td><td>2" (5 cm)</td></tr>
+    <tr><td>Flue Connection</td><td>Top or Back</td></tr>
+    <tr><td>Safety Listing</td><td>CE</td></tr>
+    <tr><td>Min. Ceiling Height</td><td>80" (203 cm)</td></tr>
+    <tr><td>Safety Dist. Front to Back</td><td>57.1" (145 cm)</td></tr>
+    <tr><td>Safety Dist. Left to Right</td><td>47.2" (120 cm)</td></tr>
+    <tr><td>Stone Capacity</td><td>77 lbs (35 kg)</td></tr>
+    <tr><td>Stone Size</td><td>4" to 6" (10&ndash;15 cm)</td></tr>
+    <tr><td>Stove Diameter</td><td>23.6" (60 cm)</td></tr>
+    <tr><td>Stove Height</td><td>29.5" (75 cm)</td></tr>
+    <tr><td>Stove Weight</td><td>119 lbs (54 kg)</td></tr>
+    <tr><td>Shipping Weight w/ Stones</td><td>196 lbs (89 kg)</td></tr>
+    <tr><td>Water Tank Capacity</td><td>30 liters</td></tr>
+    <tr><td>Stones Required</td><td>2 boxes (split-face or round)</td></tr>
+    <tr><td>Warranty</td><td>2 years limited</td></tr>
+  </tbody>
+</table>
+
+<h4>Narvi Inari / Inari Plus</h4>
+<table>
+  <thead><tr><th>Specification</th><th>Inari</th><th>Inari Plus</th></tr></thead>
+  <tbody>
+    <tr><td>SKU</td><td colspan="2">2143 (Internal: 304-BDL-129378)</td></tr>
+    <tr><td>Room Size</td><td>283 &ndash; 636 cu. ft.</td><td>283 &ndash; 636 cu. ft.</td></tr>
+    <tr><td>Kilowatt Rating</td><td colspan="2">16kW</td></tr>
+    <tr><td>Primary Fuel</td><td colspan="2">Wood</td></tr>
+    <tr><td>Max Firewood Length</td><td colspan="2">13" (33 cm)</td></tr>
+    <tr><td>Firewood Diameter</td><td colspan="2">2" (5 cm)</td></tr>
+    <tr><td>Flue Connection</td><td colspan="2">Top or Back</td></tr>
+    <tr><td>Safety Listing</td><td colspan="2">CE</td></tr>
+    <tr><td>Min. Ceiling Height</td><td colspan="2">81" (205 cm)</td></tr>
+    <tr><td>Safety Dist. Front to Back</td><td colspan="2">55.2" (140 cm)</td></tr>
+    <tr><td>Safety Dist. Left to Right</td><td colspan="2">45.3" (115 cm)</td></tr>
+    <tr><td>Stone Capacity</td><td>Min. 132 lbs</td><td>198 lbs (90 kg)</td></tr>
+    <tr><td>Stone Size</td><td colspan="2">4" to 6" (10&ndash;15 cm)</td></tr>
+    <tr><td>Stove Diameter</td><td colspan="2">21.7" (55 cm)</td></tr>
+    <tr><td>Stove Height</td><td colspan="2">30.3" (77 cm)</td></tr>
+    <tr><td>Stove Weight</td><td>119 lbs (54 kg)</td><td>135 lbs (61 kg)</td></tr>
+    <tr><td>Shipping Weight w/ Stones</td><td>251 lbs (114 kg)</td><td>333 lbs (151 kg)</td></tr>
+    <tr><td>Stones Required</td><td>3 boxes</td><td>5 boxes</td></tr>
+    <tr><td>Warranty</td><td colspan="2">2 years limited</td></tr>
+  </tbody>
+</table>
+
+<h4>Narvi NC Black</h4>
+<table>
+  <thead><tr><th>Specification</th><th>NC 16</th><th>NC 20</th><th>NC 24</th></tr></thead>
+  <tbody>
+    <tr><td>SKU</td><td colspan="3">102312 (Internal: 304-127933)</td></tr>
+    <tr><td>Room Size</td><td>283 &ndash; 565 cu. ft.</td><td>353 &ndash; 706 cu. ft.</td><td>353 &ndash; 848 cu. ft.</td></tr>
+    <tr><td>Kilowatt Rating</td><td>16kW</td><td>16kW</td><td>17kW</td></tr>
+    <tr><td>Primary Fuel</td><td colspan="3">Wood</td></tr>
+    <tr><td>Max Firewood Length</td><td colspan="3">13" (33 cm)</td></tr>
+    <tr><td>Firewood Diameter</td><td colspan="3">2" (5 cm)</td></tr>
+    <tr><td>Flue Connection</td><td colspan="3">Top or Back</td></tr>
+    <tr><td>Safety Listing</td><td colspan="3">CE</td></tr>
+    <tr><td>Min. Ceiling Height</td><td colspan="3">79.7" (202 cm)</td></tr>
+    <tr><td>Safety Dist. F-to-B</td><td colspan="3">48.4" (123 cm)</td></tr>
+    <tr><td>Safety Dist. L-to-R</td><td>31.5" (80 cm)</td><td>33.1" (84 cm)</td><td>34.6" (88 cm)</td></tr>
+    <tr><td>Stone Capacity</td><td>Min. 110 lbs</td><td>Min. 132 lbs</td><td>176 lbs (80 kg)</td></tr>
+    <tr><td>Stone Size</td><td colspan="3">4" to 6" (10&ndash;15 cm)</td></tr>
+    <tr><td>Stove Width</td><td>19.7" (50 cm)</td><td>21.3" (54 cm)</td><td>22.8" (58 cm)</td></tr>
+    <tr><td>Stove Depth</td><td colspan="3">22.8" (58 cm)</td></tr>
+    <tr><td>Stove Height</td><td>30.7" (78 cm)</td><td>31.5" (80 cm)</td><td>32.3" (82 cm)</td></tr>
+    <tr><td>Stove Weight</td><td>159 lbs (72 kg)</td><td>168 lbs (76 kg)</td><td>181 lbs (82 kg)</td></tr>
+    <tr><td>Shipping Wt. w/ Stones</td><td>269 lbs (122 kg)</td><td>300 lbs (136 kg)</td><td>357 lbs (162 kg)</td></tr>
+    <tr><td>Stones Required</td><td>3 boxes</td><td>3 boxes</td><td>4 boxes</td></tr>
+    <tr><td>Warranty</td><td colspan="3">2 years limited</td></tr>
+  </tbody>
+</table>
+
+<h4>Narvi 30/50</h4>
+<table>
+  <thead><tr><th>Specification</th><th>Narvi 30 (24kW)</th><th>Narvi 50 (50kW)</th></tr></thead>
+  <tbody>
+    <tr><td>SKU</td><td colspan="2">102033 (Internal: 304-127946)</td></tr>
+    <tr><td>Room Size</td><td>706 &ndash; 1,236 cu. ft.</td><td>1,589 &ndash; 2,472 cu. ft.</td></tr>
+    <tr><td>Kilowatt Rating</td><td>24kW</td><td>50kW</td></tr>
+    <tr><td>Primary Fuel</td><td colspan="2">Wood</td></tr>
+    <tr><td>Max Firewood Length</td><td colspan="2">13" (33 cm)</td></tr>
+    <tr><td>Firewood Diameter</td><td colspan="2">2" (5 cm)</td></tr>
+    <tr><td>Flue Connection</td><td colspan="2">Top or Back</td></tr>
+    <tr><td>Safety Listing</td><td colspan="2">CE</td></tr>
+    <tr><td>Min. Ceiling Height</td><td colspan="2">87" (220 cm)</td></tr>
+    <tr><td>Safety Dist. F-to-B</td><td>59.9" (152 cm)</td><td>92.6" (235 cm)</td></tr>
+    <tr><td>Safety Dist. L-to-R</td><td>48.7" (124 cm)</td><td>65.8" (167 cm)</td></tr>
+    <tr><td>Stone Capacity</td><td>Min. 143 lbs</td><td>220 lbs (100 kg)</td></tr>
+    <tr><td>Stone Size</td><td colspan="2">4" to 6" (10&ndash;15 cm)</td></tr>
+    <tr><td>Stove Width</td><td>21.1" (53 cm)</td><td>26.4" (67 cm)</td></tr>
+    <tr><td>Stove Depth</td><td>26.4" (67 cm)</td><td>33.5" (85 cm)</td></tr>
+    <tr><td>Stove Height</td><td>37.4" (95 cm)</td><td>43.3" (110 cm)</td></tr>
+    <tr><td>Stove Weight</td><td>331 lbs (150 kg)</td><td>606 lbs (275 kg)</td></tr>
+    <tr><td>Shipping Wt. w/ Stones</td><td>474 lbs (215 kg)</td><td>826 lbs (375 kg)</td></tr>
+    <tr><td>Stones Required</td><td>4 boxes</td><td>5 boxes</td></tr>
+    <tr><td>Warranty</td><td colspan="2">2 years limited</td></tr>
+  </tbody>
+</table>
+
+<h3>Installation Essentials</h3>
+<p>Key installation facts that apply to all Narvi stoves:</p>
+<ul>
+  <li><strong>Flue connection:</strong> All models support top or back connection (with caveats noted per model)</li>
+  <li><strong>Firewood specs:</strong> Max 13" length, ~2" diameter across all models</li>
+  <li><strong>Stone size:</strong> 4" to 6" (10&ndash;15 cm) across all models</li>
+  <li><strong>Stone type:</strong> Olivine diabase (split-face or round), ordered separately</li>
+  <li><strong>Electrical:</strong> None required &mdash; these are 100% wood-burning</li>
+  <li><strong>Floor protection:</strong> Required under and around the stove per local building codes</li>
+  <li><strong>Ventilation:</strong> Proper sauna ventilation required for combustion air and safety (see 3-vent system below)</li>
+</ul>
+
+<h3>Ventilation: The 3-Vent System for Wood-Burning Saunas</h3>
+<p>Proper ventilation is <strong>critical</strong> for wood-burning sauna stoves. Unlike electric heaters, wood-burning stoves consume oxygen for combustion and produce combustion gases. Without adequate airflow, the stove will not burn efficiently, the sauna air quality will suffer, and moisture will damage the room over time. Every wood-burning Narvi installation should include these three vents:</p>
+
+<table>
+  <thead>
+    <tr><th>Vent</th><th>Location</th><th>Purpose</th><th>During Use</th><th>After Use</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>1. Fresh Air Intake</strong></td>
+      <td>Low on the wall, near the stove</td>
+      <td>Supplies combustion air to the stove and fresh oxygen to the room</td>
+      <td><strong>OPEN</strong></td>
+      <td><strong>OPEN</strong></td>
+    </tr>
+    <tr>
+      <td><strong>2. Exhaust Vent</strong></td>
+      <td>Opposite wall from the stove, under the bench</td>
+      <td>Removes spent air and draws fresh air across the room. Must be <strong>LARGER</strong> than the intake vent</td>
+      <td><strong>OPEN</strong></td>
+      <td><strong>OPEN</strong></td>
+    </tr>
+    <tr>
+      <td><strong>3. Drying Vent</strong></td>
+      <td>Near the ceiling, opposite wall from the stove</td>
+      <td>Removes humid air after the sauna session to prevent mold and wood rot</td>
+      <td><strong>CLOSED</strong></td>
+      <td><strong>OPEN</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="watch-out">
+  <p><strong>Watch Out:</strong> The drying vent must be <strong>CLOSED during use</strong> &mdash; if left open, it will pull all the heat out through the ceiling. It's only opened after the session to dry the room. The exhaust vent must be <strong>larger than the intake</strong> to create proper airflow. These are common installation mistakes &mdash; flag them proactively with the customer and their installer.</p>
+</div>
+
+<div class="pro-tip">
+  <p><strong>Pro Tip:</strong> Wood-burning stoves need combustion air &mdash; this is the single most important reason the fresh air intake vent exists. Without it, the stove starves for oxygen, burns inefficiently, produces more smoke, and can create negative pressure in the room. If a customer reports that their wood-burning stove "doesn't burn well" or "smokes too much," the first question to ask is: <em>"Do you have a fresh air intake vent near the stove?"</em></p>
+</div>
+
+<div class="watch-out">
+  <p><strong>Watch Out:</strong> The PDF IOM data provided was empty for all Narvi models. Always direct customers and installers to download the official Installation and Operation Manual from the links below for complete, model-specific installation instructions:</p>
+  <ul>
+    <li><strong>Kuru:</strong> <a href="https://prod.cms.bathingbrands.com/sites/default/files/2025-01/Narvi%20Kuru%20Sauna%20Stove%20IOM.pdf">Narvi Kuru IOM</a></li>
+    <li><strong>Luosto &amp; Inari:</strong> <a href="https://prod.cms.bathingbrands.com/sites/default/files/2025-01/Narvi%20Luosto%20and%20Inari%20Sauna%20Stove%20IOM.pdf">Narvi Luosto and Inari IOM</a></li>
+    <li><strong>NC:</strong> <a href="https://prod.cms.bathingbrands.com/sites/default/files/2025-01/Narvi%20NC%20Sauna%20Stove%20IOM.pdf">Narvi NC IOM</a></li>
+    <li><strong>30/50:</strong> <a href="https://prod.cms.bathingbrands.com/sites/default/files/2025-01/Narvi%20Sauna%20Stove%20IOM.pdf">Narvi Sauna Stove IOM</a></li>
+  </ul>
+  <p><strong>Warranty document:</strong> <a href="https://prod.cms.bathingbrands.com/sites/default/files/2025-04/Limited%20Warranty%20-%20Narvi%20Oy.pdf">Limited Warranty &mdash; Narvi Oy</a></p>
+</div>
+
+<h3>Warranty Summary</h3>
+<table>
+  <thead><tr><th>Model</th><th>Warranty</th></tr></thead>
+  <tbody>
+    <tr><td>Kuru (13kW &amp; 16kW)</td><td>1 year limited</td></tr>
+    <tr><td>Luosto</td><td>2 years limited</td></tr>
+    <tr><td>Luosto VS</td><td>2 years limited</td></tr>
+    <tr><td>Inari / Inari Plus</td><td>2 years limited</td></tr>
+    <tr><td>NC Black (all sizes)</td><td>2 years limited</td></tr>
+    <tr><td>30/50 (24kW &amp; 50kW)</td><td>2 years limited</td></tr>
+  </tbody>
+</table>
+
+<h3>Shipping &amp; Delivery</h3>
+<p>All Narvi stoves follow the same delivery protocol:</p>
+<ul>
+  <li>Ships on a <strong>wooden pallet</strong> in three-ply cardboard</li>
+  <li>Requires a <strong>scheduled delivery appointment</strong></li>
+  <li>Driver provides <strong>"delivery only"</strong> with limited assistance</li>
+  <li>PPW may contact customers before shipping to discuss delivery logistics</li>
+  <li>For freight quotes: email <strong>Customerservice@bathingbrands.com</strong> with model number and full shipping address</li>
+  <li>Accessories can ship with the stove to save on freight costs</li>
+</ul>
+
+<h3>Required Components (Sold Separately)</h3>
+<table>
+  <thead><tr><th>Model</th><th>Split-Face Stones (boxes)</th><th>Round Stones (boxes)</th></tr></thead>
+  <tbody>
+    <tr><td>Kuru 13kW</td><td>2</td><td>2</td></tr>
+    <tr><td>Kuru 16kW</td><td>2</td><td>2</td></tr>
+    <tr><td>Luosto</td><td>2</td><td>2</td></tr>
+    <tr><td>Luosto VS</td><td>2</td><td>2</td></tr>
+    <tr><td>Inari</td><td colspan="2">3 boxes</td></tr>
+    <tr><td>Inari Plus</td><td colspan="2">5 boxes</td></tr>
+    <tr><td>NC 16</td><td colspan="2">3 boxes</td></tr>
+    <tr><td>NC 20</td><td colspan="2">3 boxes</td></tr>
+    <tr><td>NC 24</td><td colspan="2">4 boxes</td></tr>
+    <tr><td>Narvi 30 (24kW)</td><td colspan="2">4 boxes</td></tr>
+    <tr><td>Narvi 50 (50kW)</td><td colspan="2">5 boxes</td></tr>
+  </tbody>
+</table>
+
+<div class="pro-tip">
+  <p><strong>Pro Tip:</strong> Stones are sold separately and are a great add-on to every Narvi order. Both split-face and round stones are made from olivine diabase. The choice is purely aesthetic &mdash; split-face for a rustic, traditional look; round for a cleaner, modern look. Both produce equally great steam.</p>
+</div>
+
+<div class="sales-summary">
+  <p><strong>Why This Matters for Sales:</strong> You don't need to memorize this chapter &mdash; you need to know it's here. During a live call, flip to the right spec table, confirm the number, and deliver it confidently. Accuracy on specs builds trust. Getting a number wrong &mdash; even once &mdash; erodes it.</p>
+</div>
+
+<!-- ===================== CHAPTER 7 ===================== -->
+<h2 id="ch7">Chapter 7: Quick Reference Cheat Sheet</h2>
+<p>Pull this up during live calls. Everything you need at a glance.</p>
+
+<h3>Model Quick-Pick</h3>
+<table>
+  <thead>
+    <tr><th>Model</th><th>kW</th><th>Room (cu. ft.)</th><th>Stones (lbs)</th><th>Weight (lbs)</th><th>Shape</th><th>Unique Feature</th><th>Warranty</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><strong>Kuru 13</strong></td><td>13</td><td>283&ndash;494</td><td>77 min</td><td>108</td><td>Square</td><td>Compact &amp; affordable</td><td>1 yr</td></tr>
+    <tr><td><strong>Kuru 16</strong></td><td>16</td><td>353&ndash;706</td><td>88</td><td>121</td><td>Square</td><td>Compact &amp; affordable</td><td>1 yr</td></tr>
+    <tr><td><strong>Luosto</strong></td><td>16</td><td>283&ndash;706</td><td>77</td><td>104</td><td>Round</td><td>Sleek, fast heat-up</td><td>2 yr</td></tr>
+    <tr><td><strong>Luosto VS</strong></td><td>16</td><td>283&ndash;706</td><td>77</td><td>119</td><td>Round</td><td>30L water tank</td><td>2 yr</td></tr>
+    <tr><td><strong>Inari</strong></td><td>16</td><td>283&ndash;636</td><td>132 min</td><td>119</td><td>Round</td><td>Exposed stone grid</td><td>2 yr</td></tr>
+    <tr><td><strong>Inari Plus</strong></td><td>16</td><td>283&ndash;636</td><td>198</td><td>135</td><td>Round</td><td>Max stone mass</td><td>2 yr</td></tr>
+    <tr><td><strong>NC 16</strong></td><td>16</td><td>283&ndash;565</td><td>110 min</td><td>159</td><td>Square</td><td>Clean-burn firebox</td><td>2 yr</td></tr>
+    <tr><td><strong>NC 20</strong></td><td>16</td><td>353&ndash;706</td><td>132 min</td><td>168</td><td>Square</td><td>Clean-burn firebox</td><td>2 yr</td></tr>
+    <tr><td><strong>NC 24</strong></td><td>17</td><td>353&ndash;848</td><td>176</td><td>181</td><td>Square</td><td>Clean-burn, largest NC</td><td>2 yr</td></tr>
+    <tr class="highlight-row"><td><strong>Narvi 30</strong></td><td>24</td><td>706&ndash;1,236</td><td>143 min</td><td>331</td><td>Square</td><td>Commercial</td><td>2 yr</td></tr>
+    <tr class="highlight-row"><td><strong>Narvi 50</strong></td><td>50</td><td>1,589&ndash;2,472</td><td>220</td><td>606</td><td>Square</td><td>Commercial powerhouse</td><td>2 yr</td></tr>
+  </tbody>
+</table>
+<p style="font-size: 0.82rem; color: #666;">All weights shown are confirmed per-variant stove weights (without stones).</p>
+
+<h3>Key Framing Concepts &mdash; Quick Recall</h3>
+<table>
+  <thead><tr><th>Concept</th><th>Analogy / Mental Model</th></tr></thead>
+  <tbody>
+    <tr><td>Narvi brand positioning</td><td>Traditional Finnish craftsmanship &mdash; the heritage play</td></tr>
+    <tr><td>Wood-burning vs. electric</td><td>Campfire cooking vs. microwave. Both heat. One is an experience.</td></tr>
+    <tr><td>Stone mass</td><td>Thermal battery &mdash; more stones = longer lasting, softer steam</td></tr>
+    <tr><td>Olivine diabase stones</td><td>Tempered glass vs. regular glass &mdash; engineered for thermal stress</td></tr>
+    <tr><td>Kilowatts (kW)</td><td>Horsepower for the stove &mdash; bigger kW heats bigger rooms</td></tr>
+    <tr><td>Flue/chimney</td><td>Exhaust pipe for a car &mdash; routes combustion gases out</td></tr>
+    <tr><td>Kuru</td><td>Starter home &mdash; everything you need, nothing you don't</td></tr>
+    <tr><td>Luosto</td><td>Swiss Army knife &mdash; round, versatile, fits anywhere</td></tr>
+    <tr><td>Inari Plus</td><td>The thermal battery king &mdash; 198 lbs of steam-producing mass</td></tr>
+    <tr><td>NC Black</td><td>The Goldilocks stove &mdash; three sizes, clean-burn, just right</td></tr>
+    <tr><td>30/50</td><td>Commercial truck &mdash; built for big jobs, heavy duty</td></tr>
+    <tr><td>CE certification</td><td>European safety standard &mdash; NOT the same as UL (North American)</td></tr>
+    <tr><td>No electrical needed</td><td>Off-grid ready &mdash; great for cabins, remote locations</td></tr>
+  </tbody>
+</table>
+
+<h3>Decision Tree Summary</h3>
+<div class="framing-box">
+  <p><strong>Step 1: Room size?</strong></p>
+  <ul>
+    <li>Under 500 cu. ft. &rarr; Kuru 13kW, Luosto, Luosto VS, Inari, NC 16</li>
+    <li>500&ndash;706 cu. ft. &rarr; Kuru 16kW, Luosto, Luosto VS, Inari, NC 20</li>
+    <li>706&ndash;848 cu. ft. &rarr; NC 24</li>
+    <li>706&ndash;1,236 cu. ft. &rarr; Narvi 30 (24kW)</li>
+    <li>1,589&ndash;2,472 cu. ft. &rarr; Narvi 50 (50kW)</li>
+  </ul>
+  <p><strong>Step 2: Narrow by preference</strong></p>
+  <ul>
+    <li>Want hot water? &rarr; <strong>Luosto VS</strong></li>
+    <li>Best steam quality? &rarr; <strong>Inari Plus</strong> (most stone mass)</li>
+    <li>Striking visual? &rarr; <strong>Inari</strong> (exposed stone grid)</li>
+    <li>Clean-burn / eco-friendly? &rarr; <strong>NC Black</strong></li>
+    <li>Tight budget? &rarr; <strong>Kuru</strong></li>
+    <li>Most compact? &rarr; <strong>Kuru</strong> (smallest footprint)</li>
+    <li>Round design? &rarr; <strong>Luosto</strong> or <strong>Inari</strong></li>
+    <li>Commercial scale? &rarr; <strong>30/50</strong></li>
+  </ul>
+</div>
+
+<h3>Firewood Specs (All Models)</h3>
+<p><strong>Max length:</strong> 13" (33 cm) &nbsp;|&nbsp; <strong>Diameter:</strong> ~2" (5 cm) &nbsp;|&nbsp; <strong>Stone size:</strong> 4"&ndash;6" (10&ndash;15 cm)</p>
+
+<h3>Freight Contact</h3>
+<p><strong>Freight quotes:</strong> Customerservice@bathingbrands.com &mdash; include model number + full shipping address</p>
+<p><strong>Inari freight quotes:</strong> Salessupport@bathingbrands.com</p>
+
+<div class="sales-summary">
+  <p><strong>Why This Matters for Sales:</strong> This cheat sheet is your live-call lifeline. Print it, bookmark it, or keep it on a second screen. When a customer asks a question mid-call, the answer should be no more than a glance away. Speed and accuracy on a live call build the customer's confidence in you &mdash; and confidence in you is the first of the Three Tens.</p>
+</div>
+
+<!-- ===================== CLOSING ===================== -->
+<h2 id="closing">You're Ready</h2>
+
+<p>You've just completed the full Narvi training guide. Here's what you now know:</p>
+<ul>
+  <li><strong>The brand:</strong> Narvi is Finnish-made, wood-burning-only, heritage-driven, and covers everything from compact residential to large commercial.</li>
+  <li><strong>The lineup:</strong> Six product families, each with a clear personality &mdash; from the entry-level Kuru to the commercial-grade 30/50.</li>
+  <li><strong>The customer:</strong> How to qualify, match, and recommend the right stove based on room size and personal preferences.</li>
+  <li><strong>The objections:</strong> How to handle price, warranty, weight, CE/UL, and competitive comparisons using LAER and the Bridge Technique.</li>
+  <li><strong>The details:</strong> Every spec, every safety distance, every stone count &mdash; at your fingertips in the reference chapters.</li>
+</ul>
+
+<p>The Narvi customer is someone who is buying into an <em>experience</em>, not just a product. They want the fire, the ritual, the tradition. Your job is to be the expert guide who matches that desire to the right stove, handles their concerns with honesty and confidence, and makes the purchase feel like the beginning of something they'll enjoy for decades.</p>
+
+<div class="framing-box">
+  <p><strong>Your Next Steps:</strong></p>
+  <ul>
+    <li>Bookmark <strong>Chapter 7</strong> (Quick Reference) for live calls</li>
+    <li>Practice the <strong>Bridge Technique</strong> examples out loud &mdash; they need to feel natural, not scripted</li>
+    <li>Practice applying the <strong>frameworks</strong> before your next Narvi call</li>
+    <li>Remember: every Narvi sale includes <strong>Peak Protection Concierge</strong> as a differentiator &mdash; lead with it</li>
+    <li>When in doubt, ask discovery questions. Let the customer tell you what they need, then match them to the data.</li>
+  </ul>
+  <p><strong>Go make some great Narvi sales.</strong></p>
+</div>
+
+<!-- ===================== GAPS ===================== -->
+<h2 id="gaps">Appendix: Information Gaps &mdash; Requires Review</h2>
+<p>The following items could not be fully verified against the provided source data and require confirmation:</p>
+
+<table>
+  <thead><tr><th>#</th><th>Gap</th><th>Details</th></tr></thead>
+  <tbody>
+    <tr><td>1</td><td><span class="gap-flag">RESOLVED &mdash; NC 16, NC 20 dimensions</span></td><td>Individual specs for all three NC variants have been broken out from source data. NC 16: 19.7" x 22.8" x 30.7" / 159 lbs. NC 20: 21.3" x 22.8" x 31.5" / 168 lbs. NC 24: 22.8" x 22.8" x 32.3" / 181 lbs. Safety distances remain confirmed only for NC 24; NC 16 and NC 20 may have slightly different clearance requirements.</td></tr>
+    <tr><td>2</td><td><span class="gap-flag">RESOLVED &mdash; Narvi 30 (24kW) dimensions/weight</span></td><td>Narvi 30 specs broken out from source: 21.1" x 26.4" x 37.4" / 331 lbs / 474 lbs shipping. Safety distances: F-to-B 59.9" (152 cm), L-to-R 48.7" (124 cm).</td></tr>
+    <tr><td>3</td><td><span class="gap-flag">RESOLVED &mdash; Kuru 13kW detailed specs</span></td><td>Kuru 13kW specs broken out: Width 16.5" (42 cm), Weight 108 lbs (49 kg), Shipping 185 lbs (84 kg), Safety Dist. L-to-R 36.1" (92 cm). Stone capacity remains "Min. 77 lbs" per features list.</td></tr>
+    <tr><td>4</td><td><span class="gap-flag">RESOLVED &mdash; Inari base model specs</span></td><td>Inari base: 119 lbs (54 kg) stove weight, 251 lbs (114 kg) shipping weight. Inari Plus: 135 lbs (61 kg) stove weight, 333 lbs (151 kg) shipping weight. Dimensions are shared between both variants.</td></tr>
+    <tr><td>5</td><td><span class="gap-flag">NOT FOUND IN SOURCE &mdash; PDF IOM content</span></td><td>All four IOM PDF extractions returned empty ({}) data. Detailed installation instructions, ventilation requirements, maintenance schedules, and safety distance diagrams could not be verified from the IOMs. All installation info in this guide comes from the product listing data only.</td></tr>
+    <tr><td>6</td><td><span class="gap-flag">NOT FOUND IN SOURCE &mdash; Pricing</span></td><td>No pricing data was provided for any Narvi model. Pricing cannot be included in this guide. Once pricing is available, add the Daily Cost Breakdown calculation to the price objection section.</td></tr>
+    <tr><td>7</td><td><span class="gap-flag">NOTE &mdash; NC 20 stone box count</span></td><td>Source says "Round Stones (16kW - 3 Boxes) (17kW - 4 Boxes)" for the NC. The NC 16 and NC 20 are both 16kW, so this guide assigns 3 boxes to both. However, the NC 20's higher stone capacity (132 lbs vs. 110 lbs) may require more. Confirm with distributor.</td></tr>
+    <tr><td>8</td><td><span class="gap-flag">NOTE &mdash; Inari Plus as separate SKU</span></td><td>Source data lists only one product ("Narvi Inari") with one model code ("INARI"). The "Inari Plus" designation (198 lbs stone capacity, 5 boxes) appears in the source spec data but may represent a stone-loading configuration rather than a separately purchasable SKU. Confirm with distributor whether Inari and Inari Plus are distinct products or configuration options.</td></tr>
+  </tbody>
+</table>
+
+</main>
+
+<button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">&uarr;</button>
+
+<script>
+// Scroll spy
+const sections = document.querySelectorAll('h2[id], h3[id]');
+const navLinks = document.querySelectorAll('.nav-link');
+
+function updateActiveLink() {
+  let current = '';
+  sections.forEach(section => {
+    const rect = section.getBoundingClientRect();
+    if (rect.top <= 120) current = section.id;
+  });
+  navLinks.forEach(link => {
+    link.classList.toggle('active', link.getAttribute('data-section') === current);
+  });
+  // Back to top button
+  document.getElementById('backToTop').style.display = window.scrollY > 400 ? 'block' : 'none';
+}
+window.addEventListener('scroll', updateActiveLink);
+
+// Smooth scrolling
+document.querySelectorAll('.sidebar a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    e.preventDefault();
+    const target = document.querySelector(a.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      // Close mobile sidebar
+      document.querySelector('.sidebar').classList.remove('open');
+    }
+  });
+});
+
+// Search filtering
+function filterNav(query) {
+  const q = query.toLowerCase();
+  document.querySelectorAll('.nav-link').forEach(link => {
+    const text = link.textContent.toLowerCase();
+    link.style.display = text.includes(q) || q === '' ? 'block' : 'none';
+  });
+}
+</script>
+
+</body>
+</html>

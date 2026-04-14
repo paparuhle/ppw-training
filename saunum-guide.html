@@ -1,0 +1,1274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Saunum Brand Guide — Peak Primal Wellness Knowledge Base</title>
+<style>
+  /* ── Reset & Base ── */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+    background: #f5f5f5;
+    color: #333;
+    line-height: 1.7;
+    font-size: 16px;
+  }
+
+  /* ── Sidebar ── */
+  .sidebar {
+    position: fixed; top: 0; left: 0; width: 280px; height: 100vh;
+    background: #0F2439; color: #ccc; overflow-y: auto;
+    padding: 20px 0; z-index: 1000;
+    scrollbar-width: thin; scrollbar-color: #1A3C5E #0F2439;
+  }
+  .sidebar::-webkit-scrollbar { width: 6px; }
+  .sidebar::-webkit-scrollbar-track { background: #0F2439; }
+  .sidebar::-webkit-scrollbar-thumb { background: #1A3C5E; border-radius: 3px; }
+  .sidebar .logo { text-align: center; padding: 10px 20px 20px; border-bottom: 1px solid #1A3C5E; }
+  .sidebar .logo .logo-title { color: #C8862A; font-size: 1.3em; letter-spacing: 1px; font-weight: 700; }
+  .sidebar .logo p { color: #8aa; font-size: 0.75em; margin-top: 4px; text-transform: uppercase; letter-spacing: 2px; }
+  .sidebar .search-box { padding: 15px 20px; }
+  .sidebar .search-box input {
+    width: 100%; padding: 8px 12px; border: 1px solid #1A3C5E; border-radius: 4px;
+    background: #1A3C5E; color: #eee; font-size: 0.85em; outline: none;
+  }
+  .sidebar .search-box input::placeholder { color: #7899; }
+  .sidebar .search-box input:focus { border-color: #C8862A; }
+  .nav-section { padding: 10px 0; }
+  .nav-section-title {
+    color: #C8862A; font-size: 0.7em; text-transform: uppercase; letter-spacing: 2px;
+    padding: 8px 20px; font-weight: 700;
+  }
+  .nav-link {
+    display: block; padding: 7px 20px 7px 28px; color: #99aabb; text-decoration: none;
+    font-size: 0.85em; transition: all 0.2s; border-left: 3px solid transparent;
+  }
+  .nav-link:hover { color: #fff; background: #1A3C5E; }
+  .nav-link.active { color: #C8862A; border-left-color: #C8862A; background: rgba(200,134,42,0.08); }
+
+  /* ── Main Content ── */
+  .main { margin-left: 280px; padding: 40px 60px 100px; max-width: 1100px; }
+  .verified-badge {
+    background: #EAF2F8; border: 1px solid #b8d4e8; border-radius: 6px;
+    padding: 10px 18px; font-size: 0.85em; color: #1A3C5E; margin-bottom: 30px;
+    display: inline-block;
+  }
+  .chapter { margin-bottom: 60px; padding-top: 20px; }
+  .chapter h2 {
+    color: #0F2439; font-size: 1.8em; border-bottom: 3px solid #C8862A;
+    padding-bottom: 10px; margin-bottom: 25px;
+  }
+  .chapter h3 { color: #1A3C5E; font-size: 1.3em; margin: 30px 0 15px; }
+  .chapter h4 { color: #0F2439; font-size: 1.1em; margin: 20px 0 10px; }
+  .chapter p { margin-bottom: 14px; }
+  .chapter ul, .chapter ol { margin: 10px 0 18px 24px; }
+  .chapter li { margin-bottom: 6px; }
+  .chapter a.doc-link { color: #C8862A; }
+
+  /* ── Callout Boxes ── */
+  .script-box {
+    background: #EAF2F8; border-top: 3px solid #0F2439;
+    padding: 20px; margin: 20px 0; border-radius: 4px;
+  }
+  .pro-tip {
+    background: #FDF3E7; border-left: 4px solid #C8862A;
+    padding: 20px; margin: 20px 0; border-radius: 4px;
+  }
+  .watch-out {
+    background: #fde8e8; border-left: 4px solid #d9534f;
+    padding: 20px; margin: 20px 0; border-radius: 4px;
+  }
+  .key-def {
+    background: #f0f0f0; border-left: 4px solid #0F2439;
+    padding: 20px; margin: 20px 0; border-radius: 4px;
+  }
+
+  /* ── Tables ── */
+  table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.92em; }
+  thead tr { background: #0F2439; color: #fff; }
+  th { padding: 12px 14px; text-align: left; font-weight: 600; }
+  td { padding: 10px 14px; border-bottom: 1px solid #ddd; }
+  tbody tr:nth-child(even) { background: #EAF2F8; }
+  tbody tr:hover { background: #ddeaf4; }
+  .highlight-row { background: #FDF3E7 !important; font-weight: 600; }
+
+  /* ── Back to Top ── */
+  .back-top {
+    position: fixed; bottom: 30px; right: 30px; width: 48px; height: 48px;
+    background: #C8862A; color: #fff; border: none; border-radius: 50%;
+    font-size: 1.4em; cursor: pointer; display: none; z-index: 999;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.25); transition: opacity 0.3s;
+  }
+  .back-top:hover { background: #b0751f; }
+
+  /* ── Visually Hidden (for screen readers) ── */
+  .visually-hidden {
+    position: absolute; width: 1px; height: 1px; margin: -1px;
+    padding: 0; overflow: hidden; clip: rect(0,0,0,0); border: 0;
+  }
+
+  /* ── Responsive ── */
+  @media (max-width: 900px) {
+    .sidebar {
+      position: relative; width: 100%; height: auto; max-height: none;
+      overflow: visible;
+    }
+    .main, main.main { margin-left: 0; padding: 20px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ════════════════════════════════════════ SIDEBAR ════════════════════════════════════════ -->
+<nav class="sidebar" id="sidebar">
+  <div class="logo">
+    <span class="logo-title">SAUNUM</span>
+    <p>PPW Knowledge Base</p>
+  </div>
+  <div class="search-box">
+    <label for="navSearch" class="visually-hidden">Search chapters</label>
+    <input type="text" id="navSearch" placeholder="Search chapters..." autocomplete="off">
+  </div>
+  <div class="nav-section">
+    <div class="nav-section-title">Getting Started</div>
+    <a class="nav-link" href="#ch1">1. Introduction to Saunum</a>
+    <a class="nav-link" href="#ch2">2. Sauna Heater Foundations</a>
+  </div>
+  <div class="nav-section">
+    <div class="nav-section-title">Products</div>
+    <a class="nav-link" href="#ch3">3. Product Lineup</a>
+    <a class="nav-link" href="#ch3-air">↳ Air Family (Wall-Mount)</a>
+    <a class="nav-link" href="#ch3-airl">↳ Air L Family (Floor-Stand)</a>
+    <a class="nav-link" href="#ch3-compare">↳ Full Lineup Comparison</a>
+    <a class="nav-link" href="#ch3-controller">↳ AirIQ Controller</a>
+    <a class="nav-link" href="#ch3-solo">↳ Air Solo (Upsell)</a>
+  </div>
+  <div class="nav-section">
+    <div class="nav-section-title">Selling</div>
+    <a class="nav-link" href="#ch4">4. Matching Customers</a>
+    <a class="nav-link" href="#ch4-qualify">↳ Qualifying Checklist</a>
+    <a class="nav-link" href="#ch4-scenarios">↳ Customer Scenarios (6)</a>
+    <a class="nav-link" href="#ch4-sizing">↳ Sizing Guide</a>
+    <a class="nav-link" href="#ch4-electrical">↳ Electrical Requirements</a>
+  </div>
+  <div class="nav-section">
+    <div class="nav-section-title">Sales Execution</div>
+    <a class="nav-link" href="#ch5">5. Questions &amp; Objections</a>
+    <a class="nav-link" href="#ch5-questions">↳ Top Questions</a>
+    <a class="nav-link" href="#ch5-objections">↳ Objection Handling</a>
+    <a class="nav-link" href="#ch5-bridge">↳ The Bridge Technique</a>
+  </div>
+  <div class="nav-section">
+    <div class="nav-section-title">Reference</div>
+    <a class="nav-link" href="#ch6">6. Technical Reference</a>
+    <a class="nav-link" href="#ch6-specs-air">↳ Air Specs</a>
+    <a class="nav-link" href="#ch6-specs-airl">↳ Air L Specs</a>
+    <a class="nav-link" href="#ch6-electrical">↳ Electrical Chart</a>
+    <a class="nav-link" href="#ch6-install">↳ Installation</a>
+    <a class="nav-link" href="#ch6-vent">↳ Ventilation</a>
+    <a class="nav-link" href="#ch6-warranty">↳ Warranty</a>
+    <a class="nav-link" href="#ch7">7. Quick Reference Cheat Sheet</a>
+    <a class="nav-link" href="#gaps">Maintenance Notes</a>
+  </div>
+</nav>
+
+<!-- ════════════════════════════════════════ MAIN CONTENT ════════════════════════════════════════ -->
+<main class="main">
+
+<h1 class="visually-hidden">Saunum Brand Guide — Peak Primal Wellness Knowledge Base</h1>
+<div class="verified-badge">Product information verified as of April 13, 2026</div>
+
+<!-- ═══════════════════════ CHAPTER 1 ═══════════════════════ -->
+<div class="chapter" id="ch1">
+<h2 id="ch1">Chapter 1: Introduction to Saunum</h2>
+
+<h3>What Is Saunum?</h3>
+<p>Saunum is an Estonian sauna heater manufacturer that has fundamentally rethought how a sauna heater should work. While every other heater on the market simply generates heat and lets physics do the rest, Saunum built a <strong>patented air-blending system</strong> called the <strong>Climate Equalizer</strong> directly into the heater itself. This system actively circulates and mixes the air inside the sauna room, solving the single biggest comfort problem in every traditional sauna: the massive temperature difference between the ceiling and the floor.</p>
+
+<p>Think of it this way: every other sauna heater is like a space heater — it blasts heat from one spot and hopes it spreads. Saunum is like a whole-home HVAC system — it actively manages the air to create an even, comfortable environment from head to toe.</p>
+
+<h3>Where Does Saunum Fit in Our Lineup?</h3>
+<p>In our brand tier system, <strong>Saunum is the Bentley/Rolls Royce</strong>. This is the absolute best sauna heater you can buy. Here's how our lineup maps:</p>
+
+<table>
+  <thead><tr><th>Brand</th><th>Car Analogy</th><th>Position</th></tr></thead>
+  <tbody>
+    <tr><td>Harvia</td><td>Toyota</td><td>Reliable, affordable, workhorse</td></tr>
+    <tr><td>HUUM</td><td>BMW / Mercedes</td><td>Design-forward, premium</td></tr>
+    <tr class="highlight-row"><td><strong>Saunum</strong></td><td><strong>Bentley / Rolls Royce</strong></td><td><strong>Best-in-class, patented technology</strong></td></tr>
+    <tr><td>Narvi</td><td>Artisan Finnish</td><td>Traditional craftsmanship</td></tr>
+    <tr><td>Cozy Heat</td><td>Best wood-fired</td><td>Dual combustion specialist</td></tr>
+  </tbody>
+</table>
+
+<h3>Why Do We Carry Saunum?</h3>
+<p>Saunum solves problems that no other heater brand even attempts to address. Here's what makes them unique:</p>
+<ul>
+  <li><strong>Patented Climate Equalizer</strong> — the only heater that actively blends air, reducing temperature stratification by more than 60%</li>
+  <li><strong>Built-in Himalayan salt therapy</strong> — salt spheres sit in the airstream, so ions are actively propelled throughout the room (not just sitting passively on a wall)</li>
+  <li><strong>6 distinct sauna styles</strong> from a single heater — Russian Banya, Finnish, Estonian, Yoga, Salt, and Aroma</li>
+  <li><strong>UL certified</strong> — critical for North American customers; not all premium brands have this</li>
+  <li><strong>Self-drying function</strong> — the fan system dries the sauna after use, extending the life of the wood</li>
+  <li><strong>Massive stone capacity</strong> — 130 lbs (Air) to 180 lbs (Air L), producing softer, more luxurious steam</li>
+</ul>
+
+<div class="script-box">
+  <p><strong>How to Frame This:</strong></p>
+  <p><strong>The core concept:</strong> Saunum isn't just a heater — it's a climate management system. Every other heater heats the air; Saunum manages the air. That's the Bentley difference. As Prit puts it: <em>"When you're going to buy yourself a Bentley, you don't want the Bentley with a two-liter diesel engine. You want that V12 engine, or V8 at least. So when you're going to make the investment and buy yourself a sauna, buy yourself a good heater as well."</em></p>
+  <p><strong>What the customer needs to understand:</strong> The air quality, temperature evenness, and breathing comfort in a Saunum sauna is fundamentally different from any conventional heater. This isn't a marginal upgrade — it's a different category of experience.</p>
+  <p><strong>PPW framework to apply:</strong> Gap Selling — paint the Current State (hot head/cold feet, harsh breathing, dry eyes) vs. the Desired State (even temperature head to toe, soft breathable air, longer sessions). The Saunum is the bridge.</p>
+</div>
+
+<h3>What Makes Saunum Different? The 60-Second Elevator Pitch</h3>
+<p>Every sauna has the same problem: the ceiling is scorching hot (200°F+), the floor is barely warm (under 100°F), and the air near the ceiling is depleted of oxygen. Your head bakes, your feet freeze, and breathing feels harsh. This is called <strong>temperature stratification</strong> — and every other heater brand accepts it as "just how saunas work."</p>
+
+<p>Saunum said "no." They engineered a system that draws the hot, oxygen-poor air from the ceiling, mixes it with the cool, oxygen-rich air from the floor, and pushes the blended result throughout the room. The result: <strong>more than 60% more even temperature distribution</strong>, softer breathable air, and longer, more satisfying sauna sessions.</p>
+
+<div class="pro-tip">
+  <p><strong>Pro Tip:</strong> The "60% more even" stat is directly from Saunum's product literature. It's a powerful number to use in conversations because it's specific enough to be credible but simple enough to be memorable. When a customer asks "what's different about Saunum?", that 60% stat is your anchor.</p>
+</div>
+
+<h3>Prit's Personal Story — Why This Matters</h3>
+<p>Prit, our contact at Bathing Brands (Saunum's distributor), shared something powerful on a training call: <em>"I started the sauna business 10 years ago when I was bringing in home heaters to the United States. And I didn't like saunas back then because for me, scorching heat and the heat stratification, it just didn't feel comfortable. I was always tired after sauna and I didn't enjoy it at all. And I'm Estonian. Everyone in Estonia has a sauna. But I really didn't like saunas. Until my friend introduced me to the Saunum devices. And now I'm like, it's the best thing ever."</em></p>
+<p>This is a man from <strong>Estonia — the sauna capital of the Baltic region</strong> — who didn't enjoy saunas until he tried Saunum. That's how transformative the air blending technology is. And in Europe? <em>"The Saunum brand is like a premium brand. Every rich guy has a Saunum heater. If you're a sauna enthusiast and you have a little bit of money, then you're going to go for the Saunum heater because in Europe, Harvia and HUUM are cheap brands."</em></p>
+
+<div class="script-box">
+  <p><strong>"Hot Box or Real Sauna?" — How to Frame This</strong></p>
+  <p>This framing comes directly from Saunum/Bathing Brands training and it is one of the most effective ways to open a heater conversation:</p>
+  <p><em>"Most heaters just blast hot air upward and hope for the best. Your head cooks while your feet freeze. Saunum is different — it has a massive stone bed plus a patented air blending system that actively circulates the heat so the temperature is even from floor to ceiling. Any heater can heat stones. Only Saunum can blend the air. That's the difference between a hot wooden box and a real sauna."</em></p>
+  <p><strong>PPW framework:</strong> Gap Selling — paint the "hot box" as the Current State and the "real sauna" as the Desired State. The air blending is the bridge.</p>
+</div>
+</div>
+
+<!-- ═══════════════════════ CHAPTER 2 ═══════════════════════ -->
+<div class="chapter" id="ch2">
+<h2 id="ch2">Chapter 2: Understanding Sauna Heaters (Foundations)</h2>
+
+<p>Before we dive into specific Saunum models, let's make sure you understand the core concepts behind sauna heaters. If you already know this stuff, skim through — but don't skip the Saunum-specific concepts at the end of this chapter.</p>
+
+<h3>Key Terms You Need to Know</h3>
+
+<div class="key-def">
+  <p><strong>Key Definition — Kilowatt (kW):</strong> A unit of electrical power. In sauna heaters, kW tells you how much heating power the heater produces. Higher kW = more heat output = can heat a larger room. Think of it like horsepower in a car: a 5kW heater is a sedan, a 15kW heater is a truck.</p>
+</div>
+
+<div class="key-def">
+  <p><strong>Key Definition — Temperature Stratification:</strong> The natural phenomenon where hot air rises to the ceiling and cool air sinks to the floor, creating dramatic temperature layers inside a sauna. In a typical sauna, the ceiling might be 200°F while the floor is under 100°F — that's a 100°F difference in just 7 feet. This is the core problem Saunum solves.</p>
+</div>
+
+<div class="key-def">
+  <p><strong>Key Definition — Climate Equalizer:</strong> Saunum's patented system that actively blends the hot ceiling air with the cool floor air and redistributes it throughout the sauna room. This is the technology that makes Saunum unique — no other heater brand has anything like it.</p>
+</div>
+
+<div class="key-def">
+  <p><strong>Key Definition — Stone Capacity:</strong> The weight of sauna stones a heater can hold, measured in pounds (lbs) or kilograms (kg). More stones = more thermal mass = softer, more even heat and better steam production. Think of stones as a "thermal battery" — they store heat energy and release it gradually, especially when you throw water on them.</p>
+</div>
+
+<div class="key-def">
+  <p><strong>Key Definition — Incoloy Elements:</strong> A type of stainless steel alloy used in heating elements. Incoloy resists corrosion from water and steam much better than standard steel, which is critical in a sauna where you're constantly throwing water on hot stones. All Saunum heaters use Incoloy elements.</p>
+</div>
+
+<div class="key-def">
+  <p><strong>Key Definition — UL Certification (Underwriters Laboratories):</strong> An independent safety certification that's essentially required for electrical products in North America. A UL-listed heater has been tested and certified to meet strict safety standards. This is a significant differentiator — not all premium European sauna brands have UL certification for the US market.</p>
+</div>
+
+<div class="key-def">
+  <p><strong>Key Definition — Cubic Feet (cu. ft.):</strong> How sauna room size is measured. You calculate it by multiplying Length × Width × Height (all in feet). A typical home sauna might be 6' × 4' × 7' = 168 cu. ft. This number determines which heater size you need.</p>
+</div>
+
+<h3>How an Electric Sauna Heater Works</h3>
+<p>An electric sauna heater is straightforward. Electricity flows through <strong>heating elements</strong> (the coils inside the heater), which get extremely hot. Sauna stones are piled on top of and around these elements. The stones absorb the heat and radiate it into the room. When you throw water on the hot stones, it instantly flashes into steam (called <strong>löyly</strong> — pronounced "LOW-lu" — the Finnish word for sauna steam).</p>
+
+<p>The heater connects to a <strong>controller</strong> (a separate device mounted on the wall or accessed via an app) that lets you set the temperature, timer, and other settings.</p>
+
+<h3>How Saunum Is Different from Every Other Heater</h3>
+<p>Here's where Saunum breaks the mold. A conventional heater just generates heat and hope. Saunum adds three integrated systems:</p>
+
+<ol>
+  <li><strong>Telescopic Hot Air Intake</strong> — extends up near the ceiling and captures the hottest, most oxygen-depleted air</li>
+  <li><strong>Heat Equalizing Module</strong> — a whisper-quiet, 3-speed fan system inside the heater body that blends the hot ceiling air with cool, oxygen-rich floor air</li>
+  <li><strong>Blended Air Output</strong> — distributes the mixed air back into the room at a comfortable temperature with better oxygen content</li>
+</ol>
+
+<p>As the blended air passes through the heater body, it also flows across the <strong>Himalayan salt tray</strong> and optional <strong>aromatherapy system</strong>, picking up salt ions and scent before being distributed into the room.</p>
+
+<div class="script-box">
+  <p><strong>How to Frame This:</strong></p>
+  <p><strong>The core concept:</strong> Think of a conventional heater like opening a window in summer — hot air blasts in and you deal with it. Saunum is like central air conditioning — it actively manages temperature, airflow, and air quality throughout the entire space.</p>
+  <p><strong>What the customer needs to understand:</strong> The Climate Equalizer isn't an accessory or add-on. It's built into the heater itself. Every Saunum heater is both a heater AND an air management system in one unit.</p>
+</div>
+
+<h3>The 6 Sauna Styles — One Heater, Six Experiences</h3>
+<p>Because Saunum gives you control over airflow, temperature, and humidity independently, a single heater can simulate six different traditional sauna styles:</p>
+
+<table>
+  <thead><tr><th>Style</th><th>Character</th><th>What Makes It Unique</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Finnish Sauna</strong></td><td>Intense dry heat</td><td>High temp, low humidity, massive stone mass radiating heat</td></tr>
+    <tr><td><strong>Russian Banya</strong></td><td>Intense heat + heavy steam</td><td>Air blending + big stones = traditional banya simulation</td></tr>
+    <tr><td><strong>Estonian Sauna</strong></td><td>Long, soothing sessions</td><td>Moderate heat, rich steam, extended sweating</td></tr>
+    <tr><td><strong>Yoga Sauna</strong></td><td>Oxygenated floor-level warmth</td><td>Equalized air means usable heat even at floor level for poses</td></tr>
+    <tr><td><strong>Salt Sauna</strong></td><td>Halotherapy</td><td>Himalayan salt ions actively propelled through the air</td></tr>
+    <tr><td><strong>Aroma Sauna</strong></td><td>Aromatherapy-infused</td><td>Air movement carries scent throughout; impossible in most saunas</td></tr>
+  </tbody>
+</table>
+
+<div class="pro-tip">
+  <p><strong>Pro Tip:</strong> The "6 styles in 1 heater" pitch is extremely effective with customers who are on the fence between infrared and traditional. It shows that a Saunum traditional sauna is far more versatile than they realized. The Yoga Sauna mode, in particular, appeals to the wellness-focused customer who might otherwise go infrared.</p>
+</div>
+
+<h3>Wall-Mount vs. Floor-Standing</h3>
+<p>Saunum makes two form factors:</p>
+<ul>
+  <li><strong>Wall-mounted (Air series)</strong> — hangs on the wall. Better for smaller saunas where floor space is limited. Uses a telescopic intake that extends up toward the ceiling.</li>
+  <li><strong>Floor-standing (Air L series)</strong> — sits on the floor. Designed for larger, more intensively used saunas. Same telescopic system reaches up to capture ceiling air. "L" stands for "Large."</li>
+</ul>
+
+<p>Both series use the exact same Climate Equalizer technology. The difference is size, power range, and stone capacity.</p>
+
+<div class="watch-out">
+  <p><strong>Watch Out:</strong> Do NOT make medical claims about Himalayan salt benefits. Saunum's literature mentions salt aerosol has "long been used" for decongestant, anti-inflammatory, and anti-microbial properties. You can share that salt saunas are a traditional wellness practice, but never claim that Saunum heaters treat, cure, or prevent any medical condition.</p>
+</div>
+
+<h3>Four Independent Safety Systems</h3>
+<p>Saunum heaters include <strong>four distinct safety mechanisms</strong> — two physical and two software-based. This is more safety engineering than any other heater brand on the market:</p>
+
+<table>
+  <thead><tr><th>#</th><th>Type</th><th>Description</th></tr></thead>
+  <tbody>
+    <tr><td>1</td><td>Physical</td><td>High limiter #1 inside the heater — cuts power if temperature exceeds safe threshold</td></tr>
+    <tr><td>2</td><td>Physical</td><td>High limiter #2 inside the heater — backup physical safety</td></tr>
+    <tr><td>3</td><td>Software</td><td>Monitors heating rate to detect open doors (see Smart Door Detection below)</td></tr>
+    <tr><td>4</td><td>Software</td><td>Additional software-based safety monitoring via the AirIQ controller</td></tr>
+  </tbody>
+</table>
+
+<h4>Smart Door Detection — Dual Safety Approach</h4>
+<p>The Air series includes a door sensor and cable assembly as part of its safety system. The AirIQ controller also monitors heating rate — if the sauna isn't heating fast enough, the software determines the door may be open and can shut off automatically. This dual approach (physical sensor plus software monitoring) provides redundant safety.</p>
+
+<div class="pro-tip">
+  <p><strong>Pro Tip:</strong> The safety story is a strong selling point, especially for families. Four independent safety systems (two physical, two software), UL listing, and smart door detection with dual redundancy (physical sensor plus software monitoring). When a customer with kids is on the fence, the safety angle can tip the decision: "This is the safest sauna heater you can buy — four independent safety systems, UL certified, and dual door detection that automatically shuts off the heater if the door is left open."</p>
+</div>
+
+<h3>Barrel Sauna Mode — Saunum's Secret Weapon</h3>
+<p>Here's a detail most salespeople don't know: Saunum has a <strong>special heating mode designed specifically for barrel saunas</strong>. In outdoor barrel saunas, the floor stays cold because heat rises — especially in winter. As the sauna heats up, Saunum's barrel mode activates the air blending device, which draws hot air down from the ceiling and distributes heat throughout the entire sauna — <strong>including the floor</strong>.</p>
+<p>Every barrel sauna on the market has this cold floor problem. Only Saunum has a dedicated barrel mode that actively fixes it.</p>
+
+<div class="script-box">
+  <p><strong>When selling a barrel sauna to someone in a cold climate:</strong></p>
+  <p><em>"One thing to know about barrel saunas — because heat rises, the floor tends to stay cold, especially in winter. Your upper body is warm but your feet are chilly, and the whole experience feels unbalanced. Saunum has a special barrel sauna mode that actively pulls that hot air from the ceiling and pushes it down to the floor. It's the only heater brand that does this. If you're putting a barrel sauna outside in a cold climate, I would strongly recommend Saunum for that reason alone."</em></p>
+</div>
+</div>
+
+<!-- ═══════════════════════ CHAPTER 3 ═══════════════════════ -->
+<div class="chapter" id="ch3">
+<h2 id="ch3">Chapter 3: Our Saunum Product Lineup</h2>
+
+<p>Saunum keeps their lineup clean and focused. We carry <strong>two product families</strong> with a total of <strong>five models</strong>. Every model includes the patented Climate Equalizer — there's no "basic" version without it. Here's the landscape:</p>
+
+<table>
+  <thead><tr><th>Family</th><th>Mounting</th><th>Models</th><th>kW Range</th><th>Room Size Range</th><th>Stone Capacity</th><th>Finish</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Air</strong></td><td>Wall-mount</td><td>Air 5, Air 7</td><td>5–7 kW</td><td>106–318 cu. ft.</td><td>130 lbs (60 kg)</td><td>Stainless Steel</td></tr>
+    <tr><td><strong>Air L</strong></td><td>Floor-standing</td><td>Air L 10, Air L 13, Air L 15</td><td>10–15 kW</td><td>283–812 cu. ft.</td><td>180 lbs (80 kg)</td><td>Nordic Black Steel</td></tr>
+  </tbody>
+</table>
+
+<!-- ── Air Family ── -->
+<h3 id="ch3-air">The Air Family (Wall-Mount): Air 5 &amp; Air 7</h3>
+
+<p>The Air series are <strong>compact, wall-mounted heaters</strong> with the Climate Equalizer built right in. They come in an elegant <strong>stainless steel</strong> finish and are designed for small to mid-sized home saunas. The number in the name tells you the kW rating: Air 5 = ~5kW, Air 7 = ~7kW.</p>
+
+<h4>What's the Difference Between the Air 5 and Air 7?</h4>
+<p>The body is identical — same dimensions (18.3" W × 12.4" D × 75.4"–95" H), same weight (147 lbs), same stone capacity (130 lbs), same stainless steel finish. The only differences are the heating elements inside:</p>
+
+<table>
+  <thead><tr><th>Spec</th><th>Air 5</th><th>Air 7</th></tr></thead>
+  <tbody>
+    <tr><td>Wattage</td><td>4,950W</td><td>6,900W</td></tr>
+    <tr><td>Amperage</td><td>20.6A</td><td>28.8A</td></tr>
+    <tr><td>Room Size</td><td>106–212 cu. ft. (3–6 m³)</td><td>177–318 cu. ft. (5–9 m³)</td></tr>
+    <tr><td>Wire Size to Power Unit</td><td>(2) #10 + N + G</td><td>(2) #8 + N + G</td></tr>
+    <tr><td>Voltage / Phase</td><td>240 VAC / Single</td><td>240 VAC / Single</td></tr>
+  </tbody>
+</table>
+
+<div class="pro-tip">
+  <p><strong>Pro Tip:</strong> Notice the room size overlap between 177–212 cu. ft. If a customer's sauna falls in that range, recommend the Air 7. A heater that's slightly oversized heats up faster and recovers better after water throws. Undersizing a heater is the #1 mistake in sauna builds.</p>
+</div>
+
+<h4>What's Included with Every Air Heater</h4>
+<p>Every Air 5 and Air 7 ships with:</p>
+<ul>
+  <li>Stainless Steel Stone Basket</li>
+  <li>Heat Equalizing Module (the Climate Equalizer fan unit)</li>
+  <li>Telescopic Hot Air Intake</li>
+  <li>Heating Element Air Tunnels (3) — protect the elements from direct water contact</li>
+  <li>Himalayan Salt Spheres (7)</li>
+  <li>Hot Air Intake Cap</li>
+  <li>Stainless Steel Protective Grille</li>
+  <li>Heating Element Electrical Cable, 5' (152.4 cm)</li>
+  <li>Heat Equalizer Electrical Cable, 5' (152.4 cm)</li>
+  <li>Room Temperature Sensor &amp; Cable, 9.5' (289.56 cm)</li>
+  <li>Door Sensor &amp; Cable Assembly, 9.83' (299.62 cm)</li>
+  <li>IQAir Display Panel Cable, 16' (487.68 cm)</li>
+  <li>Quick Install Guide &amp; Installation Manual</li>
+</ul>
+
+<div class="watch-out">
+  <p><strong>Watch Out:</strong> The Air heaters do NOT include the controller or stones. The <strong>Saunum AirIQ Wi-Fi controller</strong> (SKU: 4745090010565) is required and sold separately. Stones require <strong>4 boxes</strong> totaling 130 lbs and are also sold separately. Make sure every Air order includes both.</p>
+</div>
+
+<h4>Key Features — What They Are and Why They Matter</h4>
+
+<p><strong>Climate Equalizer (3-Speed, Whisper-Quiet):</strong> This is the heart of the Saunum difference. The fan module runs at 3 speeds and is described as "whisper-quiet" — important because nobody wants a noisy fan in their relaxation space. It draws hot air from the ceiling through the telescopic intake, blends it with cool floor air pulled through the side-mounted valve, and pushes the mixed air out through the front grille.</p>
+
+<div class="script-box">
+  <p><strong>How to Frame This:</strong></p>
+  <p><strong>The core concept:</strong> Think of the Climate Equalizer like a convection oven vs. a regular oven. A regular oven has hot spots and cold spots. A convection oven uses a fan to circulate air evenly. The food (you!) cooks more evenly, more comfortably, and more efficiently. Same principle, applied to sauna.</p>
+  <p><strong>What the customer needs to understand:</strong> This isn't just comfort — it's efficiency. Even heat distribution means the heater doesn't have to work as hard to make the sauna feel right. And you'll stay in longer because you're not fighting discomfort.</p>
+</div>
+
+<p><strong>Himalayan Salt Reservoir (Removable, Slotted Tray — 16.5" × 4.5"):</strong> Seven Himalayan salt spheres sit in a slotted tray positioned directly in the airstream. As the Climate Equalizer moves air through the heater body, it passes over these salt spheres, picking up salt ions and distributing them throughout the room. This creates a functional salt sauna experience — not decorative salt panels on the wall, but active ion distribution.</p>
+
+<p><strong>Self-Drying Function:</strong> After your sauna session, the fan system can run independently to circulate air and help dry out the sauna room. Moisture is the enemy of sauna wood — this feature extends the life of the entire sauna build, not just the heater.</p>
+
+<p><strong>Incoloy Heating Elements with Air Tunnel Protection:</strong> Three slotted stainless steel air tunnels surround the heating elements, protecting them from direct water contact while still allowing heat to transfer efficiently to the stones. This extends element life significantly.</p>
+
+<p><strong>UL Certification:</strong> Every Saunum heater is UL listed. This matters because many municipalities require UL-listed equipment for permits and inspections. It also matters for insurance — a non-UL heater can create issues with homeowner's insurance claims.</p>
+
+<!-- ── Air L Family ── -->
+<h3 id="ch3-airl">The Air L Family (Floor-Standing): Air L 10, Air L 13 &amp; Air L 15</h3>
+
+<p>The Air L series is Saunum's <strong>floor-standing, large-format heater line</strong>. "L" stands for Large — these units sit on the floor and are designed for bigger saunas and more intensive use (think: commercial spas, large home saunas, frequent bathers). They come in a <strong>Nordic Black steel</strong> finish and pack 180 lbs of stone capacity — 50 lbs more than the Air series.</p>
+
+<h4>Open Basket vs. Closed Basket Configurations</h4>
+<p>According to Prit, the Air L 10 (the biggest seller right now) comes in <strong>two stone basket configurations</strong>:</p>
+<table>
+  <thead><tr><th>Configuration</th><th>Visual</th><th>Safety Distances</th><th>Best For</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Open Basket (Stainless Steel)</strong></td><td>You can see the stones through the basket</td><td>Larger safety distances required</td><td>Larger saunas with more clearance room</td></tr>
+    <tr><td><strong>Closed Basket (Black)</strong></td><td>Stones are hidden inside solid enclosure</td><td>Smaller safety distances</td><td>Smaller saunas where space is tight</td></tr>
+  </tbody>
+</table>
+
+<div class="watch-out">
+  <p><strong>Watch Out:</strong> Safety distances differ between the open and closed basket versions. If a customer has a smaller sauna, <strong>always recommend the closed basket (black) version</strong> because it requires less clearance from walls and benches. Getting this wrong could create a safety issue. Always check the Installation and Operation Manual for exact clearance requirements for each configuration.</p>
+</div>
+
+<div class="pro-tip">
+  <p><strong>Pro Tip — Best Seller:</strong> According to Prit at Bathing Brands, the <strong>Air L 10 is the most-used model and the biggest seller right now</strong>. It's the sweet spot of the lineup — powerful enough for most home saunas, floor-standing for premium aesthetics, and the 10kW output handles the most common room sizes. When in doubt, start your recommendation conversation with the Air L 10.</p>
+</div>
+
+<h4>What Differentiates the Three Air L Models?</h4>
+<p>Like the Air family, all three Air L models share the same body — same dimensions (18.3" W × 18.1" D × 73"–95" H), same weight (147 lbs), same 180 lb stone capacity, same Nordic Black finish. The differences are power output and room coverage:</p>
+
+<table>
+  <thead><tr><th>Spec</th><th>Air L 10</th><th>Air L 13</th><th>Air L 15</th></tr></thead>
+  <tbody>
+    <tr><td>Wattage</td><td>9,900W</td><td>12,900W</td><td>15,000W</td></tr>
+    <tr><td>Amperage</td><td>41.25A</td><td>53.75A</td><td>62.5A</td></tr>
+    <tr><td>Room Size</td><td>283–494 cu. ft. (8–14 m³)</td><td>424–565 cu. ft. (12–16 m³)</td><td>530–812 cu. ft. (15–23 m³)</td></tr>
+    <tr><td>Wire Size to Power Unit</td><td>#6 + N + G</td><td>(2) #6 + N + G</td><td>#4 + N + G</td></tr>
+    <tr><td>Voltage / Phase</td><td>240 VAC / Single</td><td>240 VAC / Single</td><td>240 VAC / Single</td></tr>
+  </tbody>
+</table>
+
+<div class="pro-tip">
+  <p><strong>Pro Tip:</strong> Notice the significant room size overlaps between Air L models: L 10 and L 13 overlap from 424–494 cu. ft., and L 13 and L 15 overlap from 530–565 cu. ft. In overlap zones, always recommend the larger model. Faster heat-up, better steam recovery after water throws, and longer element life because the heater isn't constantly running at max capacity.</p>
+</div>
+
+<h4>What's Included with Every Air L Heater</h4>
+<ul>
+  <li>Saunum Air L Sauna Heater unit</li>
+  <li>Hot Air Intake Cap &amp; Telescopic Hot Air Intake</li>
+  <li>Stone Basket</li>
+  <li>Air Outtake Grille</li>
+  <li>Cool Air Intake Valve</li>
+  <li>Protective Grill</li>
+  <li>Himalayan Salt Spheres (7)</li>
+  <li>Himalayan Salt Tray</li>
+  <li>Temperature Sensor</li>
+  <li>Installation and Operation Manual</li>
+</ul>
+
+<div class="watch-out">
+  <p><strong>Watch Out:</strong> Like the Air series, the Air L does NOT include the controller or stones. The <strong>Saunum AirIQ Wi-Fi controller</strong> is required and sold separately. Stones require <strong>6 boxes</strong> totaling 180 lbs (the Air L 13 product page states "198 lbs - 6 Boxes" in the required components — use 180 lbs as stated in the specifications, and flag this discrepancy). Always confirm stone quantity when placing orders.</p>
+</div>
+
+<h4>Air L Key Differences from the Air Series</h4>
+<table>
+  <thead><tr><th>Feature</th><th>Air (Wall-Mount)</th><th>Air L (Floor-Standing)</th></tr></thead>
+  <tbody>
+    <tr><td>Mounting</td><td>Wall-mounted</td><td>Floor-standing</td></tr>
+    <tr><td>Finish</td><td>Stainless Steel</td><td>Nordic Black Steel</td></tr>
+    <tr><td>Stone Capacity</td><td>130 lbs (60 kg)</td><td>180 lbs (80 kg)</td></tr>
+    <tr><td>Stone Boxes Required</td><td>4 boxes</td><td>6 boxes</td></tr>
+    <tr><td>Power Range</td><td>5–7 kW</td><td>10–15 kW</td></tr>
+    <tr><td>Room Size Range</td><td>106–318 cu. ft.</td><td>283–812 cu. ft.</td></tr>
+    <tr><td>Body Depth</td><td>12.4" (315 mm)</td><td>18.1" (460 mm)</td></tr>
+    <tr><td>Climate Equalizer</td><td>3-speed, whisper-quiet</td><td>3-speed, whisper-quiet</td></tr>
+    <tr><td>Salt &amp; Aroma</td><td>Yes (included)</td><td>Yes (included)</td></tr>
+  </tbody>
+</table>
+
+<!-- ── Full Lineup Comparison ── -->
+<h3 id="ch3-compare">Full Lineup Comparison — All 5 Models</h3>
+
+<table>
+  <thead>
+    <tr><th>Spec</th><th>Air 5</th><th>Air 7</th><th>Air L 10</th><th>Air L 13</th><th>Air L 15</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><strong>Family</strong></td><td>Air</td><td>Air</td><td>Air L</td><td>Air L</td><td>Air L</td></tr>
+    <tr><td><strong>Mounting</strong></td><td>Wall</td><td>Wall</td><td>Floor</td><td>Floor</td><td>Floor</td></tr>
+    <tr><td><strong>Finish</strong></td><td>Stainless</td><td>Stainless</td><td>Black</td><td>Black</td><td>Black</td></tr>
+    <tr><td><strong>Wattage</strong></td><td>4,950W</td><td>6,900W</td><td>9,900W</td><td>12,900W</td><td>15,000W</td></tr>
+    <tr><td><strong>Amperage</strong></td><td>20.6A</td><td>28.8A</td><td>41.25A</td><td>53.75A</td><td>62.5A</td></tr>
+    <tr><td><strong>Room Size</strong></td><td>106–212 ft³</td><td>177–318 ft³</td><td>283–494 ft³</td><td>424–565 ft³</td><td>530–812 ft³</td></tr>
+    <tr><td><strong>Stone Capacity</strong></td><td>130 lbs</td><td>130 lbs</td><td>180 lbs</td><td>180 lbs</td><td>180 lbs</td></tr>
+    <tr><td><strong>Weight</strong></td><td>147 lbs</td><td>147 lbs</td><td>147 lbs</td><td>147 lbs</td><td>147 lbs</td></tr>
+    <tr><td><strong>Width</strong></td><td>18.3"</td><td>18.3"</td><td>18.3"</td><td>18.3"</td><td>18.3"</td></tr>
+    <tr><td><strong>Depth</strong></td><td>12.4"</td><td>12.4"</td><td>18.1"</td><td>18.1"</td><td>18.1"</td></tr>
+    <tr><td><strong>Height</strong></td><td>75.4"–95"</td><td>75.4"–95"</td><td>73"–95"</td><td>73"–95"</td><td>73"–95"</td></tr>
+    <tr><td><strong>Min Ceiling</strong></td><td>73"</td><td>73"</td><td>73"</td><td>73"</td><td>73"</td></tr>
+    <tr><td><strong>Wire to Power Unit</strong></td><td>(2) #10+N+G</td><td>(2) #8+N+G</td><td>#6+N+G</td><td>(2) #6+N+G</td><td>#4+N+G</td></tr>
+    <tr><td><strong>Voltage</strong></td><td>240 VAC</td><td>240 VAC</td><td>240 VAC</td><td>240 VAC</td><td>240 VAC</td></tr>
+    <tr><td><strong>Phase</strong></td><td>Single</td><td>Single</td><td>Single</td><td>Single</td><td>Single</td></tr>
+    <tr><td><strong>UL Listed</strong></td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+    <tr><td><strong>Salt &amp; Aroma</strong></td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+  </tbody>
+</table>
+
+<!-- ── Controller ── -->
+<h3 id="ch3-controller">Required Controller: Saunum AirIQ Wi-Fi</h3>
+
+<p>Every Saunum heater requires the <strong>Saunum AirIQ Wi-Fi</strong> controller (SKU: 4745090010565). This is sold separately and is NOT included with the heater. The AirIQ connects via Wi-Fi and provides:</p>
+
+<ul>
+  <li>Temperature selection from <strong>104°F to 194°F</strong> (40°C to 90°C)</li>
+  <li>Wi-Fi connectivity for remote control</li>
+  <li>Display panel connects via the included 16' IQAir Display Panel Cable (on Air series)</li>
+</ul>
+
+<h4>AirIQ Is a Learning System — Not Just a Thermostat</h4>
+<p>The "IQ" in AirIQ isn't marketing fluff. According to Prit at Bathing Brands: <em>"It learns about your sauna usage, like how your sauna reacts. And so once, it could heat up the sauna in the most efficient way. So it's really, really sophisticated product. And that's the thing — that's actually the reason why the controller is called Air IQ."</em></p>
+<p>Over time, the AirIQ learns:</p>
+<ul>
+  <li>How your specific sauna cabin responds to heating</li>
+  <li>How quickly it loses heat</li>
+  <li>The most efficient way to reach and maintain target temperature</li>
+  <li>Your usage patterns and preferences</li>
+</ul>
+
+<div class="pro-tip">
+  <p><strong>Pro Tip:</strong> The AirIQ's learning capability is a great talking point for tech-savvy customers. It positions Saunum as the most technologically advanced heater brand on the market. Frame it: "The controller actually gets smarter the more you use it — it learns your sauna's specific characteristics and optimizes efficiency over time. It's like a Nest thermostat for your sauna."</p>
+</div>
+
+<div class="watch-out">
+  <p><strong>Watch Out:</strong> Never let an order ship without a controller and stones. Every Saunum heater order must include: (1) the heater, (2) the AirIQ Wi-Fi controller, and (3) the correct number of stone boxes (4 for Air, 6 for Air L). A heater without these is useless on arrival — and that's a bad customer experience.</p>
+</div>
+
+<div class="script-box">
+  <p><strong>How to Frame This:</strong></p>
+  <p><strong>The core concept:</strong> Think of the AirIQ like the thermostat for a high-end HVAC system. The heater is the furnace — powerful but dumb without a brain. The AirIQ is the brain — it lets you control everything from your phone, set the temperature precisely, and manage all six sauna styles.</p>
+  <p><strong>PPW framework to apply:</strong> Peak Protection Concierge — this is a great place to demonstrate your value. "I'll make sure your order includes everything you need — the heater, controller, and correct stone quantity — so there are no surprises on delivery day."</p>
+</div>
+
+<!-- ── Air Solo ── -->
+<h3 id="ch3-solo">The Secret Upsell: Saunum Air Solo</h3>
+
+<p>Here's a product most salespeople overlook: the <strong>Saunum Air Solo</strong>. This is Saunum's air blending unit sold as a <strong>standalone device</strong> — no heater included. It works with <strong>any heater brand</strong>, electric or wood-fired.</p>
+
+<ul>
+  <li>Mounts on the wall — the upper part <strong>must</strong> be installed very close to the ceiling for proper function</li>
+  <li>Works with any heater — Harvia, HUUM, Cozy Heat, or any existing heater</li>
+  <li>Push the button and feel an immediate difference in air quality</li>
+  <li>According to Prit: "99% of the time, the sauna experience is much better after installing it"</li>
+</ul>
+
+<div class="script-box">
+  <p><strong>The Air Solo Upsell Opportunity:</strong></p>
+  <p>The Air Solo is your secret weapon for three scenarios:</p>
+  <p><strong>1. Customer already bought a non-Saunum heater:</strong> "You've got a great heater. Want to take it to the next level? The Air Solo adds Saunum's air blending to any heater — it transforms any sauna into a Saunum experience without replacing what you have."</p>
+  <p><strong>2. Customer has an existing sauna:</strong> "You don't need a new heater to get the Saunum difference. The Air Solo is a wall-mount unit that adds air blending to any existing sauna."</p>
+  <p><strong>3. Customer loves HUUM's look but wants Saunum's performance:</strong> "Get the HUUM for the design and add the Air Solo for the air blending. Best of both worlds."</p>
+</div>
+
+<div class="watch-out">
+  <p><strong>Watch Out — Air Solo Installation:</strong> Prit specifically emphasized: the upper part of the Air Solo device must be installed <strong>very close to the ceiling</strong>. Same with Saunum heaters — the telescopic chimney must reach close to the ceiling. This is essential for proper air blending function. If the intake isn't near the ceiling, it can't capture the hottest, most oxygen-depleted air.</p>
+</div>
+</div>
+
+<!-- ═══════════════════════ CHAPTER 4 ═══════════════════════ -->
+<div class="chapter" id="ch4">
+<h2 id="ch4">Chapter 4: Matching Customers to Products</h2>
+
+<p>With only 5 models across 2 families, Saunum's lineup is refreshingly simple to navigate. The decision usually comes down to two factors: <strong>room size</strong> and <strong>mounting preference</strong>. Let's walk through how to match each customer to the right model.</p>
+
+<h3 id="ch4-qualify">The Qualifying Checklist — Mapped to Saunum</h3>
+
+<p>Here's how the PPW qualifying questions map specifically to Saunum recommendations:</p>
+
+<table>
+  <thead><tr><th>#</th><th>Question</th><th>What You're Learning</th><th>Saunum Impact</th></tr></thead>
+  <tbody>
+    <tr><td>1</td><td>What's your first name?</td><td>Build rapport</td><td>—</td></tr>
+    <tr><td>2</td><td>What got you interested in a sauna?</td><td>Motivation / desired state</td><td>Wellness-focused? → Emphasize salt therapy, 6 styles. Performance? → Emphasize heat quality, löyly.</td></tr>
+    <tr><td>3</td><td>Have you looked at any specific models?</td><td>Research level, budget signals</td><td>If they mention Saunum by name, they've done research — they're pre-qualified for premium. If comparing to Harvia/HUUM, use tier positioning.</td></tr>
+    <tr><td>4</td><td>Where is it going?</td><td>Indoor/outdoor, construction context</td><td>Saunum is designed for indoor installation. Outdoor requires a properly insulated enclosure.</td></tr>
+    <tr><td>5</td><td>Rough dimensions of the space?</td><td>Room size → model selection</td><td><strong>The critical question.</strong> Calculate cubic feet (L × W × H) and match to model range.</td></tr>
+    <tr><td>6</td><td>Indoor or outdoor?</td><td>Environment factors</td><td>If outdoor, adjust sizing upward for heat loss.</td></tr>
+    <tr><td>7</td><td>How many people?</td><td>Sauna size validation</td><td>2 people = 100–200 ft³ typical. 4+ = 250+ ft³. Validates room size answer.</td></tr>
+    <tr><td>8</td><td>What electrical do you have?</td><td>Circuit capacity</td><td>All Saunum = 240V single phase. Air 5 needs 30A circuit min. Air L 15 needs 80A+ circuit. Critical to verify.</td></tr>
+    <tr><td>9</td><td>Infrared, traditional, or both?</td><td>Sauna type preference</td><td>If "both" → Saunum's 6 sauna styles pitch. Yoga Sauna mode bridges the IR-traditional gap.</td></tr>
+    <tr><td>10</td><td>Budget range?</td><td>Price qualification</td><td>Saunum is top-tier pricing. If budget is limited, Harvia or HUUM may be better fits. Don't force Saunum on a Harvia budget.</td></tr>
+    <tr><td>11</td><td>Timeline?</td><td>Urgency</td><td>Saunum ships freight on pallet. Allow lead time for scheduled delivery.</td></tr>
+    <tr><td>12</td><td>Best email for follow-up?</td><td>Contact info</td><td>—</td></tr>
+  </tbody>
+</table>
+
+<h3>The Decision Tree: Room Size → Model</h3>
+
+<p>Once you have the room's cubic footage, the model selection is straightforward:</p>
+
+<table>
+  <thead><tr><th>Room Size (cu. ft.)</th><th>Recommended Model</th><th>Family</th><th>Notes</th></tr></thead>
+  <tbody>
+    <tr><td>106–176</td><td><strong>Air 5</strong></td><td>Air (wall)</td><td>Small home saunas, 1–2 person</td></tr>
+    <tr><td>177–212</td><td><strong>Air 7</strong></td><td>Air (wall)</td><td>Overlap zone — go with 7 for better performance</td></tr>
+    <tr><td>213–282</td><td><strong>Air 7</strong></td><td>Air (wall)</td><td>Air 7's sweet spot</td></tr>
+    <tr><td>283–423</td><td><strong>Air L 10</strong></td><td>Air L (floor)</td><td>Mid-size home saunas, 3–4 person</td></tr>
+    <tr><td>424–494</td><td><strong>Air L 13</strong></td><td>Air L (floor)</td><td>Overlap zone — go with L 13</td></tr>
+    <tr><td>495–529</td><td><strong>Air L 13</strong></td><td>Air L (floor)</td><td>Air L 13's sweet spot</td></tr>
+    <tr><td>530–565</td><td><strong>Air L 15</strong></td><td>Air L (floor)</td><td>Overlap zone — go with L 15</td></tr>
+    <tr><td>566–812</td><td><strong>Air L 15</strong></td><td>Air L (floor)</td><td>Large/commercial saunas</td></tr>
+  </tbody>
+</table>
+
+<div class="pro-tip">
+  <p><strong>Pro Tip:</strong> In every overlap zone, recommend the more powerful model. The heater investment reframe applies perfectly here: "A heater that's slightly oversized for your space will heat up faster, recover better after löyly, and last longer because it's not constantly running at maximum. It's like buying a car with a bit more horsepower than you need — it's not working as hard, so it runs smoother and lasts longer."</p>
+</div>
+
+<h3 id="ch4-scenarios">Common Customer Scenarios</h3>
+
+<h4>Scenario 1: The Wellness Enthusiast</h4>
+<p><em>"I want a sauna for health benefits — I've read about infrared and traditional and can't decide."</em></p>
+<p><strong>Recommend:</strong> Saunum (appropriate size). Frame the 6 sauna styles, especially Yoga Sauna (floor-level heat like IR) and Salt Sauna (halotherapy). The Climate Equalizer gives them the oxygenated, comfortable experience they associate with IR, but with the authentic steam and löyly of a traditional sauna. Apply Gap Selling: their current state is "confused about which type," their desired state is "one sauna that does it all."</p>
+
+<h4>Scenario 2: The Upgrade Buyer</h4>
+<p><em>"I already have a sauna but the heater is old/cheap and I want something better."</em></p>
+<p><strong>Recommend:</strong> Saunum (based on their existing room size). Frame the upgrade using the Heater Investment Reframe: "You've already invested thousands in the sauna room itself — the wood, the benches, the electrical, the construction. The heater is the engine of that investment. A $500 heater in a $7,000 sauna is like putting a 2-liter engine in a Bentley." Emphasize the Climate Equalizer as the difference they'll feel immediately vs. their old heater.</p>
+<p><strong>Alternative:</strong> If they don't want to replace their heater, recommend the <strong>Saunum Air Solo</strong> — it adds air blending to any existing heater without replacement.</p>
+
+<div class="pro-tip">
+  <p><strong>Pro Tip — The Harvia Repeat Buyer Stat:</strong> According to Harvia's own quarterly earnings report, <strong>70 to 80 percent of their sales come from second-time heater buyers</strong> — and every time someone buys their second heater, they buy a better, more expensive one. Use this with upgrade buyers: "The data shows most people who start with a basic heater end up upgrading. You can skip that step and get the right heater the first time." This is also Prit's "first car vs. second car" analogy: "When you buy your first car, you're just happy it drives. When you buy your second car, you want air conditioning, better seats, airbags."</p>
+</div>
+
+<h4>Scenario 3: The New Build (Custom Sauna)</h4>
+<p><em>"We're building a custom sauna as part of a home renovation."</em></p>
+<p><strong>Recommend:</strong> Saunum Air L (size based on plans). For custom builds, the customer has the most flexibility. Push toward the Air L series — the floor-standing format is easier to plan around in a new build, the 180 lb stone capacity produces better steam, and the Nordic Black finish is a design statement. Get the architect's dimensions and calculate cubic footage. Emphasize that electrical can be planned for the heater (vs. retrofit), making the higher-amperage Air L models easy to accommodate. While you have the architect on the phone, this is the moment to make the case that the heater is the engine of the entire build — not an afterthought. A $10,000+ custom sauna room deserves the best heater you can put in it. This is the one choice you can't retrofit cheaply later.</p>
+
+<h4>Scenario 4: The Budget-Conscious Premium Buyer</h4>
+<p><em>"I want the best, but I'm watching my budget."</em></p>
+<p><strong>Recommend:</strong> Saunum Air 5 or Air 7. These are the entry point to the Saunum experience. They have the exact same Climate Equalizer technology as the Air L — same air blending, same salt therapy, same 6 styles. The customer gets the Bentley experience in a more compact package. Frame it: "You're not getting a lesser version — you're getting the full Saunum technology in the size that fits your space."</p>
+
+<h4>Scenario 5: The "Best Possible Sauna" Buyer</h4>
+<p><em>"I want the absolute best sauna experience money can buy — no compromises."</em></p>
+<p><strong>Recommend:</strong> SaunaLife G6 cabin + Saunum Air L heater. According to Prit: <em>"When you combine two things, the Saunum heater and the G6 cabin, then you have like a perfect sauna. It doesn't get any better than this basically."</em> The G6 is pre-assembled (no DIY), has a built-in electrical fresh air ventilation system inside the wall (active, not passive), and when paired with Saunum's air blending, creates the ultimate sauna climate. This is the setup Logan Paul chose for his recovery routine. Target this pairing for second/third-time sauna buyers, celebrity clientele, and high-budget customers.</p>
+
+<h4>Scenario 6: The Sauna + Cold Plunge Buyer</h4>
+<p><em>"I want a sauna and cold plunge for recovery."</em></p>
+<p><strong>Recommend:</strong> Saunum (appropriate size) + cold plunge. Position Saunum as the ideal heater for the recovery routine because the even temperature lets them stay in for the full 15–20 minutes their muscles need. Prit explains: <em>"The secret behind a good sauna is warming your body up slowly and then bringing the temperature down quickly."</em></p>
+
+<div class="watch-out">
+  <p><strong>Watch Out — Cold Plunge Safety (Critical):</strong> Prit was explicit about two safety warnings you must communicate:</p>
+  <p><strong>1. Heart conditions and obesity:</strong> People who are overweight or have heart issues should <strong>NOT</strong> go from a sauna directly into a cold plunge. The rapid temperature change is extremely stressful for the heart. Always ask customers about health conditions before recommending the sauna-to-cold-plunge routine.</p>
+  <p><strong>2. Women and cold water temperature:</strong> Based on Saunum's cooperation with a university, the minimum recommended cold plunge temperature for women is <strong>50°F (10°C)</strong>. Women generally have less fat tissue and smaller bodies, so they cool down much faster than men and can reach dangerous core temperatures sooner. Never recommend ice-cold water without this qualification.</p>
+</div>
+
+<div class="script-box">
+  <p><strong>When a customer asks about cold plunge temperature:</strong></p>
+  <p><em>"You don't need ice-cold water to get the benefits. Even moderately cool water provides real health benefits after a sauna session. For women especially, the water should not go below about 50 degrees Fahrenheit — that's based on university research that Saunum was involved in. The key is the contrast between the hot sauna and the cooler water, not extreme cold."</em></p>
+</div>
+
+<h3 id="ch4-sizing">Sizing Guide</h3>
+
+<h4>Step 1: Calculate Base Cubic Footage</h4>
+<p>Measure the sauna room's interior dimensions in feet:</p>
+<p><strong>Cubic Feet = Length × Width × Height</strong></p>
+<p>Example: A sauna that's 6' long × 5' wide × 7' tall = 210 cu. ft.</p>
+
+<h4>Step 2: Apply Adjustment Factors</h4>
+<p>Certain conditions increase heat loss and require you to size up:</p>
+
+<table>
+  <thead><tr><th>Condition</th><th>Adjustment</th></tr></thead>
+  <tbody>
+    <tr><td>Glass door or window</td><td>Add ~25% to calculated cu. ft.</td></tr>
+    <tr><td>Uninsulated or exposed log/stone walls</td><td>Add ~30–50% to calculated cu. ft.</td></tr>
+    <tr><td>Outdoor sauna (exposed to cold weather)</td><td>Add ~25–40% to calculated cu. ft.</td></tr>
+    <tr><td>Ceilings above 7 feet</td><td>Recalculate using actual height</td></tr>
+  </tbody>
+</table>
+
+<div class="watch-out">
+  <p><strong>Watch Out:</strong> The PDF extraction for the "Sizing Your Saunum" guide returned empty. The adjustment percentages above are general sauna sizing principles, not Saunum-specific published factors. Always refer the customer and their installer to the official Saunum sizing guide at: <a href="https://prod.cms.bathingbrands.com/sites/default/files/2025-09/Sizing-Your-Saunum.pdf" class="doc-link">Sizing Your Saunum (PDF)</a> for authoritative sizing calculations.</p>
+</div>
+
+<h4>Step 3: Match to Model</h4>
+<p>Take your adjusted cubic footage and refer to the Decision Tree table above.</p>
+
+<h3 id="ch4-electrical">Electrical Requirements</h3>
+
+<p>Every Saunum heater runs on <strong>240V single-phase power</strong> — the same type of circuit your clothes dryer or electric oven uses. The difference is how much amperage each model draws:</p>
+
+<table>
+  <thead><tr><th>Model</th><th>Wattage</th><th>Amperage</th><th>Wire Size to Power Unit</th><th>Typical Home Circuit</th></tr></thead>
+  <tbody>
+    <tr><td>Air 5</td><td>4,950W</td><td>20.6A</td><td>(2) #10 + N + G</td><td>30A breaker</td></tr>
+    <tr><td>Air 7</td><td>6,900W</td><td>28.8A</td><td>(2) #8 + N + G</td><td>40A breaker</td></tr>
+    <tr><td>Air L 10</td><td>9,900W</td><td>41.25A</td><td>#6 + N + G</td><td>50A breaker</td></tr>
+    <tr><td>Air L 13</td><td>12,900W</td><td>53.75A</td><td>(2) #6 + N + G</td><td>60A breaker</td></tr>
+    <tr><td>Air L 15</td><td>15,000W</td><td>62.5A</td><td>#4 + N + G</td><td>80A breaker</td></tr>
+  </tbody>
+</table>
+
+<div class="watch-out">
+  <p><strong>Watch Out:</strong> The "Circuit Breaker" field in the official specs says "See Installation and Operation Manual" for all models. The breaker sizes listed above as "Typical Home Circuit" are estimated based on standard NEC practice (breaker must be rated at 125% of continuous load). Always direct the customer's electrician to the official Installation and Operation Manual for the definitive requirement. This is where <strong>Peak Protection Concierge</strong> shines — offer to coordinate with their electrician directly.</p>
+</div>
+
+<div class="script-box">
+  <p><strong>How to Frame This:</strong></p>
+  <p><strong>The core concept:</strong> "240V single-phase" sounds technical but it's simple — it's the same kind of power that runs your clothes dryer or electric range. Your electrician runs a dedicated line from the panel to the sauna room, just like they would for any major appliance.</p>
+  <p><strong>PPW framework to apply:</strong> Peak Protection Concierge — "I can send the exact electrical specs to your electrician so they know exactly what to run. We do this all the time — it saves a lot of back-and-forth." This is a huge value-add that builds confidence in you AND the company (<strong>Three Tens</strong>: the PPW concept that a customer must rate their certainty at a "10 out of 10" on three dimensions — certainty in the <em>product</em>, certainty in the <em>company</em>, and certainty in <em>you the salesperson</em> — before they'll buy. Every interaction should build toward all three tens).</p>
+</div>
+
+<p><strong>Additional wiring notes from spec sheets:</strong></p>
+<ul>
+  <li><strong>Air 5 &amp; Air 7:</strong> Power Unit to Elements cable = 7-conductor, #14AWG, 90°C, 5' long. Power Unit to Heat Equalizer cable = 5-conductor, #18AWG, 90°C, 5' long. Both cables are included.</li>
+  <li><strong>Air L series:</strong> Wire sizes from heater to power unit differ per model (see table above). Internal wiring details follow the Installation and Operation Manual.</li>
+  <li><strong>All models:</strong> Room temperature sensor pre-mounted with 9.5' cable (Air series).</li>
+</ul>
+
+<p><strong>Minimum ceiling height for all models:</strong> 73" (1,850 mm). The telescopic air intake adjusts from the top of the heater body up to 95" to reach near the ceiling.</p>
+</div>
+
+<!-- ═══════════════════════ CHAPTER 5 ═══════════════════════ -->
+<div class="chapter" id="ch5">
+<h2 id="ch5">Chapter 5: Handling Questions &amp; Objections</h2>
+
+<p>This is the chapter you'll use most during live calls. Below you'll find practical frameworks for the questions and objections you'll hear most often. Use the <strong>Bridge Technique</strong> on every question (answer first, then explore), and the <strong>LAER framework</strong> on every objection (Listen, Acknowledge, Explore, Respond). Both are explained in detail later in this chapter.</p>
+
+<div class="key-def">
+  <p><strong>Key Definition — The Three Tens Applied to Saunum:</strong> For a customer to buy, they need 10-out-of-10 certainty in three areas. Every interaction should build toward all three:</p>
+  <p><strong>Product Certainty (10/10):</strong> Lead with UL certification, the 60% stratification stat, 4 independent safety systems, and the patented Climate Equalizer. These are verifiable, specific, and impossible for competitors to copy.</p>
+  <p><strong>Salesperson Certainty (10/10):</strong> Lead with the overlap zone sizing rule, the electrician spec coordination offer, and your knowledge of barrel mode, ventilation, and stone requirements. These show expertise and genuine care.</p>
+  <p><strong>Company Certainty (10/10):</strong> Lead with Peak Protection Concierge — the order completeness guarantee, freight delivery coordination, and post-sale support. These show PPW is accountable, not just transactional.</p>
+</div>
+
+<h3 id="ch5-questions">Top Customer Questions</h3>
+
+<h4>"What makes Saunum different from other heaters?"</h4>
+<div class="script-box">
+  <p><strong>How to Frame This:</strong></p>
+  <p>Lead with the problem every sauna has (stratification — hot head, cold feet, harsh breathing), then position the Climate Equalizer as the only heater that actively solves it. Use the convection oven analogy: "A regular oven has hot spots. A convection oven circulates air evenly. Saunum does the same thing for your sauna." Then layer in the bonus features: built-in salt therapy, self-drying, 6 sauna styles. The key insight: Saunum isn't just a better heater — it's a different category of product.</p>
+</div>
+
+<h4>"Is the fan noisy?"</h4>
+<div class="script-box">
+  <p><strong>How to Frame This:</strong></p>
+  <p>Acknowledge the concern first (Bridge Technique — answer the question directly before exploring). The spec sheet describes the Climate Equalizer as "whisper-quiet operation" across all 3 speeds. Frame it: "It's designed for a relaxation environment, so quiet operation was a design priority. Think of it like a high-end ceiling fan on its lowest setting — you feel the benefit but you don't hear the machine."</p>
+</div>
+
+<h4>"Do I need to buy stones and a controller separately?"</h4>
+<div class="script-box">
+  <p><strong>How to Frame This:</strong></p>
+  <p>Be direct and transparent — yes, both are required and sold separately. Then reframe it as a positive: "This actually works in your favor because it means you can choose your stone type and the controller is the latest AirIQ Wi-Fi model with app control. And I'll make sure your order is complete before it ships — heater, controller, and the right number of stone boxes — so everything arrives together." This is a Peak Protection Concierge moment.</p>
+</div>
+
+<h4>"What's the difference between the Air and the Air L?"</h4>
+<div class="script-box">
+  <p><strong>How to Frame This:</strong></p>
+  <p>Simple framing: "Same technology, different size. The Air is wall-mounted for smaller rooms (up to ~318 cu. ft.). The Air L sits on the floor and handles bigger rooms (up to 812 cu. ft.). The Air L also holds 50 more pounds of stone, which means even softer, more luxurious steam. Once we know your room dimensions, the right one will be obvious."</p>
+</div>
+
+<h4>"Is it really worth the premium over a Harvia or HUUM?"</h4>
+<div class="script-box">
+  <p><strong>How to Frame This:</strong></p>
+  <p>Apply the Heater Investment Reframe: "Your sauna room — the wood, benches, glass, construction, electrical — that's a $5,000 to $15,000+ investment. The heater is the engine of that entire investment. Going with a budget heater is like putting a base-model engine in a luxury car — it runs, but you'll always wonder what you're missing." Then highlight what's unique: "No other heater on the market has air blending, built-in salt therapy, 6 sauna styles, AND UL certification. Harvia and HUUM are excellent heaters — but they heat the air. Saunum manages the air. That's the difference you'll feel every single session."</p>
+  <p><strong>PPW framework:</strong> Gap Selling — sell the experience gap between "hot head/cold feet in a conventional sauna" and "even, breathable comfort head to toe."</p>
+</div>
+
+<div class="pro-tip">
+  <p><strong>Pro Tip — HUUM vs. Saunum Price Comparison:</strong> According to Prit: <em>"When you compare the HUUM Hive heater prices to Saunum prices, they are in the same price range. But with Saunum heaters, you will be buying just a little bit more of a product, more usability."</em> When HUUM and Saunum are in the same price range, always push Saunum. The customer gets more for the same money — air blending, salt therapy, massive stone capacity, and the UL safety listing. HUUM wins on design/aesthetics, but Saunum wins on performance and health benefits.</p>
+</div>
+
+<h4>"What health benefits can I actually expect?"</h4>
+<div class="script-box">
+  <p><strong>How to Frame This:</strong></p>
+  <p>The real health benefits from sauna use require <strong>15 to 20 minutes of regular sessions</strong>. But most people leave too early because their head overheats before their muscles have had enough time. As Prit explains: <em>"Once your head overheats, it will say 'hey, you have to leave the sauna because I'm overheating' and that's when people are going away. But actually your muscles would need more time in there."</em></p>
+  <p>Frame it: "Great question. The real health benefits from sauna use come from staying in for 15 to 20 minutes regularly. But most people leave too early because their head overheats before their muscles have had enough time. Your brain can handle way less heat than your body can. What Saunum does is blend the air so the temperature is even from your head to your feet. You get to stay in longer, more comfortably, and that's where the real health benefits come from. It's the difference between a sauna you use once in a while and a sauna you use every day."</p>
+</div>
+
+<h4>"Can I use this in an outdoor sauna?"</h4>
+<div class="pro-tip">
+  <p><strong>Pro Tip:</strong> Saunum heaters are designed for indoor use. They can work in outdoor sauna buildings, but the enclosure must be properly insulated. For outdoor installations, size up the heater to account for heat loss (add 25–40% to calculated cubic footage). Direct the customer's builder to the Installation and Operation Manual for specific requirements.</p>
+</div>
+
+<h4>"What about the salt — do I need to replace it?"</h4>
+<p>The heater comes with 7 Himalayan salt spheres. Over time, as air passes over them and moisture interacts with the salt, they will slowly dissolve. Replacement salt spheres are available as accessories. The rate of replacement depends on usage frequency and humidity levels — heavy users might replace them annually, lighter users less often.</p>
+
+<h3 id="ch5-objections">Objection Handling with LAER</h3>
+
+<div class="key-def">
+  <p><strong>Key Definition — LAER Framework:</strong> Listen → Acknowledge → Explore → Respond. The idea is to hear the customer's full concern, validate it, dig into what's really driving it, and THEN respond. Most reps jump straight to "Respond" and miss the real objection.</p>
+</div>
+
+<h4>Objection: "It's too expensive."</h4>
+<p><strong>Listen:</strong> Let them finish. Don't interrupt with justifications.</p>
+<p><strong>Acknowledge:</strong> "I completely understand — Saunum is a premium investment, and that deserves serious consideration."</p>
+<p><strong>Explore:</strong> Find out what's really behind it. Is it total budget? Is it comparison to another heater? Is it sticker shock on the heater alone, or heater + controller + stones? Often the concern is less about the total number and more about feeling like they're overspending on one component. Ask: "When you say it's more than you expected, is that compared to another specific heater you've been looking at?"</p>
+<p><strong>Respond:</strong> Once you know the real concern, respond accordingly. If it's total budget — can they do an Air 5 instead of an Air L? If it's comparison to a cheaper brand — apply the Heater Investment Reframe. If it's the surprise of needing controller + stones separately — show them the complete package price and emphasize Peak Protection Concierge.</p>
+
+<div class="script-box">
+  <p><strong>The First Car vs. Second Car — How to Frame This (from Prit):</strong></p>
+  <p><em>"When you buy your first car, you're so happy that it takes you from point A to point B that you don't care what kind of car it is. But when you buy your second car, you start thinking — maybe the second car should have air conditioning, better seats, airbags. Saunas are the same way. Most people who get a basic heater end up upgrading later. You can skip that step and get the right heater the first time."</em></p>
+  <p>Back this up with data: <strong>70–80% of Harvia's sales come from second-time heater buyers</strong> who upgrade to something better. That's from Harvia's own quarterly earnings report.</p>
+</div>
+
+<div class="pro-tip">
+  <p><strong>Pro Tip — The Daily Cost Breakdown:</strong> Always break price into daily cost over product lifespan. A Saunum heater used for 15 years costs pennies per day. If a customer uses their sauna 4 days a week for 15 years, that's over 3,000 sessions. Compare that to a $30–60 spa sauna visit, a $50–100/month gym membership, or the $5,000–15,000 they've already invested in the sauna room itself. The heater is the cheapest part of the daily wellness practice they're building.</p>
+</div>
+
+<div class="script-box">
+  <p><strong>The Daily Cost How to Frame (use when "it's too expensive" persists after LAER):</strong></p>
+  <p><em>"Let me put the price in context. Divide the heater investment by 5,475 days (15 years of daily use) and the per-day number is almost always less than a cup of coffee. Do this math out loud with the customer. The sauna room itself, spread over the same period, is under a dollar a day. A single spa sauna session costs $30 to $60. You're not buying a heater — you're buying a daily wellness practice at a fraction of what most people spend on their morning coffee."</em></p>
+</div>
+
+<div class="watch-out">
+  <p><strong>Watch Out:</strong> Do not respond to a price objection by listing features. Until you complete the LAER Explore step, you don't know whether the real concern is total budget, value uncertainty, or sticker shock from the bundle (heater + controller + stones). Responding with features before exploring will feel like a sales pitch, not a consultation.</p>
+</div>
+
+<h4>Objection: "I don't need all those fancy features — I just want heat."</h4>
+<p><strong>Listen:</strong> Respect this perspective. Some customers are purists.</p>
+<p><strong>Acknowledge:</strong> "That's a totally valid approach. A great sauna starts with great heat."</p>
+<p><strong>Explore:</strong> "When you picture your ideal sauna session, what does that look like? How long do you usually stay in?" What you're looking for: do they leave early because of discomfort (stratification problem)? Do they wish they could do longer sessions? Do they want to use the sauna for exercise or meditation?</p>
+<p><strong>Respond:</strong> If they truly just want raw heat with no frills, a Harvia or HUUM may be the honest recommendation. But if they describe any comfort issues — hot head, harsh breathing, short sessions — that's the Climate Equalizer's whole reason for existing. Frame it: "The air blending isn't a fancy add-on — it directly solves the comfort issues that make most people cut their sessions short."</p>
+
+<h4>Objection: "I've never heard of this brand."</h4>
+<p><strong>Listen &amp; Acknowledge:</strong> Totally fair — Saunum is from Estonia and is newer to the US market compared to Finnish brands.</p>
+<p><strong>Explore:</strong> "What brands are you most familiar with?" This tells you their reference point.</p>
+<p><strong>Respond:</strong> Position Saunum's credentials: UL certification (US safety tested), patented technology, European engineering pedigree. Estonia is the sauna capital of the Baltic region. And the UL listing means a US-recognized testing lab has verified every safety aspect. If they know HUUM — "HUUM is also Estonian, and they've built a great reputation. Saunum takes the Estonian sauna tradition a step further with the air blending technology." Three Tens: build certainty in the product through credible credentials.</p>
+
+<h3 id="ch5-bridge">The Bridge Technique in Action</h3>
+
+<div class="key-def">
+  <p><strong>Key Definition — The Bridge Technique:</strong> Answer the customer's question FIRST (give them the direct answer they asked for), THEN bridge to a discovery question that helps you sell more effectively. Never deflect — answer, then explore.</p>
+</div>
+
+<p><strong>Example:</strong></p>
+<p><em>When a customer asks: "How much does the Air 7 cost?"</em></p>
+<p>Bridge approach: Give them the price directly (never dodge a price question). Then bridge: "And that includes [list what's included]. The two things you'll need to add are the AirIQ controller and stones. Can I ask — do you already know your sauna room dimensions? That way I can make sure the Air 7 is the right fit before we go further."</p>
+<p>Now you've answered their question, demonstrated completeness (Peak Protection Concierge), and moved into qualification — all in one natural response.</p>
+
+<div class="script-box">
+  <p><strong>Bridge Example 2 — Stock Inquiry:</strong></p>
+  <p><em>When a customer asks: "Do you have the Air L 10 in stock?"</em></p>
+  <p>Bridge approach: Answer directly ("Yes, we do have the Air L 10 available"), then bridge: "Before I get that reserved for you — can I confirm your sauna room dimensions? The Air L 10 covers 283 to 494 cubic feet, and I want to make sure it's the right fit so you're not under-powered or overspending. What are your room's length, width, and height?"</p>
+</div>
+
+<div class="script-box">
+  <p><strong>Bridge Example 3 — Discount Request:</strong></p>
+  <p><em>When a customer asks: "Can I get a discount on the Air L 13?"</em></p>
+  <p>Bridge approach: Don't dodge or deflect. Address it: "I appreciate you asking — let me make sure we're looking at the right model first, because the right size is more important than the price. What's the cubic footage of your sauna room?" If they're actually in the Air L 10 range, you just saved them money legitimately AND built trust. If they're genuinely in Air L 13 territory, you've validated their choice and can discuss the full value proposition from a position of expertise.</p>
+</div>
+
+<h3>Social Proof: Logan Paul's Setup</h3>
+<p>According to Prit, <strong>Logan Paul chose the SaunaLife G6 model with a Saunum heater</strong> for recovering after his training sessions. He specifically wanted the G6 (built-in electrical fresh air ventilation) paired with Saunum (best sauna experience for recovery).</p>
+
+<div class="pro-tip">
+  <p><strong>Pro Tip:</strong> This is useful social proof for customers who are into fitness, recovery, or follow influencer culture. A casual mention — "Even Logan Paul chose this exact setup for his recovery routine" — carries weight. Just keep it as a notable data point, not an official sponsorship claim. Use it when a customer's motivation is athletic recovery or performance.</p>
+</div>
+
+<h3>The "Why Do People Lay Down?" Insight</h3>
+<p>Here's a fascinating insight from Prit that demonstrates deep sauna knowledge: people lay down on sauna benches <strong>not because they're tired, but because they want their entire body at the same temperature</strong>. When you lay flat, your head and feet are at the same height, so they experience the same heat level. Saunum achieves this same uniform temperature effect <em>while you're sitting upright</em>.</p>
+
+<div class="script-box">
+  <p><strong>How to Use This in Conversation:</strong></p>
+  <p>When a customer says they love their sauna sessions: "You know how sometimes you lay down on the bench because it just feels better? That's actually because your body wants even temperature from head to toe. When you lay flat, you escape the stratification layers. What Saunum does is give you that same even temperature while you're sitting up. You get the comfort of laying down without actually having to."</p>
+  <p>This demonstrates product knowledge AND sauna expertise — it builds certainty in you as a salesperson (Three Tens).</p>
+</div>
+</div>
+
+<!-- ═══════════════════════ CHAPTER 6 ═══════════════════════ -->
+<div class="chapter" id="ch6">
+<h2 id="ch6">Chapter 6: Technical Reference</h2>
+
+<p>This section is for reference during calls and order preparation — not for reading cover to cover. Use Command+F / Ctrl+F to find what you need fast.</p>
+
+<h3 id="ch6-specs-air">Air Series — Full Specifications</h3>
+
+<table>
+  <thead><tr><th>Specification</th><th>Air 5</th><th>Air 7</th></tr></thead>
+  <tbody>
+    <tr><td>Model</td><td>AIR 5</td><td>AIR 7</td></tr>
+    <tr><td>SKU</td><td>4745090017892</td><td>4745090017908</td></tr>
+    <tr><td>Internal SKU</td><td>164-AIR50-SSB-240/1</td><td>164-AIR70-SSB-240/1</td></tr>
+    <tr><td>Certification</td><td>UL</td><td>UL</td></tr>
+    <tr><td>Heater Body Style</td><td>Stainless Steel</td><td>Stainless Steel</td></tr>
+    <tr><td>Heating Elements</td><td>Incoloy (Stainless Steel)</td><td>Incoloy (Stainless Steel)</td></tr>
+    <tr><td>Element Protection</td><td>Air Tunnels, Slotted SS, Three</td><td>Air Tunnels, Slotted SS, Three</td></tr>
+    <tr><td>Equalizer Module</td><td>3-Speeds, Whisper-Quiet</td><td>3-Speeds, Whisper-Quiet</td></tr>
+    <tr class="highlight-row"><td>Room Size</td><td>106–212 cu. ft. (3–6 m³)</td><td>177–318 cu. ft. (5–9 m³)</td></tr>
+    <tr class="highlight-row"><td>Wattage Rating</td><td>4,950W</td><td>6,900W</td></tr>
+    <tr><td>Operating Voltage</td><td>240 VAC</td><td>240 VAC</td></tr>
+    <tr><td>Phase</td><td>Single</td><td>Single</td></tr>
+    <tr class="highlight-row"><td>Amperage</td><td>20.6A</td><td>28.8A</td></tr>
+    <tr><td>Stone Capacity</td><td>130 lbs (60 kg)</td><td>130 lbs (60 kg)</td></tr>
+    <tr><td>Stone Size</td><td>2"–4" (5–10 cm)</td><td>2"–4" (5–10 cm)</td></tr>
+    <tr><td>Weight</td><td>147 lbs (67 kg)</td><td>147 lbs (67 kg)</td></tr>
+    <tr><td>Shipping Weight w/ Stones</td><td>279 lbs (126.6 kg)</td><td>279 lbs (126.6 kg)</td></tr>
+    <tr><td>Width</td><td>18.3" (465 mm)</td><td>18.3" (465 mm)</td></tr>
+    <tr><td>Depth</td><td>12.4" (315 mm)</td><td>12.4" (315 mm)</td></tr>
+    <tr><td>Height (w/ intake)</td><td>75.4"–95" (1915–2420 mm)</td><td>75.4"–95" (1915–2420 mm)</td></tr>
+    <tr><td>Min. Ceiling Height</td><td>73" (1850 mm)</td><td>73" (1850 mm)</td></tr>
+    <tr><td>Ceiling Hot Air Intake</td><td>17.72" × 4"</td><td>17.72" × 4"</td></tr>
+    <tr><td>Cool Air Intake Type</td><td>Adjustable Valve, Side-Mount, 12" off floor</td><td>Adjustable Valve, Side-Mount, 12" off floor</td></tr>
+    <tr><td>Cool Air Intake Size</td><td>2" × 2.75"</td><td>2" × 2.75"</td></tr>
+    <tr><td>Blended Air Output</td><td>4.31" × 14.13"</td><td>4.31" × 14.13"</td></tr>
+    <tr><td>Salt/Aroma Tray</td><td>Removable, Slotted, 16.5" × 4.5"</td><td>Removable, Slotted, 16.5" × 4.5"</td></tr>
+    <tr class="highlight-row"><td>Wire to Power Unit</td><td>(2) #10 + N + G</td><td>(2) #8 + N + G</td></tr>
+    <tr><td>Wire: Power to Elements</td><td>7-cond, #14AWG, 90°C, 5'</td><td>7-cond, #14AWG, 90°C, 5'</td></tr>
+    <tr><td>Wire: Power to Equalizer</td><td>5-cond, #18AWG, 90°C, 5'</td><td>5-cond, #18AWG, 90°C, 5'</td></tr>
+    <tr><td>Temp Sensor Cable</td><td>9.5' (289.56 cm)</td><td>9.5' (289.56 cm)</td></tr>
+    <tr><td>Circuit Breaker</td><td>See IOM</td><td>See IOM</td></tr>
+  </tbody>
+</table>
+
+<h3 id="ch6-specs-airl">Air L Series — Full Specifications</h3>
+
+<table>
+  <thead><tr><th>Specification</th><th>Air L 10</th><th>Air L 13</th><th>Air L 15</th></tr></thead>
+  <tbody>
+    <tr><td>Model</td><td>Air L 10</td><td>Air L 13</td><td>Air L 15</td></tr>
+    <tr><td>SKU</td><td>4745090018400</td><td>4745090017915</td><td>4745090018424</td></tr>
+    <tr><td>Internal SKU</td><td>164-AIR-L-10</td><td>164-AIR-L-13</td><td>164-AIR-L-15</td></tr>
+    <tr><td>Certification</td><td>UL</td><td>UL</td><td>UL</td></tr>
+    <tr><td>Heater Body Style</td><td>Solid Steel – Nordic Black</td><td>Solid Steel – Nordic Black</td><td>Solid Steel – Nordic Black</td></tr>
+    <tr><td>Heating Elements</td><td>Incoloy (Stainless Steel)</td><td>Incoloy (Stainless Steel)</td><td>Incoloy (Stainless Steel)</td></tr>
+    <tr><td>Element Protection</td><td>Air Tunnels, Slotted SS, Three</td><td>Air Tunnels, Slotted SS, Three</td><td>Air Tunnels, Slotted SS, Three</td></tr>
+    <tr><td>Equalizer Module</td><td>3-Speeds, Whisper-Quiet</td><td>3-Speeds, Whisper-Quiet</td><td>3-Speeds, Whisper-Quiet</td></tr>
+    <tr class="highlight-row"><td>Room Size</td><td>283–494 cu. ft. (8–14 m³)</td><td>424–565 cu. ft. (12–16 m³)</td><td>530–812 cu. ft. (15–23 m³)</td></tr>
+    <tr class="highlight-row"><td>Wattage Rating</td><td>9,900W</td><td>12,900W</td><td>15,000W</td></tr>
+    <tr><td>Operating Voltage</td><td>240 VAC</td><td>240 VAC</td><td>240 VAC</td></tr>
+    <tr><td>Phase</td><td>Single</td><td>Single</td><td>Single</td></tr>
+    <tr class="highlight-row"><td>Amperage</td><td>41.25A</td><td>53.75A</td><td>62.5A</td></tr>
+    <tr><td>Stone Capacity</td><td>180 lbs (80 kg)</td><td>180 lbs (80 kg)</td><td>180 lbs (80 kg)</td></tr>
+    <tr><td>Stone Size</td><td>2"–4" (5–10 cm)</td><td>2"–4" (5–10 cm)</td><td>2"–4" (5–10 cm)</td></tr>
+    <tr><td>Weight</td><td>147 lbs (67 kg)</td><td>147 lbs (67 kg)</td><td>147 lbs (67 kg)</td></tr>
+    <tr><td>Shipping Weight w/ Stones</td><td>345 lbs (156.5 kg)</td><td>345 lbs (156.5 kg)</td><td>345 lbs (156.5 kg)</td></tr>
+    <tr><td>Width</td><td>18.3" (465 mm)</td><td>18.3" (465 mm)</td><td>18.3" (465 mm)</td></tr>
+    <tr><td>Depth</td><td>18.1" (460 mm)</td><td>18.1" (460 mm)</td><td>18.1" (460 mm)</td></tr>
+    <tr><td>Height (w/ intake)</td><td>73"–95" (1850–2450 mm)</td><td>73"–95" (1850–2450 mm)</td><td>73"–95" (1850–2450 mm)</td></tr>
+    <tr><td>Min. Ceiling Height</td><td>73" (1850 mm)</td><td>73" (1850 mm)</td><td>73" (1850 mm)</td></tr>
+    <tr><td>Ceiling Hot Air Intake</td><td>17.72" × 4"</td><td>17.72" × 4"</td><td>17.72" × 4"</td></tr>
+    <tr><td>Cool Air Intake Type</td><td>Adjustable Valve, Side-Mount, 12" off floor</td><td>Adjustable Valve, Side-Mount, 12" off floor</td><td>Adjustable Valve, Side-Mount, 12" off floor</td></tr>
+    <tr><td>Cool Air Intake Size</td><td>2" × 2.75"</td><td>2" × 2.75"</td><td>2" × 2.75"</td></tr>
+    <tr><td>Blended Air Output</td><td>4.31" × 14.13"</td><td>4.31" × 14.13"</td><td>4.31" × 14.13"</td></tr>
+    <tr><td>Salt/Aroma Tray</td><td>Removable, Slotted, 16.5" × 4.5"</td><td>Removable, Slotted, 16.5" × 4.5"</td><td>Removable, Slotted, 16.5" × 4.5"</td></tr>
+    <tr class="highlight-row"><td>Wire to Power Unit</td><td>#6 + N + G</td><td>(2) #6 + N + G</td><td>#4 + N + G</td></tr>
+    <tr><td>Circuit Breaker</td><td>See IOM</td><td>See IOM</td><td>See IOM</td></tr>
+  </tbody>
+</table>
+
+<h3 id="ch6-electrical">Electrical Requirements Chart</h3>
+
+<table>
+  <thead><tr><th>Model</th><th>Watts</th><th>Amps</th><th>Voltage</th><th>Phase</th><th>Wire to Power Unit</th><th>Breaker</th></tr></thead>
+  <tbody>
+    <tr><td>Air 5</td><td>4,950W</td><td>20.6A</td><td>240 VAC</td><td>1PH</td><td>(2) #10 + N + G</td><td>See IOM</td></tr>
+    <tr><td>Air 7</td><td>6,900W</td><td>28.8A</td><td>240 VAC</td><td>1PH</td><td>(2) #8 + N + G</td><td>See IOM</td></tr>
+    <tr><td>Air L 10</td><td>9,900W</td><td>41.25A</td><td>240 VAC</td><td>1PH</td><td>#6 + N + G</td><td>See IOM</td></tr>
+    <tr><td>Air L 13</td><td>12,900W</td><td>53.75A</td><td>240 VAC</td><td>1PH</td><td>(2) #6 + N + G</td><td>See IOM</td></tr>
+    <tr><td>Air L 15</td><td>15,000W</td><td>62.5A</td><td>240 VAC</td><td>1PH</td><td>#4 + N + G</td><td>See IOM</td></tr>
+  </tbody>
+</table>
+
+<h3 id="ch6-install">Installation Essentials</h3>
+
+<h4>Delivery</h4>
+<ul>
+  <li>All Saunum heaters ship via <strong>freight on a wooden pallet</strong>, encased in three-ply cardboard</li>
+  <li>Delivery requires a <strong>scheduled appointment</strong></li>
+  <li>Driver provides "delivery only" with limited on-site assistance</li>
+  <li>Freight quote requests: email <strong>customerservice@bathingbrands.com</strong> with model number and full shipping address</li>
+  <li>Accessories can be shipped with heaters to save on shipping costs</li>
+</ul>
+
+<div class="script-box">
+  <p><strong>Peak Protection Concierge — Delivery How to Frame:</strong></p>
+  <p><em>"Saunum heaters ship freight on a pallet — it's a scheduled delivery with a big truck. The driver can get it to your driveway or garage, but they can't bring it inside or upstairs. I'm going to walk you through exactly what to expect, and I'll be available on delivery day if you have any questions. I'll also send you the Installation and Operation Manual ahead of time so your electrician can start planning. This is part of what we do — we don't just hand you a tracking number and disappear."</em></p>
+  <p><strong>PPW framework:</strong> This is a Three Tens — Company certainty moment. You're demonstrating that PPW is accountable through the entire process.</p>
+</div>
+
+<h4>Minimum Ceiling Height</h4>
+<p>All models: <strong>73" (1,850 mm)</strong>. The telescopic hot air intake extends from the top of the heater body up to 95" to reach near the ceiling. The ceiling must be at least 73" for proper operation.</p>
+
+<h4>Safety Distances</h4>
+<p>Safety clearance distances to combustible materials (front, sides, rear, and ceiling) are critical for safe installation but are not included in this guide. Always refer directly to the official Installation and Operation Manual for your specific model:</p>
+<ul>
+  <li>Air Series IOM: <a href="https://prod.cms.bathingbrands.com/sites/default/files/2026-03/Saunum-Air-Sauna-Heater-12-2025-IOM.pdf" class="doc-link">Download PDF</a></li>
+  <li>Air L Series IOM: <a href="https://prod.cms.bathingbrands.com/sites/default/files/2026-03/Saunum-Air-L-Sauna-Heater-12-2025-IDM.pdf" class="doc-link">Download PDF</a></li>
+</ul>
+
+<h4>Stone Loading</h4>
+<ul>
+  <li>Stone size for all models: <strong>2" to 4" (5–10 cm)</strong></li>
+  <li>Air series: 130 lbs required, <strong>4 boxes</strong></li>
+  <li>Air L series: 180 lbs required, <strong>6 boxes</strong></li>
+  <li>Stones are sold separately under the "Saunum Heater Stones" category</li>
+</ul>
+
+<h3 id="ch6-vent">Ventilation Requirements — The Three Vents Every Sauna Needs</h3>
+<p>A well-ventilated sauna is essential for comfort and safety. Saunum's air blending <strong>enhances</strong> what good ventilation starts — it does not replace it. Always recommend customers plan ventilation with their builder.</p>
+
+<table>
+  <thead><tr><th>Vent</th><th>Location</th><th>Size</th><th>During Use</th><th>After Use</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Fresh Air Intake</strong></td><td>Low on wall, near heater, same side as heater air inlet</td><td>Standard</td><td>Open</td><td>Open</td></tr>
+    <tr><td><strong>Exhaust</strong></td><td>Opposite wall from heater, under bench, higher than intake</td><td>Larger than intake</td><td>Open</td><td>Open</td></tr>
+    <tr><td><strong>Drying</strong></td><td>Opposite wall, near ceiling or in ceiling</td><td>Standard</td><td><strong>CLOSED</strong></td><td>Open (to dry out moisture)</td></tr>
+  </tbody>
+</table>
+
+<div class="watch-out">
+  <p><strong>Watch Out:</strong> The drying vent must stay <strong>CLOSED while the sauna is in use</strong>. An open drying vent disrupts airflow and prevents the room from reaching the desired temperature. Only open it after your sauna session is finished, so moist air can escape and the sauna room stays healthy and free of mold/mildew.</p>
+</div>
+
+<div class="script-box">
+  <p><strong>When a customer asks about sauna ventilation:</strong></p>
+  <p><em>"Ventilation is one of the most important parts of a sauna that people overlook. You need three vents: a fresh air intake low on the wall near the heater, an exhaust vent on the opposite wall under the bench, and a drying vent near the ceiling. The drying vent stays closed while you're using the sauna — you only open it afterward to let the moisture escape. If you're pairing this with a Saunum heater, the air blending device works with these vents to actively circulate and mix the air for an even more comfortable climate. I'd definitely recommend consulting the heater manual for exact sizing."</em></p>
+</div>
+
+<h3 id="ch6-warranty">Warranty</h3>
+
+<p>Warranty details by series based on available source data:</p>
+
+<table>
+  <thead><tr><th>Series</th><th>Consumer Warranty</th><th>Warranty Document</th></tr></thead>
+  <tbody>
+    <tr><td>Air (Air 5, Air 7)</td><td>Limited Warranty (included)</td><td><a href="https://prod.cms.bathingbrands.com/sites/default/files/2025-02/Saunum%20Air%20Series%20Warranty.pdf" class="doc-link">Air Series Warranty PDF</a></td></tr>
+    <tr><td>Air L (L 10, L 13, L 15)</td><td>2-Year Warranty (Consumer Use)</td><td><a href="https://prod.cms.bathingbrands.com/sites/default/files/2024-11/Saunum%20Air%20L%20Series%20%20Warranty.pdf" class="doc-link">Air L Series Warranty PDF</a></td></tr>
+  </tbody>
+</table>
+
+<div class="watch-out">
+  <p><strong>Watch Out:</strong> The Air series product data says "Limited Warranty" without specifying the duration, while the Air L series explicitly states "2-Year Warranty (Consumer Use)." The specific warranty term for the Air series should be confirmed from the warranty PDF document. Do not assume it matches the Air L series warranty.</p>
+</div>
+
+<div class="script-box">
+  <p><strong>When a Customer Asks "What's the warranty?"</strong></p>
+  <p><strong>For Air L series:</strong> <em>"The Air L carries a 2-year consumer warranty. I can send you the full warranty document so you have all the details."</em></p>
+  <p><strong>For Air series:</strong> <em>"The Air series includes a limited warranty — let me pull the actual warranty document and send it to you directly so you have the exact terms. I want to make sure you have the precise coverage details, not an approximation."</em> (Three Tens — Company: this builds trust by being transparent rather than guessing.)</p>
+</div>
+
+<div class="pro-tip">
+  <p><strong>Pro Tip:</strong> The Air L's explicit 2-year consumer warranty is a trust builder. Drop that number when a customer is comparing value across brands — most customers don't even think to ask about warranty until after they've bought, so proactively offering it signals confidence in the product (Three Tens — Product certainty).</p>
+</div>
+
+<h4>Required Controller for All Models</h4>
+<table>
+  <thead><tr><th>Controller</th><th>SKU</th><th>Temp Range</th><th>Connectivity</th></tr></thead>
+  <tbody>
+    <tr><td>Saunum AirIQ Wi-Fi</td><td>4745090010565</td><td>104°F–194°F (40°C–90°C)</td><td>Wi-Fi</td></tr>
+  </tbody>
+</table>
+</div>
+
+<!-- ═══════════════════════ CHAPTER 7 ═══════════════════════ -->
+<div class="chapter" id="ch7">
+<h2 id="ch7">Chapter 7: Quick Reference Cheat Sheet</h2>
+
+<p>Pull this up during live calls. Everything you need at a glance.</p>
+
+<h3>Model Quick-Select</h3>
+<table>
+  <thead><tr><th>Model</th><th>Type</th><th>kW</th><th>Room Size</th><th>Stones</th><th>Amps</th><th>Wire</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Air 5</strong></td><td>Wall</td><td>~5</td><td>106–212 ft³</td><td>130 lbs (4 boxes)</td><td>20.6A</td><td>(2) #10+N+G</td></tr>
+    <tr><td><strong>Air 7</strong></td><td>Wall</td><td>~7</td><td>177–318 ft³</td><td>130 lbs (4 boxes)</td><td>28.8A</td><td>(2) #8+N+G</td></tr>
+    <tr><td><strong>Air L 10</strong></td><td>Floor</td><td>~10</td><td>283–494 ft³</td><td>180 lbs (6 boxes)</td><td>41.25A</td><td>#6+N+G</td></tr>
+    <tr><td><strong>Air L 13</strong></td><td>Floor</td><td>~13</td><td>424–565 ft³</td><td>180 lbs (6 boxes)</td><td>53.75A</td><td>(2) #6+N+G</td></tr>
+    <tr><td><strong>Air L 15</strong></td><td>Floor</td><td>~15</td><td>530–812 ft³</td><td>180 lbs (6 boxes)</td><td>62.5A</td><td>#4+N+G</td></tr>
+  </tbody>
+</table>
+
+<h3>Every Order Must Include</h3>
+<table>
+  <thead><tr><th>Item</th><th>Air 5 / Air 7</th><th>Air L 10 / L 13 / L 15</th></tr></thead>
+  <tbody>
+    <tr><td>Heater</td><td>✓</td><td>✓</td></tr>
+    <tr><td>AirIQ Wi-Fi Controller</td><td>✓ (sold separately)</td><td>✓ (sold separately)</td></tr>
+    <tr><td>Stones</td><td>4 boxes (130 lbs total)</td><td>6 boxes (180 lbs total)</td></tr>
+  </tbody>
+</table>
+
+<h3>Key Framing Concepts — Quick Recall</h3>
+
+<table>
+  <thead><tr><th>Concept</th><th>Analogy / Framework</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Climate Equalizer</strong></td><td>Convection oven vs. regular oven — circulates air evenly</td></tr>
+    <tr><td><strong>Saunum vs. other brands</strong></td><td>Bentley vs. Toyota — same category, different experience</td></tr>
+    <tr><td><strong>Heater investment</strong></td><td>"$500 heater in a $7,000 sauna = 2-liter engine in a Bentley"</td></tr>
+    <tr><td><strong>240V power</strong></td><td>"Same circuit type as your clothes dryer"</td></tr>
+    <tr><td><strong>Stone capacity</strong></td><td>"Thermal battery" — more stones = softer heat, better steam</td></tr>
+    <tr><td><strong>6 sauna styles</strong></td><td>Use for IR-hesitant customers — Yoga Sauna bridges the gap</td></tr>
+    <tr><td><strong>Air blending value</strong></td><td>Gap Sell: hot head/cold feet → even comfort head to toe</td></tr>
+    <tr><td><strong>Salt therapy</strong></td><td>Active ion distribution (in airstream) vs. decorative panels (passive)</td></tr>
+    <tr><td><strong>Self-drying</strong></td><td>Extends life of the entire sauna build, not just the heater</td></tr>
+    <tr><td><strong>Separate controller/stones</strong></td><td>Reframe as "latest tech + your choice" → Peak Protection Concierge moment</td></tr>
+    <tr><td><strong>"Hot box or real sauna?"</strong></td><td>Any heater can heat stones. Only Saunum can blend the air.</td></tr>
+    <tr><td><strong>Why people lay down</strong></td><td>Not tired — seeking even temp. Saunum gives that while sitting up.</td></tr>
+    <tr><td><strong>First car vs. second car</strong></td><td>First car = happy it drives. Second car = want A/C and airbags. 70-80% upgrade heaters.</td></tr>
+    <tr><td><strong>Barrel sauna cold floor</strong></td><td>Only Saunum has barrel mode that pushes heat to the floor.</td></tr>
+    <tr><td><strong>HUUM vs. Saunum pricing</strong></td><td>Same price range, but Saunum = more product + more usability.</td></tr>
+  </tbody>
+</table>
+
+<h3>Overlap Zone Rule</h3>
+<p><strong>When room size falls in an overlap between two models, always recommend the larger model.</strong> Faster heat-up, better steam recovery, longer element life.</p>
+
+<h3>Key Differentiators vs. Competition</h3>
+<ul>
+  <li>✓ <strong>Only heater with active air blending</strong> (patented Climate Equalizer)</li>
+  <li>✓ <strong>Built-in Himalayan salt therapy</strong> (active, in-airstream — not decorative)</li>
+  <li>✓ <strong>6 sauna styles from 1 heater</strong> (Finnish, Banya, Estonian, Yoga, Salt, Aroma)</li>
+  <li>✓ <strong>UL certified</strong> (permits, insurance, peace of mind)</li>
+  <li>✓ <strong>4 independent safety systems</strong> (2 physical + 2 software) — more than any competitor</li>
+  <li>✓ <strong>Smart door detection</strong> — dual detection: physical sensor + software monitoring</li>
+  <li>✓ <strong>Self-drying function</strong> (protects the sauna investment)</li>
+  <li>✓ <strong>Barrel sauna mode</strong> — solves the cold floor problem in barrel saunas</li>
+  <li>✓ <strong>Massive stone capacity</strong> (130–180 lbs)</li>
+  <li>✓ <strong>Wi-Fi control + learning AI</strong> via AirIQ</li>
+  <li>✓ <strong>Air Solo available</strong> — adds air blending to ANY heater brand</li>
+</ul>
+
+<h3>Key Stats from Bathing Brands Training</h3>
+<table>
+  <thead><tr><th>Stat</th><th>Value</th><th>Source</th></tr></thead>
+  <tbody>
+    <tr><td>Temperature equalization improvement</td><td>60%+ more even</td><td>Saunum product literature</td></tr>
+    <tr><td>Harvia repeat buyers</td><td>70–80% of sales</td><td>Harvia quarterly earnings report</td></tr>
+    <tr><td>Session length for health benefits</td><td>15–20 minutes regular</td><td>Prit / Bathing Brands</td></tr>
+    <tr><td>Saunum safety systems</td><td>4 (2 physical + 2 software)</td><td>Prit / Bathing Brands</td></tr>
+    <tr><td>Air Solo improvement rate</td><td>99% report "much better"</td><td>Prit / Bathing Brands</td></tr>
+  </tbody>
+</table>
+
+<h3>Shipping Notes</h3>
+<ul>
+  <li>Ships freight on pallet — scheduled delivery appointment required</li>
+  <li>Freight quotes: customerservice@bathingbrands.com</li>
+  <li>Bundle accessories with heater orders to save shipping</li>
+</ul>
+
+<div class="pro-tip">
+  <p><strong>Pro Tip — Your 30-Second Saunum Pitch:</strong> "Saunum is the Bentley of sauna heaters. It's the only heater in the world with a patented air blending system that mixes the hot ceiling air with the cool floor air, so the temperature is even from head to toe. It has built-in Himalayan salt therapy, 6 different sauna styles from one heater, 4 independent safety systems, and UL certification. Any heater can heat stones. Only Saunum can blend the air. That's the difference between a hot wooden box and a real sauna."</p>
+</div>
+
+<h3>Go Sell the Best Sauna Experience on Earth</h3>
+<p>You now know more about Saunum than 99% of people selling sauna heaters. You understand the technology (Climate Equalizer), the product lineup (5 models, 2 families), the sales frameworks (Bridge Technique, LAER, Gap Selling, Investment Reframe), and the insider knowledge from Bathing Brands that most competitors will never have. Every customer who walks away with a Saunum heater is getting the best sauna experience money can buy — and you're the person who made sure they got the right model, the right controller, the right stones, and the right electrical specs. That's not just a sale. That's a Peak Protection Concierge moment. Now go make it happen.</p>
+</div>
+
+<!-- ═══════════════════════ INFORMATION GAPS ═══════════════════════ -->
+<div class="chapter" id="gaps">
+<h2>Guide Maintenance Notes <span style="font-size:0.6em;color:#999;">(Internal — For Guide Editors Only)</span></h2>
+
+<table>
+  <thead><tr><th>#</th><th>Item</th><th>Status</th><th>Action Needed</th></tr></thead>
+  <tbody>
+    <tr><td>1</td><td>Safety clearance distances (all models)</td><td>Pending</td><td>Obtain from official IOM PDFs. Front, side, rear, and ceiling clearances to combustible materials are not in product data files.</td></tr>
+    <tr><td>2</td><td>Circuit breaker size (all models)</td><td>Pending</td><td>All specs say "See IOM." Breaker estimates in Ch 4 are based on NEC 125% rule — verify against IOM when available.</td></tr>
+    <tr><td>3</td><td>Air series warranty duration</td><td>Pending</td><td>Air series lists "Limited Warranty" without duration. Air L says "2-Year." Consult Air Series Warranty PDF. SKU: 4745090017892, 4745090017908</td></tr>
+    <tr><td>4</td><td>Air L 13 stone quantity discrepancy</td><td>Source Conflict</td><td>Required components say "198 lbs - 6 Boxes" but spec table says "180 lbs (80 kg)." Guide uses 180 lbs. Confirm with Bathing Brands. SKU: 4745090017915</td></tr>
+    <tr><td>5</td><td>Sizing adjustment factors</td><td>Using Industry Standard</td><td>Saunum-specific sizing PDF was unavailable. Ch 4 uses general sauna industry factors. Update if Saunum publishes specific guidance.</td></tr>
+    <tr><td>6</td><td>Ventilation requirements (exact sizes)</td><td>Partially Resolved</td><td>General 3-vent system added from Bathing Brands training. Exact vent dimensions need IOM for model-specific sizing.</td></tr>
+    <tr><td>7</td><td>Aromatherapy system details</td><td>Pending</td><td>Referenced as "available" but no SKU, pricing, or specs in source data. Confirm details with Bathing Brands.</td></tr>
+    <tr><td>8</td><td>Commercial warranty terms</td><td>Pending</td><td>Air L warranty says "Consumer Use" — implies commercial terms may differ. Confirm with Bathing Brands.</td></tr>
+    <tr><td>9</td><td>Saunum Air Solo specs &amp; SKU</td><td>Pending</td><td>Air Solo referenced in Prit Call training but no SKU, pricing, or detailed specs in product data. Confirm with Bathing Brands.</td></tr>
+    <tr><td>10</td><td>Open vs. Closed basket SKU differentiation</td><td>Pending</td><td>Prit mentions open (stainless) and closed (black) basket configs for Air L with different safety distances. No separate SKUs in data.</td></tr>
+  </tbody>
+</table>
+</div>
+
+</main><!-- /main -->
+
+<!-- ════════════════════ BACK TO TOP ════════════════════ -->
+<button class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Back to top" aria-label="Back to top">&uarr;</button>
+
+<!-- ════════════════════ JAVASCRIPT ════════════════════ -->
+<script>
+(function(){
+  // ── Back to Top ──
+  const btn = document.getElementById('backTop');
+  window.addEventListener('scroll', function(){
+    btn.style.display = window.scrollY > 400 ? 'block' : 'none';
+  });
+
+  // ── Scroll Spy ──
+  const links = document.querySelectorAll('.nav-link');
+  const targets = [];
+  links.forEach(function(link){
+    const id = link.getAttribute('href');
+    if(id && id.startsWith('#')){
+      const el = document.querySelector(id);
+      if(el) targets.push({link: link, el: el});
+    }
+  });
+
+  function updateSpy(){
+    let current = null;
+    const scrollY = window.scrollY + 120;
+    for(let i = targets.length - 1; i >= 0; i--){
+      if(targets[i].el.offsetTop <= scrollY){
+        current = targets[i]; break;
+      }
+    }
+    links.forEach(function(l){ l.classList.remove('active'); });
+    if(current) current.link.classList.add('active');
+  }
+  window.addEventListener('scroll', updateSpy);
+  updateSpy();
+
+  // ── Sidebar Search ──
+  const search = document.getElementById('navSearch');
+  search.addEventListener('input', function(){
+    const q = this.value.toLowerCase();
+    links.forEach(function(link){
+      const text = link.textContent.toLowerCase();
+      link.style.display = (!q || text.indexOf(q) !== -1) ? 'block' : 'none';
+    });
+  });
+
+  // ── Smooth scroll for sidebar links ──
+  links.forEach(function(link){
+    link.addEventListener('click', function(e){
+      const id = this.getAttribute('href');
+      if(id && id.startsWith('#')){
+        e.preventDefault();
+        const target = document.querySelector(id);
+        if(target){
+          window.scrollTo({top: target.offsetTop - 20, behavior: 'smooth'});
+        }
+      }
+    });
+  });
+})();
+</script>
+
+</body>
+</html>
